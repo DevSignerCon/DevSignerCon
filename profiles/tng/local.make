@@ -17,8 +17,10 @@ includes[] = "drupal-org.make"
 ; Uncomment to use translation.
 ;includes[i18n] = "i18n.make"
 
-;projects[tng][version] = "" ; TODO add version
-;projects[tng][subdir] = "custom"
+projects[entityform][version] = "2.0-rc1"
+projects[entityform][subdir] = "contrib"
+projects[eventbrite][version] = "2.0-alpha3"
+projects[eventbrite][subdir] = "contrib"
 
 ; Github download example
 ;projects[os_testing][type] = "module"

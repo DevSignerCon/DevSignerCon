@@ -116,6 +116,10 @@ dependencies[] = stage_file_proxy
 dependencies[] = styleguide
 dependencies[] = styleguide_palette
 
+; Designer specific modules
+dependencies[] = entityform
+dependencies[] = eventbrite
+
 theme = aurora
 
 ;variables

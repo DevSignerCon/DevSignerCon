@@ -53,12 +53,14 @@ projects[devel][version] = "1.3"
 projects[devel][subdir] = "devel"
 projects[diff][version] = "3.2"
 projects[diff][subdir] = "devel"
-projects[search_krumo][version] = "1.5"
-projects[search_krumo][subdir] = "devel"
-projects[styleguide][subdir] = "devel"
-projects[styleguide][version] = "1.1"
 projects[environment_indicator][subdir] = "devel"
 projects[environment_indicator][version] = "2.0"
+projects[search_krumo][version] = "1.5"
+projects[search_krumo][subdir] = "devel"
+projects[stage_file_proxy][subdir] = "devel"
+projects[stage_file_proxy][version] = "1.6"
+projects[styleguide][subdir] = "devel"
+projects[styleguide][version] = "1.1"
 
 ; +++++ Themes +++++
 

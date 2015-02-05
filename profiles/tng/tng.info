@@ -14,7 +14,6 @@ core = "7.x"
 dependencies[] = admin_menu
 dependencies[] = admin_menu_toolbar
 dependencies[] = admin_views
-dependencies[] = ckeditor_styles
 dependencies[] = wysiwyg
 
 ; Chaos tool suite
@@ -108,7 +107,14 @@ dependencies[] = views_bulk_operations
 
 ; Features
 dependencies[] = features
-dependencies[] = features_override
+
+; Development - Can be disabled in production
+dependencies[] = devel
+dependencies[] = environment_indicator
+dependencies[] = search_krumo
+dependencies[] = stage_file_proxy
+dependencies[] = styleguide
+dependencies[] = styleguide_palette
 
 theme = aurora
 

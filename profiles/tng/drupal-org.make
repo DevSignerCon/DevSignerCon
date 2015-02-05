@@ -9,6 +9,7 @@ defaults[projects][subdir] = "contrib"
 
 ; +++++ Modules +++++
 
+projects[addressfield][version] = "1.0"
 projects[admin_views][version] = "1.3"
 projects[admin_menu][version] = "3.0-rc4"
 projects[blockify][version] = "1.2"
@@ -17,6 +18,7 @@ projects[ckeditor_styles][version] = "1.x-dev"
 projects[context][version] = "3.6"
 projects[content_taxonomy][version] = "1.0-beta2"
 projects[ctools][version] = "1.4"
+projects[date][version]= "2.8"
 projects[elements][version] = "1.4"
 projects[entity][version] = "1.5"
 projects[entityreference][version] = "1.1"

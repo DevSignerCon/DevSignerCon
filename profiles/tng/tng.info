@@ -53,7 +53,8 @@ dependencies[] = update
 dependencies[] = user
 
 ; Fields
-dependencies[] = content_taxonomy
+dependencies[] = addressfield
+dependencies[] = date
 dependencies[] = entityreference
 dependencies[] = link
 

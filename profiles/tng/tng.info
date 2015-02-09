@@ -56,6 +56,7 @@ dependencies[] = user
 dependencies[] = addressfield
 dependencies[] = date
 dependencies[] = entityreference
+dependencies[] = phone
 dependencies[] = link
 
 ; Frontend

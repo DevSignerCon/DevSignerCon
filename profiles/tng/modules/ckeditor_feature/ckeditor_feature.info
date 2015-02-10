@@ -1,0 +1,12 @@
+name = Ckeditor Feature
+description = CKeditor with styles, picture, and media integration
+core = 7.x
+package = Features
+dependencies[] = filter
+dependencies[] = media
+dependencies[] = picture
+dependencies[] = wysiwyg
+features[features_api][] = api:2
+features[filter][] = full_html
+features[wysiwyg][] = full_html
+features_exclude[dependencies][features] = features

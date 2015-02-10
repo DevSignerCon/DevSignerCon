@@ -1,0 +1,203 @@
+; Packaging information for tng
+name = "tng"
+description = "tng"
+core = "7.x"
+
+; Uncomment this to make a new profiler based on tng profile
+;base = base
+
+; ----------
+; Dependencies
+; ----------
+
+; Administration
+dependencies[] = admin_menu
+dependencies[] = admin_menu_toolbar
+dependencies[] = admin_views
+dependencies[] = wysiwyg
+
+; Chaos tool suite
+dependencies[] = ctools
+
+; Context
+dependencies[] = context
+dependencies[] = context_ui
+
+; Core
+dependencies[] = block
+dependencies[] = color
+dependencies[] = comment
+dependencies[] = contextual
+dependencies[] = dashboard
+dependencies[] = field
+dependencies[] = field_sql_storage
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = filter
+dependencies[] = help
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = node
+dependencies[] = number
+dependencies[] = options
+dependencies[] = overlay
+dependencies[] = path
+dependencies[] = rdf
+dependencies[] = search
+dependencies[] = shortcut
+dependencies[] = system
+dependencies[] = taxonomy
+dependencies[] = text
+dependencies[] = update
+dependencies[] = user
+
+; Fields
+dependencies[] = addressfield
+dependencies[] = date
+dependencies[] = email
+dependencies[] = entityreference
+dependencies[] = phone
+dependencies[] = link
+
+; Frontend
+dependencies[] = breakpoints
+dependencies[] = extlink
+dependencies[] = jquery_update
+dependencies[] = magic
+dependencies[] = modernizr
+dependencies[] = picture
+
+; Markup
+dependencies[] = html5_tools
+
+; Media
+dependencies[] = file_entity
+dependencies[] = media
+
+; Other
+dependencies[] = blockify
+dependencies[] = diff
+dependencies[] = elements
+dependencies[] = entity
+dependencies[] = entity_token
+dependencies[] = libraries
+dependencies[] = menu_block
+dependencies[] = metatag
+dependencies[] = module_filter
+dependencies[] = pathauto
+dependencies[] = redirect
+dependencies[] = save_draft
+dependencies[] = strongarm
+dependencies[] = token
+
+; Rules
+dependencies[] = rules
+dependencies[] = rules_admin
+
+; Statistics
+dependencies[] = googleanalytics
+
+; Variable
+dependencies[] = variable
+dependencies[] = variable_realm
+
+; Views
+dependencies[] = views
+dependencies[] = views_ui
+dependencies[] = views_content_cache
+dependencies[] = views_bulk_operations
+
+; Features
+dependencies[] = features
+
+; Development - Can be disabled in production
+dependencies[] = devel
+dependencies[] = environment_indicator
+dependencies[] = search_krumo
+dependencies[] = stage_file_proxy
+dependencies[] = styleguide
+dependencies[] = styleguide_palette
+
+; Designer specific modules
+dependencies[] = entityform
+dependencies[] = eventbrite
+
+theme = aurora
+
+;variables
+;Disable core image styles
+variables[os_base_remove_core_image_styles] = 1
+variables[site_default_country] = US
+variables[site_frontpage] = node/1
+variables[admin_menu_position_fixed] = 1
+variables[admin_menu_tweak_modules] = 1
+variables[admin_menu_tweak_permissions] = 1
+variables[extlink_class] = 0
+variables[extlink_mailto_class] = 0
+variables[extlink_target] = _blank
+variables[googleanalytics_cache] = 1
+variables[node_admin_theme] = 1
+variables[image_jpeg_quality] = 85
+variables[user_register] = 0
+
+; TODO uncomment this
+;variables[node_options_page] = array(0 => 'status',);
+variables[node_submitted_page] = 0
+variables[pathauto_node_page_pattern] = [node:title]
+variables[pathauto_node_pattern] = [node:content-type:name]s/[node:title]
+
+users[siteadmin][uid]    = 2
+users[siteadmin][name]   = tng
+users[siteadmin][mail]   = none@example.com
+users[siteadmin][status] = 1
+
+;terms
+terms[1][name] = Business / Strategy
+terms[1][description] = A manager category.
+terms[1][vocabulary_machine_name] = categories
+
+;blocks
+blocks[1][info] = "Footer"
+blocks[1][body] = <p>Powered by The New Group.</p>
+blocks[1][title] = " "
+blocks[1][format] = filtered_html
+blocks[1][theme] = tng
+blocks[1][region] = footer
+
+;files
+files[1][uri] = profiles/tng/files/placeholder.png
+files[1][destination] = public://placeholder.png
+files[1][uid] = 1
+
+;nodes
+nodes[1][type] = article
+nodes[1][title] = Front Page
+nodes[1][uid] = 1
+nodes[1][body][und][0][value]  = <p>This is an example front page.</p>
+nodes[1][body][und][0][format] = filtered_html
+nodes[1][language] = und
+nodes[1][field_category][und][0][tid] = 1
+
+; Set a text field value
+;nodes[1][field_text][und][0][value] = 25
+nodes[1][field_reference][und][0][target_id] = 2
+nodes[1][field_image][und][0][fid] = 1
+nodes[1][field_image][und][0][filename] = placholder.png
+nodes[1][field_image][und][0][uri] = public://placeholder.png
+
+;menu
+nodes[1][menu][link_title] = Home
+nodes[1][menu][menu_name] = main-menu
+
+nodes[2][type] = page
+nodes[2][title] = Subpage
+nodes[2][uid] = 1
+nodes[2][body][und][0][value]  = <p>This is an example subpage.</p>
+nodes[2][body][und][0][format] = filtered_html
+nodes[2][language] = und
+
+
+
+
+

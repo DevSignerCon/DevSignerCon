@@ -69,9 +69,9 @@ projects[styleguide][version] = "1.1"
 ; +++++ Themes +++++
 
 ; aurora
-projects[aurora][type] = "theme"
-projects[aurora][version] = "3.4"
-projects[aurora][subdir] = "contrib"
+projects[zen][type] = "theme"
+projects[zen][version] = "5.5"
+projects[zen][subdir] = "contrib"
 
 ; +++++ Libraries +++++
 

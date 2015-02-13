@@ -64,8 +64,8 @@ dependencies[] = link
 dependencies[] = breakpoints
 dependencies[] = extlink
 dependencies[] = jquery_update
-dependencies[] = magic
-dependencies[] = modernizr
+;dependencies[] = magic
+;dependencies[] = modernizr
 dependencies[] = picture
 
 ; Markup
@@ -76,7 +76,7 @@ dependencies[] = file_entity
 dependencies[] = media
 
 ; Other
-dependencies[] = blockify
+;dependencies[] = blockify
 dependencies[] = diff
 dependencies[] = elements
 dependencies[] = entity
@@ -123,7 +123,7 @@ dependencies[] = styleguide_palette
 dependencies[] = entityform
 dependencies[] = eventbrite
 
-theme = aurora
+theme = zen
 
 ;variables
 ;Disable core image styles

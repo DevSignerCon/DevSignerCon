@@ -57,6 +57,7 @@ dependencies[] = addressfield
 dependencies[] = date
 dependencies[] = email
 dependencies[] = entityreference
+dependencies[] = field_group
 dependencies[] = phone
 dependencies[] = link
 

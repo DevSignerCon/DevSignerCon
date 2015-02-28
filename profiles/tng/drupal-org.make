@@ -25,6 +25,7 @@ projects[entity][version] = "1.5"
 projects[entityreference][version] = "1.1"
 projects[extlink][version] = "1.17"
 projects[features][version] = "2.3"
+projects[field_group][version] = "1.4"
 projects[file_entity][version] = "2.0-beta1"
 projects[google_analytics][version] = "1.4"
 projects[html5_tools][version] = "1.2"
@@ -68,7 +69,7 @@ projects[styleguide][version] = "1.1"
 
 ; +++++ Themes +++++
 
-; aurora
+; zen
 projects[zen][type] = "theme"
 projects[zen][version] = "5.5"
 projects[zen][subdir] = "contrib"

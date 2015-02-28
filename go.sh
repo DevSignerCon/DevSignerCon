@@ -11,6 +11,9 @@ echo '$base_url = "http://local.devsigner.com";' >> sites/default/settings.php
 # Not sure why this was created
 rm -rf public\:
 
+# Revert Featurs
+drush fra -y
+
 # Generate a login
 drush uli
 

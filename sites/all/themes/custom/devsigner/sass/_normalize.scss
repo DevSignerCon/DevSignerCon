@@ -535,7 +535,8 @@ textarea {
 /* Drupal-style form labels. */
 label {
   display: block;
-  font-weight: bold;
+  font-family: $miso-bold;
+  font-weight: normal;
 }
 
 /**

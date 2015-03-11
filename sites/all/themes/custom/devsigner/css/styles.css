@@ -598,13 +598,14 @@ textarea {
 /* line 536, ../sass/_normalize.scss */
 label {
   display: block;
-  font-weight: bold;
+  font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
+  font-weight: normal;
 }
 
 /**
  * Tables
  */
-/* line 544, ../sass/_normalize.scss */
+/* line 545, ../sass/_normalize.scss */
 table {
   /* Remove most spacing between table cells. */
   border-collapse: collapse;
@@ -1561,7 +1562,7 @@ tr.selected td {
 
 /* line 20, ../sass/components/_content.scss */
 h1#page-title {
-  border-bottom: 1px solid #ebedf1;
+  border-bottom: 2px solid #EBEDF1;
   color: #012233;
   font-size: 4.5em;
   line-height: 1em;
@@ -1596,6 +1597,77 @@ h1#page-title {
 }
 
 /* line 7, ../sass/components/_forms.scss */
+.form-required {
+  color: #b5138a;
+}
+
+/* line 13, ../sass/components/_forms.scss */
+input,
+select,
+textarea {
+  border: 2px solid #E8E8E8;
+  color: #929292;
+}
+
+/* line 19, ../sass/components/_forms.scss */
+input.form-text,
+textarea {
+  padding: 13px 13px 12px !important;
+}
+
+/* line 23, ../sass/components/_forms.scss */
+#edit-submit {
+  background-color: #012233;
+  border: none;
+  color: white;
+  font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
+  font-size: 1.5em;
+  padding: 10px 26px 8px;
+}
+
+/* line 32, ../sass/components/_forms.scss */
+.devsigner-forms h3,
+.devsigner-forms legend {
+  font-size: 1.75em;
+  margin: 0;
+  position: relative;
+  text-transform: uppercase;
+  width: 100%;
+}
+/* line 39, ../sass/components/_forms.scss */
+.devsigner-forms h3 span,
+.devsigner-forms legend span {
+  display: inline;
+  float: left;
+  width: 22.22222%;
+  padding: 0 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 0;
+  text-align: right;
+}
+@media screen and (max-width: 768px) {
+  /* line 39, ../sass/components/_forms.scss */
+  .devsigner-forms h3 span,
+  .devsigner-forms legend span {
+    width: 100%;
+    left: 0;
+  }
+}
+/* line 46, ../sass/components/_forms.scss */
+.devsigner-forms h3:after,
+.devsigner-forms legend:after {
+  background: #EBEDF1;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 22.222222%;
+  position: absolute;
+  top: 39px;
+  width: 77.777778%;
+}
+/* line 58, ../sass/components/_forms.scss */
 .devsigner-forms .form-item {
   *zoom: 1;
 }
@@ -1608,7 +1680,7 @@ h1#page-title {
 .devsigner-forms .form-item:after {
   clear: both;
 }
-/* line 11, ../sass/components/_forms.scss */
+/* line 62, ../sass/components/_forms.scss */
 .devsigner-forms label {
   display: inline;
   float: left;
@@ -1618,28 +1690,122 @@ h1#page-title {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: 0;
+  clear: left;
+  color: #424242;
+  font-size: 1.375em;
   text-align: right;
 }
 @media screen and (max-width: 768px) {
-  /* line 11, ../sass/components/_forms.scss */
+  /* line 62, ../sass/components/_forms.scss */
   .devsigner-forms label {
     width: 100%;
     left: 0;
   }
 }
-/* line 17, ../sass/components/_forms.scss */
+/* line 71, ../sass/components/_forms.scss */
 .devsigner-forms label.option {
+  color: #929292;
   float: none;
+  font-family: miso, Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  font-size: 1em;
   text-align: left;
   width: auto;
 }
-/* line 25, ../sass/components/_forms.scss */
-.devsigner-forms table label {
+/* line 77, ../sass/components/_forms.scss */
+.devsigner-forms .field-type-text label {
+  padding-top: 13px;
+}
+/* line 82, ../sass/components/_forms.scss */
+.devsigner-forms #edit-field-community-sponsor-name label {
+  padding-top: 0;
+}
+/* line 87, ../sass/components/_forms.scss */
+.devsigner-forms .field-type-text-with-summary fieldset.form-wrapper label {
+  color: #929292;
   float: none;
+  font-family: miso, Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  font-size: 1em;
   text-align: left;
   width: auto;
 }
-/* line 34, ../sass/components/_forms.scss */
+/* line 92, ../sass/components/_forms.scss */
+.devsigner-forms table#field-company-values {
+  width: 100%;
+}
+/* line 96, ../sass/components/_forms.scss */
+.devsigner-forms table#field-company-values .field-label {
+  text-align: right;
+}
+/* line 100, ../sass/components/_forms.scss */
+.devsigner-forms table#field-company-values label {
+  float: none;
+  padding: none;
+  width: auto;
+}
+/* line 106, ../sass/components/_forms.scss */
+.devsigner-forms table#field-company-values th {
+  border-bottom: none;
+}
+/* line 110, ../sass/components/_forms.scss */
+.devsigner-forms table#field-company-values thead {
+  display: inline;
+  float: left;
+  width: 22.22222%;
+  padding: 0 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 0;
+}
+@media screen and (max-width: 768px) {
+  /* line 110, ../sass/components/_forms.scss */
+  .devsigner-forms table#field-company-values thead {
+    width: 100%;
+    left: 0;
+  }
+}
+/* line 115, ../sass/components/_forms.scss */
+.devsigner-forms table#field-company-values tbody {
+  display: inline;
+  float: left;
+  width: 66.66667%;
+  padding: 0 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 0;
+  padding-right: 0;
+  border: none;
+}
+@media screen and (max-width: 768px) {
+  /* line 115, ../sass/components/_forms.scss */
+  .devsigner-forms table#field-company-values tbody {
+    width: 100%;
+    left: 0;
+  }
+}
+/* line 124, ../sass/components/_forms.scss */
+.devsigner-forms #field-company-add-more-wrapper > .form-item > div.clearfix {
+  display: inline;
+  float: left;
+  width: 66.66667%;
+  padding: 0 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  left: 22.22222%;
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+}
+@media screen and (max-width: 768px) {
+  /* line 124, ../sass/components/_forms.scss */
+  .devsigner-forms #field-company-add-more-wrapper > .form-item > div.clearfix {
+    width: 100%;
+    left: 0;
+  }
+}
+/* line 134, ../sass/components/_forms.scss */
 .devsigner-forms input.form-text,
 .devsigner-forms .form-textarea-wrapper,
 .devsigner-forms .form-radios,
@@ -1655,7 +1821,7 @@ h1#page-title {
   padding-right: 0;
 }
 @media screen and (max-width: 768px) {
-  /* line 34, ../sass/components/_forms.scss */
+  /* line 134, ../sass/components/_forms.scss */
   .devsigner-forms input.form-text,
   .devsigner-forms .form-textarea-wrapper,
   .devsigner-forms .form-radios,
@@ -1664,7 +1830,7 @@ h1#page-title {
     left: 0;
   }
 }
-/* line 40, ../sass/components/_forms.scss */
+/* line 140, ../sass/components/_forms.scss */
 .devsigner-forms .description {
   display: inline;
   float: left;
@@ -1677,25 +1843,45 @@ h1#page-title {
   position: relative;
   padding-left: 0;
   padding-right: 0;
+  clear: left;
+  font-size: 1em;
 }
 @media screen and (max-width: 768px) {
-  /* line 40, ../sass/components/_forms.scss */
+  /* line 140, ../sass/components/_forms.scss */
   .devsigner-forms .description {
     width: 100%;
     left: 0;
   }
 }
-/* line 48, ../sass/components/_forms.scss */
-.devsigner-forms .form-type-textfield .description {
-  left: 0%;
+/* line 150, ../sass/components/_forms.scss */
+.devsigner-forms #edit-actions {
+  display: inline;
+  float: left;
+  width: 66.66667%;
+  padding: 0 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  left: 22.22222%;
   position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 76px;
 }
-/* line 53, ../sass/components/_forms.scss */
+@media screen and (max-width: 768px) {
+  /* line 150, ../sass/components/_forms.scss */
+  .devsigner-forms #edit-actions {
+    width: 100%;
+    left: 0;
+  }
+}
+/* line 159, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-session-format .description {
   left: 0%;
   position: relative;
+  clear: none;
 }
-/* line 58, ../sass/components/_forms.scss */
+/* line 165, ../sass/components/_forms.scss */
 .devsigner-forms .field-type-text-with-summary {
   *zoom: 1;
 }
@@ -1708,7 +1894,7 @@ h1#page-title {
 .devsigner-forms .field-type-text-with-summary:after {
   clear: both;
 }
-/* line 61, ../sass/components/_forms.scss */
+/* line 168, ../sass/components/_forms.scss */
 .devsigner-forms .field-type-text-with-summary fieldset.form-wrapper {
   display: inline;
   float: left;
@@ -1722,11 +1908,17 @@ h1#page-title {
   padding-right: 0;
 }
 @media screen and (max-width: 768px) {
-  /* line 61, ../sass/components/_forms.scss */
+  /* line 168, ../sass/components/_forms.scss */
   .devsigner-forms .field-type-text-with-summary fieldset.form-wrapper {
     width: 100%;
     left: 0;
   }
+}
+/* line 176, ../sass/components/_forms.scss */
+.devsigner-forms #edit-field-address fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 /**

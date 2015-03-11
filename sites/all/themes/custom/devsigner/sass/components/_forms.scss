@@ -2,7 +2,58 @@
 // Forms
 //
 
+
+// Global form elemenets
+.form-required {
+  color: $fuschia;
+}
+
+input,
+select,
+textarea {
+  border: 2px solid #E8E8E8;
+  color: $light;
+}
+
+input.form-text,
+textarea {
+  padding: 13px 13px 12px !important;
+}
+
+#edit-submit {
+  @include devsigner-button;
+}
+
+// Styles specific to Session, Sponsor, and Volunteer forms
 .devsigner-forms {
+
+  // Fieldgroup titles
+  h3,
+  legend {
+    font-size: 1.75em; // 1.75em * 16px = 28px
+    margin: 0;
+    position: relative;
+    text-transform: uppercase;
+    width: 100%;
+
+    span {
+      @include column(2,9);
+      @include alpha;
+      text-align: right;
+    }
+
+    // @TODO Is there a simpler way to do the partial border here?
+    &:after {
+      background: #EBEDF1;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 22.222222%;
+      position: absolute;
+      top: 39px;
+      width: 77.777778%;
+    }
+  }
 
   .form-item {
     @include clearfix;
@@ -11,21 +62,70 @@
   label {
     @include column(2,9);
     @include alpha;
+    clear: left;
+    color: #424242;
+    font-size: 1.375em; // 1.375 * 16px = 22px;
     text-align: right;
 
     // Fix for option labels
     &.option {
-      float: none;
-      text-align: left;
-      width: auto;
+      @include label-normal;
     }
   }
 
+  // Center label in simple text fields
+  .field-type-text label {
+    padding-top: 13px;
+  }
+
+  // Fix for Community Sponsor Name label
+  #edit-field-community-sponsor-name label {
+    padding-top: 0;
+  }
+
+  // Fix for labels within form wrappers
+  .field-type-text-with-summary fieldset.form-wrapper label {
+    @include label-normal;
+  }
+
   // Fix for labels within tables
-  table label {
-    float: none;
-    text-align: left;
-    width: auto;
+  table#field-company-values {
+
+    width: 100%;
+
+    .field-label {
+      text-align: right;
+    }
+
+    label {
+      float: none;
+      padding: none;
+      width: auto;
+    }
+
+    th {
+      border-bottom: none;
+    }
+
+    thead {
+      @include column(2,9);
+      @include alpha;
+    }
+
+    tbody {
+      @include column(6,9);
+      @include alpha;
+      @include omega;
+      border: none;
+    }
+  }
+
+  // Add more items button
+  #field-company-add-more-wrapper > .form-item > div.clearfix {
+    @include column(6,9);
+    @include push(2,9);
+    @include alpha;
+    @include omega;
   }
 
   input.form-text,
@@ -42,16 +142,23 @@
     @include push(2,9);
     @include alpha;
     @include omega;
+    clear: left;
+    font-size: 1em; // 1em * 16px = 16px
   }
 
-  // Fix for single textfields
-  .form-type-textfield .description {
-    @include push(0);
+  // Submit button
+  #edit-actions {
+    @include column(6,9);
+    @include push(2,9);
+    @include alpha;
+    @include omega;
+    margin-bottom: 76px;
   }
 
   // Fix for session format (@TODO remove once there is an input?)
   #edit-field-session-format .description {
     @include push(0);
+    clear: none;
   }
 
   // Fix for input formats help box
@@ -63,5 +170,12 @@
       @include push(2,9);
       @include omega;
     }
+  }
+
+  // Fix for address box
+  #edit-field-address fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
   }
 }

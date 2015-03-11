@@ -1729,25 +1729,25 @@ textarea {
   width: auto;
 }
 /* line 92, ../sass/components/_forms.scss */
-.devsigner-forms table#field-company-values {
+.devsigner-forms #edit-field-company table {
   width: 100%;
 }
 /* line 96, ../sass/components/_forms.scss */
-.devsigner-forms table#field-company-values .field-label {
+.devsigner-forms #edit-field-company table .field-label {
   text-align: right;
 }
 /* line 100, ../sass/components/_forms.scss */
-.devsigner-forms table#field-company-values label {
+.devsigner-forms #edit-field-company table label {
   float: none;
   padding: none;
   width: auto;
 }
 /* line 106, ../sass/components/_forms.scss */
-.devsigner-forms table#field-company-values th {
+.devsigner-forms #edit-field-company table th {
   border-bottom: none;
 }
 /* line 110, ../sass/components/_forms.scss */
-.devsigner-forms table#field-company-values thead {
+.devsigner-forms #edit-field-company table thead {
   display: inline;
   float: left;
   width: 22.22222%;
@@ -1759,13 +1759,13 @@ textarea {
 }
 @media screen and (max-width: 768px) {
   /* line 110, ../sass/components/_forms.scss */
-  .devsigner-forms table#field-company-values thead {
+  .devsigner-forms #edit-field-company table thead {
     width: 100%;
     left: 0;
   }
 }
 /* line 115, ../sass/components/_forms.scss */
-.devsigner-forms table#field-company-values tbody {
+.devsigner-forms #edit-field-company table tbody {
   display: inline;
   float: left;
   width: 66.66667%;
@@ -1779,13 +1779,13 @@ textarea {
 }
 @media screen and (max-width: 768px) {
   /* line 115, ../sass/components/_forms.scss */
-  .devsigner-forms table#field-company-values tbody {
+  .devsigner-forms #edit-field-company table tbody {
     width: 100%;
     left: 0;
   }
 }
 /* line 124, ../sass/components/_forms.scss */
-.devsigner-forms #field-company-add-more-wrapper > .form-item > div.clearfix {
+.devsigner-forms #edit-field-company .form-item > div.clearfix {
   display: inline;
   float: left;
   width: 66.66667%;
@@ -1800,7 +1800,7 @@ textarea {
 }
 @media screen and (max-width: 768px) {
   /* line 124, ../sass/components/_forms.scss */
-  .devsigner-forms #field-company-add-more-wrapper > .form-item > div.clearfix {
+  .devsigner-forms #edit-field-company .form-item > div.clearfix {
     width: 100%;
     left: 0;
   }

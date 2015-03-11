@@ -88,8 +88,8 @@ textarea {
     @include label-normal;
   }
 
-  // Fix for labels within tables
-  table#field-company-values {
+  // Fix for Company field table
+  #edit-field-company table {
 
     width: 100%;
 
@@ -121,7 +121,7 @@ textarea {
   }
 
   // Add more items button
-  #field-company-add-more-wrapper > .form-item > div.clearfix {
+  #edit-field-company .form-item > div.clearfix {
     @include column(6,9);
     @include push(2,9);
     @include alpha;

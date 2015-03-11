@@ -22,3 +22,11 @@
 #footer {
   @include container;
 }
+
+.content-inner {
+  @include column(9);
+}
+
+.region-sidebar-first {
+  @include column(3);
+}

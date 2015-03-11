@@ -4,11 +4,23 @@
 
 #tier_1 {
   background: $lime;
+  color: $white;
+
+  a:link,
+  a:visited {
+    color: $white;
+  }
 }
 
 #tier_2 {
-  background: $gray;
+  background: $white;
+  color: $navy;
 }
 
 #tier_3 {
+  background: $gray;
+}
+
+#tier_4 {
+  background: url("../images/bike.png") no-repeat 50% 50%;
 }

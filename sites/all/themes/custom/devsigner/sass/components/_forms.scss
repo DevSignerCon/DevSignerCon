@@ -1,0 +1,67 @@
+//
+// Forms
+//
+
+.devsigner-forms {
+
+  .form-item {
+    @include clearfix;
+  }
+
+  label {
+    @include column(2,9);
+    @include alpha;
+    text-align: right;
+
+    // Fix for option labels
+    &.option {
+      float: none;
+      text-align: left;
+      width: auto;
+    }
+  }
+
+  // Fix for labels within tables
+  table label {
+    float: none;
+    text-align: left;
+    width: auto;
+  }
+
+  input.form-text,
+  .form-textarea-wrapper,
+  .form-radios,
+  .form-checkboxes {
+    @include column(6,9);
+    @include alpha;
+    @include omega;
+  }
+
+  .description {
+    @include column(6,9);
+    @include push(2,9);
+    @include alpha;
+    @include omega;
+  }
+
+  // Fix for single textfields
+  .form-type-textfield .description {
+    @include push(0);
+  }
+
+  // Fix for session format (@TODO remove once there is an input?)
+  #edit-field-session-format .description {
+    @include push(0);
+  }
+
+  // Fix for input formats help box
+  .field-type-text-with-summary {
+    @include clearfix;
+
+    fieldset.form-wrapper {
+      @include column(6,9);
+      @include push(2,9);
+      @include omega;
+    }
+  }
+}

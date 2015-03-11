@@ -5,13 +5,13 @@
 // Adapted from  The Semantic Grid System: http://semantic.gs
 
 // Defaults which you can freely override
-$column-width: 60px;
-$gutter-width: 15px;
+$column-width: 70px;
+$gutter-width: 30px;
 $columns: 12;
 
 // Set total width to 100% for responsive layout, set max width in pixels
 $total-width: 100%;
-$max-width: 1140px;
+$max-width: 1200px;
 
 // Responsive Breakpoints, feel free to override or add more
 $mobile: 768px;
@@ -89,11 +89,11 @@ body {
   }
 
 }
-@mixin push($offset:1) {
+@mixin push($offset:1,$columns:$columns) {
   left: (1/$columns)*$offset*(100%);
   position: relative;
 }
-@mixin pull($offset:1) {
+@mixin pull($offset:1,$columns:$columns) {
   left: -((1/$columns)*$offset*(100%));
   position: relative;
 }

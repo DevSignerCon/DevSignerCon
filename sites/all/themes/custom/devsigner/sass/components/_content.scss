@@ -1,0 +1,26 @@
+//
+// Content
+//
+
+.breadcrumb {
+
+  font-size: 0.875em; // 0.875 / 16px = 14px
+  margin-top: 24px;
+  text-transform: uppercase;
+
+  a {
+    color: $light;
+
+    &:hover {
+      color: $navy;
+    }
+  }
+}
+
+h1#page-title {
+  border-bottom: 1px solid #ebedf1;
+  color: $navy;
+  font-size: 4.5em; // 4.5 / 16px = 72px
+  line-height: 1em;
+  margin-top: 17px;
+}

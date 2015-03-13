@@ -35,3 +35,23 @@
     @include element-invisible-off;
   }
 }
+
+// Removes special label form styling
+@mixin label-normal {
+  color: $light;
+  float: none;
+  font-family: $miso;
+  font-size: 1em; // 1em * 16px = 16px
+  text-align: left;
+  width: auto;
+}
+
+// Button
+@mixin devsigner-button($bg:$navy,$color:$white) {
+  background-color: $bg;
+  border: none;
+  color: $white;
+  font-family: $miso-bold;
+  font-size: 1.5em; // 1.5em * 16px = 24px
+  padding: 10px 26px 8px;
+}

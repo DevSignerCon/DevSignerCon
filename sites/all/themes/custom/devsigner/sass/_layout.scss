@@ -1,0 +1,32 @@
+//
+// Layout
+//
+
+#header-wrapper,
+#content-wrapper,
+#tier_1,
+#tier_2,
+#tier_3,
+#tier_4,
+#tier_5,
+#footer-wrapper {
+  @include wrapper;
+}
+
+#header,
+#content,
+.region-tier-1,
+.region-tier-2,
+.region-tier-3,
+.region-tier-4,
+#footer {
+  @include container;
+}
+
+.content-inner {
+  @include column(9);
+}
+
+.region-sidebar-first {
+  @include column(3);
+}

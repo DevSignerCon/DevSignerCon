@@ -172,6 +172,17 @@ textarea {
     }
   }
 
+  // Remove Session Description label and category field
+  #edit-field-session-description .form-item label,
+  #edit-field-categories {
+    @include element-invisible;
+  }
+
+  // Fix for session description w/o label
+  #edit-field-session-description .form-textarea-wrapper {
+    @include push(2,9);
+  }
+
   // Fix for address box
   #edit-field-address fieldset {
     margin: 0;

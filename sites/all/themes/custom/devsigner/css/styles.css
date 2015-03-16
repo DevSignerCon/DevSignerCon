@@ -647,7 +647,7 @@ body:after {
 }
 
 /* line 22, ../sass/_layout.scss */
-#header,
+#header-section,
 #content,
 .region-tier-1,
 .region-tier-2,
@@ -677,8 +677,9 @@ body:after {
   }
 }
 
-/* line 30, ../sass/_layout.scss */
-.region-sidebar-first {
+/* line 31, ../sass/_layout.scss */
+.region-sidebar-first,
+.region-sidebar-second {
   display: inline;
   float: left;
   width: 25%;
@@ -688,8 +689,9 @@ body:after {
   box-sizing: border-box;
 }
 @media screen and (max-width: 768px) {
-  /* line 30, ../sass/_layout.scss */
-  .region-sidebar-first {
+  /* line 31, ../sass/_layout.scss */
+  .region-sidebar-first,
+  .region-sidebar-second {
     width: 100%;
     left: 0;
   }
@@ -1535,6 +1537,50 @@ tr.selected td {
   background-color: #012233;
 }
 
+/* line 9, ../sass/components/_header.scss */
+.header-inner {
+  height: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+/* line 14, ../sass/components/_header.scss */
+#main-menu {
+  display: inline;
+  float: left;
+  width: 75%;
+  padding: 0 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  /* line 14, ../sass/components/_header.scss */
+  #main-menu {
+    width: 100%;
+    left: 0;
+  }
+}
+
+/* line 18, ../sass/components/_header.scss */
+#logo {
+  display: inline;
+  float: left;
+  width: 25%;
+  padding: 0 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  /* line 18, ../sass/components/_header.scss */
+  #logo {
+    width: 100%;
+    left: 0;
+  }
+}
+
 /* line 5, ../sass/components/_footer.scss */
 #footer-wrapper {
   background: #012233;
@@ -1933,6 +1979,91 @@ textarea {
   margin: 0;
   padding: 0;
   border: none;
+}
+
+/* line 7, ../sass/components/_home.scss */
+.front #header-section,
+.front .region-header {
+  max-width: 100%;
+  width: 100%;
+}
+/* line 12, ../sass/components/_home.scss */
+.front #header-wrapper {
+  height: 900px;
+}
+/* line 16, ../sass/components/_home.scss */
+.front .header-inner {
+  position: relative;
+  z-index: 999;
+}
+/* line 22, ../sass/components/_home.scss */
+.front #header h2.block-title {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+/* line 26, ../sass/components/_home.scss */
+.front #header .block {
+  margin: 0;
+}
+/* line 30, ../sass/components/_home.scss */
+.front #header .flexslider {
+  background: #012233;
+  border: none;
+  margin: 0;
+  position: relative;
+  top: -512px;
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  -ms-border-radius: none;
+  -o-border-radius: none;
+  border-radius: none;
+}
+/* line 40, ../sass/components/_home.scss */
+.front #header .flexslider .views-field-title,
+.front #header .flexslider .views-field-body,
+.front #header .flexslider .views-field-field-link {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+/* line 44, ../sass/components/_home.scss */
+.front #header .flexslider .views-field-title {
+  color: white;
+  font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
+  font-size: 4.5em;
+  line-height: 1.2em;
+  position: relative;
+  top: 632px;
+}
+/* line 52, ../sass/components/_home.scss */
+.front #header .flexslider .views-field-title a {
+  color: white;
+}
+/* line 57, ../sass/components/_home.scss */
+.front #header .flexslider .views-field-body {
+  color: white;
+  font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
+  font-size: 3em;
+  line-height: 1.2em;
+  position: relative;
+  top: 605px;
+}
+/* line 66, ../sass/components/_home.scss */
+.front #header .flexslider .views-field-field-link {
+  position: relative;
+  top: 605px;
+}
+/* line 70, ../sass/components/_home.scss */
+.front #header .flexslider .views-field-field-link a {
+  background-color: #8ab513;
+  border: none;
+  color: white;
+  font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
+  font-size: 1.5em;
+  padding: 10px 26px 8px;
 }
 
 /**

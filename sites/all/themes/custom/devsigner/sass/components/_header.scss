@@ -5,3 +5,16 @@
 #header-wrapper {
   background-color: $navy;
 }
+
+.header-inner {
+  height: 130px;
+  @include container;
+}
+
+#main-menu {
+  @include column(9);
+}
+
+#logo {
+  @include column(3);
+}

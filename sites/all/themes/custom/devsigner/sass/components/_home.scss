@@ -1,0 +1,76 @@
+//
+// Homepage specific styling
+//
+
+.front {
+  #header-section,
+  .region-header {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  #header-wrapper {
+    height: 900px;
+  }
+
+  .header-inner {
+    position: relative;
+    z-index: 999;
+  }
+
+  #header {
+    h2.block-title {
+      @include element-invisible;
+    }
+
+    .block {
+      margin: 0;
+    }
+
+    .flexslider {
+      background: $navy;
+      border: none;
+      margin: 0;
+      position: relative;
+      top: -512px;
+      @include border-radius(none);
+
+      .views-field-title,
+      .views-field-body,
+      .views-field-field-link {
+        @include container;
+      }
+
+      .views-field-title {
+        color: $white;
+        font-family: $miso-bold;
+        font-size: 4.5em; // 4.5em * 16px = 72px
+        line-height: 1.2em;
+        position: relative;
+        top: 632px;
+
+        a {
+          color: $white;
+        }
+      }
+
+      .views-field-body {
+        color: $white;
+        font-family: $miso-bold;
+        font-size: 3em; // 3em * 16px = 48px
+        line-height: 1.2em;
+        position: relative;
+        top: 605px;
+      }
+
+      .views-field-field-link {
+        position: relative;
+        top: 605px;
+
+        a {
+          @include devsigner-button($lime);
+        }
+      }
+    } 
+  }
+}

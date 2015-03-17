@@ -19,6 +19,8 @@
   }
 
   #header {
+
+    // Flexslider slideshow block
     h2.block-title {
       @include element-invisible;
     }
@@ -27,13 +29,17 @@
       margin: 0;
     }
 
-    .flexslider {
+    #block-views-flex-slider-block {
       background: $navy;
       border: none;
       margin: 0;
       position: relative;
       top: -420px;
       @include border-radius(none);
+
+      .view-content {
+        max-height: 700px;
+      }
 
       .views-field-title,
       .views-field-body,
@@ -207,7 +213,7 @@
 
     @include clearfix;
     margin-bottom: 10px;
-    
+
     h2.block-title {
       color: $white;
       text-align: center;

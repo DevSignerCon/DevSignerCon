@@ -86,7 +86,9 @@
     <?php print render($page['tier_1']); ?>
     <?php print render($page['tier_2']); ?>
     <?php print render($page['tier_3']); ?>
-    <?php print render($page['tier_4']); ?>
+    <div class="tier4-frame">
+      <?php print render($page['tier_4']); ?>
+    </div>
     <?php print render($page['tier_5']); ?>
 
   </div>

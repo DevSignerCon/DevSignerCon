@@ -664,7 +664,7 @@ body:after {
   display: inline;
   float: left;
   width: 75%;
-  padding: 0 30px;
+  padding: 0 15px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -683,7 +683,7 @@ body:after {
   display: inline;
   float: left;
   width: 25%;
-  padding: 0 30px;
+  padding: 0 15px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1550,7 +1550,7 @@ tr.selected td {
   display: inline;
   float: left;
   width: 75%;
-  padding: 0 30px;
+  padding: 0 15px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1568,7 +1568,7 @@ tr.selected td {
   display: inline;
   float: left;
   width: 25%;
-  padding: 0 30px;
+  padding: 0 15px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1709,8 +1709,17 @@ h1#page-title {
 }
 
 /* line 34, ../sass/components/_tiers.scss */
-#tier_4 {
+.tier4-frame {
   background: url("../images/bike.png") no-repeat 50% 50%;
+  float: left;
+  width: 100%;
+}
+
+/* line 41, ../sass/components/_tiers.scss */
+#tier_4 {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
 }
 
 /* line 7, ../sass/components/_forms.scss */
@@ -1757,7 +1766,7 @@ textarea {
   display: inline;
   float: left;
   width: 22.22222%;
-  padding: 0 30px;
+  padding: 0 15px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1802,7 +1811,7 @@ textarea {
   display: inline;
   float: left;
   width: 22.22222%;
-  padding: 0 30px;
+  padding: 0 15px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1868,7 +1877,7 @@ textarea {
   display: inline;
   float: left;
   width: 22.22222%;
-  padding: 0 30px;
+  padding: 0 15px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1886,7 +1895,7 @@ textarea {
   display: inline;
   float: left;
   width: 66.66667%;
-  padding: 0 30px;
+  padding: 0 15px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1906,7 +1915,7 @@ textarea {
   display: inline;
   float: left;
   width: 66.66667%;
-  padding: 0 30px;
+  padding: 0 15px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1930,7 +1939,7 @@ textarea {
   display: inline;
   float: left;
   width: 66.66667%;
-  padding: 0 30px;
+  padding: 0 15px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1952,7 +1961,7 @@ textarea {
   display: inline;
   float: left;
   width: 66.66667%;
-  padding: 0 30px;
+  padding: 0 15px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1975,7 +1984,7 @@ textarea {
   display: inline;
   float: left;
   width: 66.66667%;
-  padding: 0 30px;
+  padding: 0 15px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -2016,7 +2025,7 @@ textarea {
   display: inline;
   float: left;
   width: 66.66667%;
-  padding: 0 30px;
+  padding: 0 15px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -2172,7 +2181,7 @@ textarea {
   display: inline;
   float: left;
   width: 25%;
-  padding: 0 30px;
+  padding: 0 15px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -2185,72 +2194,231 @@ textarea {
     left: 0;
   }
 }
-/* line 109, ../sass/components/_home.scss */
+/* line 108, ../sass/components/_home.scss */
+.front #block-views-blog-block {
+  *zoom: 1;
+  margin-bottom: 70px;
+}
+/* line 60, ../sass/layouts/_grid.scss */
+.front #block-views-blog-block:before, .front #block-views-blog-block:after {
+  content: "";
+  display: table;
+}
+/* line 64, ../sass/layouts/_grid.scss */
+.front #block-views-blog-block:after {
+  clear: both;
+}
+/* line 113, ../sass/components/_home.scss */
 .front #block-views-blog-block h2.block-title {
   margin-top: 47px;
   text-align: center;
 }
-/* line 114, ../sass/components/_home.scss */
+/* line 118, ../sass/components/_home.scss */
 .front #block-views-blog-block .views-row {
   display: inline;
   float: left;
   width: 33.33333%;
-  padding: 0 30px;
+  padding: 0 15px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 @media screen and (max-width: 768px) {
-  /* line 114, ../sass/components/_home.scss */
+  /* line 118, ../sass/components/_home.scss */
   .front #block-views-blog-block .views-row {
     width: 100%;
     left: 0;
   }
 }
-/* line 118, ../sass/components/_home.scss */
+/* line 122, ../sass/components/_home.scss */
 .front #block-views-blog-block .views-field-title {
   border-top: 1px solid #f0f2f4;
   border-left: 1px solid #f0f2f4;
   border-right: 1px solid #f0f2f4;
   padding: 25px 25px 10px;
 }
-/* line 124, ../sass/components/_home.scss */
+/* line 128, ../sass/components/_home.scss */
+.front #block-views-blog-block .views-field-title span {
+  border-bottom: 1px solid #f0f2f4;
+  display: block;
+}
+/* line 133, ../sass/components/_home.scss */
 .front #block-views-blog-block .views-field-title a {
   font-size: 1.5625em;
 }
-/* line 129, ../sass/components/_home.scss */
+/* line 138, ../sass/components/_home.scss */
 .front #block-views-blog-block .views-field-body {
   border-left: 1px solid #f0f2f4;
   border-right: 1px solid #f0f2f4;
   color: #929292;
   padding: 5px 25px 25px;
 }
-/* line 136, ../sass/components/_home.scss */
+/* line 145, ../sass/components/_home.scss */
 .front #block-views-blog-block .views-field-view-node {
   border-bottom: 1px solid #f0f2f4;
   border-left: 1px solid #f0f2f4;
   border-right: 1px solid #f0f2f4;
   padding: 5px 25px 25px;
 }
-/* line 142, ../sass/components/_home.scss */
+/* line 151, ../sass/components/_home.scss */
 .front #block-views-blog-block .views-field-view-node a {
+  background-color: white;
+  border: none;
+  color: #012233;
+  font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
+  font-size: 1.5em;
+  padding: 10px 26px 8px;
+  border: 1px solid #012233;
+}
+/* line 155, ../sass/components/_home.scss */
+.front #block-views-blog-block .views-field-view-node a:hover {
+  color: white;
+  background: #012233;
+}
+/* line 164, ../sass/components/_home.scss */
+.front .keynotes {
+  *zoom: 1;
+  margin-bottom: 70px;
+}
+/* line 60, ../sass/layouts/_grid.scss */
+.front .keynotes:before, .front .keynotes:after {
+  content: "";
+  display: table;
+}
+/* line 64, ../sass/layouts/_grid.scss */
+.front .keynotes:after {
+  clear: both;
+}
+/* line 169, ../sass/components/_home.scss */
+.front .keynotes h2.block-title {
+  color: #8ab513;
+  margin-bottom: 4px;
+  margin-top: 47px;
+  text-align: center;
+}
+/* line 176, ../sass/components/_home.scss */
+.front .keynotes .keynote-row {
+  display: inline;
+  float: left;
+  width: 50%;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  /* line 176, ../sass/components/_home.scss */
+  .front .keynotes .keynote-row {
+    width: 100%;
+    left: 0;
+  }
+}
+/* line 179, ../sass/components/_home.scss */
+.front .keynotes .keynote-row .left {
+  display: inline;
+  float: left;
+  width: 33.33333%;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 0;
+}
+@media screen and (max-width: 768px) {
+  /* line 179, ../sass/components/_home.scss */
+  .front .keynotes .keynote-row .left {
+    width: 100%;
+    left: 0;
+  }
+}
+/* line 183, ../sass/components/_home.scss */
+.front .keynotes .keynote-row .right {
+  display: inline;
+  float: left;
+  width: 66.66667%;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-right: 0;
+}
+@media screen and (max-width: 768px) {
+  /* line 183, ../sass/components/_home.scss */
+  .front .keynotes .keynote-row .right {
+    width: 100%;
+    left: 0;
+  }
+}
+/* line 189, ../sass/components/_home.scss */
+.front .keynotes h3 {
+  border-bottom: 1px solid white;
+  color: #012233;
+  font-size: 1.5625em;
+  line-height: 1em;
+  padding-bottom: 8px;
+  margin-bottom: 13px;
+}
+/* line 198, ../sass/components/_home.scss */
+.front .keynotes p {
+  color: #0d0d0d;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+/* line 206, ../sass/components/_home.scss */
+.front #block-views-session-tracks-block {
+  *zoom: 1;
+  margin-bottom: 10px;
+}
+/* line 60, ../sass/layouts/_grid.scss */
+.front #block-views-session-tracks-block:before, .front #block-views-session-tracks-block:after {
+  content: "";
+  display: table;
+}
+/* line 64, ../sass/layouts/_grid.scss */
+.front #block-views-session-tracks-block:after {
+  clear: both;
+}
+/* line 211, ../sass/components/_home.scss */
+.front #block-views-session-tracks-block h2.block-title {
+  color: white;
+  text-align: center;
+}
+/* line 216, ../sass/components/_home.scss */
+.front #block-views-session-tracks-block .views-row {
+  display: inline;
+  float: left;
+  width: 25%;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  /* line 216, ../sass/components/_home.scss */
+  .front #block-views-session-tracks-block .views-row {
+    width: 100%;
+    left: 0;
+  }
+}
+/* line 219, ../sass/components/_home.scss */
+.front #block-views-session-tracks-block .views-row a {
   background-color: white;
   border: none;
   color: white;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
   font-size: 1.5em;
   padding: 10px 26px 8px;
-  border: 1px solid #012233;
-}
-/* line 146, ../sass/components/_home.scss */
-.front #block-views-blog-block .views-field-view-node a:hover {
-  color: white;
-  background: #012233;
-}
-/* line 156, ../sass/components/_home.scss */
-.front .keynotes h2.block-title {
-  color: #8ab513;
+  border: 1px solid white;
+  background: none;
+  display: block;
+  margin-bottom: 60px;
   text-align: center;
+}
+/* line 227, ../sass/components/_home.scss */
+.front #block-views-session-tracks-block .views-row a:hover {
+  background: #012233;
+  border: 1px solid #012233;
+  color: white;
 }
 
 /**

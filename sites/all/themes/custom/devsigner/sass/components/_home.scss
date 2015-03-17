@@ -106,6 +106,10 @@
 
   // News & Updates Block
   #block-views-blog-block {
+
+    @include clearfix;
+    margin-bottom: 70px;
+
     h2.block-title {
       margin-top: 47px;
       text-align: center;
@@ -120,6 +124,11 @@
       border-left: 1px solid #f0f2f4;
       border-right: 1px solid #f0f2f4;
       padding: 25px 25px 10px;
+
+      span {
+        border-bottom: 1px solid #f0f2f4;
+        display: block;
+      }
 
       a {
         font-size: 1.5625em; // 1.5625em * 16px = 25px
@@ -153,9 +162,74 @@
 
   // Keynote Speakers block
   .keynotes {
+
+    @include clearfix;
+    margin-bottom: 70px;
+
     h2.block-title {
       color: $lime;
+      margin-bottom: 4px;
+      margin-top: 47px;
       text-align: center;
+    }
+
+    .keynote-row {
+      @include column(6);
+
+      .left {
+        @include column(2,6);
+        @include alpha;
+      }
+      .right {
+        @include column(4,6);
+        @include omega;
+      }
+    }
+
+    h3 {
+      border-bottom: 1px solid $white;
+      color: $navy;
+      font-size: 1.5625em; // 1.5625em * 16px = 25px
+      line-height: 1em;
+      padding-bottom: 8px;
+      margin-bottom: 13px;
+    }
+
+    p {
+      color: #0d0d0d;
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+  }
+
+  // Session Tracks Block
+  #block-views-session-tracks-block {
+
+    @include clearfix;
+    margin-bottom: 10px;
+    
+    h2.block-title {
+      color: $white;
+      text-align: center;
+    }
+
+    .views-row {
+      @include column(3);
+
+      a {
+        @include devsigner-button($white, $white);
+        border: 1px solid $white;
+        background: none;
+        display: block;
+        margin-bottom: 60px;
+        text-align: center;
+
+        &:hover {
+          background: $navy;
+          border: 1px solid $navy;
+          color: $white;
+        }
+      }
     }
   }
 }

@@ -1546,7 +1546,7 @@ tr.selected td {
 }
 
 /* line 14, ../sass/components/_header.scss */
-#main-menu {
+#navigation-wrapper {
   display: inline;
   float: left;
   width: 75%;
@@ -1557,7 +1557,7 @@ tr.selected td {
 }
 @media screen and (max-width: 768px) {
   /* line 14, ../sass/components/_header.scss */
-  #main-menu {
+  #navigation-wrapper {
     width: 100%;
     left: 0;
   }
@@ -1579,6 +1579,68 @@ tr.selected td {
     width: 100%;
     left: 0;
   }
+}
+
+/* line 7, ../sass/components/_navigation.scss */
+.block-nice-menus ul.nice-menu {
+  float: right;
+  font-size: 1.125em;
+  margin-top: 50px;
+  text-align: right;
+  text-transform: uppercase;
+}
+/* line 14, ../sass/components/_navigation.scss */
+.block-nice-menus ul.nice-menu li {
+  background: none;
+  border: none;
+}
+/* line 19, ../sass/components/_navigation.scss */
+.block-nice-menus ul.nice-menu a {
+  color: white;
+  margin: 0 0 0 70px;
+}
+/* line 23, ../sass/components/_navigation.scss */
+.block-nice-menus ul.nice-menu a.active {
+  border-bottom: 3px solid #8ab513;
+}
+/* line 26, ../sass/components/_navigation.scss */
+.block-nice-menus ul.nice-menu a:hover {
+  color: #8ab513;
+}
+/* line 33, ../sass/components/_navigation.scss */
+.block-nice-menus ul.nice-menu li.menuparent:hover {
+  background: none;
+}
+/* line 37, ../sass/components/_navigation.scss */
+.block-nice-menus ul.nice-menu li.menuparent > a {
+  padding: 0.3em 5px;
+}
+/* line 41, ../sass/components/_navigation.scss */
+.block-nice-menus ul.nice-menu li.menuparent ul {
+  border: none;
+  margin-left: 70px;
+  padding-top: 16px;
+}
+/* line 46, ../sass/components/_navigation.scss */
+.block-nice-menus ul.nice-menu li.menuparent ul li {
+  background: rgba(1, 34, 51, 0.8);
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  margin: 0;
+  text-align: left;
+}
+/* line 52, ../sass/components/_navigation.scss */
+.block-nice-menus ul.nice-menu li.menuparent ul li:first-child {
+  border-top: 1px solid white;
+}
+/* line 55, ../sass/components/_navigation.scss */
+.block-nice-menus ul.nice-menu li.menuparent ul li:last-child {
+  border-bottom: 1px solid white;
+}
+/* line 59, ../sass/components/_navigation.scss */
+.block-nice-menus ul.nice-menu li.menuparent ul li a {
+  padding: 0.75em 1em;
+  margin: 0;
 }
 
 /* line 5, ../sass/components/_footer.scss */
@@ -1615,29 +1677,38 @@ h1#page-title {
   margin-top: 17px;
 }
 
-/* line 5, ../sass/components/_tiers.scss */
+/* line 10, ../sass/components/_tiers.scss */
+#tier_1 h2.block-title,
+#tier_2 h2.block-title,
+#tier_3 h2.block-title,
+#tier_4 h2.block-title,
+#tier_5 h2.block-title {
+  font-size: 3.75em;
+}
+
+/* line 15, ../sass/components/_tiers.scss */
 #tier_1 {
   background: #8ab513;
   color: white;
 }
-/* line 10, ../sass/components/_tiers.scss */
+/* line 20, ../sass/components/_tiers.scss */
 #tier_1 a:link,
 #tier_1 a:visited {
   color: white;
 }
 
-/* line 15, ../sass/components/_tiers.scss */
+/* line 25, ../sass/components/_tiers.scss */
 #tier_2 {
   background: white;
   color: #012233;
 }
 
-/* line 20, ../sass/components/_tiers.scss */
+/* line 30, ../sass/components/_tiers.scss */
 #tier_3 {
   background: #e6e9ed;
 }
 
-/* line 24, ../sass/components/_tiers.scss */
+/* line 34, ../sass/components/_tiers.scss */
 #tier_4 {
   background: url("../images/bike.png") no-repeat 50% 50%;
 }
@@ -1994,7 +2065,7 @@ textarea {
 /* line 16, ../sass/components/_home.scss */
 .front .header-inner {
   position: relative;
-  z-index: 999;
+  z-index: 500;
 }
 /* line 22, ../sass/components/_home.scss */
 .front #header h2.block-title {
@@ -2014,7 +2085,7 @@ textarea {
   border: none;
   margin: 0;
   position: relative;
-  top: -512px;
+  top: -420px;
   -webkit-border-radius: none;
   -moz-border-radius: none;
   -ms-border-radius: none;
@@ -2036,27 +2107,39 @@ textarea {
   font-size: 4.5em;
   line-height: 1.2em;
   position: relative;
-  top: 632px;
+  top: 577px;
 }
 /* line 52, ../sass/components/_home.scss */
+.front #header .flexslider .views-field-title span {
+  padding: 0 30px;
+}
+/* line 56, ../sass/components/_home.scss */
 .front #header .flexslider .views-field-title a {
   color: white;
 }
-/* line 57, ../sass/components/_home.scss */
+/* line 61, ../sass/components/_home.scss */
 .front #header .flexslider .views-field-body {
   color: white;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
   font-size: 3em;
   line-height: 1.2em;
   position: relative;
-  top: 605px;
+  top: 550px;
 }
-/* line 66, ../sass/components/_home.scss */
+/* line 69, ../sass/components/_home.scss */
+.front #header .flexslider .views-field-body .field-content {
+  padding: 0 30px;
+}
+/* line 74, ../sass/components/_home.scss */
 .front #header .flexslider .views-field-field-link {
   position: relative;
-  top: 605px;
+  top: 575px;
 }
-/* line 70, ../sass/components/_home.scss */
+/* line 78, ../sass/components/_home.scss */
+.front #header .flexslider .views-field-field-link .field-content {
+  padding: 0 30px;
+}
+/* line 82, ../sass/components/_home.scss */
 .front #header .flexslider .views-field-field-link a {
   background-color: #8ab513;
   border: none;
@@ -2064,6 +2147,110 @@ textarea {
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
   font-size: 1.5em;
   padding: 10px 26px 8px;
+}
+/* line 91, ../sass/components/_home.scss */
+.front .sponsors h2.block-title {
+  margin-bottom: 8px;
+  margin-top: 42px;
+  text-align: center;
+}
+/* line 97, ../sass/components/_home.scss */
+.front .sponsors ul {
+  *zoom: 1;
+}
+/* line 60, ../sass/layouts/_grid.scss */
+.front .sponsors ul:before, .front .sponsors ul:after {
+  content: "";
+  display: table;
+}
+/* line 64, ../sass/layouts/_grid.scss */
+.front .sponsors ul:after {
+  clear: both;
+}
+/* line 101, ../sass/components/_home.scss */
+.front .sponsors li {
+  display: inline;
+  float: left;
+  width: 25%;
+  padding: 0 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 46px;
+}
+@media screen and (max-width: 768px) {
+  /* line 101, ../sass/components/_home.scss */
+  .front .sponsors li {
+    width: 100%;
+    left: 0;
+  }
+}
+/* line 109, ../sass/components/_home.scss */
+.front #block-views-blog-block h2.block-title {
+  margin-top: 47px;
+  text-align: center;
+}
+/* line 114, ../sass/components/_home.scss */
+.front #block-views-blog-block .views-row {
+  display: inline;
+  float: left;
+  width: 33.33333%;
+  padding: 0 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  /* line 114, ../sass/components/_home.scss */
+  .front #block-views-blog-block .views-row {
+    width: 100%;
+    left: 0;
+  }
+}
+/* line 118, ../sass/components/_home.scss */
+.front #block-views-blog-block .views-field-title {
+  border-top: 1px solid #f0f2f4;
+  border-left: 1px solid #f0f2f4;
+  border-right: 1px solid #f0f2f4;
+  padding: 25px 25px 10px;
+}
+/* line 124, ../sass/components/_home.scss */
+.front #block-views-blog-block .views-field-title a {
+  font-size: 1.5625em;
+}
+/* line 129, ../sass/components/_home.scss */
+.front #block-views-blog-block .views-field-body {
+  border-left: 1px solid #f0f2f4;
+  border-right: 1px solid #f0f2f4;
+  color: #929292;
+  padding: 5px 25px 25px;
+}
+/* line 136, ../sass/components/_home.scss */
+.front #block-views-blog-block .views-field-view-node {
+  border-bottom: 1px solid #f0f2f4;
+  border-left: 1px solid #f0f2f4;
+  border-right: 1px solid #f0f2f4;
+  padding: 5px 25px 25px;
+}
+/* line 142, ../sass/components/_home.scss */
+.front #block-views-blog-block .views-field-view-node a {
+  background-color: white;
+  border: none;
+  color: white;
+  font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
+  font-size: 1.5em;
+  padding: 10px 26px 8px;
+  border: 1px solid #012233;
+}
+/* line 146, ../sass/components/_home.scss */
+.front #block-views-blog-block .views-field-view-node a:hover {
+  color: white;
+  background: #012233;
+}
+/* line 156, ../sass/components/_home.scss */
+.front .keynotes h2.block-title {
+  color: #8ab513;
+  text-align: center;
 }
 
 /**

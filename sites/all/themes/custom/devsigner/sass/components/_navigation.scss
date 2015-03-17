@@ -1,0 +1,67 @@
+//
+// Navigation
+//
+
+.block-nice-menus {
+ 
+  ul.nice-menu {
+    float: right;
+    font-size: 1.125em; // 1.125em * 16px = 18px
+    margin-top: 50px;
+    text-align: right;
+    text-transform: uppercase;
+
+    li {
+      background: none;
+      border: none;
+    }
+
+    a {
+      color: $white;
+      margin: 0 0 0 70px;
+
+      &.active {
+        border-bottom: 3px solid $lime;
+      }
+      &:hover {
+        color: $lime;
+      }
+    }
+
+    li.menuparent {
+     
+      &:hover {
+        background: none;
+      }
+
+      > a {
+        padding: 0.3em 5px;
+      }
+
+      ul {
+        border: none;
+        margin-left: 70px;
+        padding-top: 16px;
+
+        li {
+          background: rgba(1, 34, 51, 0.8);
+          border-left: 1px solid $white;
+          border-right: 1px solid $white;
+          margin: 0;
+          text-align: left;
+          &:first-child {
+            border-top: 1px solid $white;
+          }
+          &:last-child {
+            border-bottom: 1px solid $white;
+          }
+
+          a {
+            padding: 0.75em 1em;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

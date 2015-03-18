@@ -30,66 +30,109 @@
     }
 
     #block-views-flex-slider-block {
-      background: $navy;
-      border: none;
-      margin: 0;
-      position: relative;
-      top: -420px;
-      @include border-radius(none);
 
       .view-content {
         max-height: 700px;
       }
 
-      .views-field-title,
-      .views-field-body,
-      .views-field-field-link {
-        @include container;
-      }
-
-      .views-field-title {
-        color: $white;
-        font-family: $miso-bold;
-        font-size: 4.5em; // 4.5em * 16px = 72px
-        line-height: 1.2em;
+      .flexslider {
+        background: $navy;
+        border: none;
+        margin: 0;
         position: relative;
-        top: 577px;
-        
-        span {
-          padding: 0 30px;
+        top: -420px;
+        @include border-radius(none);
+
+        .views-field-title,
+        .views-field-body,
+        .views-field-field-link {
+          @include container;
         }
 
-        a {
+        .views-field-title {
           color: $white;
-        }
-      }
+          font-family: $miso-bold;
+          font-size: 4.5em; // 4.5em * 16px = 72px
+          line-height: 1.2em;
+          position: relative;
+          top: 577px;
+          
+          span {
+            padding: 0 30px;
+          }
 
-      .views-field-body {
-        color: $white;
-        font-family: $miso-bold;
-        font-size: 3em; // 3em * 16px = 48px
-        line-height: 1.2em;
-        position: relative;
-        top: 550px;
-        
-        .field-content {
-          padding: 0 30px;
-        }
-      }
-
-      .views-field-field-link {
-        position: relative;
-        top: 575px;
-        
-        .field-content {
-          padding: 0 30px;
+          a {
+            color: $white;
+          }
         }
 
-        a {
-          @include devsigner-button($lime);
+        .views-field-body {
+          color: $white;
+          font-family: $miso-bold;
+          font-size: 3em; // 3em * 16px = 48px
+          line-height: 1.2em;
+          position: relative;
+          top: 550px;
+          
+          .field-content {
+            padding: 0 30px;
+          }
+        }
+
+        .views-field-field-link {
+          position: relative;
+          top: 575px;
+          
+          .field-content {
+            padding: 0 30px;
+          }
+
+          a {
+            @include devsigner-button($lime);
+          }
         }
       }
     } 
+  }
+
+  // About Us
+  #content-wrapper {
+    min-height: 600px;
+    position: relative;
+  }
+
+  #content-horse {
+    background: url("../images/horse.png") no-repeat 0 0;
+    position: absolute;
+    left: 41.6666667%;
+    overflow: hidden;
+    height: 100%;
+    width: 58.333333%;
+  }
+
+  .content-inner {
+    @include column(5);
+
+    h1#page-title {
+      border-bottom: none;
+      margin-top: 100px;
+    }
+
+    .field-name-body {
+      p:first-child {
+        font-size: 1.75em; // 1.75em * 16px = 28px
+        line-height: 1.5em;
+      }
+      a.devsigner-button {
+        @include devsigner-button($white,$navy);
+        border: 1px solid $navy;
+
+        &:hover {
+          color: $white;
+          background: $navy;
+        }
+      }
+    }
   }
 
   // Sponsors Block
@@ -236,6 +279,20 @@
           color: $white;
         }
       }
+    }
+  }
+
+  // Google Maps Block
+  #tier_5 {
+
+    .block {
+      // Remove extra whitespace around iframe
+      line-height: 0;
+      margin-bottom: 0;
+    }
+
+    iframe {
+      max-width: 100%;
     }
   }
 }

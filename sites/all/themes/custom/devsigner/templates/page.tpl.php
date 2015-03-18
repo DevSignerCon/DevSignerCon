@@ -47,6 +47,7 @@
   <div id="main">
 
     <div id="content-wrapper">
+      <div id="content-horse"></div>
       <div id="content" class="column" role="main">
         <div class="content-inner">
           <?php print render($page['highlighted']); ?>

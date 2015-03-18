@@ -6,6 +6,16 @@
  * of these @include files will be combined into a single file.
  */
 /* Import Sass mixins, variables, Compass modules, etc. */
+/* line 60, ../sass/_mixins.scss */
+.devsigner-button {
+  background-color: #012233;
+  border: none;
+  color: white;
+  font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
+  font-size: 1.5em;
+  padding: 10px 26px 8px;
+}
+
 @font-face {
   font-family: miso;
   src: url("../fonts/miso/miso.otf");
@@ -1653,6 +1663,65 @@ tr.selected td {
   color: #e6e9ed;
 }
 
+/* line 14, ../sass/components/_footer.scss */
+#footer {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+/* line 17, ../sass/components/_footer.scss */
+#footer .block {
+  margin: 1.5em 0;
+}
+/* line 21, ../sass/components/_footer.scss */
+#footer .social {
+  display: inline;
+  float: left;
+  width: 100%;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  /* line 21, ../sass/components/_footer.scss */
+  #footer .social {
+    width: 100%;
+    left: 0;
+  }
+}
+/* line 24, ../sass/components/_footer.scss */
+#footer .social p {
+  float: left;
+  margin: 1.5em 0;
+}
+/* line 28, ../sass/components/_footer.scss */
+#footer .social p a {
+  display: inline-block;
+  margin-right: 35px;
+  text-indent: -9999px;
+}
+/* line 33, ../sass/components/_footer.scss */
+#footer .social p a.social-fb {
+  background: url("../images/fb.png") no-repeat;
+  width: 10px;
+}
+/* line 37, ../sass/components/_footer.scss */
+#footer .social p a.social-twitter {
+  background: url("../images/twitter.png") no-repeat;
+  width: 28px;
+}
+/* line 41, ../sass/components/_footer.scss */
+#footer .social p a.social-google {
+  background: url("../images/google.png") no-repeat;
+  width: 21px;
+}
+/* line 48, ../sass/components/_footer.scss */
+#footer .social p:last-child {
+  float: right;
+  text-align: right;
+}
+
 /* line 5, ../sass/components/_content.scss */
 .breadcrumb {
   font-size: 0.875em;
@@ -2088,8 +2157,12 @@ textarea {
 .front #header .block {
   margin: 0;
 }
-/* line 32, ../sass/components/_home.scss */
-.front #header #block-views-flex-slider-block {
+/* line 34, ../sass/components/_home.scss */
+.front #header #block-views-flex-slider-block .view-content {
+  max-height: 700px;
+}
+/* line 38, ../sass/components/_home.scss */
+.front #header #block-views-flex-slider-block .flexslider {
   background: #012233;
   border: none;
   margin: 0;
@@ -2101,20 +2174,16 @@ textarea {
   -o-border-radius: none;
   border-radius: none;
 }
-/* line 40, ../sass/components/_home.scss */
-.front #header #block-views-flex-slider-block .view-content {
-  max-height: 700px;
-}
-/* line 46, ../sass/components/_home.scss */
-.front #header #block-views-flex-slider-block .views-field-title,
-.front #header #block-views-flex-slider-block .views-field-body,
-.front #header #block-views-flex-slider-block .views-field-field-link {
+/* line 48, ../sass/components/_home.scss */
+.front #header #block-views-flex-slider-block .flexslider .views-field-title,
+.front #header #block-views-flex-slider-block .flexslider .views-field-body,
+.front #header #block-views-flex-slider-block .flexslider .views-field-field-link {
   margin-left: auto;
   margin-right: auto;
   max-width: 1200px;
 }
-/* line 50, ../sass/components/_home.scss */
-.front #header #block-views-flex-slider-block .views-field-title {
+/* line 52, ../sass/components/_home.scss */
+.front #header #block-views-flex-slider-block .flexslider .views-field-title {
   color: white;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
   font-size: 4.5em;
@@ -2122,16 +2191,16 @@ textarea {
   position: relative;
   top: 577px;
 }
-/* line 58, ../sass/components/_home.scss */
-.front #header #block-views-flex-slider-block .views-field-title span {
+/* line 60, ../sass/components/_home.scss */
+.front #header #block-views-flex-slider-block .flexslider .views-field-title span {
   padding: 0 30px;
 }
-/* line 62, ../sass/components/_home.scss */
-.front #header #block-views-flex-slider-block .views-field-title a {
+/* line 64, ../sass/components/_home.scss */
+.front #header #block-views-flex-slider-block .flexslider .views-field-title a {
   color: white;
 }
-/* line 67, ../sass/components/_home.scss */
-.front #header #block-views-flex-slider-block .views-field-body {
+/* line 69, ../sass/components/_home.scss */
+.front #header #block-views-flex-slider-block .flexslider .views-field-body {
   color: white;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
   font-size: 3em;
@@ -2139,21 +2208,21 @@ textarea {
   position: relative;
   top: 550px;
 }
-/* line 75, ../sass/components/_home.scss */
-.front #header #block-views-flex-slider-block .views-field-body .field-content {
+/* line 77, ../sass/components/_home.scss */
+.front #header #block-views-flex-slider-block .flexslider .views-field-body .field-content {
   padding: 0 30px;
 }
-/* line 80, ../sass/components/_home.scss */
-.front #header #block-views-flex-slider-block .views-field-field-link {
+/* line 82, ../sass/components/_home.scss */
+.front #header #block-views-flex-slider-block .flexslider .views-field-field-link {
   position: relative;
   top: 575px;
 }
-/* line 84, ../sass/components/_home.scss */
-.front #header #block-views-flex-slider-block .views-field-field-link .field-content {
+/* line 86, ../sass/components/_home.scss */
+.front #header #block-views-flex-slider-block .flexslider .views-field-field-link .field-content {
   padding: 0 30px;
 }
-/* line 88, ../sass/components/_home.scss */
-.front #header #block-views-flex-slider-block .views-field-field-link a {
+/* line 90, ../sass/components/_home.scss */
+.front #header #block-views-flex-slider-block .flexslider .views-field-field-link a {
   background-color: #8ab513;
   border: none;
   color: white;
@@ -2161,13 +2230,69 @@ textarea {
   font-size: 1.5em;
   padding: 10px 26px 8px;
 }
-/* line 97, ../sass/components/_home.scss */
+/* line 99, ../sass/components/_home.scss */
+.front #content-wrapper {
+  min-height: 600px;
+  position: relative;
+}
+/* line 104, ../sass/components/_home.scss */
+.front #content-horse {
+  background: url("../images/horse.png") no-repeat 0 0;
+  position: absolute;
+  left: 41.6666667%;
+  overflow: hidden;
+  height: 100%;
+  width: 58.333333%;
+}
+/* line 113, ../sass/components/_home.scss */
+.front .content-inner {
+  display: inline;
+  float: left;
+  width: 41.66667%;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  /* line 113, ../sass/components/_home.scss */
+  .front .content-inner {
+    width: 100%;
+    left: 0;
+  }
+}
+/* line 116, ../sass/components/_home.scss */
+.front .content-inner h1#page-title {
+  border-bottom: none;
+  margin-top: 100px;
+}
+/* line 122, ../sass/components/_home.scss */
+.front .content-inner .field-name-body p:first-child {
+  font-size: 1.75em;
+  line-height: 1.5em;
+}
+/* line 126, ../sass/components/_home.scss */
+.front .content-inner .field-name-body a.devsigner-button {
+  background-color: white;
+  border: none;
+  color: #012233;
+  font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
+  font-size: 1.5em;
+  padding: 10px 26px 8px;
+  border: 1px solid #012233;
+}
+/* line 130, ../sass/components/_home.scss */
+.front .content-inner .field-name-body a.devsigner-button:hover {
+  color: white;
+  background: #012233;
+}
+/* line 140, ../sass/components/_home.scss */
 .front .sponsors h2.block-title {
   margin-bottom: 8px;
   margin-top: 42px;
   text-align: center;
 }
-/* line 103, ../sass/components/_home.scss */
+/* line 146, ../sass/components/_home.scss */
 .front .sponsors ul {
   *zoom: 1;
 }
@@ -2180,7 +2305,7 @@ textarea {
 .front .sponsors ul:after {
   clear: both;
 }
-/* line 107, ../sass/components/_home.scss */
+/* line 150, ../sass/components/_home.scss */
 .front .sponsors li {
   display: inline;
   float: left;
@@ -2192,13 +2317,13 @@ textarea {
   margin-bottom: 46px;
 }
 @media screen and (max-width: 768px) {
-  /* line 107, ../sass/components/_home.scss */
+  /* line 150, ../sass/components/_home.scss */
   .front .sponsors li {
     width: 100%;
     left: 0;
   }
 }
-/* line 114, ../sass/components/_home.scss */
+/* line 157, ../sass/components/_home.scss */
 .front #block-views-blog-block {
   *zoom: 1;
   margin-bottom: 70px;
@@ -2212,12 +2337,12 @@ textarea {
 .front #block-views-blog-block:after {
   clear: both;
 }
-/* line 119, ../sass/components/_home.scss */
+/* line 162, ../sass/components/_home.scss */
 .front #block-views-blog-block h2.block-title {
   margin-top: 47px;
   text-align: center;
 }
-/* line 124, ../sass/components/_home.scss */
+/* line 167, ../sass/components/_home.scss */
 .front #block-views-blog-block .views-row {
   display: inline;
   float: left;
@@ -2228,43 +2353,43 @@ textarea {
   box-sizing: border-box;
 }
 @media screen and (max-width: 768px) {
-  /* line 124, ../sass/components/_home.scss */
+  /* line 167, ../sass/components/_home.scss */
   .front #block-views-blog-block .views-row {
     width: 100%;
     left: 0;
   }
 }
-/* line 128, ../sass/components/_home.scss */
+/* line 171, ../sass/components/_home.scss */
 .front #block-views-blog-block .views-field-title {
   border-top: 1px solid #f0f2f4;
   border-left: 1px solid #f0f2f4;
   border-right: 1px solid #f0f2f4;
   padding: 25px 25px 10px;
 }
-/* line 134, ../sass/components/_home.scss */
+/* line 177, ../sass/components/_home.scss */
 .front #block-views-blog-block .views-field-title span {
   border-bottom: 1px solid #f0f2f4;
   display: block;
 }
-/* line 139, ../sass/components/_home.scss */
+/* line 182, ../sass/components/_home.scss */
 .front #block-views-blog-block .views-field-title a {
   font-size: 1.5625em;
 }
-/* line 144, ../sass/components/_home.scss */
+/* line 187, ../sass/components/_home.scss */
 .front #block-views-blog-block .views-field-body {
   border-left: 1px solid #f0f2f4;
   border-right: 1px solid #f0f2f4;
   color: #929292;
   padding: 5px 25px 25px;
 }
-/* line 151, ../sass/components/_home.scss */
+/* line 194, ../sass/components/_home.scss */
 .front #block-views-blog-block .views-field-view-node {
   border-bottom: 1px solid #f0f2f4;
   border-left: 1px solid #f0f2f4;
   border-right: 1px solid #f0f2f4;
   padding: 5px 25px 25px;
 }
-/* line 157, ../sass/components/_home.scss */
+/* line 200, ../sass/components/_home.scss */
 .front #block-views-blog-block .views-field-view-node a {
   background-color: white;
   border: none;
@@ -2274,12 +2399,12 @@ textarea {
   padding: 10px 26px 8px;
   border: 1px solid #012233;
 }
-/* line 161, ../sass/components/_home.scss */
+/* line 204, ../sass/components/_home.scss */
 .front #block-views-blog-block .views-field-view-node a:hover {
   color: white;
   background: #012233;
 }
-/* line 170, ../sass/components/_home.scss */
+/* line 213, ../sass/components/_home.scss */
 .front .keynotes {
   *zoom: 1;
   margin-bottom: 70px;
@@ -2293,14 +2418,14 @@ textarea {
 .front .keynotes:after {
   clear: both;
 }
-/* line 175, ../sass/components/_home.scss */
+/* line 218, ../sass/components/_home.scss */
 .front .keynotes h2.block-title {
   color: #8ab513;
   margin-bottom: 4px;
   margin-top: 47px;
   text-align: center;
 }
-/* line 182, ../sass/components/_home.scss */
+/* line 225, ../sass/components/_home.scss */
 .front .keynotes .keynote-row {
   display: inline;
   float: left;
@@ -2311,13 +2436,13 @@ textarea {
   box-sizing: border-box;
 }
 @media screen and (max-width: 768px) {
-  /* line 182, ../sass/components/_home.scss */
+  /* line 225, ../sass/components/_home.scss */
   .front .keynotes .keynote-row {
     width: 100%;
     left: 0;
   }
 }
-/* line 185, ../sass/components/_home.scss */
+/* line 228, ../sass/components/_home.scss */
 .front .keynotes .keynote-row .left {
   display: inline;
   float: left;
@@ -2329,13 +2454,13 @@ textarea {
   padding-left: 0;
 }
 @media screen and (max-width: 768px) {
-  /* line 185, ../sass/components/_home.scss */
+  /* line 228, ../sass/components/_home.scss */
   .front .keynotes .keynote-row .left {
     width: 100%;
     left: 0;
   }
 }
-/* line 189, ../sass/components/_home.scss */
+/* line 232, ../sass/components/_home.scss */
 .front .keynotes .keynote-row .right {
   display: inline;
   float: left;
@@ -2347,13 +2472,13 @@ textarea {
   padding-right: 0;
 }
 @media screen and (max-width: 768px) {
-  /* line 189, ../sass/components/_home.scss */
+  /* line 232, ../sass/components/_home.scss */
   .front .keynotes .keynote-row .right {
     width: 100%;
     left: 0;
   }
 }
-/* line 195, ../sass/components/_home.scss */
+/* line 238, ../sass/components/_home.scss */
 .front .keynotes h3 {
   border-bottom: 1px solid white;
   color: #012233;
@@ -2362,13 +2487,13 @@ textarea {
   padding-bottom: 8px;
   margin-bottom: 13px;
 }
-/* line 204, ../sass/components/_home.scss */
+/* line 247, ../sass/components/_home.scss */
 .front .keynotes p {
   color: #0d0d0d;
   margin-bottom: 10px;
   margin-top: 0;
 }
-/* line 212, ../sass/components/_home.scss */
+/* line 255, ../sass/components/_home.scss */
 .front #block-views-session-tracks-block {
   *zoom: 1;
   margin-bottom: 10px;
@@ -2382,12 +2507,12 @@ textarea {
 .front #block-views-session-tracks-block:after {
   clear: both;
 }
-/* line 217, ../sass/components/_home.scss */
+/* line 260, ../sass/components/_home.scss */
 .front #block-views-session-tracks-block h2.block-title {
   color: white;
   text-align: center;
 }
-/* line 222, ../sass/components/_home.scss */
+/* line 265, ../sass/components/_home.scss */
 .front #block-views-session-tracks-block .views-row {
   display: inline;
   float: left;
@@ -2398,13 +2523,13 @@ textarea {
   box-sizing: border-box;
 }
 @media screen and (max-width: 768px) {
-  /* line 222, ../sass/components/_home.scss */
+  /* line 265, ../sass/components/_home.scss */
   .front #block-views-session-tracks-block .views-row {
     width: 100%;
     left: 0;
   }
 }
-/* line 225, ../sass/components/_home.scss */
+/* line 268, ../sass/components/_home.scss */
 .front #block-views-session-tracks-block .views-row a {
   background-color: white;
   border: none;
@@ -2418,11 +2543,20 @@ textarea {
   margin-bottom: 60px;
   text-align: center;
 }
-/* line 233, ../sass/components/_home.scss */
+/* line 276, ../sass/components/_home.scss */
 .front #block-views-session-tracks-block .views-row a:hover {
   background: #012233;
   border: 1px solid #012233;
   color: white;
+}
+/* line 288, ../sass/components/_home.scss */
+.front #tier_5 .block {
+  line-height: 0;
+  margin-bottom: 0;
+}
+/* line 294, ../sass/components/_home.scss */
+.front #tier_5 iframe {
+  max-width: 100%;
 }
 
 /**

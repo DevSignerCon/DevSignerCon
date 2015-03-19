@@ -1792,6 +1792,48 @@ h1#page-title {
   height: 100%;
 }
 
+/* line 8, ../sass/components/_sidebar.scss */
+.region-sidebar-first,
+.region-sidebar-second {
+  margin-top: 57px;
+}
+/* line 11, ../sass/components/_sidebar.scss */
+.region-sidebar-first h2.block-title,
+.region-sidebar-second h2.block-title {
+  color: #012233;
+  font-size: 1.5em;
+  font-family: miso, Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  text-transform: uppercase;
+}
+
+/* line 21, ../sass/components/_sidebar.scss */
+#block-views-blog-block-1 {
+  border-bottom: 1px solid #E9ECEF;
+}
+/* line 23, ../sass/components/_sidebar.scss */
+#block-views-blog-block-1 .views-row {
+  padding: 16px;
+}
+/* line 26, ../sass/components/_sidebar.scss */
+#block-views-blog-block-1 .views-row.views-row-even {
+  background: #E2E2E2;
+}
+/* line 30, ../sass/components/_sidebar.scss */
+#block-views-blog-block-1 .views-row .views-field-title {
+  font-size: 1.5625em;
+  margin-bottom: 5px;
+}
+/* line 35, ../sass/components/_sidebar.scss */
+#block-views-blog-block-1 .views-row .views-field-changed {
+  color: #929292;
+  font-size: 1.125em;
+}
+
+/* line 45, ../sass/components/_sidebar.scss */
+#block-twitter-block-1 h2.block-title {
+  background: url("../images/bird.png") no-repeat 120px 10px;
+}
+
 /* line 7, ../sass/components/_forms.scss */
 .form-required {
   color: #b5138a;

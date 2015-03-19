@@ -2,8 +2,47 @@
 // Sidebar Blocks
 //
 
+// Sidebar Vertical Alignment
+
+.region-sidebar-first,
+.region-sidebar-second {
+  margin-top: 57px;
+
+  h2.block-title {
+    color: $navy;
+    font-size: 1.5em; // 1.5em * 16px = 24px;
+    font-family: $miso;
+    text-transform: uppercase;
+  }
+}
 
 // News & Updates Block
+
 #block-views-blog-block-1 {
-  
+  border-bottom: 1px solid #E9ECEF;
+  .views-row {
+    padding: 16px;
+
+    &.views-row-even {
+      background: #E2E2E2;
+    }
+
+    .views-field-title {
+      font-size: 1.5625em; // 1.5625em * 16px = 25px
+      margin-bottom: 5px;
+    }
+
+    .views-field-changed {
+      color: $light;
+      font-size: 1.125em; // 1.125em * 16px = 18px
+    }
+  }
+}
+
+// Twitter Block
+
+#block-twitter-block-1 {
+  h2.block-title {
+    background: url("../images/bird.png") no-repeat 120px 10px;
+  }
 }

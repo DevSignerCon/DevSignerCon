@@ -1582,6 +1582,7 @@ tr.selected td {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  margin-top: 16px;
 }
 @media screen and (max-width: 768px) {
   /* line 18, ../sass/components/_header.scss */
@@ -1595,7 +1596,7 @@ tr.selected td {
 .block-nice-menus ul.nice-menu {
   float: right;
   font-size: 1.125em;
-  margin-top: 50px;
+  margin-top: 66px;
   text-align: right;
   text-transform: uppercase;
 }

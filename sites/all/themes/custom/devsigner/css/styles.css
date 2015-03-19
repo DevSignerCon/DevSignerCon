@@ -1730,15 +1730,35 @@ tr.selected td {
   text-transform: uppercase;
 }
 /* line 11, ../sass/components/_content.scss */
+.breadcrumb li {
+  padding: 0 16px 0 0;
+}
+/* line 14, ../sass/components/_content.scss */
+.breadcrumb li:after {
+  background: url("../images/crumb.png") no-repeat 0 1px;
+  content: "";
+  display: inline-block;
+  height: 10px;
+  margin-left: 16px;
+  width: 6px;
+}
+/* line 23, ../sass/components/_content.scss */
+.breadcrumb li:last-child:after {
+  background: none;
+  height: 0;
+  margin: 0;
+  width: 0;
+}
+/* line 31, ../sass/components/_content.scss */
 .breadcrumb a {
   color: #929292;
 }
-/* line 14, ../sass/components/_content.scss */
+/* line 34, ../sass/components/_content.scss */
 .breadcrumb a:hover {
   color: #012233;
 }
 
-/* line 20, ../sass/components/_content.scss */
+/* line 40, ../sass/components/_content.scss */
 h1#page-title {
   border-bottom: 2px solid #EBEDF1;
   color: #012233;

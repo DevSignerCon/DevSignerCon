@@ -8,6 +8,26 @@
   margin-top: 24px;
   text-transform: uppercase;
 
+  li {
+    padding: 0 16px 0 0;
+
+    &:after {
+      background: url("../images/crumb.png") no-repeat 0 1px;
+      content: "";
+      display: inline-block;
+      height: 10px;
+      margin-left: 16px;
+      width: 6px;
+    }
+
+    &:last-child:after {
+      background: none;
+      height: 0;
+      margin: 0;
+      width: 0;
+    }
+  }
+
   a {
     color: $light;
 

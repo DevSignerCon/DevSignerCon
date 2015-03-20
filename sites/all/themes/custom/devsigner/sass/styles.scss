@@ -19,10 +19,13 @@
 /* Component (SMACSS module) rules */
 @import "components/misc";
 @import "components/header";
+@import "components/navigation";
 @import "components/footer";
 @import "components/content";
 @import "components/tiers";
+@import "components/sidebar";
 @import "components/forms";
+@import "components/home";
 
 // Optionally, add your own components here.
 @import "print";

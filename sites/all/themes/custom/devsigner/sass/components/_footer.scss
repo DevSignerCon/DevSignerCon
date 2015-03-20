@@ -10,3 +10,44 @@
     color: $gray;
   }
 }
+
+#footer {
+  @include container;
+
+  .block {
+    margin: 1.5em 0;
+  }
+
+  .social {
+    @include column(12);
+
+    p {
+      float: left;
+      margin: 1.5em 0;
+
+      a {
+        display: inline-block;
+        margin-right: 35px;
+        text-indent: -9999px;
+
+        &.social-fb {
+          background: url("../images/fb.png") no-repeat;
+          width: 10px;
+        }
+        &.social-twitter {
+          background: url("../images/twitter.png") no-repeat;
+          width: 28px;
+        }
+        &.social-google {
+          background: url("../images/google.png") no-repeat;
+          width: 21px;
+        }
+      }
+    }
+
+    p:last-child {
+      float: right;
+      text-align: right;
+    }
+  }
+}

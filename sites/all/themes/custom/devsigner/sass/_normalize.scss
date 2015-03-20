@@ -59,6 +59,18 @@ audio:not([controls]) {
   display: none;
 }
 
+/* New responsive fix */
+@viewport{
+  zoom: 1.0;
+  width: extend-to-zoom;
+}
+
+/* Responsive Fix for IE10 */
+@-ms-viewport{
+  width: extend-to-zoom;
+  zoom: 1.0;
+}
+
 /**
  * Base
  *

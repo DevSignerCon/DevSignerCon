@@ -2,6 +2,16 @@
 // Tiers
 //
 
+#tier_1,
+#tier_2,
+#tier_3,
+#tier_4,
+#tier_5 {
+  h2.block-title {
+    font-size: 3.75em; // 3.75em * 16px = 60px
+  }
+}
+
 #tier_1 {
   background: $lime;
   color: $white;
@@ -21,6 +31,15 @@
   background: $gray;
 }
 
-#tier_4 {
+.tier4-frame {
   background: url("../images/bike.png") no-repeat 50% 50%;
+  float: left;
+  width: 100%;
+}
+
+// Semi-transparent layer to darken bike image
+#tier_4 {
+  background-color: rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
 }

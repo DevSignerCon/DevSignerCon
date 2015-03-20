@@ -1,0 +1,132 @@
+//
+// Navigation
+//
+
+
+// Main Menu
+.block-nice-menus {
+
+  // Hide block title by default
+  h2.block-title {
+    display: none;
+  }
+ 
+  ul.nice-menu {
+    float: right;
+    font-size: 1.125em; // 1.125em * 16px = 18px
+    margin-top: 66px;
+    text-align: right;
+    text-transform: uppercase;
+
+    li {
+      background: none;
+      border: none;
+    }
+
+    a {
+      color: $white;
+      margin: 0 0 0 70px;
+
+      &.active {
+        border-bottom: 3px solid $lime;
+      }
+      &:hover {
+        color: $lime;
+      }
+    }
+
+    li.menuparent {
+     
+      &:hover {
+        background: none;
+      }
+
+      > a {
+        padding: 0.3em 5px;
+      }
+
+      ul {
+        background: url("../images/nibbler.png") no-repeat 0 6px;
+        border: none;
+        margin-left: 70px;
+        padding-top: 16px;
+
+        li {
+          background: rgba(1, 34, 51, 0.8);
+          border-left: 1px solid $white;
+          border-right: 1px solid $white;
+          margin: 0;
+          text-align: left;
+
+          &:last-child {
+            border-bottom: 1px solid $white;
+          }
+
+          a {
+            padding: 0.75em 1em;
+            margin: 0;
+
+            &.active {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media all and (min-width: $tablet +1 ) {
+    ul.nice-menu {
+      display: block !important;
+    }
+  }
+
+  @media all and (max-width: $tablet) {
+    
+    h2.block-title {
+      cursor: pointer;
+      display: block;
+      background: url("../images/burger.png") no-repeat 0 0;
+      float: right;
+      margin-top: 40px;
+      text-indent: -9999px;
+      width: 30px;
+    }
+
+    ul.nice-menu {
+      display: none;
+      width: 100%;
+
+      li {
+        width: 100%;
+
+        a {
+          display: block;
+
+          &.active {
+            border-bottom: none;
+          }
+        }
+      }
+
+      li.menuparent {
+        ul {
+          background: none;
+          display: block !important;
+          position: static;
+          visibility: visible !important;
+          width: 100%;
+
+          li {
+            border: none;
+            width: 100%;
+          }
+        }
+
+        ul * {
+          display: block !important;
+        }
+      }
+    }
+  }
+}

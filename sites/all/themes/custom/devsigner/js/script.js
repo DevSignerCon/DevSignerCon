@@ -17,7 +17,11 @@
 Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
-    // Place your code here.
+    // Expand dropdown menu when title is clicked
+    $("#navigation h2.block-title").click(function(){
+      $(this).toggleClass('menu-active');
+      $(this).next("ul.nice-menu").slideToggle("slow");
+    });
 
   }
 };

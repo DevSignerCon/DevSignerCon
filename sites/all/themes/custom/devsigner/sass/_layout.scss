@@ -13,7 +13,7 @@
   @include wrapper;
 }
 
-#header,
+#header-section,
 #content,
 .region-tier-1,
 .region-tier-2,
@@ -27,6 +27,7 @@
   @include column(9);
 }
 
-.region-sidebar-first {
+.region-sidebar-first,
+.region-sidebar-second {
   @include column(3);
 }

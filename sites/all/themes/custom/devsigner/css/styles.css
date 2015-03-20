@@ -1550,9 +1550,11 @@ tr.selected td {
 /* line 5, ../sass/components/_header.scss */
 #header-wrapper {
   background-color: #012233;
+  height: 895px;
+  overflow: hidden;
 }
 
-/* line 9, ../sass/components/_header.scss */
+/* line 12, ../sass/components/_header.scss */
 .header-inner {
   height: 130px;
   margin-left: auto;
@@ -1560,7 +1562,7 @@ tr.selected td {
   max-width: 1200px;
 }
 
-/* line 14, ../sass/components/_header.scss */
+/* line 17, ../sass/components/_header.scss */
 #navigation-wrapper {
   display: inline;
   float: left;
@@ -1571,14 +1573,14 @@ tr.selected td {
   box-sizing: border-box;
 }
 @media screen and (max-width: 480px) {
-  /* line 14, ../sass/components/_header.scss */
+  /* line 17, ../sass/components/_header.scss */
   #navigation-wrapper {
     width: 100%;
     left: 0;
   }
 }
 
-/* line 18, ../sass/components/_header.scss */
+/* line 21, ../sass/components/_header.scss */
 #logo {
   display: inline;
   float: left;
@@ -1590,7 +1592,7 @@ tr.selected td {
   margin-top: 16px;
 }
 @media screen and (max-width: 480px) {
-  /* line 18, ../sass/components/_header.scss */
+  /* line 21, ../sass/components/_header.scss */
   #logo {
     width: 100%;
     left: 0;

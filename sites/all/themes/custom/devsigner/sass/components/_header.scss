@@ -4,6 +4,9 @@
 
 #header-wrapper {
   background-color: $navy;
+  // @TODO Add top:-420px to #main and remove fixed height;
+  height: 895px;
+  overflow: hidden;
 }
 
 .header-inner {

@@ -2,6 +2,8 @@
 // Navigation
 //
 
+
+// Main Menu
 .block-nice-menus {
  
   ul.nice-menu {
@@ -59,8 +61,39 @@
           a {
             padding: 0.75em 1em;
             margin: 0;
+
+            &.active {
+              border-bottom: none;
+            }
           }
         }
+
+          /* Required for Up Triangle */
+        li:first-child:after, li:first-child:before { 
+          bottom: 100%;
+          left: 25px; 
+          border: solid transparent; 
+          content: " "; 
+          height: 0; 
+          width: 0; 
+          position: absolute; 
+          pointer-events: none;
+        }
+
+        li:first-child:after { 
+          border-color: rgba(0, 0, 255, 0); 
+          border-bottom-color: #082232;
+          border-width: 6px; 
+          margin-left: -6px; 
+        }
+
+        li:first-child:before { 
+          border-color: rgba(255, 255, 255, 0);
+          border-bottom-color: #ffffff; 
+          border-width: 7px; 
+          margin-left: -7px; 
+        }
+
       }
     }
   }

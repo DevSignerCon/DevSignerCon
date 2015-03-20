@@ -49,6 +49,10 @@
         top: -420px;
         @include border-radius(none);
 
+        @media screen and (max-width: $tablet) {
+          top: -321px;
+        }
+
         // Prev / Next Arrows
         .flex-direction-nav {
 

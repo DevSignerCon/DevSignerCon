@@ -1,0 +1,88 @@
+//
+// Schedule Page
+//
+
+// Top half of schedule page
+.schedule-day {
+  @include column(3, 9);
+
+  &:first-child {
+    @include alpha;
+  }
+  &:last-child {
+    @include omega;
+  }
+
+  h3 {
+    font-size: 1.5em; // 1.5em * 16px = 24px
+    margin-bottom: 0;
+
+    .day {
+      color: $navy;
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+
+    font-family: $miso-bold;
+    font-size: 1.125em; // 1.125 * 16px = 18px
+    list-style: none;
+    padding: 10px 20px;
+
+    &:nth-child(2n+1) {
+      background: #F9FAFB;
+    }
+
+    .schedule-label {
+      display: block;
+      font-size: 1.3125em; // 1.3125em * 16px = 21px
+    }
+
+    .room {
+      text-transform: uppercase;
+    }
+  }
+
+  &.friday {
+    .room {
+      color: $lime;
+    }
+  }
+    &.saturday {
+    .room {
+      color: $fuschia;
+    }
+  }
+    &.sunday {
+    .room {
+      color: $teal;
+    }
+  }
+}
+
+// Bottom Half of Schedule Page
+.schedule-detail {
+  clear: both;
+
+  h2 {
+    color: $navy;
+    border-bottom: 2px solid #ebedf1;
+    font-size: 3em; // 3 *16 = 48px
+    line-height: 1.25;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    font-size: 1.875em; // 1.875em * 16px = 30px
+    margin-bottom: 0;
+
+    .day {
+      color: $navy;
+    }
+  }
+}

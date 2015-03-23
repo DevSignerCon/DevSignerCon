@@ -1898,7 +1898,7 @@ h1#page-title {
 }
 /* line 26, ../sass/components/_sidebar.scss */
 #block-views-blog-block-1 .views-row.views-row-even {
-  background: #E2E2E2;
+  background: #EEEEEE;
 }
 /* line 30, ../sass/components/_sidebar.scss */
 #block-views-blog-block-1 .views-row .views-field-title {
@@ -2794,7 +2794,7 @@ textarea {
 }
 /* line 37, ../sass/components/_schedule.scss */
 .schedule-day li:nth-child(2n+1) {
-  background: #F9FAFB;
+  background: #EEEEEE;
 }
 /* line 41, ../sass/components/_schedule.scss */
 .schedule-day li .schedule-label {

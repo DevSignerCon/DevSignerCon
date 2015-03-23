@@ -189,4 +189,9 @@ textarea {
     padding: 0;
     border: none;
   }
+
+  // Fix for address fields
+  #edit-field-address fieldset .form-item {
+    width: 100%;
+  }
 }

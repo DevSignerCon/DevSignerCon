@@ -1544,7 +1544,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1398863088');
+  background-image: url('../images/progress.gif?1427244851');
 }
 
 /* line 5, ../sass/components/_header.scss */
@@ -1866,7 +1866,7 @@ h1#page-title {
 
 /* line 34, ../sass/components/_tiers.scss */
 .tier4-frame {
-  background: url("../images/bike.png") no-repeat 50% 50%;
+  background: url("../images/bike.jpg") no-repeat 50% 50%;
   float: left;
   width: 100%;
 }
@@ -2428,7 +2428,7 @@ textarea {
 }
 /* line 166, ../sass/components/_home.scss */
 .front #content-horse {
-  background: url("../images/horse.png") no-repeat 0 0;
+  background: url("../images/horse.jpg") no-repeat 0 0;
   position: absolute;
   left: 41.6666667%;
   overflow: hidden;

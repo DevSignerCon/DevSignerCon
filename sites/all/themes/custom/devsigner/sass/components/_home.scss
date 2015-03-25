@@ -5,8 +5,9 @@
 .front {
   
   #header-wrapper {
-    // @TODO Add top:-420px to #main and remove fixed height;
-    height: 895px;
+    // Fallback for browsers that don't support vw
+    height: 900px;
+    height: 62.5vw;
     overflow: hidden;
   }
 
@@ -18,10 +19,6 @@
 
   #header-section {
     overflow: hidden;
-  }
-
-  #header-wrapper {
-    height: 900px;
   }
 
   .header-inner {
@@ -117,7 +114,9 @@
           font-size: 4.5em; // 4.5em * 16px = 72px
           line-height: 1.2em;
           position: relative;
+          // Fallback for browsers that don't support vw
           top: 577px;
+          top: 41vw;
           
           span {
             padding: 0 30px;
@@ -125,6 +124,14 @@
 
           a {
             color: $white;
+          }
+
+          // Slideshow text position adjustments for smaller screens
+          @media screen and (max-width: 1140px) {
+            top: 45vw;
+          }
+          @media screen and (max-width: 1028px) {
+            top: 48vw;
           }
         }
 
@@ -134,16 +141,28 @@
           font-size: 3em; // 3em * 16px = 48px
           line-height: 1.2em;
           position: relative;
+          // Fallback for browsers that don't support vw
           top: 550px;
-          
+          top: 39vw;
+
           .field-content {
             padding: 0 30px;
+          }
+
+          // Slideshow text position adjustments for smaller screens
+          @media screen and (max-width: 1140px) {
+            top: 43vw;
+          }
+          @media screen and (max-width: 1028px) {
+            top: 46vw;
           }
         }
 
         .views-field-field-link {
           position: relative;
-          top: 575px;
+          // Fallback for browsers that don't support vw
+          top: 570px;
+          top: 41.5vw;
           
           .field-content {
             padding: 0 30px;
@@ -151,6 +170,14 @@
 
           a {
             @include devsigner-button($lime);
+          }
+
+          // Slideshow text position adjustments for smaller screens
+          @media screen and (max-width: 1140px) {
+            top: 45.5vw;
+          }
+          @media screen and (max-width: 1028px) {
+            top: 58.5vw;
           }
         }
       }

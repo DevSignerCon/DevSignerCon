@@ -15,6 +15,7 @@
   @include container;
 
   .block {
+    @include column(12);
     margin: 1.5em 0;
   }
 

@@ -9,6 +9,20 @@
     height: 900px;
     height: 62.5vw;
     overflow: hidden;
+
+    // Need to make adjustments to height when slider is below header
+    @media screen and (max-width: 600px) {
+      height: 80vw;
+    }
+    @media screen and (max-width: 500px) {
+      height: 83.8vw;
+    }
+    @media screen and (max-width: 400px) {
+      height: 89vw;
+    }
+    @media screen and (max-width: 320px) {
+      height: 94vw;
+    }
   }
 
   #header-section,
@@ -50,19 +64,20 @@
         border: none;
         margin: 0;
         position: relative;
-        top: -420px;
+        top: -130px;
         @include border-radius(none);
 
-        @media screen and (max-width: $tablet) {
-          top: -321px;
-        }
+        @media screen and (max-width: 600px) {
+          top: -24px;
+        }  
 
         // Prev / Next Arrows
         .flex-direction-nav {
 
           a.flex-next {
             display: block;
-            margin-top: 98px;
+            margin-top: -200px;
+            margin-right: -5px;
 
             &:before {
               content: "";
@@ -70,10 +85,15 @@
               height: 31px;
               width: 19px;
             }
+
+            @media screen and (max-width: 900px) {
+              margin-top: -150px;
+            }
           }
           a.flex-prev {
             display: block;
-            margin-top: 98px;
+            margin-top: -200px;
+            margin-left: -5px;
 
             &:before {
               content: "";
@@ -81,12 +101,16 @@
               height: 31px;
               width: 19px;
             }
+
+            @media screen and (max-width: 900px) {
+             margin-top: -150px;
+            }
           }
         }
 
         // Pager
         .flex-control-nav.flex-control-paging {
-          bottom: 36px;
+          bottom: 405px;
           z-index: 50;
 
           a {
@@ -99,6 +123,19 @@
             &.flex-active {
               background: url("../images/slider-pager-active.png") 0 0 no-repeat;
             }
+          }
+          @media screen and (max-width: 1028px) {
+            bottom: 375px;
+          }
+          @media screen and (max-width: 900px) {
+            bottom: 270px;
+          }
+          @media screen and (max-width: 600px) {
+            bottom: 197px;
+          }
+          // Remove pager on very small screens
+          @media screen and (max-width: 400px) {
+            @include element-invisible;
           }
         }
 
@@ -116,7 +153,7 @@
           position: relative;
           // Fallback for browsers that don't support vw
           top: 577px;
-          top: 41vw;
+          top: -42vw;
           
           span {
             padding: 0 30px;
@@ -127,12 +164,20 @@
           }
 
           // Slideshow text position adjustments for smaller screens
-          @media screen and (max-width: 1140px) {
-            top: 45vw;
+          @media screen and (max-width: 900px) {
+            font-size: 3.5em;
           }
-          @media screen and (max-width: 1028px) {
-            top: 48vw;
+          @media screen and (max-width: $tablet) {
+            top: -44vw;
           }
+          @media screen and (max-width: 670px) {
+            top: -46vw;
+          }
+          @media screen and (max-width: 600px) {
+            font-size: 2.5em;
+            top: -57vw;
+          }
+
         }
 
         .views-field-body {
@@ -143,26 +188,33 @@
           position: relative;
           // Fallback for browsers that don't support vw
           top: 550px;
-          top: 39vw;
+          top: -44vw;
 
           .field-content {
             padding: 0 30px;
           }
 
           // Slideshow text position adjustments for smaller screens
-          @media screen and (max-width: 1140px) {
-            top: 43vw;
+          @media screen and (max-width: 900px) {
+            font-size: 2em;
           }
-          @media screen and (max-width: 1028px) {
-            top: 46vw;
+          @media screen and (max-width: $tablet) {
+            top: -46vw;
+          } 
+          @media screen and (max-width: 670px) {
+            top: -48vw;
           }
+          @media screen and (max-width: 600px) {
+            font-size: 1.25em;
+            top: -61vw;
+          }        
         }
 
         .views-field-field-link {
           position: relative;
           // Fallback for browsers that don't support vw
           top: 570px;
-          top: 41.5vw;
+          top: -41.5vw;
           
           .field-content {
             padding: 0 30px;
@@ -174,11 +226,21 @@
 
           // Slideshow text position adjustments for smaller screens
           @media screen and (max-width: 1140px) {
-            top: 45.5vw;
+            top: -44.5vw;
           }
-          @media screen and (max-width: 1028px) {
-            top: 58.5vw;
+          @media screen and (max-width: $tablet) {
+            top: -46.5vw;
           }
+          @media screen and (max-width: 670px) {
+            top: -48.5vw;
+          }
+          @media screen and (max-width: 600px) {
+            top: -64vw;
+          }
+        }
+
+        .views-field-field-slide-image {
+          height: 62.5vw;
         }
       }
     } 

@@ -181,6 +181,10 @@ textarea {
   // Fix for session description w/o label
   #edit-field-session-description .form-textarea-wrapper {
     @include push(2,9);
+
+    @media screen and (max-width: 600px) {
+      left: 0;
+    }
   }
 
   // Fix for address box

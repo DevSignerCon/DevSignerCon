@@ -14,9 +14,9 @@
 #navigation-wrapper {
   @include column(9);
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: $tablet) {
     // Width for mobile
-    width: 58.3333333%; // 7 columns / 12 total = 58.3333333%
+    width: 100%;
   }
 }
 

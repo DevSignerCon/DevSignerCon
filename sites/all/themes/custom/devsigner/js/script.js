@@ -21,6 +21,7 @@ Drupal.behaviors.my_custom_behavior = {
     $("#navigation h2.block-title").click(function(){
       $(this).toggleClass('menu-active');
       $(this).next("ul.nice-menu").slideToggle("slow");
+      $('body').toggleClass("main-menu-active");
     });
 
   }

@@ -6,22 +6,26 @@
   
   #header-wrapper {
     // Fallback for browsers that don't support vw
-    height: 900px;
-    height: 62.5vw;
+    max-height: 900px;
+    max-height: 62.5vw;
     overflow: hidden;
+    transition: max-height 0.7s;
 
     // Need to make adjustments to height when slider is below header
+    @media screen and (max-width: $tablet) {
+      max-height: 60vw;
+    }
     @media screen and (max-width: 600px) {
-      height: 80vw;
+      max-height: 83vw;
     }
     @media screen and (max-width: 500px) {
-      height: 83.8vw;
+      max-height: 85.8vw;
     }
     @media screen and (max-width: 400px) {
-      height: 89vw;
+      max-height: 89vw;
     }
     @media screen and (max-width: 320px) {
-      height: 94vw;
+      max-height: 94vw;
     }
   }
 
@@ -67,8 +71,12 @@
         top: -130px;
         @include border-radius(none);
 
+        @media screen and (max-width: $tablet) {
+          top: -172px;
+        }
+
         @media screen and (max-width: 600px) {
-          top: -24px;
+          top: -56px;
         }  
 
         // Prev / Next Arrows
@@ -449,5 +457,12 @@
     p {
       margin: 0;
     }
+  }
+}
+
+// Fix for mobile menu
+@media screen and (max-width: $tablet) {
+  .main-menu-active #header-wrapper {
+    max-height: 1000px !important;
   }
 }

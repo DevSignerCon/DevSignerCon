@@ -13,9 +13,19 @@
 
 #navigation-wrapper {
   @include column(9);
+
+  @media screen and (max-width: $tablet) {
+    // Width for mobile
+    width: 100%;
+  }
 }
 
 #logo {
   @include column(3);
   margin-top: 16px;
+
+  @media screen and (max-width: 600px) {
+    // Width for mobile
+    width: 41.6666667%; // 5 columns / 12 total = 41.66667%
+  }
 }

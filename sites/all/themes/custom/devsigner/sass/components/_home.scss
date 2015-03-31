@@ -258,6 +258,10 @@
   #content-wrapper {
     min-height: 600px;
     position: relative;
+
+    @media screen and (max-width: $tablet) {
+      min-height: 0;
+    }
   }
 
   #content-horse {
@@ -267,14 +271,31 @@
     overflow: hidden;
     height: 100%;
     width: 58.333333%;
+
+    @media screen and (max-width: $tablet) {
+      background: none;
+    }
   }
 
   .content-inner {
     @include column(5);
 
+    @media screen and (max-width: $tablet) {
+      @include column(12);
+    }
+
+    article {
+      margin-bottom: 1.5em;
+    }
+
     h1#page-title {
       border-bottom: none;
       margin-top: 100px;
+
+      @media screen and (max-width: $tablet) {
+        font-size: 3.5em;
+        margin-top: 40px;
+      }
     }
 
     .field-name-body {
@@ -325,6 +346,11 @@
 
     .views-row {
       @include column(4);
+      margin-bottom: 1.5em;
+
+      @media screen and (max-width: 655px) {
+        @include column(12);
+      }
     }
 
     .views-field-title {
@@ -383,6 +409,7 @@
 
     .keynote-row {
       @include column(6);
+      margin-bottom: 1.5em;
 
       .left {
         @include column(2,6);
@@ -391,6 +418,10 @@
       .right {
         @include column(4,6);
         @include omega;
+      }
+
+      @media screen and (max-width: 655px) {
+        @include column(12);
       }
     }
 

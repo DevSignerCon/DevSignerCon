@@ -2310,19 +2310,19 @@ textarea {
   left: 22.22222%;
   position: relative;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   /* line 182, ../sass/components/_forms.scss */
   .devsigner-forms #edit-field-session-description .form-textarea-wrapper {
     left: 0;
   }
 }
-/* line 191, ../sass/components/_forms.scss */
+/* line 192, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-address fieldset {
   margin: 0;
   padding: 0;
   border: none;
 }
-/* line 198, ../sass/components/_forms.scss */
+/* line 199, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-address fieldset .form-item {
   width: 100%;
 }

@@ -5,12 +5,17 @@
 // Top half of schedule page
 .schedule-day {
   @include column(3, 9);
+  margin-bottom: 1.5em;
 
   &:first-child {
     @include alpha;
   }
   &:last-child {
     @include omega;
+  }
+
+  @media screen and (max-width: $tablet) {
+    @include column(9, 9);
   }
 
   h3 {
@@ -38,7 +43,8 @@
       background: #EEEEEE;
     }
 
-    .schedule-label {
+    .schedule-label,
+    a {
       display: block;
       font-size: 1.3125em; // 1.3125em * 16px = 21px
     }
@@ -74,15 +80,74 @@
     border-bottom: 2px solid #ebedf1;
     font-size: 3em; // 3 *16 = 48px
     line-height: 1.25;
-    margin-bottom: 0;
+    margin-bottom: 0.5em;
   }
 
   h3 {
     font-size: 1.875em; // 1.875em * 16px = 30px
+    line-height: 1.5;
     margin-bottom: 0;
 
     .day {
       color: $navy;
+    }
+  }
+
+  h4 {
+    color: $white;
+    padding: 12px 5px 8px;
+    font-size: 1.875em; // 1.875 * 16 = 30px
+    margin-bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+
+    &:before {
+      content: "\25A0";
+      font-size: 12px;
+      padding-right: 5px;
+      position: relative;
+      top: -2px;
+    }
+  }
+
+  .friday {
+    border-bottom: 2px solid #ebedf1;
+    margin-bottom: 1.5em;
+    
+    h4 {
+      background: $lime;
+    }
+    li:before {
+      color: $lime;
+    }
+  }
+
+  .saturday {
+    border-bottom: 2px solid #ebedf1;
+    margin-bottom: 1.5em;
+    
+    h4 {
+      background: $fuschia;
+    }
+    li:before {
+      color: $fuschia;
+    }
+  }
+
+  .sunday {
+    h4 {
+      background: $teal;
+    }
+    li:before {
+      color: $teal;
     }
   }
 }

@@ -3,6 +3,10 @@
 //
 
 .front {
+
+  html[xmlns] .slides {display: block;}
+  .flexslider .slides > li {display: none;}
+
   
   #header-wrapper {
     // Fallback for browsers that don't support vw
@@ -487,6 +491,15 @@
 
     p {
       margin: 0;
+    }
+
+    // Overlay to prevent scrolling on google Map
+    .overlay {
+      background: transparent; 
+      position: absolute; 
+      width: 100%;
+      height: 500px; /* your iframe height */
+      top: 0;
     }
   }
 }

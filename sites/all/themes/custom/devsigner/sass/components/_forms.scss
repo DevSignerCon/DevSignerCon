@@ -182,6 +182,7 @@ textarea {
   #edit-field-session-description .form-textarea-wrapper {
     @include push(2,9);
 
+    // @TODO Replace with tablet width?
     @media screen and (max-width: 600px) {
       left: 0;
     }

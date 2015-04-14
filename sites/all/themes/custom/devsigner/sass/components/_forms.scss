@@ -43,16 +43,17 @@ textarea {
     }
 
     // @TODO Is there a simpler way to do the partial border here?
-    &:after {
-      background: #EBEDF1;
-      content: "";
-      display: block;
-      height: 2px;
-      left: 22.222222%;
-      position: absolute;
-      top: 39px;
-      width: 77.777778%;
-    }
+    // commented out as this is broken on chrome as of launch day.
+    //&:after {
+    //  background: #EBEDF1;
+    //  content: "";
+    //  display: block;
+    //  height: 2px;
+    //  left: 22.222222%;
+    //  position: absolute;
+    //  top: 39px;
+    //  width: 77.777778%;
+    //}
   }
 
   .form-item {
@@ -74,11 +75,22 @@ textarea {
   }
 
   // Center label in simple text fields
+  .form-type-textfield label,
+  .field-type-email label,
   .field-type-text label {
     padding-top: 13px;
   }
 
-  // Fix for Community Sponsor Name label
+  #edit-field-company label {
+    padding-right: 0;
+
+    .form-required {
+      padding-right: 3px;
+    }
+  }
+
+  // Fix for various multiline labels
+  #edit-field-phone label,
   #edit-field-community-sponsor-name label {
     padding-top: 0;
   }
@@ -155,12 +167,6 @@ textarea {
     margin-bottom: 76px;
   }
 
-  // Fix for session format (@TODO remove once there is an input?)
-  #edit-field-session-format .description {
-    @include push(0);
-    clear: none;
-  }
-
   // Fix for input formats help box
   .field-type-text-with-summary {
     @include clearfix;
@@ -172,20 +178,9 @@ textarea {
     }
   }
 
-  // Remove Session Description label and category field
-  #edit-field-session-description .form-item label,
+  // Remove category field
   #edit-field-categories {
     @include element-invisible;
-  }
-
-  // Fix for session description w/o label
-  #edit-field-session-description .form-textarea-wrapper {
-    @include push(2,9);
-
-    // @TODO Replace with tablet width?
-    @media screen and (max-width: 600px) {
-      left: 0;
-    }
   }
 
   // Fix for address box

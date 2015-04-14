@@ -7,7 +7,7 @@
   html[xmlns] .slides {display: block;}
   .flexslider .slides > li {display: none;}
 
-  
+
   #header-wrapper {
     // Fallback for browsers that don't support vw
     max-height: 900px;
@@ -81,14 +81,14 @@
 
         @media screen and (max-width: 600px) {
           top: -56px;
-        }  
+        }
 
         // Prev / Next Arrows
         .flex-direction-nav {
 
           a.flex-next {
             display: block;
-            margin-top: -200px;
+            margin-top: -280px;
             margin-right: -5px;
 
             &:before {
@@ -98,13 +98,16 @@
               width: 19px;
             }
 
+            @media screen and (max-width: 1400px) {
+              margin-top: -200px;
+            }
             @media screen and (max-width: 900px) {
               margin-top: -150px;
             }
           }
           a.flex-prev {
             display: block;
-            margin-top: -200px;
+            margin-top: -280px;
             margin-left: -5px;
 
             &:before {
@@ -114,6 +117,9 @@
               width: 19px;
             }
 
+            @media screen and (max-width: 1400px) {
+              margin-top: -200px;
+            }
             @media screen and (max-width: 900px) {
              margin-top: -150px;
             }
@@ -122,7 +128,7 @@
 
         // Pager
         .flex-control-nav.flex-control-paging {
-          bottom: 405px;
+          bottom: 680px;
           z-index: 50;
 
           a {
@@ -135,6 +141,18 @@
             &.flex-active {
               background: url("../images/slider-pager-active.png") 0 0 no-repeat;
             }
+          }
+          @media screen and (max-width: 1800px) {
+            bottom: 590px;
+          }
+          @media screen and (max-width: 1600px) {
+            bottom: 500px;
+          }
+          @media screen and (max-width: 1400px) {
+            bottom: 450px;
+          }
+          @media screen and (max-width: 1280px) {
+            bottom: 405px;
           }
           @media screen and (max-width: 1028px) {
             bottom: 375px;
@@ -166,7 +184,7 @@
           // Fallback for browsers that don't support vw
           top: 577px;
           top: -42vw;
-          
+
           span {
             padding: 0 30px;
           }
@@ -212,14 +230,14 @@
           }
           @media screen and (max-width: $tablet) {
             top: -46vw;
-          } 
+          }
           @media screen and (max-width: 670px) {
             top: -48vw;
           }
           @media screen and (max-width: 600px) {
             font-size: 1.25em;
             top: -61vw;
-          }        
+          }
         }
 
         .views-field-field-link {
@@ -227,7 +245,7 @@
           // Fallback for browsers that don't support vw
           top: 570px;
           top: -41.5vw;
-          
+
           .field-content {
             padding: 0 30px;
           }
@@ -255,7 +273,7 @@
           height: 62.5vw;
         }
       }
-    } 
+    }
   }
 
   // About Us
@@ -275,6 +293,7 @@
     overflow: hidden;
     height: 100%;
     width: 58.333333%;
+    z-index: 1;
 
     @media screen and (max-width: $tablet) {
       background: none;
@@ -287,6 +306,9 @@
     @media screen and (max-width: $tablet) {
       @include column(12);
     }
+
+    z-index: 3;
+    position: relative;
 
     article {
       margin-bottom: 1.5em;
@@ -495,8 +517,8 @@
 
     // Overlay to prevent scrolling on google Map
     .overlay {
-      background: transparent; 
-      position: absolute; 
+      background: transparent;
+      position: absolute;
       width: 100%;
       height: 500px; /* your iframe height */
       top: 0;

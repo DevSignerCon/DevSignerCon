@@ -175,15 +175,35 @@
           @include container;
         }
 
+        .views-field-nothing {
+          position: relative;
+          // Fallback for browsers that don't support vw
+          top: 577px;
+          top: -45vw;
+
+          @media screen and (max-width: 1500px) {
+            top: -42vw;
+          }
+          @media screen and (max-width: 1200px) {
+            top: -42vw;
+          }
+          @media screen and (max-width: $tablet) {
+            top: -44vw;
+          }
+          @media screen and (max-width: 670px) {
+            top: -46vw;
+          }
+          @media screen and (max-width: 600px) {
+            top: -57vw;
+          }
+        }
+
         .views-field-title {
           color: $white;
           font-family: $miso-bold;
           font-size: 4.5em; // 4.5em * 16px = 72px
           line-height: 1.2em;
-          position: relative;
-          // Fallback for browsers that don't support vw
-          top: 577px;
-          top: -42vw;
+          text-transform: uppercase;
 
           span {
             padding: 0 30px;
@@ -197,15 +217,8 @@
           @media screen and (max-width: 900px) {
             font-size: 3.5em;
           }
-          @media screen and (max-width: $tablet) {
-            top: -44vw;
-          }
-          @media screen and (max-width: 670px) {
-            top: -46vw;
-          }
           @media screen and (max-width: 600px) {
             font-size: 2.5em;
-            top: -57vw;
           }
 
         }
@@ -215,57 +228,31 @@
           font-family: $miso-bold;
           font-size: 3em; // 3em * 16px = 48px
           line-height: 1.2em;
-          position: relative;
-          // Fallback for browsers that don't support vw
-          top: 550px;
-          top: -44vw;
 
           .field-content {
             padding: 0 30px;
+          }
+
+          p {
+            margin: 20px 0 40px 0;
           }
 
           // Slideshow text position adjustments for smaller screens
           @media screen and (max-width: 900px) {
             font-size: 2em;
           }
-          @media screen and (max-width: $tablet) {
-            top: -46vw;
-          }
-          @media screen and (max-width: 670px) {
-            top: -48vw;
-          }
           @media screen and (max-width: 600px) {
             font-size: 1.25em;
-            top: -61vw;
           }
         }
 
         .views-field-field-link {
-          position: relative;
-          // Fallback for browsers that don't support vw
-          top: 570px;
-          top: -41.5vw;
-
           .field-content {
             padding: 0 30px;
           }
 
           a {
             @include devsigner-button($lime);
-          }
-
-          // Slideshow text position adjustments for smaller screens
-          @media screen and (max-width: 1140px) {
-            top: -44.5vw;
-          }
-          @media screen and (max-width: $tablet) {
-            top: -46.5vw;
-          }
-          @media screen and (max-width: 670px) {
-            top: -48.5vw;
-          }
-          @media screen and (max-width: 600px) {
-            top: -64vw;
           }
         }
 

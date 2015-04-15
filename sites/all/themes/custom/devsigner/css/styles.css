@@ -2063,6 +2063,10 @@ textarea {
   }
 }
 /* line 59, ../sass/components/_forms.scss */
+.devsigner-forms legend {
+  float: left;
+}
+/* line 63, ../sass/components/_forms.scss */
 .devsigner-forms .form-item {
   *zoom: 1;
 }
@@ -2075,7 +2079,7 @@ textarea {
 .devsigner-forms .form-item:after {
   clear: both;
 }
-/* line 63, ../sass/components/_forms.scss */
+/* line 67, ../sass/components/_forms.scss */
 .devsigner-forms label {
   display: inline;
   float: left;
@@ -2091,13 +2095,13 @@ textarea {
   text-align: right;
 }
 @media screen and (max-width: 480px) {
-  /* line 63, ../sass/components/_forms.scss */
+  /* line 67, ../sass/components/_forms.scss */
   .devsigner-forms label {
     width: 100%;
     left: 0;
   }
 }
-/* line 72, ../sass/components/_forms.scss */
+/* line 76, ../sass/components/_forms.scss */
 .devsigner-forms label.option {
   color: #616061;
   float: none;
@@ -2106,26 +2110,26 @@ textarea {
   text-align: left;
   width: auto;
 }
-/* line 78, ../sass/components/_forms.scss */
+/* line 82, ../sass/components/_forms.scss */
 .devsigner-forms .form-type-textfield label,
 .devsigner-forms .field-type-email label,
 .devsigner-forms .field-type-text label {
   padding-top: 13px;
 }
-/* line 84, ../sass/components/_forms.scss */
+/* line 88, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-company label {
   padding-right: 0;
 }
-/* line 87, ../sass/components/_forms.scss */
+/* line 91, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-company label .form-required {
   padding-right: 3px;
 }
-/* line 93, ../sass/components/_forms.scss */
+/* line 97, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-phone label,
 .devsigner-forms #edit-field-community-sponsor-name label {
   padding-top: 0;
 }
-/* line 99, ../sass/components/_forms.scss */
+/* line 103, ../sass/components/_forms.scss */
 .devsigner-forms .field-type-text-with-summary fieldset.form-wrapper label {
   color: #616061;
   float: none;
@@ -2134,25 +2138,25 @@ textarea {
   text-align: left;
   width: auto;
 }
-/* line 104, ../sass/components/_forms.scss */
+/* line 108, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-company table {
   width: 100%;
 }
-/* line 108, ../sass/components/_forms.scss */
+/* line 112, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-company table .field-label {
   text-align: right;
 }
-/* line 112, ../sass/components/_forms.scss */
+/* line 116, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-company table label {
   float: none;
   padding: none;
   width: auto;
 }
-/* line 118, ../sass/components/_forms.scss */
+/* line 122, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-company table th {
   border-bottom: none;
 }
-/* line 122, ../sass/components/_forms.scss */
+/* line 126, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-company table thead {
   display: inline;
   float: left;
@@ -2164,13 +2168,13 @@ textarea {
   padding-left: 0;
 }
 @media screen and (max-width: 480px) {
-  /* line 122, ../sass/components/_forms.scss */
+  /* line 126, ../sass/components/_forms.scss */
   .devsigner-forms #edit-field-company table thead {
     width: 100%;
     left: 0;
   }
 }
-/* line 127, ../sass/components/_forms.scss */
+/* line 131, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-company table tbody {
   display: inline;
   float: left;
@@ -2184,13 +2188,13 @@ textarea {
   border: none;
 }
 @media screen and (max-width: 480px) {
-  /* line 127, ../sass/components/_forms.scss */
+  /* line 131, ../sass/components/_forms.scss */
   .devsigner-forms #edit-field-company table tbody {
     width: 100%;
     left: 0;
   }
 }
-/* line 136, ../sass/components/_forms.scss */
+/* line 140, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-company .form-item > div.clearfix {
   display: inline;
   float: left;
@@ -2205,13 +2209,13 @@ textarea {
   padding-right: 0;
 }
 @media screen and (max-width: 480px) {
-  /* line 136, ../sass/components/_forms.scss */
+  /* line 140, ../sass/components/_forms.scss */
   .devsigner-forms #edit-field-company .form-item > div.clearfix {
     width: 100%;
     left: 0;
   }
 }
-/* line 143, ../sass/components/_forms.scss */
+/* line 147, ../sass/components/_forms.scss */
 .devsigner-forms input.form-text,
 .devsigner-forms .form-textarea-wrapper,
 .devsigner-forms .form-radios,
@@ -2227,7 +2231,7 @@ textarea {
   padding-right: 0;
 }
 @media screen and (max-width: 480px) {
-  /* line 143, ../sass/components/_forms.scss */
+  /* line 147, ../sass/components/_forms.scss */
   .devsigner-forms input.form-text,
   .devsigner-forms .form-textarea-wrapper,
   .devsigner-forms .form-radios,
@@ -2236,7 +2240,7 @@ textarea {
     left: 0;
   }
 }
-/* line 152, ../sass/components/_forms.scss */
+/* line 156, ../sass/components/_forms.scss */
 .devsigner-forms .description {
   display: inline;
   float: left;
@@ -2253,17 +2257,17 @@ textarea {
   font-size: 1em;
 }
 @media screen and (max-width: 480px) {
-  /* line 152, ../sass/components/_forms.scss */
+  /* line 156, ../sass/components/_forms.scss */
   .devsigner-forms .description {
     width: 100%;
     left: 0;
   }
 }
-/* line 162, ../sass/components/_forms.scss */
+/* line 166, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-session-description-und-0-format {
   display: none;
 }
-/* line 167, ../sass/components/_forms.scss */
+/* line 171, ../sass/components/_forms.scss */
 .devsigner-forms #edit-actions {
   display: inline;
   float: left;
@@ -2279,13 +2283,13 @@ textarea {
   margin-bottom: 76px;
 }
 @media screen and (max-width: 480px) {
-  /* line 167, ../sass/components/_forms.scss */
+  /* line 171, ../sass/components/_forms.scss */
   .devsigner-forms #edit-actions {
     width: 100%;
     left: 0;
   }
 }
-/* line 176, ../sass/components/_forms.scss */
+/* line 180, ../sass/components/_forms.scss */
 .devsigner-forms .field-type-text-with-summary {
   *zoom: 1;
 }
@@ -2298,7 +2302,7 @@ textarea {
 .devsigner-forms .field-type-text-with-summary:after {
   clear: both;
 }
-/* line 179, ../sass/components/_forms.scss */
+/* line 183, ../sass/components/_forms.scss */
 .devsigner-forms .field-type-text-with-summary fieldset.form-wrapper {
   display: inline;
   float: left;
@@ -2312,13 +2316,13 @@ textarea {
   padding-right: 0;
 }
 @media screen and (max-width: 480px) {
-  /* line 179, ../sass/components/_forms.scss */
+  /* line 183, ../sass/components/_forms.scss */
   .devsigner-forms .field-type-text-with-summary fieldset.form-wrapper {
     width: 100%;
     left: 0;
   }
 }
-/* line 187, ../sass/components/_forms.scss */
+/* line 191, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-categories {
   position: absolute !important;
   height: 1px;
@@ -2326,13 +2330,13 @@ textarea {
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
-/* line 192, ../sass/components/_forms.scss */
+/* line 196, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-address fieldset {
   margin: 0;
   padding: 0;
   border: none;
 }
-/* line 199, ../sass/components/_forms.scss */
+/* line 203, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-address fieldset .form-item {
   width: 100%;
 }

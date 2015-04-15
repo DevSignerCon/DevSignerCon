@@ -56,6 +56,10 @@ textarea {
     //}
   }
 
+  legend {
+    float: left;
+  }
+
   .form-item {
     @include clearfix;
   }

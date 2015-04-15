@@ -1888,23 +1888,24 @@ h1#page-title {
   font-size: 4.5em;
   line-height: 1em;
   margin-top: 17px;
+  margin-bottom: 20px;
 }
 
-/* line 50, ../sass/components/_content.scss */
+/* line 51, ../sass/components/_content.scss */
 #content article h2 {
   line-height: 1;
 }
-/* line 53, ../sass/components/_content.scss */
+/* line 54, ../sass/components/_content.scss */
 #content article h3 {
   line-height: 1;
   margin-bottom: .75em;
 }
-/* line 57, ../sass/components/_content.scss */
+/* line 58, ../sass/components/_content.scss */
 #content article p {
   margin-top: .5em;
   margin-bottom: 1em;
 }
-/* line 61, ../sass/components/_content.scss */
+/* line 62, ../sass/components/_content.scss */
 #content article ul {
   margin-top: .5em;
 }

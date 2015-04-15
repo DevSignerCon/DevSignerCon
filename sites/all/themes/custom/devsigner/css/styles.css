@@ -1890,6 +1890,25 @@ h1#page-title {
   margin-top: 17px;
 }
 
+/* line 50, ../sass/components/_content.scss */
+#content article h2 {
+  line-height: 1;
+}
+/* line 53, ../sass/components/_content.scss */
+#content article h3 {
+  line-height: 1;
+  margin-bottom: .75em;
+}
+/* line 57, ../sass/components/_content.scss */
+#content article p {
+  margin-top: .5em;
+  margin-bottom: 1em;
+}
+/* line 61, ../sass/components/_content.scss */
+#content article ul {
+  margin-top: .5em;
+}
+
 /* line 10, ../sass/components/_tiers.scss */
 #tier_1 h2.block-title,
 #tier_2 h2.block-title,

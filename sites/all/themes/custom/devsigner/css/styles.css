@@ -2697,7 +2697,7 @@ textarea {
 /* line 294, ../sass/components/_home.scss */
 .front .content-inner h1#page-title {
   border-bottom: none;
-  margin-top: 100px;
+  margin-top: 70px;
 }
 @media screen and (max-width: 768px) {
   /* line 294, ../sass/components/_home.scss */

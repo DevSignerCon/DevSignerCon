@@ -1,6 +1,10 @@
 //
 // Layout
 //
+#page {
+  // Keeps menu from spilling out the side and causing scroll bars.
+  overflow: hidden;
+}
 
 #header-wrapper,
 #content-wrapper,

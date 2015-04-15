@@ -158,6 +158,11 @@ textarea {
     font-size: 1em; // 1em * 16px = 16px
   }
 
+  // Hide the text format info box
+  #edit-field-session-description-und-0-format {
+    display: none;
+  }
+
   // Submit button
   #edit-actions {
     @include column(6,9);

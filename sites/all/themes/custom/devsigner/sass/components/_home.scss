@@ -197,6 +197,7 @@
 
           span {
             padding: 0 30px;
+            display: block;
           }
 
           a {
@@ -208,7 +209,8 @@
             font-size: 3.5em;
           }
           @media screen and (max-width: 600px) {
-            font-size: 2.5em;
+            font-size: 2.2em;
+            line-height: 1;
           }
 
         }
@@ -233,6 +235,10 @@
           }
           @media screen and (max-width: 600px) {
             font-size: 1.25em;
+
+            p {
+              margin: 5px 0 20px 0;
+            }
           }
         }
 
@@ -295,6 +301,10 @@
       border-bottom: none;
       margin-top: 70px;
 
+      @media screen and (min-width: $tablet) and (max-width: 960px) {
+        margin-top: 50px;
+      }
+
       @media screen and (max-width: $tablet) {
         font-size: 3.5em;
         margin-top: 40px;
@@ -305,6 +315,10 @@
       p:first-child {
         font-size: 1.75em; // 1.75em * 16px = 28px
         line-height: 1.5em;
+
+        @media screen and (min-width: $tablet) and (max-width: 960px) {
+          font-size: 1.5em;
+        }
       }
       a.devsigner-button {
         @include devsigner-button($white,$navy);

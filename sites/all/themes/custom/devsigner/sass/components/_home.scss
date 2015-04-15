@@ -65,7 +65,6 @@
 
       .view-content {
         max-height: 700px;
-        overflow: hidden;
       }
 
       .flexslider {
@@ -74,6 +73,8 @@
         margin: 0;
         position: relative;
         top: -130px;
+        max-height: 830px;
+        overflow: hidden;
         @include border-radius(none);
 
         @media screen and (max-width: $tablet) {
@@ -89,7 +90,7 @@
 
           a.flex-next {
             display: block;
-            margin-top: -280px;
+            margin-top: -50px;
             margin-right: -5px;
 
             &:before {
@@ -99,8 +100,8 @@
               width: 19px;
             }
 
-            @media screen and (max-width: 1400px) {
-              margin-top: -200px;
+            @media screen and (max-width: 1200px) {
+              margin-top: -100px;
             }
             @media screen and (max-width: 900px) {
               margin-top: -150px;
@@ -108,7 +109,7 @@
           }
           a.flex-prev {
             display: block;
-            margin-top: -280px;
+            margin-top: -50px;
             margin-left: -5px;
 
             &:before {
@@ -118,8 +119,8 @@
               width: 19px;
             }
 
-            @media screen and (max-width: 1400px) {
-              margin-top: -200px;
+            @media screen and (max-width: 1200px) {
+              margin-top: -100px;
             }
             @media screen and (max-width: 900px) {
              margin-top: -150px;
@@ -129,8 +130,8 @@
 
         // Pager
         .flex-control-nav.flex-control-paging {
-          bottom: 680px;
-          z-index: 50;
+          bottom: 65px;
+          z-index: 5;
 
           a {
             background: url("../images/slider-pager.png") 0 0 no-repeat;
@@ -143,26 +144,17 @@
               background: url("../images/slider-pager-active.png") 0 0 no-repeat;
             }
           }
-          @media screen and (max-width: 1800px) {
-            bottom: 590px;
-          }
-          @media screen and (max-width: 1600px) {
-            bottom: 500px;
-          }
-          @media screen and (max-width: 1400px) {
-            bottom: 450px;
-          }
-          @media screen and (max-width: 1280px) {
-            bottom: 405px;
+          @media screen and (max-width: 1300px) {
+            bottom: 180px;
           }
           @media screen and (max-width: 1028px) {
-            bottom: 375px;
+            bottom: 270px;
           }
           @media screen and (max-width: 900px) {
             bottom: 270px;
           }
           @media screen and (max-width: 600px) {
-            bottom: 197px;
+            bottom: 100px;
           }
           // Remove pager on very small screens
           @media screen and (max-width: 400px) {
@@ -183,9 +175,6 @@
           top: -45vw;
 
           @media screen and (max-width: 1500px) {
-            top: -42vw;
-          }
-          @media screen and (max-width: 1200px) {
             top: -42vw;
           }
           @media screen and (max-width: $tablet) {

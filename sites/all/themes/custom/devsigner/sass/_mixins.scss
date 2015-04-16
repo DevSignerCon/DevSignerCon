@@ -57,6 +57,12 @@
 }
 
 // Custom devsigner-button class
-.devsigner-button {
-  @include devsigner-button;
+#page {
+  .devsigner-button {
+    @include devsigner-button;
+  }
+  .devsigner-button.lime {
+    @include devsigner-button($lime);
+  }
 }
+

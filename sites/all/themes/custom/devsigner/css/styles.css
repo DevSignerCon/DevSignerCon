@@ -6,9 +6,18 @@
  * of these @include files will be combined into a single file.
  */
 /* Import Sass mixins, variables, Compass modules, etc. */
-/* line 60, ../sass/_mixins.scss */
-.devsigner-button {
+/* line 61, ../sass/_mixins.scss */
+#page .devsigner-button {
   background-color: #012233;
+  border: none;
+  color: #FFFFFF;
+  font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
+  font-size: 1.5em;
+  padding: 10px 26px 8px;
+}
+/* line 64, ../sass/_mixins.scss */
+#page .devsigner-button.lime {
+  background-color: #8AB513;
   border: none;
   color: #FFFFFF;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;

@@ -341,24 +341,6 @@
     }
   }
 
-  // Sponsors Block
-  .sponsors {
-    h2.block-title {
-      margin-bottom: 8px;
-      margin-top: 42px;
-      text-align: center;
-    }
-
-    ul {
-      @include clearfix;
-    }
-
-    li {
-      @include column(3);
-      margin-bottom: 46px;
-    }
-  }
-
   // News & Updates Block
   #block-views-blog-block {
 

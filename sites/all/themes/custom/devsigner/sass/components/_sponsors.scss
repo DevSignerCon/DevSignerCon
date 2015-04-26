@@ -1,0 +1,34 @@
+//
+// Sponsor Block and page styling
+//
+
+// Sponsors Block
+.sponsors {
+  h2.block-title {
+    margin-bottom: 8px;
+    margin-top: 42px;
+    text-align: center;
+  }
+
+  .view-content {
+    @include clearfix;
+  }
+
+  .views-row {
+    @include column(3);
+    margin-bottom: 46px;
+
+    @media screen and (max-width: $desktop) {
+      @include column(4);
+    }
+
+    @media screen and (max-width: $tablet) {
+      @include column(6);
+    }
+  }
+}
+
+// Hide old sponsors block
+#block-block-4 {
+  @include element-invisible;
+}

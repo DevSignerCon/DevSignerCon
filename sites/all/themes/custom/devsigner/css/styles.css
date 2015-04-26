@@ -707,8 +707,27 @@ body:after {
     left: 0;
   }
 }
+@media screen and (max-width: 768px) {
+  /* line 30, ../sass/_layout.scss */
+  .content-inner {
+    display: inline;
+    float: left;
+    width: 100%;
+    padding: 0 15px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 480px) {
+  /* line 30, ../sass/_layout.scss */
+  .content-inner {
+    width: 100%;
+    left: 0;
+  }
+}
 
-/* line 34, ../sass/_layout.scss */
+/* line 38, ../sass/_layout.scss */
 .region-sidebar-first,
 .region-sidebar-second {
   display: inline;
@@ -720,7 +739,28 @@ body:after {
   box-sizing: border-box;
 }
 @media screen and (max-width: 480px) {
-  /* line 34, ../sass/_layout.scss */
+  /* line 38, ../sass/_layout.scss */
+  .region-sidebar-first,
+  .region-sidebar-second {
+    width: 100%;
+    left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 38, ../sass/_layout.scss */
+  .region-sidebar-first,
+  .region-sidebar-second {
+    display: inline;
+    float: left;
+    width: 100%;
+    padding: 0 15px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 480px) {
+  /* line 38, ../sass/_layout.scss */
   .region-sidebar-first,
   .region-sidebar-second {
     width: 100%;
@@ -3362,6 +3402,40 @@ textarea {
   width: 1px;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* line 39, ../sass/components/_sponsors.scss */
+.page-sponsors h3 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 0.75em;
+}
+/* line 45, ../sass/components/_sponsors.scss */
+.page-sponsors .views-row {
+  clear: both;
+  margin-bottom: 50px;
+}
+/* line 50, ../sass/components/_sponsors.scss */
+.page-sponsors .views-field-title {
+  font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
+  font-size: 1.3em;
+  line-height: 1;
+}
+/* line 56, ../sass/components/_sponsors.scss */
+.page-sponsors .views-field-field-sponsor-image {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 768px) {
+  /* line 56, ../sass/components/_sponsors.scss */
+  .page-sponsors .views-field-field-sponsor-image {
+    margin-bottom: 20px;
+  }
+}
+/* line 65, ../sass/components/_sponsors.scss */
+.page-sponsors .views-field-field-sponsor-image img {
+  max-width: 320px;
 }
 
 /**

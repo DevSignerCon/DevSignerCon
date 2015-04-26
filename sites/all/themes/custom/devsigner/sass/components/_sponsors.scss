@@ -32,3 +32,38 @@
 #block-block-4 {
   @include element-invisible;
 }
+
+// Sponsors list page
+.page-sponsors {
+
+  h3 {
+    font-size: 1.5em;
+    line-height: 1;
+    margin-bottom: 0.75em;
+  }
+
+  .views-row {
+    clear: both;
+    margin-bottom: 50px;
+  }
+
+  .views-field-title {
+    font-family: $miso-bold;
+    font-size: 1.3em;
+    line-height: 1;
+  }
+
+  .views-field-field-sponsor-image {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 50px;
+
+    @media screen and (max-width: $tablet) {
+      margin-bottom: 20px;
+    }
+
+    img {
+      max-width: 320px;
+    }
+  }
+}

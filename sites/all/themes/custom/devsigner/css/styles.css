@@ -3319,26 +3319,26 @@ textarea {
 }
 
 /* line 7, ../sass/components/_sponsors.scss */
-.sponsors h2.block-title {
+.view-sponsors h2.block-title {
   margin-bottom: 8px;
   margin-top: 42px;
   text-align: center;
 }
 /* line 13, ../sass/components/_sponsors.scss */
-.sponsors .view-content {
+.view-sponsors .view-content {
   *zoom: 1;
 }
 /* line 60, ../sass/layouts/_grid.scss */
-.sponsors .view-content:before, .sponsors .view-content:after {
+.view-sponsors .view-content:before, .view-sponsors .view-content:after {
   content: "";
   display: table;
 }
 /* line 65, ../sass/layouts/_grid.scss */
-.sponsors .view-content:after {
+.view-sponsors .view-content:after {
   clear: both;
 }
 /* line 17, ../sass/components/_sponsors.scss */
-.sponsors .views-row {
+.view-sponsors .views-row {
   display: inline;
   float: left;
   width: 25%;
@@ -3350,14 +3350,14 @@ textarea {
 }
 @media screen and (max-width: 480px) {
   /* line 17, ../sass/components/_sponsors.scss */
-  .sponsors .views-row {
+  .view-sponsors .views-row {
     width: 100%;
     left: 0;
   }
 }
 @media screen and (max-width: 960px) {
   /* line 17, ../sass/components/_sponsors.scss */
-  .sponsors .views-row {
+  .view-sponsors .views-row {
     display: inline;
     float: left;
     width: 33.33333%;
@@ -3369,7 +3369,7 @@ textarea {
 }
 @media screen and (max-width: 960px) and (max-width: 480px) {
   /* line 17, ../sass/components/_sponsors.scss */
-  .sponsors .views-row {
+  .view-sponsors .views-row {
     width: 100%;
     left: 0;
   }
@@ -3377,7 +3377,7 @@ textarea {
 
 @media screen and (max-width: 768px) {
   /* line 17, ../sass/components/_sponsors.scss */
-  .sponsors .views-row {
+  .view-sponsors .views-row {
     display: inline;
     float: left;
     width: 50%;
@@ -3389,7 +3389,7 @@ textarea {
 }
 @media screen and (max-width: 768px) and (max-width: 480px) {
   /* line 17, ../sass/components/_sponsors.scss */
-  .sponsors .views-row {
+  .view-sponsors .views-row {
     width: 100%;
     left: 0;
   }

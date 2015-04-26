@@ -43,27 +43,43 @@
   }
 
   .views-row {
-    clear: both;
+    @include clearfix;
     margin-bottom: 50px;
-  }
 
-  .views-field-title {
-    font-family: $miso-bold;
-    font-size: 1.3em;
-    line-height: 1;
+    .field-content {
+      font-family: $miso-bold;
+      font-size: 1.3em;
+      line-height: 1;
+
+      p {
+        font-family: $miso;
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 1em;
+        margin-top: 0.5em;
+      }
+    }
   }
 
   .views-field-field-sponsor-image {
-    float: left;
-    margin-right: 20px;
+    @include column(5);
     margin-bottom: 50px;
 
     @media screen and (max-width: $tablet) {
+      @include column(12);
       margin-bottom: 20px;
     }
 
     img {
-      max-width: 320px;
+      max-width: 100%;
+    }
+  }
+
+  .views-field-nothing {
+    @include column(7);
+
+    @media screen and (max-width: $tablet) {
+      @include column(12);
     }
   }
 }

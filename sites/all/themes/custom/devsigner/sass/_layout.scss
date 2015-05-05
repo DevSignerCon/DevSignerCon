@@ -29,9 +29,17 @@
 
 .content-inner {
   @include column(9);
+
+  @media screen and (max-width: $tablet) {
+    @include column(12);
+  }
 }
 
 .region-sidebar-first,
 .region-sidebar-second {
   @include column(3);
+
+  @media screen and (max-width: $tablet) {
+    @include column(12);
+  }
 }

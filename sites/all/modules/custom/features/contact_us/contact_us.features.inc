@@ -1,32 +1,23 @@
 <?php
 /**
  * @file
- * session.features.inc
+ * contact_us.features.inc
  */
-
-/**
- * Implements hook_ctools_plugin_api().
- */
-function session_ctools_plugin_api($module = NULL, $api = NULL) {
-  if ($module == "field_group" && $api == "field_group") {
-    return array("version" => "1");
-  }
-}
 
 /**
  * Implements hook_default_entityform_type().
  */
-function session_default_entityform_type() {
+function contact_us_default_entityform_type() {
   $items = array();
-  $items['session'] = entity_import('entityform_type', '{
-    "type" : "session",
-    "label" : "Submit A Session",
+  $items['contact_us'] = entity_import('entityform_type', '{
+    "type" : "contact_us",
+    "label" : "Contact Us",
     "data" : {
       "draftable" : 0,
       "draft_redirect_path" : "",
       "draft_button_text" : "",
       "draft_save_text" : { "value" : "", "format" : "filtered_html" },
-      "submit_button_text" : "Submit Session",
+      "submit_button_text" : "",
       "submit_confirm_msg" : "",
       "your_submissions" : "",
       "disallow_resubmit_msg" : "",
@@ -35,7 +26,7 @@ function session_default_entityform_type() {
       "preview_page" : 0,
       "submission_page_title" : "",
       "submission_text" : {
-        "value" : "Rockstar! We\\u0027ve got your submission. We\\u0027ll be in touch soon!",
+        "value" : "Thank you for reaching out! We\\u0027ll be in touch soon.",
         "format" : "filtered_html"
       },
       "submission_show_submitted" : 0,
@@ -46,7 +37,7 @@ function session_default_entityform_type() {
       "resubmit_action" : "new",
       "redirect_path" : "",
       "instruction_pre" : {
-        "value" : "\\u003Cp\\u003ESession submission deadline: Friday, May 29.\\u003C\\/p\\u003E",
+        "value" : "Have a question or a brilliant idea? Drop us a line!",
         "format" : "filtered_html"
       }
     },
@@ -54,13 +45,13 @@ function session_default_entityform_type() {
     "rdf_mapping" : [],
     "paths" : {
       "submit" : {
-        "source" : "eform\\/submit\\/session",
-        "alias" : "conference\\/session-submission",
+        "source" : "eform\\/submit\\/contact-us",
+        "alias" : "contact-us",
         "language" : "und"
       },
       "confirm" : {
-        "source" : "eform\\/session\\/confirm",
-        "alias" : "conference\\/session-submission\\/confirmation",
+        "source" : "eform\\/contact-us\\/confirm",
+        "alias" : "contact-us\\/confirmation",
         "language" : "und"
       }
     }

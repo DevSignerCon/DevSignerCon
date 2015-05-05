@@ -11,7 +11,7 @@ function sponsor_default_entityform_type() {
   $items = array();
   $items['sponsor'] = entity_import('entityform_type', '{
     "type" : "sponsor",
-    "label" : "Sponsor",
+    "label" : "Sponsor Application",
     "data" : {
       "draftable" : 0,
       "draft_redirect_path" : "",
@@ -25,12 +25,15 @@ function sponsor_default_entityform_type() {
       "page_title_view" : "",
       "preview_page" : 0,
       "submission_page_title" : "",
-      "submission_text" : { "value" : "", "format" : "filtered_html" },
+      "submission_text" : {
+        "value" : "Thank you for your generous support! A Devsigner representative will contact you soon to complete your sponsorship. All sponsors may receive additional swag and benefits, based on the discretion of the organizers.  ",
+        "format" : "filtered_html"
+      },
       "submission_show_submitted" : 0,
       "submissions_view" : "default",
       "user_submissions_view" : "default",
       "form_status" : "ENTITYFORM_OPEN",
-      "roles" : { "1" : "1", "2" : "2" },
+      "roles" : { "1" : "1", "2" : "2", "3" : 0 },
       "resubmit_action" : "new",
       "redirect_path" : "",
       "instruction_pre" : {
@@ -40,7 +43,18 @@ function sponsor_default_entityform_type() {
     },
     "weight" : "0",
     "rdf_mapping" : [],
-    "paths" : []
+    "paths" : {
+      "submit" : {
+        "source" : "eform\\/submit\\/sponsor",
+        "alias" : "sponsors\\/apply",
+        "language" : "und"
+      },
+      "confirm" : {
+        "source" : "eform\\/sponsor\\/confirm",
+        "alias" : "sponsors\\/apply\\/confirmation",
+        "language" : "und"
+      }
+    }
   }');
   return $items;
 }

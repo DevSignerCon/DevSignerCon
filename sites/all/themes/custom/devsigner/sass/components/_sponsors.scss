@@ -12,11 +12,23 @@
 
   .view-content {
     @include clearfix;
+    position: relative;
   }
 
   .views-row {
     @include column(3);
-    margin-bottom: 46px;
+    margin-bottom: 23px;
+    margin-top: 23px;
+    position: relative;
+    height: 200px;
+
+    .views-field {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      max-width: 90%;
+    }
+
 
     @media screen and (max-width: $desktop) {
       @include column(4);

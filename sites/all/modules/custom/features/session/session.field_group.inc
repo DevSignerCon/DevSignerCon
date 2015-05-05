@@ -53,19 +53,25 @@ function session_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Speaker',
+    'label' => 'Speakers',
     'weight' => '6',
     'children' => array(
       0 => 'field_speaker_bio',
       1 => 'field_speaking_experience',
+      2 => 'field_email',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Speaker',
+      'label' => 'Speakers',
       'instance_settings' => array(
         'required_fields' => 1,
-        'classes' => 'group-speaker field-group-fieldset',
+        'id' => '',
+        'classes' => '',
         'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
       ),
       'formatter' => 'open',
     ),

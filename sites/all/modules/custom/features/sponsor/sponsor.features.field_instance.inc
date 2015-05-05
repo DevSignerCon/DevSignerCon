@@ -10,12 +10,43 @@
 function sponsor_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'entityform-sponsor-field_a_la_carte_sponsorships'
+  $field_instances['entityform-sponsor-field_a_la_carte_sponsorships'] = array(
+    'bundle' => 'sponsor',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'The a la carte options will become available closer to the event as we determine our logistical needs. They will start at $500 and will vary in price depending on expenses and brand exposure availability.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 12,
+      ),
+    ),
+    'entity_type' => 'entityform',
+    'field_name' => 'field_a_la_carte_sponsorships',
+    'label' => 'A la Carte Sponsorships (prices not yet available)',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 13,
+    ),
+  );
+
   // Exported field_instance: 'entityform-sponsor-field_additional_notes'
   $field_instances['entityform-sponsor-field_additional_notes'] = array(
     'bundle' => 'sponsor',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Use this space to tell us any additional information before we contact you. No need to put payment information in this section. We will contact you for secure payment after you have submitted the form.',
+    'description' => 'Anything else we should know? No need to put payment information in this section. We will contact you for secure payment after this form has been submitted.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -40,7 +71,7 @@ function sponsor_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 41,
+      'weight' => 14,
     ),
   );
 
@@ -89,7 +120,7 @@ function sponsor_field_default_field_instances() {
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => 32,
+      'weight' => 2,
     ),
   );
 
@@ -98,7 +129,8 @@ function sponsor_field_default_field_instances() {
     'bundle' => 'sponsor',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Two complimentary tickets. Sponsor logo will appear on inner page of the schedule/programs and on sponsor page of Devsigner event website.',
+    'description' => 'Benefits: Bronze sponsor\'s name/logo appears on some of the larger printed items, inner page of the schedule and program, and event sponsor page. Bronze sponsorship also includes one complimentary tickets, one or more social media shoutouts, and a link to sponsor\'s website on the event website sponsor page.
+',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -120,7 +152,7 @@ function sponsor_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 37,
+      'weight' => 9,
     ),
   );
 
@@ -129,7 +161,7 @@ function sponsor_field_default_field_instances() {
     'bundle' => 'sponsor',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Name or logo will appear on sponsor page of website. Names will appear in alphabetical order.',
+    'description' => 'Benefits: Community sponsor\'s name or logo will appear on sponsor page of event website. We will also link to the community sponsor\'s website, if applicable.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -151,7 +183,7 @@ function sponsor_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 39,
+      'weight' => 10,
     ),
   );
 
@@ -185,7 +217,7 @@ function sponsor_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 40,
+      'weight' => 11,
     ),
   );
 
@@ -219,7 +251,7 @@ function sponsor_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 31,
+      'weight' => 1,
     ),
   );
 
@@ -228,7 +260,7 @@ function sponsor_field_default_field_instances() {
     'bundle' => 'sponsor',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Who is the point of contact in your organization?',
+    'description' => 'Who will be our primary point of contact for your company?',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -253,7 +285,7 @@ function sponsor_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 33,
+      'weight' => 3,
     ),
   );
 
@@ -284,7 +316,7 @@ function sponsor_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'emailwidget',
-      'weight' => 35,
+      'weight' => 5,
     ),
   );
 
@@ -293,7 +325,7 @@ function sponsor_field_default_field_instances() {
     'bundle' => 'sponsor',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Four complimentary tickets. Sponsor logo will appear on most printed items, any session intro slides, outer page of schedules/programs, all pages of the Devsigner event website, and all event swag. Sponsor will be mentioned in introduction and any closing speeches. ',
+    'description' => 'Benefits: Gold sponsor\'s name/logo appears on most printed items, the event website sponsor page, any session intro slides, outer page of schedules, and event swag. Gold sponsorship also includes three complimentary tickets, one or more social media shoutouts, link to sponsor\'s website on the event website sponsor page, and verbal mentions in the introduction and any closing speeches.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -315,7 +347,7 @@ function sponsor_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 37,
+      'weight' => 7,
     ),
   );
 
@@ -351,7 +383,7 @@ function sponsor_field_default_field_instances() {
       'module' => 'phone',
       'settings' => array(),
       'type' => 'phone_textfield',
-      'weight' => 34,
+      'weight' => 4,
     ),
   );
 
@@ -360,7 +392,7 @@ function sponsor_field_default_field_instances() {
     'bundle' => 'sponsor',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Six complimentary tickets. Sponsor logo will appear on most printed items, any session intro slides, outer page of schedules/programs, all pages of the Devsigner event website, and all event swag. Sponsor will be mentioned in introduction and any closing speeches. EXCLUSIVE TO PLATINUM: Completely sponsor one session.',
+    'description' => 'Benefits: Platinum sponsor\'s name/logo appears on most printed items, the event website sponsor page, any session intro slides, all pages of the event website, outer page of schedules, and event swag. Platinum sponsorship also includes five complimentary tickets, one or more social media shoutouts, link to sponsor\'s website on the event website sponsor page, and verbal mentions in the introduction and any closing speeches. Platinum sponsor may also sponsor one session.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -382,7 +414,7 @@ function sponsor_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 36,
+      'weight' => 6,
     ),
   );
 
@@ -391,7 +423,7 @@ function sponsor_field_default_field_instances() {
     'bundle' => 'sponsor',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Three complimentary tickets. Sponsor logo will appear on some larger printed items, inner page of the schedule/program, and sponsor page of Devsigner event website.',
+    'description' => 'Benefits: Silver sponsor\'s name/logo appears on some of the larger printed items, inner page of the schedule and program, and event sponsor page. Silver sponsorship also includes two complimentary tickets, one or more social media shoutouts, and a link to sponsor\'s website on the event website sponsor page.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -413,14 +445,54 @@ function sponsor_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 38,
+      'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance: 'entityform-sponsor-field_we_re_hiring'
+  $field_instances['entityform-sponsor-field_we_re_hiring'] = array(
+    'bundle' => 'sponsor',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Add a “We’re Hiring!” emblem next to your logo/name in your sponsorship category.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 13,
+      ),
+    ),
+    'entity_type' => 'entityform',
+    'field_name' => 'field_we_re_hiring',
+    'label' => 'We\'re Hiring',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 12,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('A la Carte Sponsorships (prices not yet available)');
+  t('Add a “We’re Hiring!” emblem next to your logo/name in your sponsorship category.');
   t('Additional Notes');
   t('Address');
+  t('Anything else we should know? No need to put payment information in this section. We will contact you for secure payment after this form has been submitted.');
+  t('Benefits: Bronze sponsor\'s name/logo appears on some of the larger printed items, inner page of the schedule and program, and event sponsor page. Bronze sponsorship also includes one complimentary tickets, one or more social media shoutouts, and a link to sponsor\'s website on the event website sponsor page.
+');
+  t('Benefits: Community sponsor\'s name or logo will appear on sponsor page of event website. We will also link to the community sponsor\'s website, if applicable.');
+  t('Benefits: Gold sponsor\'s name/logo appears on most printed items, the event website sponsor page, any session intro slides, outer page of schedules, and event swag. Gold sponsorship also includes three complimentary tickets, one or more social media shoutouts, link to sponsor\'s website on the event website sponsor page, and verbal mentions in the introduction and any closing speeches.');
+  t('Benefits: Platinum sponsor\'s name/logo appears on most printed items, the event website sponsor page, any session intro slides, all pages of the event website, outer page of schedules, and event swag. Platinum sponsorship also includes five complimentary tickets, one or more social media shoutouts, link to sponsor\'s website on the event website sponsor page, and verbal mentions in the introduction and any closing speeches. Platinum sponsor may also sponsor one session.');
+  t('Benefits: Silver sponsor\'s name/logo appears on some of the larger printed items, inner page of the schedule and program, and event sponsor page. Silver sponsorship also includes two complimentary tickets, one or more social media shoutouts, and a link to sponsor\'s website on the event website sponsor page.');
   t('Bronze');
   t('Community Sponsor');
   t('Community Sponsor Name');
@@ -428,17 +500,13 @@ function sponsor_field_default_field_instances() {
   t('Contact E-mail Address');
   t('Contact Name');
   t('Contact Telephone Number');
-  t('Four complimentary tickets. Sponsor logo will appear on most printed items, any session intro slides, outer page of schedules/programs, all pages of the Devsigner event website, and all event swag. Sponsor will be mentioned in introduction and any closing speeches. ');
   t('Gold');
-  t('Name or logo will appear on sponsor page of website. Names will appear in alphabetical order.');
   t('Organization / Company');
   t('Platinum');
   t('Silver');
-  t('Six complimentary tickets. Sponsor logo will appear on most printed items, any session intro slides, outer page of schedules/programs, all pages of the Devsigner event website, and all event swag. Sponsor will be mentioned in introduction and any closing speeches. EXCLUSIVE TO PLATINUM: Completely sponsor one session.');
-  t('Three complimentary tickets. Sponsor logo will appear on some larger printed items, inner page of the schedule/program, and sponsor page of Devsigner event website.');
-  t('Two complimentary tickets. Sponsor logo will appear on inner page of the schedule/programs and on sponsor page of Devsigner event website.');
-  t('Use this space to tell us any additional information before we contact you. No need to put payment information in this section. We will contact you for secure payment after you have submitted the form.');
-  t('Who is the point of contact in your organization?');
+  t('The a la carte options will become available closer to the event as we determine our logistical needs. They will start at $500 and will vary in price depending on expenses and brand exposure availability.');
+  t('We\'re Hiring');
+  t('Who will be our primary point of contact for your company?');
 
   return $field_instances;
 }

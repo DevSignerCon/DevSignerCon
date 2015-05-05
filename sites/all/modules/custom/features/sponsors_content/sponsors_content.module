@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Sponsors Content feature.
+ */
+
+include_once 'sponsors_content.features.inc';

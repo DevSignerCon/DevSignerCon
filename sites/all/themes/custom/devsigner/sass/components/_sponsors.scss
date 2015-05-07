@@ -29,18 +29,18 @@
       -ms-transform: translateY(-50%); /* IE 9 */
       -webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
       transform: translateY(-50%);
-      max-width: 66%;
+      max-width: 75%;
     }
 
 
     @media screen and (max-width: $desktop) {
       @include column(4);
-      padding: 0 50px;
+      padding: 0 40px;
     }
 
     @media screen and (max-width: $tablet) {
       @include column(6);
-      padding: 0 50px;
+      padding: 0 40px;
     }
   }
 }

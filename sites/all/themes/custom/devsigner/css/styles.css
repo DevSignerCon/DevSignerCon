@@ -3369,7 +3369,7 @@ textarea {
   -webkit-transform: translateY(-50%);
   /* Chrome, Safari, Opera */
   transform: translateY(-50%);
-  max-width: 66%;
+  max-width: 75%;
 }
 @media screen and (max-width: 960px) {
   /* line 18, ../sass/components/_sponsors.scss */
@@ -3381,7 +3381,7 @@ textarea {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 0 50px;
+    padding: 0 40px;
   }
 }
 @media screen and (max-width: 960px) and (max-width: 480px) {
@@ -3402,7 +3402,7 @@ textarea {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 0 50px;
+    padding: 0 40px;
   }
 }
 @media screen and (max-width: 768px) and (max-width: 480px) {

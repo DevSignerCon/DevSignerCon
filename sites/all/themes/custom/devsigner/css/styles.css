@@ -1598,7 +1598,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1429986570');
+  background-image: url('../images/progress.gif?1430353752');
 }
 
 /* line 5, ../sass/components/_header.scss */
@@ -3349,7 +3349,7 @@ textarea {
   box-sizing: border-box;
   margin-bottom: 23px;
   margin-top: 23px;
-  padding: 0 50px;
+  padding: 0 40px;
   position: relative;
   height: 200px;
 }

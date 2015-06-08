@@ -1,0 +1,1 @@
+"Devsigner Conference http://www.devsignercon.com features sessions and workshops focusing on front web design and development techniques, tips and tools. We also aim to inspire our technically inclined creative community with amazing session topics that bridge the gap between art and code. Join us June 27-28th in Portland, Oregon for our second annual celebration of Devsigners."

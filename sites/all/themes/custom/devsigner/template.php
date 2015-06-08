@@ -75,7 +75,6 @@ function devsigner_preprocess_entity(&$variables, $hook) {
 
   // Hide title field
   if (isset($variables['elements']['#bundle']) && $variables['elements']['#bundle'] == 'session') {
-    dpm($variables);
     unset($variables['content']['field_session_title']);
   }
 }
@@ -154,3 +153,61 @@ function devsigner_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+
+/**
+ * Implements hook_preprocess_field()
+ *
+ * This is placeholder, it's not working
+ *
+ */
+
+function devsigner_preprocess_field(&$vars) {
+
+  dsm($vars);
+
+  /* Set shortcut variables. Hooray for less typing! */
+  $name = $vars['element']['#field_name'];
+  $bundle = $vars['element']['#bundle'];
+  $mode = $vars['element']['#view_mode'];
+  $classes = &$vars['classes_array'];
+  $title_classes = &$vars['title_attributes_array']['class'];
+  $content_classes = &$vars['content_attributes_array']['class'];
+  $item_classes = array();
+
+  /* Global field classes */
+  $classes[] = 'field-wrapper';
+  $title_classes[] = 'field-label';
+  $content_classes[] = 'field-items';
+  $item_classes[] = 'field-item';
+
+  /* Uncomment the lines below to see variables you can use to target a field */
+  // print '<strong>Name:</strong> ' . $name . '<br/>';
+  // print '<strong>Bundle:</strong> ' . $bundle  . '<br/>';
+  // print '<strong>Mode:</strong> ' . $mode .'<br/>';
+
+  /* Add specific classes to targeted fields */
+  switch ($mode) {
+    /* All teasers */
+    case 'teaser':
+      switch ($name) {
+        /* Teaser read more links */
+        case 'node_link':
+          $item_classes[] = 'more-link';
+          break;
+        /* Teaser descriptions */
+        case 'body':
+        case 'field_description':
+          $item_classes[] = 'description';
+          break;
+      }
+      break;
+  }
+
+  switch ($name) {
+    case 'field_categories':
+      $title_classes[] = 'inline';
+      $content_classes[] = 'content';
+      $item_classes[] = 'categories';
+      break;
+  }
+}

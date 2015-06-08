@@ -3640,6 +3640,43 @@ textarea {
   margin-top: -4px;
 }
 
+/* line 52, ../sass/components/_sessions.scss */
+.field-name-field-session-format,
+.field-name-field-exerience-level,
+.field-name-field-categories {
+  margin-bottom: 1em;
+}
+/* line 57, ../sass/components/_sessions.scss */
+.field-name-field-session-format .field-item,
+.field-name-field-exerience-level .field-item,
+.field-name-field-categories .field-item {
+  background: #012233;
+  border-radius: 4px;
+  color: #FFFFFF;
+  display: inline-block;
+  line-height: 1.2;
+  margin-right: 3px;
+  padding: 0.33em 0.5em 0.1333em;
+}
+/* line 67, ../sass/components/_sessions.scss */
+.field-name-field-session-format a,
+.field-name-field-exerience-level a,
+.field-name-field-categories a {
+  color: #FFFFFF;
+  display: inline-block;
+}
+
+/* line 75, ../sass/components/_sessions.scss */
+.field-name-field-session-format .field-item,
+.field-name-field-categories .field-item {
+  padding: 0;
+}
+/* line 79, ../sass/components/_sessions.scss */
+.field-name-field-session-format a,
+.field-name-field-categories a {
+  padding: 0.33em 0.5em 0.1333em;
+}
+
 /**
  * @file
  * Print styling

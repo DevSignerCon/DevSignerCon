@@ -52,10 +52,34 @@ function devsigner_preprocess_html(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
  */
-/* -- Delete this line if you want to use this function
 function devsigner_preprocess_page(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
+
+  // Fix the entity form page title and title tag.
+  if (arg(0) == 'entityform') {
+    $eid = arg(1);
+    $wrapper = entity_metadata_wrapper('entityform', $eid);
+    if (isset($wrapper->field_session_title)) {
+      $session_title = $wrapper->field_session_title->value();
+      drupal_set_title($session_title);
+
+      // Ugh Metatag
+      $variables['page']['content']['metatags']['global']['title']['#attached']['metatag_set_preprocess_variable'][0][2] = $session_title;
+      $variables['page']['content']['metatags']['global']['title']['#attached']['metatag_set_preprocess_variable'][1][2]['title'] = $session_title;
+      $variables['page']['content']['metatags']['global']['og:title']['#attached']['drupal_add_html_head'][0][0]['#value'] = $session_title;
+      $variables['page']['content']['metatags']['global']['twitter:title']['#attached']['drupal_add_html_head'][0][0]['#value'] = $session_title;
+    }
+  }
 }
+
+function devsigner_preprocess_entity(&$variables, $hook) {
+
+  // Hide title field
+  if (isset($variables['elements']['#bundle']) && $variables['elements']['#bundle'] == 'session') {
+    dpm($variables);
+    unset($variables['content']['field_session_title']);
+  }
+}
+
 // */
 
 /**

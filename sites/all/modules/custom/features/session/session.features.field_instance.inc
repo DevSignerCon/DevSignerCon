@@ -15,52 +15,127 @@ function session_field_default_field_instances() {
     'bundle' => 'session',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'This will be added and used later by the session lead to organize the schedule.',
+    'description' => 'Topical tags used to organize the schedule.',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 6,
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
+      'email' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
       ),
     ),
     'entity_type' => 'entityform',
     'field_name' => 'field_categories',
-    'label' => 'Session Category',
+    'label' => 'Session Tags',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
+      'module' => 'taxonomy',
+      'settings' => array(
+        'autocomplete_path' => 'taxonomy/autocomplete',
+        'size' => 60,
+      ),
+      'type' => 'taxonomy_autocomplete',
       'weight' => 1,
     ),
   );
 
-  // Exported field_instance: 'entityform-session-field_email'
-  $field_instances['entityform-session-field_email'] = array(
+  // Exported field_instance: 'entityform-session-field_contact_name'
+  $field_instances['entityform-session-field_contact_name'] = array(
     'bundle' => 'session',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Your email will not be shared, and we will only send you email related to your session proposal.',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'email',
+        'module' => 'text',
         'settings' => array(),
-        'type' => 'email_default',
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
+      'email' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+    ),
+    'entity_type' => 'entityform',
+    'field_name' => 'field_contact_name',
+    'label' => 'Full Name',
+    'required' => 1,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 13,
+    ),
+  );
+
+  // Exported field_instance: 'entityform-session-field_email_address'
+  $field_instances['entityform-session-field_email_address'] = array(
+    'bundle' => 'session',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
+      'email' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 8,
       ),
     ),
     'entity_type' => 'entityform',
-    'field_name' => 'field_email',
-    'label' => 'E-mail Address',
+    'field_name' => 'field_email_address',
+    'label' => 'Email Address',
     'required' => 1,
     'settings' => array(
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -68,7 +143,7 @@ function session_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'emailwidget',
-      'weight' => 9,
+      'weight' => 14,
     ),
   );
 
@@ -84,12 +159,26 @@ function session_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 3,
+        'weight' => 2,
+      ),
+      'email' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 2,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'entityform',
     'field_name' => 'field_exerience_level',
-    'label' => 'Exerience Level',
+    'label' => 'Experience Level',
     'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -115,7 +204,21 @@ function session_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 3,
+      ),
+      'email' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'entityform',
@@ -151,7 +254,21 @@ function session_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 7,
+        'weight' => 1,
+      ),
+      'email' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 1,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'entityform',
@@ -184,6 +301,19 @@ function session_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 0,
       ),
+      'email' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'entity_type' => 'entityform',
     'field_name' => 'field_session_title',
@@ -204,6 +334,59 @@ function session_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'entityform-session-field_speaker'
+  $field_instances['entityform-session-field_speaker'] = array(
+    'bundle' => 'session',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Link to the speaker profile for accepted sessions.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 10,
+      ),
+      'email' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'full',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 5,
+      ),
+    ),
+    'entity_type' => 'entityform',
+    'field_name' => 'field_speaker',
+    'label' => 'Speaker(s)',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 17,
+    ),
+  );
+
   // Exported field_instance: 'entityform-session-field_speaker_bio'
   $field_instances['entityform-session-field_speaker_bio'] = array(
     'bundle' => 'session',
@@ -216,7 +399,20 @@ function session_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 7,
+      ),
+      'email' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
       ),
     ),
     'entity_type' => 'entityform',
@@ -234,7 +430,7 @@ function session_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 10,
+      'weight' => 15,
     ),
   );
 
@@ -250,7 +446,20 @@ function session_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 8,
+      ),
+      'email' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 8,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
       ),
     ),
     'entity_type' => 'entityform',
@@ -268,7 +477,7 @@ function session_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 11,
+      'weight' => 16,
     ),
   );
 
@@ -284,7 +493,21 @@ function session_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 4,
+      ),
+      'email' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'entityform',
@@ -292,7 +515,7 @@ function session_field_default_field_instances() {
     'label' => 'Session Takeaways',
     'required' => 1,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -308,20 +531,22 @@ function session_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('E-mail Address');
-  t('Exerience Level');
+  t('Email Address');
+  t('Experience Level');
+  t('Full Name');
   t('If speakers have presented on this or other topics before, please let us know where, and if a recording is available. This will not be made public. If there is more than one speaker, list speaking experience for each. Note that speakers do NOT need to have extensive presentation experience.  ');
+  t('Link to the speaker profile for accepted sessions.');
   t('Presentations and discussions will each be 45-60 minutes, while hands-on workshops will be 3 hours. If you have an idea for a different format, choose "Other" and then describe it below. <a href="/contact-us">Contact us</a> if you have any questions.');
-  t('Session Category');
   t('Session Description');
   t('Session Format');
+  t('Session Tags');
   t('Session Takeaways');
   t('Session Title');
   t('Speaker Bios');
+  t('Speaker(s)');
   t('Speaking Experience');
-  t('This will be added and used later by the session lead to organize the schedule.');
+  t('Topical tags used to organize the schedule.');
   t('What will attendees walk away with? ');
-  t('Your email will not be shared, and we will only send you email related to your session proposal.');
 
   return $field_instances;
 }

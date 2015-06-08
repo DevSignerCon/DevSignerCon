@@ -35,7 +35,7 @@ function session_default_entityform_type() {
       "preview_page" : 0,
       "submission_page_title" : "",
       "submission_text" : {
-        "value" : "Rockstar! We\\u0027ve got your submission. We\\u0027ll be in touch soon!",
+        "value" : "Rockstar! We\\u0027ve got your submission. We\\u0027ll be in touch soon! Please share your session on Twitter, Facebook, or your blog.",
         "format" : "filtered_html"
       },
       "submission_show_submitted" : 0,
@@ -46,7 +46,7 @@ function session_default_entityform_type() {
       "resubmit_action" : "new",
       "redirect_path" : "",
       "instruction_pre" : {
-        "value" : "\\u003Cp\\u003ESession submission deadline: Friday, May 29.\\u003C\\/p\\u003E",
+        "value" : "\\u003Cp\\u003ESession submission deadline: Friday, June 5th.\\u003C\\/p\\u003E",
         "format" : "filtered_html"
       }
     },

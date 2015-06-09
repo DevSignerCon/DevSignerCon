@@ -4,7 +4,7 @@
 
 // Top half of schedule page
 .schedule-day {
-  @include column(3, 9);
+  @include column(2, 4);
   margin-bottom: 1.5em;
 
   &:first-child {

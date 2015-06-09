@@ -1598,7 +1598,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1429986570');
+  background-image: url('../images/progress.gif?1430353752');
 }
 
 /* line 5, ../sass/components/_header.scss */
@@ -3200,7 +3200,7 @@ textarea {
 .schedule-day {
   display: inline;
   float: left;
-  width: 33.33333%;
+  width: 50%;
   padding: 0 15px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;

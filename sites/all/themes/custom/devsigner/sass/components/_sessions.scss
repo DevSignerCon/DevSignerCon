@@ -1,0 +1,82 @@
+//
+// Sessions
+//
+
+.entityform-session {
+  .submitted {
+    @include element-invisible;
+  }
+
+  .field-name-field-speaker > .field-label {
+    font-size: 1.75em; // 1.75em * 16px = 28px
+    margin: 0;
+    position: relative;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  .field-name-field-speaker .field-item {
+    overflow: auto;
+  }
+
+  .field-name-field-contact-name .field-item {
+    font-size: 1.3em;
+    font-family: misoBold,Arial,Helvetica,"Numbus Sans L",sans-serif;
+    font-weight: normal;
+  }
+
+  .field-name-field-photo {
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 10px;
+
+    @media screen and (max-width: $tablet) {
+      width: 100%;
+    }
+  }
+
+  .field-name-field-speaker-bio {
+
+    @media screen and (max-width: $tablet) {
+      float: left;
+      width: 100%;
+    }
+
+    p {
+      margin-top: -4px;
+    }
+  }
+}
+
+// Tags
+.field-name-field-session-format,
+.field-name-field-exerience-level,
+.field-name-field-categories {
+  margin-bottom: 1em;
+
+  .field-item {
+    background: $navy;
+    border-radius: 4px;
+    color: $white;
+    display: inline-block;
+    line-height: 1.2;
+    margin-right: 3px;
+    padding: 0.33em 0.5em 0.1333em;
+  }
+
+  a {
+    color: $white;
+    display: inline-block;
+  }
+}
+.field-name-field-session-format,
+.field-name-field-categories {
+
+  .field-item {
+    padding: 0;
+  }
+
+  a {
+    padding: 0.33em 0.5em 0.1333em;
+  }
+}

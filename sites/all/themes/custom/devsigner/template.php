@@ -155,17 +155,37 @@ function devsigner_preprocess_block(&$variables, $hook) {
 // */
 
 /**
- * Implements hook_preprocess_field()
+ * Overrides theme_field().
  *
- * This is placeholder, it's not working
- *
+ * Remove the hard coded classes so we can add them in preprocess functions.
  */
+function devsigner_field($variables) {
+  $output = '';
 
+  // Render the label, if it's not hidden.
+  if (!$variables['label_hidden']) {
+    $output .= '<div ' . $variables['title_attributes'] . '>' . $variables['label'] . ':&nbsp;</div>';
+  }
+
+  // Render the items.
+  $output .= '<div ' . $variables['content_attributes'] . '>';
+  foreach ($variables['items'] as $delta => $item) {
+    $output .= '<div ' . $variables['item_attributes'][$delta] . '>' . drupal_render($item) . '</div>';
+  }
+  $output .= '</div>';
+
+  // Render the top-level DIV.
+  $output = '<div class="' . $variables['classes'] . '"' . $variables['attributes'] . '>' . $output . '</div>';
+
+  return $output;
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
 function devsigner_preprocess_field(&$vars) {
 
-  dsm($vars);
-
-  /* Set shortcut variables. Hooray for less typing! */
+  // Set shortcut variables.
   $name = $vars['element']['#field_name'];
   $bundle = $vars['element']['#bundle'];
   $mode = $vars['element']['#view_mode'];
@@ -180,21 +200,21 @@ function devsigner_preprocess_field(&$vars) {
   $content_classes[] = 'field-items';
   $item_classes[] = 'field-item';
 
-  /* Uncomment the lines below to see variables you can use to target a field */
+  // Uncomment the lines below to see variables you can use to target a field.
   // print '<strong>Name:</strong> ' . $name . '<br/>';
   // print '<strong>Bundle:</strong> ' . $bundle  . '<br/>';
   // print '<strong>Mode:</strong> ' . $mode .'<br/>';
 
-  /* Add specific classes to targeted fields */
+  // Add specific classes to targeted fields.
   switch ($mode) {
-    /* All teasers */
+    // All teasers.
     case 'teaser':
       switch ($name) {
-        /* Teaser read more links */
+        // Teaser read more links.
         case 'node_link':
           $item_classes[] = 'more-link';
           break;
-        /* Teaser descriptions */
+        // Teaser descriptions.
         case 'body':
         case 'field_description':
           $item_classes[] = 'description';
@@ -203,11 +223,14 @@ function devsigner_preprocess_field(&$vars) {
       break;
   }
 
-  switch ($name) {
-    case 'field_categories':
-      $title_classes[] = 'inline';
-      $content_classes[] = 'content';
-      $item_classes[] = 'categories';
-      break;
+  // Apply odd or even classes along with our custom classes to each item.
+  foreach ($vars['items'] as $delta => $item) {
+    $vars['item_attributes_array'][$delta]['class'] = $item_classes;
+    $vars['item_attributes_array'][$delta]['class'][] = $delta % 2 ? 'even' : 'odd';
+
+    // If we're dealing with a taxonomy term, add tid based class.
+    if (isset($item['#options']['entity_type']) && $item['#options']['entity_type'] == 'taxonomy_term') {
+      $vars['item_attributes_array'][$delta]['class'][] = 'term-' . $item['#options']['entity']->tid;
+    }
   }
 }

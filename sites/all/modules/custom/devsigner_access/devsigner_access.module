@@ -4,26 +4,18 @@
  * Code for the Entity Form Access.
  */
 
-/* Override or insert variables into the page templates.
- *
- * @param $variables
-*   An array of variables to pass to the theme template.
- * @param $hook
-*   The name of the template being rendered ("page" in this case.)
- */
-function devsigner_access_preprocess_page(&$variables, $hook) {
+function devsigner_access_entityform_access_alter(&$access, $op, $context) {
+  switch ($op) {
+    case 'view':
 
-  // If this is an entity form, and not a session view page access denied!
-  if (arg(0) == 'entityform') {
-    $eid = arg(1);
-    $wrapper = entity_metadata_wrapper('entityform', $eid);
-    if ($wrapper->getBundle() == 'session') {
+      // If admin return with no alteration of permissions
+      if (is_array($context['account']->roles) && in_array('administrator', $context['account']->roles)) {
+        return true;
 
-      // This is a session view and allowed
-      // Edit permissions are handled by the entity_form module.
-    } else if (arg(2) != 'edit') {
-      exit();
-    }
+      // Block views for anything that's not a session
+      } else if ($context['entityform']->type != 'session') {
+        $access = 0;
+      }
+      break;
   }
 }
-

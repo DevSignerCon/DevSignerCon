@@ -205,31 +205,3 @@ textarea {
     width: 100%;
   }
 }
-
-.entityform-session {
-  .submitted {
-    display: none;
-  }
-  .field-name-field-speaker > .field-label {
-    font-size: 1.75em; // 1.75em * 16px = 28px
-    margin: 0;
-    position: relative;
-    text-transform: uppercase;
-    width: 100%;
-  }
-  .field-name-field-speaker .field-item {
-    overflow: auto;
-  }
-  .field-name-field-contact-name .field-item {
-    font-size: 1.3em;
-    font-family: misoBold,Arial,Helvetica,"Numbus Sans L",sans-serif;
-    font-weight: normal;
-  }
-  .field-name-field-photo {
-    float: left;
-    margin-right: 25px;
-  }
-  .field-name-field-speaker-bio p {
-    margin-top: -4px;
-  }
-}

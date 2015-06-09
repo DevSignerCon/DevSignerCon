@@ -75,7 +75,6 @@ function devsigner_preprocess_entity(&$variables, $hook) {
 
   // Hide title field
   if (isset($variables['elements']['#bundle']) && $variables['elements']['#bundle'] == 'session') {
-    dpm($variables);
     unset($variables['content']['field_session_title']);
   }
 }

@@ -1,0 +1,29 @@
+<?php
+/**
+ * @file
+ * Code for the Entity Form Access.
+ */
+
+/* Override or insert variables into the page templates.
+ *
+ * @param $variables
+*   An array of variables to pass to the theme template.
+ * @param $hook
+*   The name of the template being rendered ("page" in this case.)
+ */
+function devsigner_access_preprocess_page(&$variables, $hook) {
+
+  // If this is an entity form, and not a session view page access denied!
+  if (arg(0) == 'entityform') {
+    $eid = arg(1);
+    $wrapper = entity_metadata_wrapper('entityform', $eid);
+    if ($wrapper->getBundle() == 'session') {
+
+      // This is a session view and allowed
+      // Edit permissions are handled by the entity_form module.
+    } else if (arg(2) != 'edit') {
+      exit();
+    }
+  }
+}
+

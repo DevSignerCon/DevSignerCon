@@ -3673,7 +3673,7 @@ textarea {
 .field-name-field-session-format a,
 .field-name-field-exerience-level a,
 .field-name-field-categories a {
-  color: #FFFFFF;
+  color: inherit;
   display: inline-block;
 }
 

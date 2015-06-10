@@ -694,8 +694,165 @@ function session_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'taxonomy_term-categories-field_background_color'
+  $field_instances['taxonomy_term-categories-field_background_color'] = array(
+    'bundle' => 'categories',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This will be used as the background color for the Category.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_background_color',
+    'label' => 'Background Color',
+    'required' => 0,
+    'settings' => array(
+      'colorfield_colorpicker_type' => 'farbtastic',
+      'colorfield_enable_colorpicker' => TRUE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'colorfield',
+      'settings' => array(
+        'colorfield_colorpicker_type' => 'farbtastic',
+        'colorfield_enable_colorpicker' => TRUE,
+        'colorfield_options' => array(
+          'colorfield_colorpicker_type' => 'farbtastic',
+          'colorfield_enable_colorpicker' => 1,
+        ),
+      ),
+      'type' => 'colorfield_unified_textfield',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-categories-field_text_color'
+  $field_instances['taxonomy_term-categories-field_text_color'] = array(
+    'bundle' => 'categories',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This will be used as the text color for the Category. Should only be used when the background color makes the text hard to read.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_text_color',
+    'label' => 'Text Color',
+    'required' => 0,
+    'settings' => array(
+      'colorfield_colorpicker_type' => 'farbtastic',
+      'colorfield_enable_colorpicker' => TRUE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'colorfield',
+      'settings' => array(
+        'colorfield_colorpicker_type' => 'farbtastic',
+        'colorfield_enable_colorpicker' => TRUE,
+        'colorfield_options' => array(
+          'colorfield_colorpicker_type' => 'farbtastic',
+          'colorfield_enable_colorpicker' => 1,
+        ),
+      ),
+      'type' => 'colorfield_unified_textfield',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-formats-field_background_color'
+  $field_instances['taxonomy_term-formats-field_background_color'] = array(
+    'bundle' => 'formats',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This will be used as the background color for the Format.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_background_color',
+    'label' => 'Background Color',
+    'required' => 0,
+    'settings' => array(
+      'colorfield_colorpicker_type' => 'farbtastic',
+      'colorfield_enable_colorpicker' => TRUE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'colorfield',
+      'settings' => array(
+        'colorfield_colorpicker_type' => 'farbtastic',
+        'colorfield_enable_colorpicker' => TRUE,
+        'colorfield_options' => array(
+          'colorfield_colorpicker_type' => 'farbtastic',
+          'colorfield_enable_colorpicker' => 1,
+        ),
+      ),
+      'type' => 'colorfield_unified_textfield',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-formats-field_text_color'
+  $field_instances['taxonomy_term-formats-field_text_color'] = array(
+    'bundle' => 'formats',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This will be used as the text color for the Format. Should only be used when the background color makes the text hard to read.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_text_color',
+    'label' => 'Text Color',
+    'required' => 0,
+    'settings' => array(
+      'colorfield_colorpicker_type' => 'farbtastic',
+      'colorfield_enable_colorpicker' => TRUE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'colorfield',
+      'settings' => array(
+        'colorfield_colorpicker_type' => 'farbtastic',
+        'colorfield_enable_colorpicker' => TRUE,
+        'colorfield_options' => array(
+          'colorfield_colorpicker_type' => 'farbtastic',
+          'colorfield_enable_colorpicker' => 1,
+        ),
+      ),
+      'type' => 'colorfield_unified_textfield',
+      'weight' => 2,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
+  t('Background Color');
   t('Email Address');
   t('Experience Level');
   t('Full Name');
@@ -713,6 +870,11 @@ function session_field_default_field_instances() {
   t('Speaker Bios');
   t('Speaker(s)');
   t('Speaking Experience');
+  t('Text Color');
+  t('This will be used as the background color for the Category.');
+  t('This will be used as the background color for the Format.');
+  t('This will be used as the text color for the Category. Should only be used when the background color makes the text hard to read.');
+  t('This will be used as the text color for the Format. Should only be used when the background color makes the text hard to read.');
   t('Topical tags used to organize the schedule.');
   t('We will not share your email address with anyone and we will only contact you about the conference.');
   t('What will attendees walk away with? ');

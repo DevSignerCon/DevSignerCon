@@ -10,6 +10,28 @@
 function session_field_default_field_bases() {
   $field_bases = array();
 
+  // Exported field_base: 'field_background_color'
+  $field_bases['field_background_color'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_background_color',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'indexes' => array(
+      'rgb' => array(
+        0 => 'rgb',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'colorfield',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'colorfield',
+  );
+
   // Exported field_base: 'field_categories'
   $field_bases['field_categories'] = array(
     'active' => 1,
@@ -113,6 +135,9 @@ function session_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_session_format',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
     'indexes' => array(
       'tid' => array(
         0 => 'tid',
@@ -329,6 +354,28 @@ function session_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_text_color'
+  $field_bases['field_text_color'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_text_color',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'indexes' => array(
+      'rgb' => array(
+        0 => 'rgb',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'colorfield',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'colorfield',
   );
 
   return $field_bases;

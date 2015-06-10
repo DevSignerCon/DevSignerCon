@@ -231,6 +231,20 @@ function devsigner_preprocess_field(&$vars) {
     // If we're dealing with a taxonomy term, add tid based class.
     if (isset($item['#options']['entity_type']) && $item['#options']['entity_type'] == 'taxonomy_term') {
       $vars['item_attributes_array'][$delta]['class'][] = 'term-' . $item['#options']['entity']->tid;
+
+      // Add colors to taxonomy term output if one is set.
+      $wrapper = entity_metadata_wrapper('taxonomy_term', $item['#options']['entity']);
+
+      // Add the background color.
+      if (isset($wrapper->field_background_color) && $wrapper->field_background_color->value() != '') {
+        $vars['item_attributes_array'][$delta]['style'][] = 'background-color: ' . check_plain($wrapper->field_background_color->value()) . ';';
+      }
+
+      // Add the text color. Accompanying CSS sets the term links to inherit
+      // their color from this parent.
+      if (isset($wrapper->field_text_color) && $wrapper->field_text_color->value() != '') {
+        $vars['item_attributes_array'][$delta]['style'][] = 'color: ' . check_plain($wrapper->field_text_color->value()) . ';';
+      }
     }
   }
 }

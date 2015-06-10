@@ -54,7 +54,7 @@ function session_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Speakers',
-    'weight' => '9',
+    'weight' => '10',
     'children' => array(
       0 => 'field_speaker_bio',
       1 => 'field_speaking_experience',

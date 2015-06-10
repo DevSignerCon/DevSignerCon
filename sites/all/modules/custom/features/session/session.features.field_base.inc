@@ -82,31 +82,33 @@ function session_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_exerience_level'
-  $field_bases['field_exerience_level'] = array(
+  // Exported field_base: 'field_experience_level'
+  $field_bases['field_experience_level'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_exerience_level',
+    'field_name' => 'field_experience_level',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
     'indexes' => array(
-      'value' => array(
-        0 => 'value',
+      'tid' => array(
+        0 => 'tid',
       ),
     ),
     'locked' => 0,
-    'module' => 'list',
+    'module' => 'taxonomy',
     'settings' => array(
       'allowed_values' => array(
-        'beginner' => 'Beginner',
-        'intermediate' => 'Intermediate',
-        'advanced' => 'Advanced',
-        'any' => 'Any',
+        0 => array(
+          'vocabulary' => 'experience_level',
+          'parent' => 0,
+        ),
       ),
-      'allowed_values_function' => '',
     ),
     'translatable' => 0,
-    'type' => 'list_text',
+    'type' => 'taxonomy_term_reference',
   );
 
   // Exported field_base: 'field_session_description'

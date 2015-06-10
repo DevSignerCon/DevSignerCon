@@ -337,6 +337,7 @@ function form_submissions_views_default_views() {
         'display_values' => array(
           'session::field_categories' => 'session::field_categories',
           'session::field_session_status' => 'session::field_session_status',
+          'session::field_experience_level' => 'session::field_experience_level',
         ),
       ),
     ),
@@ -392,6 +393,10 @@ function form_submissions_views_default_views() {
   $handler->display->display_options['fields']['field_categories']['label'] = 'Categories';
   $handler->display->display_options['fields']['field_categories']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_categories']['delta_offset'] = '0';
+  /* Field: Entityform Submission: Experience Level */
+  $handler->display->display_options['fields']['field_experience_level']['id'] = 'field_experience_level';
+  $handler->display->display_options['fields']['field_experience_level']['table'] = 'field_data_field_experience_level';
+  $handler->display->display_options['fields']['field_experience_level']['field'] = 'field_experience_level';
   /* Field: Field: Full Name */
   $handler->display->display_options['fields']['field_contact_name']['id'] = 'field_contact_name';
   $handler->display->display_options['fields']['field_contact_name']['table'] = 'field_data_field_contact_name';
@@ -441,10 +446,12 @@ function form_submissions_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'session' => 'session',
   );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   /* Filter criterion: Entityform Submission: Session Format (field_session_format) */
   $handler->display->display_options['filters']['field_session_format_tid']['id'] = 'field_session_format_tid';
   $handler->display->display_options['filters']['field_session_format_tid']['table'] = 'field_data_field_session_format';
   $handler->display->display_options['filters']['field_session_format_tid']['field'] = 'field_session_format_tid';
+  $handler->display->display_options['filters']['field_session_format_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_session_format_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_session_format_tid']['expose']['operator_id'] = 'field_session_format_tid_op';
   $handler->display->display_options['filters']['field_session_format_tid']['expose']['label'] = 'Session Format';
@@ -461,6 +468,7 @@ function form_submissions_views_default_views() {
   $handler->display->display_options['filters']['field_categories_tid']['id'] = 'field_categories_tid';
   $handler->display->display_options['filters']['field_categories_tid']['table'] = 'field_data_field_categories';
   $handler->display->display_options['filters']['field_categories_tid']['field'] = 'field_categories_tid';
+  $handler->display->display_options['filters']['field_categories_tid']['group'] = 1;
   $handler->display->display_options['filters']['field_categories_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_categories_tid']['expose']['operator_id'] = 'field_categories_tid_op';
   $handler->display->display_options['filters']['field_categories_tid']['expose']['label'] = 'Category';
@@ -473,10 +481,28 @@ function form_submissions_views_default_views() {
   );
   $handler->display->display_options['filters']['field_categories_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_categories_tid']['vocabulary'] = 'categories';
+  /* Filter criterion: Entityform Submission: Experience Level (field_experience_level) */
+  $handler->display->display_options['filters']['field_experience_level_tid']['id'] = 'field_experience_level_tid';
+  $handler->display->display_options['filters']['field_experience_level_tid']['table'] = 'field_data_field_experience_level';
+  $handler->display->display_options['filters']['field_experience_level_tid']['field'] = 'field_experience_level_tid';
+  $handler->display->display_options['filters']['field_experience_level_tid']['group'] = 1;
+  $handler->display->display_options['filters']['field_experience_level_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_experience_level_tid']['expose']['operator_id'] = 'field_experience_level_tid_op';
+  $handler->display->display_options['filters']['field_experience_level_tid']['expose']['label'] = 'Experience Level';
+  $handler->display->display_options['filters']['field_experience_level_tid']['expose']['operator'] = 'field_experience_level_tid_op';
+  $handler->display->display_options['filters']['field_experience_level_tid']['expose']['identifier'] = 'field_experience_level_tid';
+  $handler->display->display_options['filters']['field_experience_level_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_experience_level_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_experience_level_tid']['vocabulary'] = 'experience_level';
   /* Filter criterion: Entityform Submission: Session Status (field_session_status) */
   $handler->display->display_options['filters']['field_session_status_value']['id'] = 'field_session_status_value';
   $handler->display->display_options['filters']['field_session_status_value']['table'] = 'field_data_field_session_status';
   $handler->display->display_options['filters']['field_session_status_value']['field'] = 'field_session_status_value';
+  $handler->display->display_options['filters']['field_session_status_value']['group'] = 1;
   $handler->display->display_options['filters']['field_session_status_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_session_status_value']['expose']['operator_id'] = 'field_session_status_value_op';
   $handler->display->display_options['filters']['field_session_status_value']['expose']['label'] = 'Status';
@@ -944,6 +970,7 @@ function form_submissions_views_default_views() {
     t('Session Title'),
     t('Session Format'),
     t('Categories'),
+    t('Experience Level'),
     t('Email Address'),
     t('Status'),
     t('<a href="[url]">view</a>'),

@@ -82,7 +82,7 @@ function session_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 11,
       ),
     ),
     'entity_type' => 'entityform',
@@ -129,7 +129,7 @@ function session_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 13,
       ),
     ),
     'entity_type' => 'entityform',
@@ -149,8 +149,8 @@ function session_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-session-field_exerience_level'
-  $field_instances['entityform-session-field_exerience_level'] = array(
+  // Exported field_instance: 'entityform-session-field_experience_level'
+  $field_instances['entityform-session-field_experience_level'] = array(
     'bundle' => 'session',
     'default_value' => NULL,
     'deleted' => 0,
@@ -158,28 +158,27 @@ function session_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 2,
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 14,
       ),
       'email' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 2,
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'list',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'taxonomy_term_reference_link',
         'weight' => 2,
       ),
     ),
     'entity_type' => 'entityform',
-    'field_name' => 'field_exerience_level',
+    'field_name' => 'field_experience_level',
     'label' => 'Experience Level',
     'required' => 1,
     'settings' => array(
@@ -190,7 +189,7 @@ function session_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -432,7 +431,7 @@ function session_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 10,
       ),
     ),
     'entity_type' => 'entityform',
@@ -577,7 +576,7 @@ function session_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 12,
       ),
     ),
     'entity_type' => 'entityform',
@@ -624,7 +623,7 @@ function session_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 14,
       ),
     ),
     'entity_type' => 'entityform',
@@ -690,7 +689,7 @@ function session_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -744,6 +743,93 @@ function session_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_text_color',
+    'label' => 'Text Color',
+    'required' => 0,
+    'settings' => array(
+      'colorfield_colorpicker_type' => 'farbtastic',
+      'colorfield_enable_colorpicker' => TRUE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'colorfield',
+      'settings' => array(
+        'colorfield_colorpicker_type' => 'farbtastic',
+        'colorfield_enable_colorpicker' => TRUE,
+        'colorfield_options' => array(
+          'colorfield_colorpicker_type' => 'farbtastic',
+          'colorfield_enable_colorpicker' => 1,
+        ),
+      ),
+      'type' => 'colorfield_unified_textfield',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-experience_level-field_background_color'
+  $field_instances['taxonomy_term-experience_level-field_background_color'] = array(
+    'bundle' => 'experience_level',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This will be used as the background color for the Experience Level.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'colorfield',
+        'settings' => array(
+          'height' => 20,
+          'width' => 20,
+        ),
+        'type' => 'colorfield_color_swatch',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_background_color',
+    'label' => 'Background Color',
+    'required' => 0,
+    'settings' => array(
+      'colorfield_colorpicker_type' => 'farbtastic',
+      'colorfield_enable_colorpicker' => TRUE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'colorfield',
+      'settings' => array(
+        'colorfield_colorpicker_type' => 'farbtastic',
+        'colorfield_enable_colorpicker' => TRUE,
+        'colorfield_options' => array(
+          'colorfield_colorpicker_type' => 'farbtastic',
+          'colorfield_enable_colorpicker' => 1,
+        ),
+      ),
+      'type' => 'colorfield_unified_textfield',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'taxonomy_term-experience_level-field_text_color'
+  $field_instances['taxonomy_term-experience_level-field_text_color'] = array(
+    'bundle' => 'experience_level',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'This will be used as the text color for the Experience Level. Should only be used when the background color makes the text hard to read.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'colorfield',
+        'settings' => array(
+          'height' => 20,
+          'width' => 20,
+        ),
+        'type' => 'colorfield_color_swatch',
         'weight' => 1,
       ),
     ),
@@ -872,8 +958,10 @@ function session_field_default_field_instances() {
   t('Speaking Experience');
   t('Text Color');
   t('This will be used as the background color for the Category.');
+  t('This will be used as the background color for the Experience Level.');
   t('This will be used as the background color for the Format.');
   t('This will be used as the text color for the Category. Should only be used when the background color makes the text hard to read.');
+  t('This will be used as the text color for the Experience Level. Should only be used when the background color makes the text hard to read.');
   t('This will be used as the text color for the Format. Should only be used when the background color makes the text hard to read.');
   t('Topical tags used to organize the schedule.');
   t('We will not share your email address with anyone and we will only contact you about the conference.');

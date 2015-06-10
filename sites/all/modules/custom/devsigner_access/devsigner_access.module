@@ -4,17 +4,27 @@
  * Code for the Entity Form Access.
  */
 
+/**
+ * Invokes hook_entityform_access.
+ *
+ * Used to allow access to session submissions that have been accepted.
+ */
 function devsigner_access_entityform_access_alter(&$access, $op, $context) {
   switch ($op) {
     case 'view':
-
-      // If admin return with no alteration of permissions
+      // If admin return with no alteration of permissions.
       if (is_array($context['account']->roles) && in_array('administrator', $context['account']->roles)) {
-        return true;
+        return TRUE;
+      }
 
-      // Block views for anything that's not a session
-      } else if ($context['entityform']->type != 'session') {
-        $access = 0;
+      // Allow access to accepted sessions.
+      if ($context['entityform']->type == 'session') {
+        $wrapper = entity_metadata_wrapper('entityform', $context['entityform']);
+
+        // Use the wrapper to check the value and change access as needed.
+        if ($wrapper->field_session_status->value() == 'accepted') {
+          $access = TRUE;
+        }
       }
       break;
   }

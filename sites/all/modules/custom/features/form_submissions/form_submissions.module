@@ -1,15 +1,17 @@
 <?php
 /**
  * @file
- * Code for the Entity Form Access.
+ * Code for the Form Submissions feature.
  */
+
+include_once 'form_submissions.features.inc';
 
 /**
  * Invokes hook_entityform_access.
  *
  * Used to allow access to session submissions that have been accepted.
  */
-function devsigner_access_entityform_access_alter(&$access, $op, $context) {
+function form_submissions_entityform_access_alter(&$access, $op, $context) {
   switch ($op) {
     case 'view':
       // If admin return with no alteration of permissions.

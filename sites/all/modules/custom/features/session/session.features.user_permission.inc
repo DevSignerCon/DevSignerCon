@@ -61,7 +61,6 @@ function session_user_default_permissions() {
     'name' => 'view any entityform',
     'roles' => array(
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
     ),
     'module' => 'entityform',
   );
@@ -71,6 +70,7 @@ function session_user_default_permissions() {
     'name' => 'view own entityform',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'entityform',
   );

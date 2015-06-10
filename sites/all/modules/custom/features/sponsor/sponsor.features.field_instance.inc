@@ -19,9 +19,8 @@ function sponsor_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 12,
       ),
     ),
@@ -50,9 +49,8 @@ function sponsor_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 11,
       ),
     ),
@@ -84,14 +82,8 @@ function sponsor_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'addressfield',
-        'settings' => array(
-          'format_handlers' => array(
-            0 => 'address',
-          ),
-          'use_widget_handlers' => 1,
-        ),
-        'type' => 'addressfield_default',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 1,
       ),
     ),
@@ -134,9 +126,8 @@ function sponsor_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 8,
       ),
     ),
@@ -165,9 +156,8 @@ function sponsor_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 9,
       ),
     ),
@@ -196,9 +186,8 @@ function sponsor_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 10,
       ),
     ),
@@ -230,9 +219,8 @@ function sponsor_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 0,
       ),
     ),
@@ -264,9 +252,8 @@ function sponsor_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 2,
       ),
     ),
@@ -289,8 +276,8 @@ function sponsor_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-sponsor-field_email'
-  $field_instances['entityform-sponsor-field_email'] = array(
+  // Exported field_instance: 'entityform-sponsor-field_email_address'
+  $field_instances['entityform-sponsor-field_email_address'] = array(
     'bundle' => 'sponsor',
     'default_value' => NULL,
     'deleted' => 0,
@@ -298,17 +285,17 @@ function sponsor_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'email',
         'settings' => array(),
-        'type' => 'email_default',
-        'weight' => 4,
+        'type' => 'hidden',
+        'weight' => 14,
       ),
     ),
     'entity_type' => 'entityform',
-    'field_name' => 'field_email',
-    'label' => 'Contact E-mail Address',
+    'field_name' => 'field_email_address',
+    'label' => 'Contact Address',
     'required' => 1,
     'settings' => array(
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -316,7 +303,7 @@ function sponsor_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'emailwidget',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
@@ -329,9 +316,8 @@ function sponsor_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 6,
       ),
     ),
@@ -360,9 +346,8 @@ function sponsor_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'phone',
         'settings' => array(),
-        'type' => 'phone',
+        'type' => 'hidden',
         'weight' => 3,
       ),
     ),
@@ -383,7 +368,7 @@ function sponsor_field_default_field_instances() {
       'module' => 'phone',
       'settings' => array(),
       'type' => 'phone_textfield',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -396,9 +381,8 @@ function sponsor_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 5,
       ),
     ),
@@ -427,9 +411,8 @@ function sponsor_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 7,
       ),
     ),
@@ -458,9 +441,8 @@ function sponsor_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 13,
       ),
     ),
@@ -497,7 +479,7 @@ function sponsor_field_default_field_instances() {
   t('Community Sponsor');
   t('Community Sponsor Name');
   t('Community Sponsor Name as it should appear on website (Community Sponsor Only)');
-  t('Contact E-mail Address');
+  t('Contact Address');
   t('Contact Name');
   t('Contact Telephone Number');
   t('Gold');

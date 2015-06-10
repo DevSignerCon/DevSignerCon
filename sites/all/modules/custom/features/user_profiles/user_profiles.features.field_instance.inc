@@ -28,7 +28,7 @@ function user_profiles_field_default_field_instances() {
     'entity_type' => 'user',
     'field_name' => 'field_contact_name',
     'label' => 'Full Name',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => 1,
@@ -64,7 +64,7 @@ function user_profiles_field_default_field_instances() {
     'entity_type' => 'user',
     'field_name' => 'field_photo',
     'label' => 'Photo',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'alt_field' => 1,
       'default_image' => 0,
@@ -106,10 +106,10 @@ function user_profiles_field_default_field_instances() {
     'entity_type' => 'user',
     'field_name' => 'field_speaker_bio',
     'label' => 'Speaker Bio',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'text_processing' => 1,
-      'user_register_form' => 1,
+      'user_register_form' => 0,
     ),
     'widget' => array(
       'active' => 1,
@@ -169,7 +169,7 @@ function user_profiles_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => 13,
+      'weight' => 12,
     ),
   );
 

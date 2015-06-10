@@ -41,8 +41,8 @@ function session_default_entityform_type() {
       "submission_show_submitted" : 0,
       "submissions_view" : "default",
       "user_submissions_view" : "default",
-      "form_status" : "ENTITYFORM_OPEN",
-      "roles" : { "1" : "1", "2" : "2", "3" : 0 },
+      "form_status" : "ENTITYFORM_CLOSED",
+      "roles" : { "3" : "3", "1" : 0, "2" : 0 },
       "resubmit_action" : "new",
       "redirect_path" : "",
       "instruction_pre" : {

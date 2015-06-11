@@ -3332,15 +3332,25 @@ textarea {
   line-height: 1.5;
   color: #012233;
 }
-/* line 116, ../sass/components/_schedule.scss */
+/* line 115, ../sass/components/_schedule.scss */
+.schedule-detail li .field-type-taxonomy-term-reference {
+  display: inline;
+  padding-left: 10px;
+  margin-bottom: 0;
+}
+/* line 120, ../sass/components/_schedule.scss */
+.schedule-detail li .field-type-taxonomy-term-reference .field-items {
+  display: inline;
+}
+/* line 126, ../sass/components/_schedule.scss */
 .schedule-detail li span.session-title {
   font-family: misoBold, Arial, Helvetica, 'Nimbus Sans L', sans-serif;
 }
-/* line 120, ../sass/components/_schedule.scss */
+/* line 130, ../sass/components/_schedule.scss */
 .schedule-detail li span.session-presenter {
   color: #616061;
 }
-/* line 125, ../sass/components/_schedule.scss */
+/* line 135, ../sass/components/_schedule.scss */
 .schedule-detail li:before {
   content: "\25A0";
   font-size: 12px;
@@ -3348,37 +3358,37 @@ textarea {
   position: relative;
   top: -2px;
 }
-/* line 134, ../sass/components/_schedule.scss */
+/* line 144, ../sass/components/_schedule.scss */
 .schedule-detail .friday {
   border-bottom: 2px solid #ebedf1;
   margin-bottom: 1.5em;
 }
-/* line 138, ../sass/components/_schedule.scss */
+/* line 148, ../sass/components/_schedule.scss */
 .schedule-detail .friday h4 {
   background: #8AB513;
 }
-/* line 141, ../sass/components/_schedule.scss */
+/* line 151, ../sass/components/_schedule.scss */
 .schedule-detail .friday li:before {
   color: #8AB513;
 }
-/* line 146, ../sass/components/_schedule.scss */
+/* line 156, ../sass/components/_schedule.scss */
 .schedule-detail .saturday {
   border-bottom: 2px solid #ebedf1;
   margin-bottom: 1.5em;
 }
-/* line 150, ../sass/components/_schedule.scss */
+/* line 160, ../sass/components/_schedule.scss */
 .schedule-detail .saturday h4 {
   background: #B5138A;
 }
-/* line 153, ../sass/components/_schedule.scss */
+/* line 163, ../sass/components/_schedule.scss */
 .schedule-detail .saturday li:before {
   color: #B5138A;
 }
-/* line 159, ../sass/components/_schedule.scss */
+/* line 169, ../sass/components/_schedule.scss */
 .schedule-detail .sunday h4 {
   background: #138AB5;
 }
-/* line 162, ../sass/components/_schedule.scss */
+/* line 172, ../sass/components/_schedule.scss */
 .schedule-detail .sunday li:before {
   color: #138AB5;
 }

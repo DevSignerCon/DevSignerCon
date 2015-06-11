@@ -5,3 +5,123 @@
  */
 
 include_once 'session.features.inc';
+
+/**
+ * Implements hook_theme().
+ */
+function session_theme() {
+  return array(
+    'session_info_insert' =>  array(
+      'variables' => array('session' => NULL),
+    ),
+  );
+}
+
+/**
+ * Implements hook_filter_info().
+ */
+function session_filter_info() {
+
+  $filters['session_filter'] = array(
+    'title' => t('Insert session info filter'),
+    'description' => t('Inserts info about a session using [session:1234] tags.'),
+    'cache' => FALSE,
+    'process callback' => '_session_filter_html',
+    'tips callback' => '_session_filter_html_tips',
+  );
+
+  return $filters;
+}
+
+/**
+ * Filter tips callback.
+ */
+function _session_filter_html_tips($filter, $format, $long) {
+  return t("You may insert session links by using the format [session:1234] where 1234 is the ID of a session submission.");
+}
+
+/**
+ * Filter process callback.
+ */
+function _session_filter_html($text, $filter, $format) {
+  _session_substitute_tags($text);
+  return $text;
+}
+
+/**
+ * Parses the tags of a text string and substitutes data about sessions.
+ *
+ * @param string $text
+ *   The text string to process.
+ */
+function _session_substitute_tags(&$text) {
+  if (preg_match_all("/\[session:([0-9]*)?\]/i", $text, $match)) {
+    $repl = array();
+    $raw_tags = array();
+    foreach ($match[1] as $key => $entity_id) {
+      $raw_tags[] = $match[0][$key];
+
+      // If we have a session matching the id, proceed.
+      if ($session = entity_load_single('entityform', $entity_id)) {
+        // Get the session info and render it. Pass it to the replacements.
+        $repl[] = render(theme('session_info_insert', compact('session')));
+      }
+      // Otherwise do nothing.
+      else {
+        $repl[] = '';
+      }
+    }
+    $text = str_replace($raw_tags, $repl, $text);
+  }
+}
+
+/**
+ * Builds session info for insertion into content by the session filter.
+ *
+ * @param object $session
+ *   An entity metadata wrapper containing the session to display.
+ *
+ * @return array
+ *   A render array of session info.
+ */
+function theme_session_info_insert($vars) {
+  // Get a wrapper for the session.
+  $session_wrapper = entity_metadata_wrapper('entityform', $vars['session']);
+  $output = [];
+
+  // Build the session title.
+  $output['title'] = array(
+    '#weight' => 0,
+    '#prefix' => '<span class="session-title">',
+    '#markup' => l($session_wrapper->field_session_title->value(), 'entityform/' . $session_wrapper->entityform_id->value()),
+    '#suffix' => '</span>',
+  );
+
+  // Get a list of the presenters.
+  $presenters = [];
+  foreach ($session_wrapper->field_speaker as $speaker_wrapper) {
+    $presenters[] = $speaker_wrapper->field_contact_name->value();
+  }
+
+  // Add the separator between the two main elements.
+  $output['separator'] = array(
+    '#weight' => 1,
+    '#markup' => ' - ',
+  );
+
+  // Build the presenter markup.
+  $output['presenter'] = array(
+    '#weight' => 2,
+    '#prefix' => '<span class="session-presenter">',
+    '#markup' => implode(', ', $presenters),
+    '#suffix' => '</span>',
+  );
+
+  // Output the categories.
+  // $output['categories'] = array(
+  //   '#weight' => 3,
+  //   '#markup' => render(field_view_field('entityform', $vars['session'], 'field_categories', array('label' => 'hidden'))),
+  // );
+
+  return $output;
+}

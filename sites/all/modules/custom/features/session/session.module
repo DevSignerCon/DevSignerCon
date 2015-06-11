@@ -73,6 +73,50 @@ function _session_substitute_tags(&$text) {
     }
     $text = str_replace($raw_tags, $repl, $text);
   }
+
+  if (preg_match_all("/\[session-title:([0-9]*)?\]/i", $text, $match)) {
+    $repl = array();
+    $raw_tags = array();
+    foreach ($match[1] as $key => $entity_id) {
+      $raw_tags[] = $match[0][$key];
+
+      // If we have a session matching the id, proceed.
+      if ($session = entity_load_single('entityform', $entity_id)) {
+        // Tell the theme function to only return the title.
+        $options = array('output' => array('title'));
+
+        // Get the session info and render it. Pass it to the replacements.
+        $repl[] = render(theme('session_info_insert', compact('session', 'options')));
+      }
+      // Otherwise do nothing.
+      else {
+        $repl[] = '';
+      }
+    }
+    $text = str_replace($raw_tags, $repl, $text);
+  }
+
+  if (preg_match_all("/\[session-presenter:([0-9]*)?\]/i", $text, $match)) {
+    $repl = array();
+    $raw_tags = array();
+    foreach ($match[1] as $key => $entity_id) {
+      $raw_tags[] = $match[0][$key];
+
+      // If we have a session matching the id, proceed.
+      if ($session = entity_load_single('entityform', $entity_id)) {
+        // Tell the theme function to only return the title.
+        $options = array('output' => array('presenter'));
+
+        // Get the session info and render it. Pass it to the replacements.
+        $repl[] = render(theme('session_info_insert', compact('session', 'options')));
+      }
+      // Otherwise do nothing.
+      else {
+        $repl[] = '';
+      }
+    }
+    $text = str_replace($raw_tags, $repl, $text);
+  }
 }
 
 /**
@@ -85,17 +129,30 @@ function _session_substitute_tags(&$text) {
  *   A render array of session info.
  */
 function theme_session_info_insert($vars) {
-  // Get a wrapper for the session.
-  $session_wrapper = entity_metadata_wrapper('entityform', $vars['session']);
+  // Set up the initial options.
+  $options = array(
+    'output' => array('title', 'separator', 'presenter'),
+  );
+
+  // Override the options if passed.
+  if (isset($vars['options'])) {
+    $options = $vars['options'];
+  }
+
   $output = [];
 
-  // Build the session title.
-  $output['title'] = array(
-    '#weight' => 0,
-    '#prefix' => '<span class="session-title">',
-    '#markup' => l($session_wrapper->field_session_title->value(), 'entityform/' . $session_wrapper->entityform_id->value()),
-    '#suffix' => '</span>',
-  );
+  // Get a wrapper for the session.
+  $session_wrapper = entity_metadata_wrapper('entityform', $vars['session']);
+
+  if (in_array('title', $options['output'])) {
+    // Build the session title.
+    $output['title'] = array(
+      '#weight' => 0,
+      '#prefix' => '<span class="session-title">',
+      '#markup' => l($session_wrapper->field_session_title->value(), 'entityform/' . $session_wrapper->entityform_id->value()),
+      '#suffix' => '</span>',
+    );
+  }
 
   // Get a list of the presenters.
   $presenters = [];
@@ -103,25 +160,31 @@ function theme_session_info_insert($vars) {
     $presenters[] = $speaker_wrapper->field_contact_name->value();
   }
 
-  // Add the separator between the two main elements.
-  $output['separator'] = array(
-    '#weight' => 1,
-    '#markup' => ' - ',
-  );
+  if (in_array('separator', $options['output'])) {
+    // Add the separator between the two main elements.
+    $output['separator'] = array(
+      '#weight' => 1,
+      '#markup' => ' - ',
+    );
+  }
 
-  // Build the presenter markup.
-  $output['presenter'] = array(
-    '#weight' => 2,
-    '#prefix' => '<span class="session-presenter">',
-    '#markup' => implode(', ', $presenters),
-    '#suffix' => '</span>',
-  );
+  if (in_array('presenter', $options['output'])) {
+    // Build the presenter markup.
+    $output['presenter'] = array(
+      '#weight' => 2,
+      '#prefix' => '<span class="session-presenter">',
+      '#markup' => implode(', ', $presenters),
+      '#suffix' => '</span>',
+    );
+  }
 
-  // Output the categories.
-  // $output['categories'] = array(
-  //   '#weight' => 3,
-  //   '#markup' => render(field_view_field('entityform', $vars['session'], 'field_categories', array('label' => 'hidden'))),
-  // );
+  if (in_array('categories', $options['output'])) {
+    // Output the categories.
+    $output['categories'] = array(
+      '#weight' => 3,
+      '#markup' => render(field_view_field('entityform', $vars['session'], 'field_categories', array('label' => 'hidden'))),
+    );
+  }
 
   return $output;
 }

@@ -3702,6 +3702,88 @@ textarea {
   padding: 0.33em 0.5em 0.1333em;
 }
 
+/* line 85, ../sass/components/_sessions.scss */
+.view-sessions .view-filters {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #EBEDF1;
+}
+/* line 89, ../sass/components/_sessions.scss */
+.view-sessions .view-filters .views-exposed-widget {
+  padding-bottom: 10px;
+}
+/* line 93, ../sass/components/_sessions.scss */
+.view-sessions .view-filters #edit-field-experience-level-tid-wrapper {
+  margin-right: 20px;
+}
+/* line 98, ../sass/components/_sessions.scss */
+.view-sessions .view-filters .bef-select-as-links .form-type-bef-link {
+  float: left;
+  padding-right: 12px;
+}
+/* line 102, ../sass/components/_sessions.scss */
+.view-sessions .view-filters .bef-select-as-links .form-type-bef-link a {
+  display: inline-block;
+  line-height: 1.2;
+  padding: 0.33em 0 0.1333em;
+}
+/* line 107, ../sass/components/_sessions.scss */
+.view-sessions .view-filters .bef-select-as-links .form-type-bef-link a.active {
+  background: #012233;
+  border-radius: 4px;
+  color: #FFFFFF;
+  display: inline-block;
+  line-height: 1.2;
+  padding: 0.33em 0.5em 0.1333em;
+}
+/* line 120, ../sass/components/_sessions.scss */
+.view-sessions table {
+  width: 100%;
+}
+/* line 125, ../sass/components/_sessions.scss */
+.view-sessions th.views-field-field-contact-name, .view-sessions th.views-field-field-session-title {
+  text-align: left;
+}
+/* line 131, ../sass/components/_sessions.scss */
+.view-sessions tr.even, .view-sessions tr.odd {
+  background: none;
+  border: none;
+  vertical-align: middle;
+}
+/* line 137, ../sass/components/_sessions.scss */
+.view-sessions td {
+  padding: 12px 7px;
+}
+/* line 140, ../sass/components/_sessions.scss */
+.view-sessions td.views-field-field-session-title {
+  font-family: misoBold,Arial,Helvetica,"Numbus Sans L",sans-serif;
+  padding-left: 0;
+  padding-right: 15px;
+  font-size: 21px;
+}
+/* line 147, ../sass/components/_sessions.scss */
+.view-sessions td.views-field-field-contact-name {
+  padding-left: 0;
+}
+/* line 151, ../sass/components/_sessions.scss */
+.view-sessions td.views-field-field-experience-level, .view-sessions td.views-field-field-session-format {
+  white-space: nowrap;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  /* line 151, ../sass/components/_sessions.scss */
+  .view-sessions td.views-field-field-experience-level, .view-sessions td.views-field-field-session-format {
+    white-space: normal;
+  }
+}
+/* line 160, ../sass/components/_sessions.scss */
+.view-sessions td.views-field-field-experience-level div, .view-sessions td.views-field-field-session-format div {
+  margin-bottom: 0;
+}
+/* line 165, ../sass/components/_sessions.scss */
+.view-sessions td .field-item {
+  margin-right: 0;
+}
+
 /**
  * @file
  * Print styling

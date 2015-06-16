@@ -3535,21 +3535,7 @@ textarea {
 .page-sponsors .views-row:after {
   clear: both;
 }
-/* line 66, ../sass/components/_sponsors.scss */
-.page-sponsors .views-row .field-content {
-  font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
-  font-size: 1.3em;
-  line-height: 1;
-}
-/* line 71, ../sass/components/_sponsors.scss */
-.page-sponsors .views-row .field-content p {
-  font-family: miso, Arial, Helvetica, "Nimbus Sans L", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 1em;
-  margin-top: 0.5em;
-}
-/* line 81, ../sass/components/_sponsors.scss */
+/* line 67, ../sass/components/_sponsors.scss */
 .page-sponsors .views-field-field-sponsor-image {
   display: inline;
   float: left;
@@ -3561,14 +3547,14 @@ textarea {
   margin-bottom: 50px;
 }
 @media screen and (max-width: 480px) {
-  /* line 81, ../sass/components/_sponsors.scss */
+  /* line 67, ../sass/components/_sponsors.scss */
   .page-sponsors .views-field-field-sponsor-image {
     width: 100%;
     left: 0;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 81, ../sass/components/_sponsors.scss */
+  /* line 67, ../sass/components/_sponsors.scss */
   .page-sponsors .views-field-field-sponsor-image {
     display: inline;
     float: left;
@@ -3581,18 +3567,18 @@ textarea {
   }
 }
 @media screen and (max-width: 768px) and (max-width: 480px) {
-  /* line 81, ../sass/components/_sponsors.scss */
+  /* line 67, ../sass/components/_sponsors.scss */
   .page-sponsors .views-field-field-sponsor-image {
     width: 100%;
     left: 0;
   }
 }
 
-/* line 90, ../sass/components/_sponsors.scss */
+/* line 76, ../sass/components/_sponsors.scss */
 .page-sponsors .views-field-field-sponsor-image img {
   max-width: 100%;
 }
-/* line 95, ../sass/components/_sponsors.scss */
+/* line 81, ../sass/components/_sponsors.scss */
 .page-sponsors .views-field-nothing {
   display: inline;
   float: left;
@@ -3603,14 +3589,14 @@ textarea {
   box-sizing: border-box;
 }
 @media screen and (max-width: 480px) {
-  /* line 95, ../sass/components/_sponsors.scss */
+  /* line 81, ../sass/components/_sponsors.scss */
   .page-sponsors .views-field-nothing {
     width: 100%;
     left: 0;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 95, ../sass/components/_sponsors.scss */
+  /* line 81, ../sass/components/_sponsors.scss */
   .page-sponsors .views-field-nothing {
     display: inline;
     float: left;
@@ -3622,7 +3608,7 @@ textarea {
   }
 }
 @media screen and (max-width: 768px) and (max-width: 480px) {
-  /* line 95, ../sass/components/_sponsors.scss */
+  /* line 81, ../sass/components/_sponsors.scss */
   .page-sponsors .views-field-nothing {
     width: 100%;
     left: 0;

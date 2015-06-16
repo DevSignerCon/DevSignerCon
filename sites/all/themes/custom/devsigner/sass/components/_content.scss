@@ -47,6 +47,15 @@ h1#page-title {
 }
 
 #content {
+  .content-inner {
+    font-size: 18px;
+
+    @media screen and (max-width: $tablet) {
+      font-size: 21px;
+      line-height: 26px;
+    }
+  }
+
   article {
     h2 {
       line-height: 1;

@@ -1946,21 +1946,32 @@ h1#page-title {
   margin-bottom: 20px;
 }
 
-/* line 51, ../sass/components/_content.scss */
+/* line 50, ../sass/components/_content.scss */
+#content .content-inner {
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  /* line 50, ../sass/components/_content.scss */
+  #content .content-inner {
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+/* line 60, ../sass/components/_content.scss */
 #content article h2 {
   line-height: 1;
 }
-/* line 54, ../sass/components/_content.scss */
+/* line 63, ../sass/components/_content.scss */
 #content article h3 {
   line-height: 1;
   margin-bottom: .75em;
 }
-/* line 58, ../sass/components/_content.scss */
+/* line 67, ../sass/components/_content.scss */
 #content article p {
   margin-top: .5em;
   margin-bottom: 1em;
 }
-/* line 62, ../sass/components/_content.scss */
+/* line 71, ../sass/components/_content.scss */
 #content article ul {
   margin-top: .5em;
 }

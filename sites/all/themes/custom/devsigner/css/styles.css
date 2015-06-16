@@ -6,23 +6,25 @@
  * of these @include files will be combined into a single file.
  */
 /* Import Sass mixins, variables, Compass modules, etc. */
-/* line 61, ../sass/_mixins.scss */
+/* line 62, ../sass/_mixins.scss */
 #page .devsigner-button {
   background-color: #012233;
   border: none;
   color: #FFFFFF;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
-  font-size: 1.5em;
+  font-size: 24px;
   padding: 10px 26px 8px;
+  white-space: nowrap;
 }
-/* line 64, ../sass/_mixins.scss */
+/* line 65, ../sass/_mixins.scss */
 #page .devsigner-button.lime {
   background-color: #8AB513;
   border: none;
   color: #FFFFFF;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
-  font-size: 1.5em;
+  font-size: 24px;
   padding: 10px 26px 8px;
+  white-space: nowrap;
 }
 
 @font-face {
@@ -1946,21 +1948,32 @@ h1#page-title {
   margin-bottom: 20px;
 }
 
-/* line 51, ../sass/components/_content.scss */
+/* line 50, ../sass/components/_content.scss */
+#content .content-inner {
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  /* line 50, ../sass/components/_content.scss */
+  #content .content-inner {
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+/* line 60, ../sass/components/_content.scss */
 #content article h2 {
   line-height: 1;
 }
-/* line 54, ../sass/components/_content.scss */
+/* line 63, ../sass/components/_content.scss */
 #content article h3 {
   line-height: 1;
   margin-bottom: .75em;
 }
-/* line 58, ../sass/components/_content.scss */
+/* line 67, ../sass/components/_content.scss */
 #content article p {
   margin-top: .5em;
   margin-bottom: 1em;
 }
-/* line 62, ../sass/components/_content.scss */
+/* line 71, ../sass/components/_content.scss */
 #content article ul {
   margin-top: .5em;
 }
@@ -2078,8 +2091,9 @@ textarea {
   border: none;
   color: #FFFFFF;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
-  font-size: 1.5em;
+  font-size: 24px;
   padding: 10px 26px 8px;
+  white-space: nowrap;
 }
 
 /* line 32, ../sass/components/_forms.scss */
@@ -2778,8 +2792,9 @@ textarea {
   border: none;
   color: #FFFFFF;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
-  font-size: 1.5em;
+  font-size: 24px;
   padding: 10px 26px 8px;
+  white-space: nowrap;
 }
 /* line 264, ../sass/components/_home.scss */
 .front #header #block-views-flex-slider-block .flexslider .views-field-field-slide-image {
@@ -2875,13 +2890,13 @@ textarea {
 }
 /* line 324, ../sass/components/_home.scss */
 .front .content-inner .field-name-body p:first-child {
-  font-size: 1.75em;
+  font-size: 27px;
   line-height: 1.5em;
 }
 @media screen and (min-width: 768px) and (max-width: 960px) {
   /* line 324, ../sass/components/_home.scss */
   .front .content-inner .field-name-body p:first-child {
-    font-size: 1.5em;
+    font-size: 22px;
   }
 }
 /* line 332, ../sass/components/_home.scss */
@@ -2890,8 +2905,9 @@ textarea {
   border: none;
   color: #012233;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
-  font-size: 1.5em;
+  font-size: 24px;
   padding: 10px 26px 8px;
+  white-space: nowrap;
   border: 1px solid #012233;
 }
 /* line 336, ../sass/components/_home.scss */
@@ -2992,8 +3008,9 @@ textarea {
   border: none;
   color: #012233;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
-  font-size: 1.5em;
+  font-size: 24px;
   padding: 10px 26px 8px;
+  white-space: nowrap;
   border: 1px solid #012233;
 }
 /* line 397, ../sass/components/_home.scss */
@@ -3153,8 +3170,9 @@ textarea {
   border: none;
   color: #FFFFFF;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
-  font-size: 1.5em;
+  font-size: 24px;
   padding: 10px 26px 8px;
+  white-space: nowrap;
   border: 1px solid #FFFFFF;
   background: none;
   display: block;
@@ -3517,21 +3535,7 @@ textarea {
 .page-sponsors .views-row:after {
   clear: both;
 }
-/* line 66, ../sass/components/_sponsors.scss */
-.page-sponsors .views-row .field-content {
-  font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
-  font-size: 1.3em;
-  line-height: 1;
-}
-/* line 71, ../sass/components/_sponsors.scss */
-.page-sponsors .views-row .field-content p {
-  font-family: miso, Arial, Helvetica, "Nimbus Sans L", sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 1em;
-  margin-top: 0.5em;
-}
-/* line 81, ../sass/components/_sponsors.scss */
+/* line 67, ../sass/components/_sponsors.scss */
 .page-sponsors .views-field-field-sponsor-image {
   display: inline;
   float: left;
@@ -3543,14 +3547,14 @@ textarea {
   margin-bottom: 50px;
 }
 @media screen and (max-width: 480px) {
-  /* line 81, ../sass/components/_sponsors.scss */
+  /* line 67, ../sass/components/_sponsors.scss */
   .page-sponsors .views-field-field-sponsor-image {
     width: 100%;
     left: 0;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 81, ../sass/components/_sponsors.scss */
+  /* line 67, ../sass/components/_sponsors.scss */
   .page-sponsors .views-field-field-sponsor-image {
     display: inline;
     float: left;
@@ -3563,18 +3567,18 @@ textarea {
   }
 }
 @media screen and (max-width: 768px) and (max-width: 480px) {
-  /* line 81, ../sass/components/_sponsors.scss */
+  /* line 67, ../sass/components/_sponsors.scss */
   .page-sponsors .views-field-field-sponsor-image {
     width: 100%;
     left: 0;
   }
 }
 
-/* line 90, ../sass/components/_sponsors.scss */
+/* line 76, ../sass/components/_sponsors.scss */
 .page-sponsors .views-field-field-sponsor-image img {
   max-width: 100%;
 }
-/* line 95, ../sass/components/_sponsors.scss */
+/* line 81, ../sass/components/_sponsors.scss */
 .page-sponsors .views-field-nothing {
   display: inline;
   float: left;
@@ -3585,14 +3589,14 @@ textarea {
   box-sizing: border-box;
 }
 @media screen and (max-width: 480px) {
-  /* line 95, ../sass/components/_sponsors.scss */
+  /* line 81, ../sass/components/_sponsors.scss */
   .page-sponsors .views-field-nothing {
     width: 100%;
     left: 0;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 95, ../sass/components/_sponsors.scss */
+  /* line 81, ../sass/components/_sponsors.scss */
   .page-sponsors .views-field-nothing {
     display: inline;
     float: left;
@@ -3604,7 +3608,7 @@ textarea {
   }
 }
 @media screen and (max-width: 768px) and (max-width: 480px) {
-  /* line 95, ../sass/components/_sponsors.scss */
+  /* line 81, ../sass/components/_sponsors.scss */
   .page-sponsors .views-field-nothing {
     width: 100%;
     left: 0;

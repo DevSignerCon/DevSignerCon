@@ -6,23 +6,25 @@
  * of these @include files will be combined into a single file.
  */
 /* Import Sass mixins, variables, Compass modules, etc. */
-/* line 61, ../sass/_mixins.scss */
+/* line 62, ../sass/_mixins.scss */
 #page .devsigner-button {
   background-color: #012233;
   border: none;
   color: #FFFFFF;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
-  font-size: 1.5em;
+  font-size: 24px;
   padding: 10px 26px 8px;
+  white-space: nowrap;
 }
-/* line 64, ../sass/_mixins.scss */
+/* line 65, ../sass/_mixins.scss */
 #page .devsigner-button.lime {
   background-color: #8AB513;
   border: none;
   color: #FFFFFF;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
-  font-size: 1.5em;
+  font-size: 24px;
   padding: 10px 26px 8px;
+  white-space: nowrap;
 }
 
 @font-face {
@@ -2089,8 +2091,9 @@ textarea {
   border: none;
   color: #FFFFFF;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
-  font-size: 1.5em;
+  font-size: 24px;
   padding: 10px 26px 8px;
+  white-space: nowrap;
 }
 
 /* line 32, ../sass/components/_forms.scss */
@@ -2789,8 +2792,9 @@ textarea {
   border: none;
   color: #FFFFFF;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
-  font-size: 1.5em;
+  font-size: 24px;
   padding: 10px 26px 8px;
+  white-space: nowrap;
 }
 /* line 264, ../sass/components/_home.scss */
 .front #header #block-views-flex-slider-block .flexslider .views-field-field-slide-image {
@@ -2886,13 +2890,13 @@ textarea {
 }
 /* line 324, ../sass/components/_home.scss */
 .front .content-inner .field-name-body p:first-child {
-  font-size: 1.75em;
+  font-size: 27px;
   line-height: 1.5em;
 }
 @media screen and (min-width: 768px) and (max-width: 960px) {
   /* line 324, ../sass/components/_home.scss */
   .front .content-inner .field-name-body p:first-child {
-    font-size: 1.5em;
+    font-size: 22px;
   }
 }
 /* line 332, ../sass/components/_home.scss */
@@ -2901,8 +2905,9 @@ textarea {
   border: none;
   color: #012233;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
-  font-size: 1.5em;
+  font-size: 24px;
   padding: 10px 26px 8px;
+  white-space: nowrap;
   border: 1px solid #012233;
 }
 /* line 336, ../sass/components/_home.scss */
@@ -3003,8 +3008,9 @@ textarea {
   border: none;
   color: #012233;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
-  font-size: 1.5em;
+  font-size: 24px;
   padding: 10px 26px 8px;
+  white-space: nowrap;
   border: 1px solid #012233;
 }
 /* line 397, ../sass/components/_home.scss */
@@ -3164,8 +3170,9 @@ textarea {
   border: none;
   color: #FFFFFF;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
-  font-size: 1.5em;
+  font-size: 24px;
   padding: 10px 26px 8px;
+  white-space: nowrap;
   border: 1px solid #FFFFFF;
   background: none;
   display: block;

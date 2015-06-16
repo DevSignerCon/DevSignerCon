@@ -80,3 +80,90 @@
     padding: 0.33em 0.5em 0.1333em;
   }
 }
+
+.view-sessions {
+  .view-filters {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #EBEDF1;
+
+    .views-exposed-widget {
+      padding-bottom: 10px;
+    }
+
+    #edit-field-experience-level-tid-wrapper {
+      margin-right: 20px;
+    }
+
+    .bef-select-as-links {
+      .form-type-bef-link {
+        float: left;
+        padding-right: 12px;
+
+        a {
+          display: inline-block;
+          line-height: 1.2;
+          padding: 0.33em 0 0.1333em;
+
+          &.active {
+            background: #012233;
+            border-radius: 4px;
+            color: #FFFFFF;
+            display: inline-block;
+            line-height: 1.2;
+            padding: 0.33em 0.5em 0.1333em;
+          }
+        }
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th {
+    &.views-field-field-contact-name,
+    &.views-field-field-session-title {
+      text-align: left;
+    }
+  }
+
+  tr.even, tr.odd {
+    background: none;
+    border: none;
+    vertical-align: middle;
+  }
+
+  td {
+    padding: 12px 7px;
+
+    &.views-field-field-session-title {
+      font-family: misoBold,Arial,Helvetica,"Numbus Sans L",sans-serif;
+      padding-left: 0;
+      padding-right: 15px;
+      font-size: 21px;
+    }
+
+    &.views-field-field-contact-name {
+      padding-left: 0;
+    }
+
+    &.views-field-field-experience-level,
+    &.views-field-field-session-format {
+      white-space: nowrap;
+      text-align: center;
+
+      @media screen and (max-width: $tablet) {
+        white-space: normal;
+      }
+
+      div {
+        margin-bottom: 0;
+      }
+    }
+
+    .field-item {
+      margin-right: 0;
+    }
+  }
+}

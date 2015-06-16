@@ -17,6 +17,13 @@ function session_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function session_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_default_entityform_type().
  */
 function session_default_entityform_type() {
@@ -44,8 +51,8 @@ function session_default_entityform_type() {
       "submission_show_submitted" : 0,
       "submissions_view" : "default",
       "user_submissions_view" : "default",
-      "form_status" : "ENTITYFORM_CLOSED",
-      "roles" : { "3" : "3", "1" : 0, "2" : 0 },
+      "form_status" : "ENTITYFORM_OPEN",
+      "roles" : { "2" : "2", "3" : "3", "1" : 0 },
       "resubmit_action" : "new",
       "redirect_path" : "",
       "instruction_pre" : {

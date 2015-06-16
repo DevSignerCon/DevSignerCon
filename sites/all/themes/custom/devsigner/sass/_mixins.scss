@@ -67,3 +67,17 @@
   }
 }
 
+// Icon Set
+@mixin devsigner-icon($content: "\e600", $size: 18px) {
+  content: $content;
+  font-family: 'icomoon';
+  font-size: $size;
+  line-height: $size;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

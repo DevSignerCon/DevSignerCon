@@ -1719,6 +1719,72 @@ tr.selected td {
   margin-top: 0;
 }
 
+/* line 836, ../sass/components/_misc.scss */
+.view-organizing-team .views-row {
+  display: inline;
+  float: left;
+  width: 33.33333%;
+  padding: 0 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 35px;
+}
+@media screen and (max-width: 480px) {
+  /* line 836, ../sass/components/_misc.scss */
+  .view-organizing-team .views-row {
+    width: 100%;
+    left: 0;
+  }
+}
+/* line 839, ../sass/components/_misc.scss */
+.view-organizing-team .views-row.views-row-4, .view-organizing-team .views-row.views-row-7, .view-organizing-team .views-row.views-row-10, .view-organizing-team .views-row.views-row-13, .view-organizing-team .views-row.views-row-16 {
+  clear: left;
+}
+/* line 849, ../sass/components/_misc.scss */
+.view-organizing-team .views-row .views-field {
+  text-align: center;
+}
+/* line 853, ../sass/components/_misc.scss */
+.view-organizing-team .views-row h2 {
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+/* line 859, ../sass/components/_misc.scss */
+.view-organizing-team .views-row .views-field-field-photo .field-content {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+/* line 866, ../sass/components/_misc.scss */
+.view-organizing-team .views-row .views-field-field-photo .field-content img {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 960px) {
+  /* line 873, ../sass/components/_misc.scss */
+  .view-organizing-team .views-row .views-field-field-photo .field-content {
+    width: 175px;
+    height: 175px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 879, ../sass/components/_misc.scss */
+  .view-organizing-team .views-row .views-field-field-photo .field-content {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 885, ../sass/components/_misc.scss */
+  .view-organizing-team .views-row .views-field-field-photo .field-content {
+    width: 200px;
+    height: 200px;
+  }
+}
+
 /* line 5, ../sass/components/_header.scss */
 #header-wrapper {
   background-color: #012233;

@@ -44,6 +44,10 @@ h1#page-title {
   line-height: 1em;
   margin-top: 17px;
   margin-bottom: 20px;
+
+  @media screen and (max-width: $mobile) {
+    font-size: 3em; // 4.5 / 16px = 72px
+  }
 }
 
 #content {

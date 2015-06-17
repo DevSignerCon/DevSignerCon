@@ -1,0 +1,5 @@
+name = Devsigner Taxonomy
+description = Customizes Taxonomy handling throughout the site.
+core = 7.x
+dependencies[] = taxonomy_entity_index
+dependencies[] = entityform

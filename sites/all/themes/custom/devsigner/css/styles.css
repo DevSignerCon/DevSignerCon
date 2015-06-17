@@ -1706,6 +1706,15 @@ tr.selected td {
   line-height: 1.2;
 }
 /* line 818, ../sass/components/_misc.scss */
+.page-taxonomy-term #content .entity-entityform .content .profile {
+  margin: 0 0 5px;
+}
+/* line 821, ../sass/components/_misc.scss */
+.page-taxonomy-term #content .entity-entityform .content .profile .field-name-field-contact-name .field-item {
+  font-size: .9em;
+  font-family: miso, Arial, Helvetica, "Nimbus Sans L", sans-serif;
+}
+/* line 827, ../sass/components/_misc.scss */
 .page-taxonomy-term #content .entity-entityform .content p {
   margin-top: 0;
 }
@@ -2054,6 +2063,12 @@ h1#page-title {
   margin-top: 17px;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 768px) {
+  /* line 40, ../sass/components/_content.scss */
+  h1#page-title {
+    font-size: 3.75em;
+  }
+}
 @media screen and (max-width: 480px) {
   /* line 40, ../sass/components/_content.scss */
   h1#page-title {
@@ -2061,32 +2076,32 @@ h1#page-title {
   }
 }
 
-/* line 54, ../sass/components/_content.scss */
+/* line 57, ../sass/components/_content.scss */
 #content .content-inner {
   font-size: 18px;
 }
 @media screen and (max-width: 768px) {
-  /* line 54, ../sass/components/_content.scss */
+  /* line 57, ../sass/components/_content.scss */
   #content .content-inner {
     font-size: 21px;
     line-height: 26px;
   }
 }
-/* line 64, ../sass/components/_content.scss */
+/* line 67, ../sass/components/_content.scss */
 #content article h2 {
   line-height: 1;
 }
-/* line 67, ../sass/components/_content.scss */
+/* line 70, ../sass/components/_content.scss */
 #content article h3 {
   line-height: 1;
   margin-bottom: .75em;
 }
-/* line 71, ../sass/components/_content.scss */
+/* line 74, ../sass/components/_content.scss */
 #content article p {
   margin-top: .5em;
   margin-bottom: 1em;
 }
-/* line 75, ../sass/components/_content.scss */
+/* line 78, ../sass/components/_content.scss */
 #content article ul {
   margin-top: .5em;
 }

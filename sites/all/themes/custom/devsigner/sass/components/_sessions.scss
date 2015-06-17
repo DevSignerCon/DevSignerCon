@@ -120,7 +120,7 @@
       padding-right: 5px;
     }
     &.term-18:before {
-      @include devsigner-icon($dot-open, 16px);    
+      @include devsigner-icon($dot-open, 16px);
       padding-right: 5px;
       top: 1px;
     }
@@ -163,11 +163,6 @@
     }
   }
 
-  // Allow scrolling for mobile
-  .view-content {
-    overflow-x: scroll;
-  }
-
   table {
     width: 100%;
   }
@@ -176,6 +171,12 @@
     &.views-field-field-contact-name,
     &.views-field-field-session-title {
       text-align: left;
+    }
+
+    @media screen and (max-width: $mobile + 40) {
+      &.views-field-field-session-format {
+        display: none;
+      }
     }
   }
 
@@ -210,6 +211,12 @@
 
       div {
         margin-bottom: 0;
+      }
+    }
+
+    @media screen and (max-width: $mobile + 40) {
+      &.views-field-field-session-format {
+        display: none;
       }
     }
 

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * @file
  * Styles are organized using the SMACSS technique. @see http://smacss.com/book/
@@ -1696,7 +1697,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1429986570');
+  background-image: url('../images/progress.gif?1430353752');
 }
 
 /* line 5, ../sass/components/_header.scss */
@@ -3947,55 +3948,63 @@ textarea {
   line-height: 1.2;
   padding: 0.33em 0.5em 0.1333em;
 }
-/* line 167, ../sass/components/_sessions.scss */
-.view-sessions .view-content {
-  overflow-x: scroll;
-}
-/* line 171, ../sass/components/_sessions.scss */
+/* line 166, ../sass/components/_sessions.scss */
 .view-sessions table {
   width: 100%;
 }
-/* line 176, ../sass/components/_sessions.scss */
+/* line 171, ../sass/components/_sessions.scss */
 .view-sessions th.views-field-field-contact-name, .view-sessions th.views-field-field-session-title {
   text-align: left;
 }
-/* line 182, ../sass/components/_sessions.scss */
+@media screen and (max-width: 520px) {
+  /* line 177, ../sass/components/_sessions.scss */
+  .view-sessions th.views-field-field-session-format {
+    display: none;
+  }
+}
+/* line 183, ../sass/components/_sessions.scss */
 .view-sessions tr.even, .view-sessions tr.odd {
   background: none;
   border: none;
   vertical-align: middle;
 }
-/* line 188, ../sass/components/_sessions.scss */
+/* line 189, ../sass/components/_sessions.scss */
 .view-sessions td {
   padding: 12px 7px;
 }
-/* line 191, ../sass/components/_sessions.scss */
+/* line 192, ../sass/components/_sessions.scss */
 .view-sessions td.views-field-field-session-title {
   font-family: misoBold,Arial,Helvetica,"Numbus Sans L",sans-serif;
   padding-left: 0;
   padding-right: 15px;
   font-size: 21px;
 }
-/* line 198, ../sass/components/_sessions.scss */
+/* line 199, ../sass/components/_sessions.scss */
 .view-sessions td.views-field-field-contact-name {
   padding-left: 0;
 }
-/* line 202, ../sass/components/_sessions.scss */
+/* line 203, ../sass/components/_sessions.scss */
 .view-sessions td.views-field-field-experience-level, .view-sessions td.views-field-field-session-format {
   white-space: nowrap;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
-  /* line 202, ../sass/components/_sessions.scss */
+  /* line 203, ../sass/components/_sessions.scss */
   .view-sessions td.views-field-field-experience-level, .view-sessions td.views-field-field-session-format {
     white-space: normal;
   }
 }
-/* line 211, ../sass/components/_sessions.scss */
+/* line 212, ../sass/components/_sessions.scss */
 .view-sessions td.views-field-field-experience-level div, .view-sessions td.views-field-field-session-format div {
   margin-bottom: 0;
 }
-/* line 216, ../sass/components/_sessions.scss */
+@media screen and (max-width: 520px) {
+  /* line 218, ../sass/components/_sessions.scss */
+  .view-sessions td.views-field-field-session-format {
+    display: none;
+  }
+}
+/* line 223, ../sass/components/_sessions.scss */
 .view-sessions td .field-item {
   margin-right: 0;
 }

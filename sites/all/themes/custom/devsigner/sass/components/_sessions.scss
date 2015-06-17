@@ -7,6 +7,16 @@
     @include element-invisible;
   }
 
+  .group-details,
+  .group-schedule {
+    @include column(1,2);
+
+  }
+
+  .field-name-field-session-description {
+    clear: both;
+  }
+
   .field-name-field-speaker > .field-label {
     font-size: 1.75em; // 1.75em * 16px = 28px
     margin: 0;
@@ -51,7 +61,9 @@
 // Tags
 .field-name-field-session-format,
 .field-name-field-experience-level,
-.field-name-field-categories {
+.field-name-field-categories,
+.field-name-field-room,
+.field-name-field-time-slot {
   margin-bottom: 1em;
 
   .field-item {
@@ -61,6 +73,7 @@
     display: inline-block;
     line-height: 1.2;
     margin-right: 3px;
+    margin-bottom: 3px;
     padding: 0.33em 0.5em 0.1333em;
   }
 
@@ -69,6 +82,14 @@
     display: inline-block;
   }
 }
+
+.field-name-field-time-slot {
+  .field-item {
+    clear: both;
+    float: left;
+  }
+}
+
 .field-name-field-session-format,
 .field-name-field-experience-level,
 .field-name-field-categories {

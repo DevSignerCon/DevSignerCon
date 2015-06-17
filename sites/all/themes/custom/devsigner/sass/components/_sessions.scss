@@ -70,6 +70,7 @@
   }
 }
 .field-name-field-session-format,
+.field-name-field-experience-level,
 .field-name-field-categories {
 
   .field-item {
@@ -84,8 +85,12 @@
 // Icons
 .field-name-field-session-format {
   .field-item {
+    a {
+      padding: 0.33em 0.5em 0.1333em 0.4em;
+    }
+
     &:before {
-      padding-left: 5px;
+      padding-left: 6px;
       position: relative;
       top: 2px;
     }
@@ -103,27 +108,36 @@
 
 .field-name-field-experience-level {
   .field-item {
+    a {
+      padding: 0.33em 0.5em 0.1333em 0.3em;
+    }
+
     &:before {
-      margin-left: -5px;
+      padding-left: 5px;
       position: relative;
       top: 2px;
     }
-    &.term-15:before {
-      @include devsigner-icon($dot-single);
+    &.term-15 {
+      a {
+        padding: 0.33em 0.5em 0.1333em 0.1em;
+      }
+
+      &:before {
+        padding-left: 3px;
+        @include devsigner-icon($dot-single);
+      }
     }
     &.term-16:before {
       @include devsigner-icon($dot-double);
-      padding-right: 5px;
     }
     &.term-17:before {
       @include devsigner-icon($dot-triple);
-      padding-right: 5px;
     }
     &.term-18:before {
       @include devsigner-icon($dot-open, 16px);
-      padding-right: 5px;
       top: 1px;
     }
+
   }
 }
 
@@ -173,7 +187,7 @@
       text-align: left;
     }
 
-    @media screen and (max-width: $mobile + 40) {
+    @media screen and (max-width: $mobile + 120) {
       &.views-field-field-session-format {
         display: none;
       }
@@ -205,16 +219,12 @@
       white-space: nowrap;
       text-align: center;
 
-      @media screen and (max-width: $tablet) {
-        white-space: normal;
-      }
-
       div {
         margin-bottom: 0;
       }
     }
 
-    @media screen and (max-width: $mobile + 40) {
+    @media screen and (max-width: $mobile + 120) {
       &.views-field-field-session-format {
         display: none;
       }

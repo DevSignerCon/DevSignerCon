@@ -5,11 +5,18 @@
  */
 
 /**
- * Add a teaser view for entity forms.
+ * Add additional view modes to entities.
  */
 function devsigner_taxonomy_entity_info_alter(&$entity_info) {
+  // Add teaser for entity forms.
   $entity_info['entityform']['view modes']['teaser'] = array(
     'label' => t('Teaser'),
+    'custom settings' => TRUE,
+  );
+
+  // Add taxonomy for users.
+  $entity_info['user']['view modes']['taxonomy'] = array(
+    'label' => t('Taxonomy'),
     'custom settings' => TRUE,
   );
 }

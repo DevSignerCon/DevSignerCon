@@ -815,6 +815,15 @@ tr.selected td {
       }
 
       .content {
+        .profile {
+          margin: 0 0 5px;
+
+          .field-name-field-contact-name .field-item {
+            font-size: .9em;
+            font-family: $miso;
+          }
+        }
+
         p {
           margin-top: 0;
         }

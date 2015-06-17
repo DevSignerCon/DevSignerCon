@@ -116,6 +116,37 @@ $nav-height: 3em;
 $tabs-container-bg: #fff;
 $tabs-border: #bbb;
 
+// Icon codes
+.icon-icons_1:before {
+  content: "\e600";
+}
+.icon-icons_2:before {
+  content: "\e601";
+}
+.icon-icons_3:before {
+  content: "\e602";
+}
+.icon-pencil2:before {
+  content: "\e906";
+}
+.icon-display:before {
+  content: "\e956";
+}
+.icon-users:before {
+  content: "\e972";
+}
+.icon-list:before {
+  content: "\e9ba";
+}
+
+$dot-single: '\e600';
+$dot-double: '\e601';
+$dot-triple: '\e602';
+$dot-open:   '\e603';
+$pencil:     '\e906';
+$display:    '\e956';
+$users:      '\e972';
+
 
 // =============================================================================
 // Partials to be shared with all .scss files.

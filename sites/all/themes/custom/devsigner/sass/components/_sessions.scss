@@ -81,6 +81,52 @@
   }
 }
 
+// Icons
+.field-name-field-session-format {
+  .field-item {
+    &:before {
+      padding-left: 5px;
+      position: relative;
+      top: 2px;
+    }
+    &.term-6:before {
+      @include devsigner-icon($users);
+    }
+    &.term-7:before {
+      @include devsigner-icon($display);
+    }
+    &.term-8:before {
+      @include devsigner-icon($pencil);
+    }
+  }
+}
+
+.field-name-field-experience-level {
+  .field-item {
+    &:before {
+      margin-left: -5px;
+      position: relative;
+      top: 2px;
+    }
+    &.term-15:before {
+      @include devsigner-icon($dot-single);
+    }
+    &.term-16:before {
+      @include devsigner-icon($dot-double);
+      padding-right: 5px;
+    }
+    &.term-17:before {
+      @include devsigner-icon($dot-triple);
+      padding-right: 5px;
+    }
+    &.term-18:before {
+      @include devsigner-icon($dot-open, 16px);    
+      padding-right: 5px;
+      top: 1px;
+    }
+  }
+}
+
 .view-sessions {
   .view-filters {
     padding-bottom: 10px;
@@ -115,6 +161,11 @@
         }
       }
     }
+  }
+
+  // Allow scrolling for mobile
+  .view-content {
+    overflow-x: scroll;
   }
 
   table {

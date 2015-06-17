@@ -6,6 +6,41 @@
  * of these @include files will be combined into a single file.
  */
 /* Import Sass mixins, variables, Compass modules, etc. */
+/* line 120, ../sass/_init.scss */
+.icon-icons_1:before {
+  content: "\e600";
+}
+
+/* line 123, ../sass/_init.scss */
+.icon-icons_2:before {
+  content: "\e601";
+}
+
+/* line 126, ../sass/_init.scss */
+.icon-icons_3:before {
+  content: "\e602";
+}
+
+/* line 129, ../sass/_init.scss */
+.icon-pencil2:before {
+  content: "\e906";
+}
+
+/* line 132, ../sass/_init.scss */
+.icon-display:before {
+  content: "\e956";
+}
+
+/* line 135, ../sass/_init.scss */
+.icon-users:before {
+  content: "\e972";
+}
+
+/* line 138, ../sass/_init.scss */
+.icon-list:before {
+  content: "\e9ba";
+}
+
 /* line 62, ../sass/_mixins.scss */
 #page .devsigner-button {
   background-color: #012233;
@@ -42,6 +77,67 @@
   src: url("../fonts/miso/miso-light.otf");
   font-weight: normal !important;
 }
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon/icomoon.eot?qoksfj");
+  src: url("../fonts/icomoon/icomoon.eot?#iefixqoksfj") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?qoksfj") format("truetype"), url("../fonts/icomoon/icomoon.woff?qoksfj") format("woff"), url("../fonts/icomoon/icomoon.svg?qoksfj#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 38, ../sass/_fonts.scss */
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 52, ../sass/_fonts.scss */
+.icon-icon_new:before {
+  content: "\e603";
+}
+
+/* line 55, ../sass/_fonts.scss */
+.icon-icons_1:before {
+  content: "\e600";
+}
+
+/* line 58, ../sass/_fonts.scss */
+.icon-icons_2:before {
+  content: "\e601";
+}
+
+/* line 61, ../sass/_fonts.scss */
+.icon-icons_3:before {
+  content: "\e602";
+}
+
+/* line 64, ../sass/_fonts.scss */
+.icon-pencil2:before {
+  content: "\e906";
+}
+
+/* line 67, ../sass/_fonts.scss */
+.icon-display:before {
+  content: "\e956";
+}
+
+/* line 70, ../sass/_fonts.scss */
+.icon-users:before {
+  content: "\e972";
+}
+
+/* line 73, ../sass/_fonts.scss */
+.icon-list:before {
+  content: "\e9ba";
+}
+
 /* HTML element (SMACSS base) rules */
 /**
  * @file
@@ -1600,7 +1696,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1430353752');
+  background-image: url('../images/progress.gif?1429986570');
 }
 
 /* line 5, ../sass/components/_header.scss */
@@ -3702,31 +3798,147 @@ textarea {
   padding: 0.33em 0.5em 0.1333em;
 }
 
-/* line 85, ../sass/components/_sessions.scss */
+/* line 87, ../sass/components/_sessions.scss */
+.field-name-field-session-format .field-item:before {
+  padding-left: 5px;
+  position: relative;
+  top: 2px;
+}
+/* line 92, ../sass/components/_sessions.scss */
+.field-name-field-session-format .field-item.term-6:before {
+  content: "";
+  font-family: 'icomoon';
+  font-size: 18px;
+  line-height: 18px;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* line 95, ../sass/components/_sessions.scss */
+.field-name-field-session-format .field-item.term-7:before {
+  content: "";
+  font-family: 'icomoon';
+  font-size: 18px;
+  line-height: 18px;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* line 98, ../sass/components/_sessions.scss */
+.field-name-field-session-format .field-item.term-8:before {
+  content: "";
+  font-family: 'icomoon';
+  font-size: 18px;
+  line-height: 18px;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 106, ../sass/components/_sessions.scss */
+.field-name-field-experience-level .field-item:before {
+  margin-left: -5px;
+  position: relative;
+  top: 2px;
+}
+/* line 111, ../sass/components/_sessions.scss */
+.field-name-field-experience-level .field-item.term-15:before {
+  content: "";
+  font-family: 'icomoon';
+  font-size: 18px;
+  line-height: 18px;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* line 114, ../sass/components/_sessions.scss */
+.field-name-field-experience-level .field-item.term-16:before {
+  content: "";
+  font-family: 'icomoon';
+  font-size: 18px;
+  line-height: 18px;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-right: 5px;
+}
+/* line 118, ../sass/components/_sessions.scss */
+.field-name-field-experience-level .field-item.term-17:before {
+  content: "";
+  font-family: 'icomoon';
+  font-size: 18px;
+  line-height: 18px;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-right: 5px;
+}
+/* line 122, ../sass/components/_sessions.scss */
+.field-name-field-experience-level .field-item.term-18:before {
+  content: "";
+  font-family: 'icomoon';
+  font-size: 16px;
+  line-height: 16px;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-right: 5px;
+  top: 1px;
+}
+
+/* line 131, ../sass/components/_sessions.scss */
 .view-sessions .view-filters {
   padding-bottom: 10px;
   border-bottom: 2px solid #EBEDF1;
 }
-/* line 89, ../sass/components/_sessions.scss */
+/* line 135, ../sass/components/_sessions.scss */
 .view-sessions .view-filters .views-exposed-widget {
   padding-bottom: 10px;
 }
-/* line 93, ../sass/components/_sessions.scss */
+/* line 139, ../sass/components/_sessions.scss */
 .view-sessions .view-filters #edit-field-experience-level-tid-wrapper {
   margin-right: 20px;
 }
-/* line 98, ../sass/components/_sessions.scss */
+/* line 144, ../sass/components/_sessions.scss */
 .view-sessions .view-filters .bef-select-as-links .form-type-bef-link {
   float: left;
   padding-right: 12px;
 }
-/* line 102, ../sass/components/_sessions.scss */
+/* line 148, ../sass/components/_sessions.scss */
 .view-sessions .view-filters .bef-select-as-links .form-type-bef-link a {
   display: inline-block;
   line-height: 1.2;
   padding: 0.33em 0 0.1333em;
 }
-/* line 107, ../sass/components/_sessions.scss */
+/* line 153, ../sass/components/_sessions.scss */
 .view-sessions .view-filters .bef-select-as-links .form-type-bef-link a.active {
   background: #012233;
   border-radius: 4px;
@@ -3735,51 +3947,55 @@ textarea {
   line-height: 1.2;
   padding: 0.33em 0.5em 0.1333em;
 }
-/* line 120, ../sass/components/_sessions.scss */
+/* line 167, ../sass/components/_sessions.scss */
+.view-sessions .view-content {
+  overflow-x: scroll;
+}
+/* line 171, ../sass/components/_sessions.scss */
 .view-sessions table {
   width: 100%;
 }
-/* line 125, ../sass/components/_sessions.scss */
+/* line 176, ../sass/components/_sessions.scss */
 .view-sessions th.views-field-field-contact-name, .view-sessions th.views-field-field-session-title {
   text-align: left;
 }
-/* line 131, ../sass/components/_sessions.scss */
+/* line 182, ../sass/components/_sessions.scss */
 .view-sessions tr.even, .view-sessions tr.odd {
   background: none;
   border: none;
   vertical-align: middle;
 }
-/* line 137, ../sass/components/_sessions.scss */
+/* line 188, ../sass/components/_sessions.scss */
 .view-sessions td {
   padding: 12px 7px;
 }
-/* line 140, ../sass/components/_sessions.scss */
+/* line 191, ../sass/components/_sessions.scss */
 .view-sessions td.views-field-field-session-title {
   font-family: misoBold,Arial,Helvetica,"Numbus Sans L",sans-serif;
   padding-left: 0;
   padding-right: 15px;
   font-size: 21px;
 }
-/* line 147, ../sass/components/_sessions.scss */
+/* line 198, ../sass/components/_sessions.scss */
 .view-sessions td.views-field-field-contact-name {
   padding-left: 0;
 }
-/* line 151, ../sass/components/_sessions.scss */
+/* line 202, ../sass/components/_sessions.scss */
 .view-sessions td.views-field-field-experience-level, .view-sessions td.views-field-field-session-format {
   white-space: nowrap;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
-  /* line 151, ../sass/components/_sessions.scss */
+  /* line 202, ../sass/components/_sessions.scss */
   .view-sessions td.views-field-field-experience-level, .view-sessions td.views-field-field-session-format {
     white-space: normal;
   }
 }
-/* line 160, ../sass/components/_sessions.scss */
+/* line 211, ../sass/components/_sessions.scss */
 .view-sessions td.views-field-field-experience-level div, .view-sessions td.views-field-field-session-format div {
   margin-bottom: 0;
 }
-/* line 165, ../sass/components/_sessions.scss */
+/* line 216, ../sass/components/_sessions.scss */
 .view-sessions td .field-item {
   margin-right: 0;
 }

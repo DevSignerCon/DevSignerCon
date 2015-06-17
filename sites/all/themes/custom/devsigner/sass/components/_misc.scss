@@ -805,3 +805,19 @@ tr.selected td {
     background-image: image-url("progress.gif");
   }
 }
+
+.page-taxonomy-term {
+  #content {
+    .entity-entityform {
+      h2 {
+        margin-bottom: 0;
+      }
+
+      .content {
+        p {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

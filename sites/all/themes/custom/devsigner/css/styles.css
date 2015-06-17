@@ -1700,6 +1700,15 @@ tr.selected td {
   background-image: url('../images/progress.gif?1430353752');
 }
 
+/* line 812, ../sass/components/_misc.scss */
+.page-taxonomy-term #content .entity-entityform h2 {
+  margin-bottom: 0;
+}
+/* line 817, ../sass/components/_misc.scss */
+.page-taxonomy-term #content .entity-entityform .content p {
+  margin-top: 0;
+}
+
 /* line 5, ../sass/components/_header.scss */
 #header-wrapper {
   background-color: #012233;

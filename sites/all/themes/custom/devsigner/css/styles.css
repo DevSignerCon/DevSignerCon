@@ -1785,6 +1785,11 @@ tr.selected td {
   }
 }
 
+/* line 896, ../sass/components/_misc.scss */
+.section-users .profile h2 {
+  margin: 0;
+}
+
 /* line 5, ../sass/components/_header.scss */
 #header-wrapper {
   background-color: #012233;

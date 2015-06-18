@@ -2,6 +2,14 @@
 // Navigation
 //
 
+.region-sidebar-second {
+  #block-views-your-session-block-1,
+  #block-system-user-menu {
+    ul {
+      margin-top: 0;
+    }
+  }
+}
 
 // Main Menu
 .block-nice-menus {

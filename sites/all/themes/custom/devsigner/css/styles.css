@@ -1847,11 +1847,17 @@ tr.selected td {
   }
 }
 
-/* line 10, ../sass/components/_navigation.scss */
+/* line 8, ../sass/components/_navigation.scss */
+.region-sidebar-second #block-views-your-session-block-1 ul,
+.region-sidebar-second #block-system-user-menu ul {
+  margin-top: 0;
+}
+
+/* line 18, ../sass/components/_navigation.scss */
 .block-nice-menus h2.block-title {
   display: none;
 }
-/* line 14, ../sass/components/_navigation.scss */
+/* line 22, ../sass/components/_navigation.scss */
 .block-nice-menus ul.nice-menu {
   float: right;
   font-size: 1.125em;
@@ -1859,41 +1865,41 @@ tr.selected td {
   text-align: right;
   text-transform: uppercase;
 }
-/* line 21, ../sass/components/_navigation.scss */
+/* line 29, ../sass/components/_navigation.scss */
 .block-nice-menus ul.nice-menu li {
   background: none;
   border: none;
 }
-/* line 26, ../sass/components/_navigation.scss */
+/* line 34, ../sass/components/_navigation.scss */
 .block-nice-menus ul.nice-menu a {
   color: #FFFFFF;
   margin: 0 0 0 70px;
   text-shadow: 0px 1px 2px rgba(1, 34, 51, 0.2);
 }
-/* line 31, ../sass/components/_navigation.scss */
+/* line 39, ../sass/components/_navigation.scss */
 .block-nice-menus ul.nice-menu a.active {
   border-bottom: 3px solid #8AB513;
 }
-/* line 34, ../sass/components/_navigation.scss */
+/* line 42, ../sass/components/_navigation.scss */
 .block-nice-menus ul.nice-menu a:hover {
   color: #8AB513;
 }
-/* line 41, ../sass/components/_navigation.scss */
+/* line 49, ../sass/components/_navigation.scss */
 .block-nice-menus ul.nice-menu li.menuparent:hover {
   background: none;
 }
-/* line 45, ../sass/components/_navigation.scss */
+/* line 53, ../sass/components/_navigation.scss */
 .block-nice-menus ul.nice-menu li.menuparent > a {
   padding: 0.3em 5px;
 }
-/* line 49, ../sass/components/_navigation.scss */
+/* line 57, ../sass/components/_navigation.scss */
 .block-nice-menus ul.nice-menu li.menuparent ul {
   background: url("../images/nibbler.png") no-repeat 0 6px;
   border: none;
   margin-left: 70px;
   padding-top: 16px;
 }
-/* line 55, ../sass/components/_navigation.scss */
+/* line 63, ../sass/components/_navigation.scss */
 .block-nice-menus ul.nice-menu li.menuparent ul li {
   background: rgba(1, 34, 51, 0.8);
   border-left: 1px solid #FFFFFF;
@@ -1901,31 +1907,31 @@ tr.selected td {
   margin: 0;
   text-align: left;
 }
-/* line 62, ../sass/components/_navigation.scss */
+/* line 70, ../sass/components/_navigation.scss */
 .block-nice-menus ul.nice-menu li.menuparent ul li:last-child {
   border-bottom: 1px solid #FFFFFF;
 }
-/* line 66, ../sass/components/_navigation.scss */
+/* line 74, ../sass/components/_navigation.scss */
 .block-nice-menus ul.nice-menu li.menuparent ul li a {
   padding: 0.75em 1em;
   margin: 0;
 }
-/* line 70, ../sass/components/_navigation.scss */
+/* line 78, ../sass/components/_navigation.scss */
 .block-nice-menus ul.nice-menu li.menuparent ul li a.active {
   border-bottom: none;
 }
 @media screen and (min-width: 769px) {
-  /* line 81, ../sass/components/_navigation.scss */
+  /* line 89, ../sass/components/_navigation.scss */
   .block-nice-menus ul.nice-menu {
     display: block !important;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 89, ../sass/components/_navigation.scss */
+  /* line 97, ../sass/components/_navigation.scss */
   .block-nice-menus #navigation-wrapper {
     background: #000000;
   }
-  /* line 93, ../sass/components/_navigation.scss */
+  /* line 101, ../sass/components/_navigation.scss */
   .block-nice-menus h2.block-title {
     cursor: pointer;
     display: block;
@@ -1937,7 +1943,7 @@ tr.selected td {
     top: -74px;
     width: 30px;
   }
-  /* line 105, ../sass/components/_navigation.scss */
+  /* line 113, ../sass/components/_navigation.scss */
   .block-nice-menus ul.nice-menu {
     background: #012233;
     display: none;
@@ -1948,12 +1954,12 @@ tr.selected td {
     top: -50px;
     width: 100%;
   }
-  /* line 115, ../sass/components/_navigation.scss */
+  /* line 123, ../sass/components/_navigation.scss */
   .block-nice-menus ul.nice-menu > li {
     background: #012233;
     width: 100%;
   }
-  /* line 119, ../sass/components/_navigation.scss */
+  /* line 127, ../sass/components/_navigation.scss */
   .block-nice-menus ul.nice-menu > li > a {
     border-bottom: 1px solid #FFFFFF;
     display: block;
@@ -1961,15 +1967,15 @@ tr.selected td {
     font-size: 24px;
     margin: 0;
   }
-  /* line 126, ../sass/components/_navigation.scss */
+  /* line 134, ../sass/components/_navigation.scss */
   .block-nice-menus ul.nice-menu > li > a.active {
     border-bottom: 1px solid #FFFFFF;
   }
-  /* line 132, ../sass/components/_navigation.scss */
+  /* line 140, ../sass/components/_navigation.scss */
   .block-nice-menus ul.nice-menu li.menuparent {
     margin-bottom: 30px;
   }
-  /* line 136, ../sass/components/_navigation.scss */
+  /* line 144, ../sass/components/_navigation.scss */
   .block-nice-menus ul.nice-menu li.menuparent ul {
     background: none;
     display: block !important;
@@ -1979,24 +1985,24 @@ tr.selected td {
     visibility: visible !important;
     width: 100%;
   }
-  /* line 145, ../sass/components/_navigation.scss */
+  /* line 153, ../sass/components/_navigation.scss */
   .block-nice-menus ul.nice-menu li.menuparent ul li {
     background: #012233;
     border: none;
     text-align: right;
     width: 100%;
   }
-  /* line 151, ../sass/components/_navigation.scss */
+  /* line 159, ../sass/components/_navigation.scss */
   .block-nice-menus ul.nice-menu li.menuparent ul li > a {
     border-bottom: none;
     font-family: miso, Arial, Helvetica, "Nimbus Sans L", sans-serif;
     padding-right: 5px;
   }
-  /* line 158, ../sass/components/_navigation.scss */
+  /* line 166, ../sass/components/_navigation.scss */
   .block-nice-menus ul.nice-menu li.menuparent ul li:last-child {
     border: none;
   }
-  /* line 164, ../sass/components/_navigation.scss */
+  /* line 172, ../sass/components/_navigation.scss */
   .block-nice-menus ul.nice-menu li.menuparent ul * {
     display: block !important;
   }

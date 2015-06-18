@@ -20,6 +20,7 @@ textarea {
   padding: 13px 13px 12px !important;
 }
 
+#edit-save,
 #edit-submit {
   @include devsigner-button;
 }

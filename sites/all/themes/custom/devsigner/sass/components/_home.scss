@@ -294,6 +294,7 @@
 
   .content-inner {
     @include column(5);
+    padding-bottom: 0 !important;
 
     @media screen and (max-width: $tablet) {
       @include column(12);

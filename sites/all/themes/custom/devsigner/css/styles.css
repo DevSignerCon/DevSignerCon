@@ -2156,6 +2156,7 @@ h1#page-title {
 /* line 57, ../sass/components/_content.scss */
 #content .content-inner {
   font-size: 18px;
+  padding-bottom: 30px;
 }
 @media screen and (max-width: 768px) {
   /* line 57, ../sass/components/_content.scss */
@@ -2164,21 +2165,21 @@ h1#page-title {
     line-height: 26px;
   }
 }
-/* line 67, ../sass/components/_content.scss */
+/* line 68, ../sass/components/_content.scss */
 #content article h2 {
   line-height: 1;
 }
-/* line 70, ../sass/components/_content.scss */
+/* line 71, ../sass/components/_content.scss */
 #content article h3 {
   line-height: 1;
   margin-bottom: .75em;
 }
-/* line 74, ../sass/components/_content.scss */
+/* line 75, ../sass/components/_content.scss */
 #content article p {
   margin-top: .5em;
   margin-bottom: 1em;
 }
-/* line 78, ../sass/components/_content.scss */
+/* line 79, ../sass/components/_content.scss */
 #content article ul {
   margin-top: .5em;
 }
@@ -2291,6 +2292,7 @@ textarea {
 }
 
 /* line 23, ../sass/components/_forms.scss */
+#edit-save,
 #edit-submit {
   background-color: #012233;
   border: none;
@@ -2301,7 +2303,7 @@ textarea {
   white-space: nowrap;
 }
 
-/* line 32, ../sass/components/_forms.scss */
+/* line 33, ../sass/components/_forms.scss */
 .devsigner-forms h3,
 .devsigner-forms legend,
 .entityform-session h3,
@@ -2312,7 +2314,7 @@ textarea {
   text-transform: uppercase;
   width: 100%;
 }
-/* line 40, ../sass/components/_forms.scss */
+/* line 41, ../sass/components/_forms.scss */
 .devsigner-forms h3 span,
 .devsigner-forms legend span,
 .entityform-session h3 span,
@@ -2328,7 +2330,7 @@ textarea {
   text-align: right;
 }
 @media screen and (max-width: 480px) {
-  /* line 40, ../sass/components/_forms.scss */
+  /* line 41, ../sass/components/_forms.scss */
   .devsigner-forms h3 span,
   .devsigner-forms legend span,
   .entityform-session h3 span,
@@ -2337,12 +2339,12 @@ textarea {
     left: 0;
   }
 }
-/* line 60, ../sass/components/_forms.scss */
+/* line 61, ../sass/components/_forms.scss */
 .devsigner-forms legend,
 .entityform-session legend {
   float: left;
 }
-/* line 64, ../sass/components/_forms.scss */
+/* line 65, ../sass/components/_forms.scss */
 .devsigner-forms .form-item,
 .entityform-session .form-item {
   *zoom: 1;
@@ -2359,7 +2361,7 @@ textarea {
 .entityform-session .form-item:after {
   clear: both;
 }
-/* line 68, ../sass/components/_forms.scss */
+/* line 69, ../sass/components/_forms.scss */
 .devsigner-forms label,
 .entityform-session label {
   display: inline;
@@ -2376,14 +2378,14 @@ textarea {
   text-align: right;
 }
 @media screen and (max-width: 480px) {
-  /* line 68, ../sass/components/_forms.scss */
+  /* line 69, ../sass/components/_forms.scss */
   .devsigner-forms label,
   .entityform-session label {
     width: 100%;
     left: 0;
   }
 }
-/* line 77, ../sass/components/_forms.scss */
+/* line 78, ../sass/components/_forms.scss */
 .devsigner-forms label.option,
 .entityform-session label.option {
   color: #616061;
@@ -2393,7 +2395,7 @@ textarea {
   text-align: left;
   width: auto;
 }
-/* line 83, ../sass/components/_forms.scss */
+/* line 84, ../sass/components/_forms.scss */
 .devsigner-forms .form-type-textfield label,
 .devsigner-forms .field-type-email label,
 .devsigner-forms .field-type-text label,
@@ -2402,24 +2404,24 @@ textarea {
 .entityform-session .field-type-text label {
   padding-top: 13px;
 }
-/* line 89, ../sass/components/_forms.scss */
+/* line 90, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-company label,
 .entityform-session #edit-field-company label {
   padding-right: 0;
 }
-/* line 92, ../sass/components/_forms.scss */
+/* line 93, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-company label .form-required,
 .entityform-session #edit-field-company label .form-required {
   padding-right: 3px;
 }
-/* line 98, ../sass/components/_forms.scss */
+/* line 99, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-phone label,
 .devsigner-forms #edit-field-community-sponsor-name label,
 .entityform-session #edit-field-phone label,
 .entityform-session #edit-field-community-sponsor-name label {
   padding-top: 0;
 }
-/* line 104, ../sass/components/_forms.scss */
+/* line 105, ../sass/components/_forms.scss */
 .devsigner-forms .field-type-text-with-summary fieldset.form-wrapper label,
 .entityform-session .field-type-text-with-summary fieldset.form-wrapper label {
   color: #616061;
@@ -2429,29 +2431,29 @@ textarea {
   text-align: left;
   width: auto;
 }
-/* line 109, ../sass/components/_forms.scss */
+/* line 110, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-company table,
 .entityform-session #edit-field-company table {
   width: 100%;
 }
-/* line 113, ../sass/components/_forms.scss */
+/* line 114, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-company table .field-label,
 .entityform-session #edit-field-company table .field-label {
   text-align: right;
 }
-/* line 117, ../sass/components/_forms.scss */
+/* line 118, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-company table label,
 .entityform-session #edit-field-company table label {
   float: none;
   padding: 0;
   width: auto;
 }
-/* line 123, ../sass/components/_forms.scss */
+/* line 124, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-company table th,
 .entityform-session #edit-field-company table th {
   border-bottom: none;
 }
-/* line 127, ../sass/components/_forms.scss */
+/* line 128, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-company table thead,
 .entityform-session #edit-field-company table thead {
   display: inline;
@@ -2464,14 +2466,14 @@ textarea {
   padding-left: 0;
 }
 @media screen and (max-width: 480px) {
-  /* line 127, ../sass/components/_forms.scss */
+  /* line 128, ../sass/components/_forms.scss */
   .devsigner-forms #edit-field-company table thead,
   .entityform-session #edit-field-company table thead {
     width: 100%;
     left: 0;
   }
 }
-/* line 132, ../sass/components/_forms.scss */
+/* line 133, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-company table tbody,
 .entityform-session #edit-field-company table tbody {
   display: inline;
@@ -2486,14 +2488,14 @@ textarea {
   border: none;
 }
 @media screen and (max-width: 480px) {
-  /* line 132, ../sass/components/_forms.scss */
+  /* line 133, ../sass/components/_forms.scss */
   .devsigner-forms #edit-field-company table tbody,
   .entityform-session #edit-field-company table tbody {
     width: 100%;
     left: 0;
   }
 }
-/* line 141, ../sass/components/_forms.scss */
+/* line 142, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-company .form-item > div.clearfix,
 .entityform-session #edit-field-company .form-item > div.clearfix {
   display: inline;
@@ -2509,14 +2511,14 @@ textarea {
   padding-right: 0;
 }
 @media screen and (max-width: 480px) {
-  /* line 141, ../sass/components/_forms.scss */
+  /* line 142, ../sass/components/_forms.scss */
   .devsigner-forms #edit-field-company .form-item > div.clearfix,
   .entityform-session #edit-field-company .form-item > div.clearfix {
     width: 100%;
     left: 0;
   }
 }
-/* line 148, ../sass/components/_forms.scss */
+/* line 149, ../sass/components/_forms.scss */
 .devsigner-forms input.form-text,
 .devsigner-forms .form-textarea-wrapper,
 .devsigner-forms .form-radios,
@@ -2536,7 +2538,7 @@ textarea {
   padding-right: 0;
 }
 @media screen and (max-width: 480px) {
-  /* line 148, ../sass/components/_forms.scss */
+  /* line 149, ../sass/components/_forms.scss */
   .devsigner-forms input.form-text,
   .devsigner-forms .form-textarea-wrapper,
   .devsigner-forms .form-radios,
@@ -2549,7 +2551,7 @@ textarea {
     left: 0;
   }
 }
-/* line 157, ../sass/components/_forms.scss */
+/* line 158, ../sass/components/_forms.scss */
 .devsigner-forms .description,
 .entityform-session .description {
   display: inline;
@@ -2567,19 +2569,19 @@ textarea {
   font-size: 1em;
 }
 @media screen and (max-width: 480px) {
-  /* line 157, ../sass/components/_forms.scss */
+  /* line 158, ../sass/components/_forms.scss */
   .devsigner-forms .description,
   .entityform-session .description {
     width: 100%;
     left: 0;
   }
 }
-/* line 167, ../sass/components/_forms.scss */
+/* line 168, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-session-description-und-0-format,
 .entityform-session #edit-field-session-description-und-0-format {
   display: none;
 }
-/* line 172, ../sass/components/_forms.scss */
+/* line 173, ../sass/components/_forms.scss */
 .devsigner-forms #edit-actions,
 .entityform-session #edit-actions {
   display: inline;
@@ -2596,14 +2598,14 @@ textarea {
   margin-bottom: 76px;
 }
 @media screen and (max-width: 480px) {
-  /* line 172, ../sass/components/_forms.scss */
+  /* line 173, ../sass/components/_forms.scss */
   .devsigner-forms #edit-actions,
   .entityform-session #edit-actions {
     width: 100%;
     left: 0;
   }
 }
-/* line 181, ../sass/components/_forms.scss */
+/* line 182, ../sass/components/_forms.scss */
 .devsigner-forms .field-type-text-with-summary,
 .entityform-session .field-type-text-with-summary {
   *zoom: 1;
@@ -2620,7 +2622,7 @@ textarea {
 .entityform-session .field-type-text-with-summary:after {
   clear: both;
 }
-/* line 184, ../sass/components/_forms.scss */
+/* line 185, ../sass/components/_forms.scss */
 .devsigner-forms .field-type-text-with-summary fieldset.form-wrapper,
 .entityform-session .field-type-text-with-summary fieldset.form-wrapper {
   display: inline;
@@ -2635,14 +2637,14 @@ textarea {
   padding-right: 0;
 }
 @media screen and (max-width: 480px) {
-  /* line 184, ../sass/components/_forms.scss */
+  /* line 185, ../sass/components/_forms.scss */
   .devsigner-forms .field-type-text-with-summary fieldset.form-wrapper,
   .entityform-session .field-type-text-with-summary fieldset.form-wrapper {
     width: 100%;
     left: 0;
   }
 }
-/* line 192, ../sass/components/_forms.scss */
+/* line 193, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-categories,
 .entityform-session #edit-field-categories {
   position: absolute !important;
@@ -2651,14 +2653,14 @@ textarea {
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
-/* line 197, ../sass/components/_forms.scss */
+/* line 198, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-address fieldset,
 .entityform-session #edit-field-address fieldset {
   margin: 0;
   padding: 0;
   border: none;
 }
-/* line 204, ../sass/components/_forms.scss */
+/* line 205, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-address fieldset .form-item,
 .entityform-session #edit-field-address fieldset .form-item {
   width: 100%;
@@ -3041,6 +3043,7 @@ textarea {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  padding-bottom: 0 !important;
   z-index: 3;
   position: relative;
 }
@@ -3071,40 +3074,40 @@ textarea {
   }
 }
 
-/* line 305, ../sass/components/_home.scss */
+/* line 306, ../sass/components/_home.scss */
 .front .content-inner article {
   margin-bottom: 1.5em;
 }
-/* line 309, ../sass/components/_home.scss */
+/* line 310, ../sass/components/_home.scss */
 .front .content-inner h1#page-title {
   border-bottom: none;
   margin-top: 70px;
 }
 @media screen and (min-width: 768px) and (max-width: 960px) {
-  /* line 309, ../sass/components/_home.scss */
+  /* line 310, ../sass/components/_home.scss */
   .front .content-inner h1#page-title {
     margin-top: 50px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 309, ../sass/components/_home.scss */
+  /* line 310, ../sass/components/_home.scss */
   .front .content-inner h1#page-title {
     font-size: 3.5em;
     margin-top: 40px;
   }
 }
-/* line 324, ../sass/components/_home.scss */
+/* line 325, ../sass/components/_home.scss */
 .front .content-inner .field-name-body p:first-child {
   font-size: 27px;
   line-height: 1.5em;
 }
 @media screen and (min-width: 768px) and (max-width: 960px) {
-  /* line 324, ../sass/components/_home.scss */
+  /* line 325, ../sass/components/_home.scss */
   .front .content-inner .field-name-body p:first-child {
     font-size: 22px;
   }
 }
-/* line 332, ../sass/components/_home.scss */
+/* line 333, ../sass/components/_home.scss */
 .front .content-inner .field-name-body a.devsigner-button {
   background-color: #FFFFFF;
   border: none;
@@ -3115,12 +3118,12 @@ textarea {
   white-space: nowrap;
   border: 1px solid #012233;
 }
-/* line 336, ../sass/components/_home.scss */
+/* line 337, ../sass/components/_home.scss */
 .front .content-inner .field-name-body a.devsigner-button:hover {
   color: #FFFFFF;
   background: #012233;
 }
-/* line 345, ../sass/components/_home.scss */
+/* line 346, ../sass/components/_home.scss */
 .front #block-views-blog-block {
   *zoom: 1;
   margin-bottom: 70px;
@@ -3134,12 +3137,12 @@ textarea {
 .front #block-views-blog-block:after {
   clear: both;
 }
-/* line 350, ../sass/components/_home.scss */
+/* line 351, ../sass/components/_home.scss */
 .front #block-views-blog-block h2.block-title {
   margin-top: 47px;
   text-align: center;
 }
-/* line 355, ../sass/components/_home.scss */
+/* line 356, ../sass/components/_home.scss */
 .front #block-views-blog-block .views-row {
   display: inline;
   float: left;
@@ -3151,14 +3154,14 @@ textarea {
   margin-bottom: 1.5em;
 }
 @media screen and (max-width: 480px) {
-  /* line 355, ../sass/components/_home.scss */
+  /* line 356, ../sass/components/_home.scss */
   .front #block-views-blog-block .views-row {
     width: 100%;
     left: 0;
   }
 }
 @media screen and (max-width: 655px) {
-  /* line 355, ../sass/components/_home.scss */
+  /* line 356, ../sass/components/_home.scss */
   .front #block-views-blog-block .views-row {
     display: inline;
     float: left;
@@ -3170,44 +3173,44 @@ textarea {
   }
 }
 @media screen and (max-width: 655px) and (max-width: 480px) {
-  /* line 355, ../sass/components/_home.scss */
+  /* line 356, ../sass/components/_home.scss */
   .front #block-views-blog-block .views-row {
     width: 100%;
     left: 0;
   }
 }
 
-/* line 364, ../sass/components/_home.scss */
+/* line 365, ../sass/components/_home.scss */
 .front #block-views-blog-block .views-field-title {
   border-top: 1px solid #f0f2f4;
   border-left: 1px solid #f0f2f4;
   border-right: 1px solid #f0f2f4;
   padding: 25px 25px 10px;
 }
-/* line 370, ../sass/components/_home.scss */
+/* line 371, ../sass/components/_home.scss */
 .front #block-views-blog-block .views-field-title span {
   border-bottom: 1px solid #f0f2f4;
   display: block;
 }
-/* line 375, ../sass/components/_home.scss */
+/* line 376, ../sass/components/_home.scss */
 .front #block-views-blog-block .views-field-title a {
   font-size: 1.5625em;
 }
-/* line 380, ../sass/components/_home.scss */
+/* line 381, ../sass/components/_home.scss */
 .front #block-views-blog-block .views-field-body {
   border-left: 1px solid #f0f2f4;
   border-right: 1px solid #f0f2f4;
   color: #616061;
   padding: 5px 25px 25px;
 }
-/* line 387, ../sass/components/_home.scss */
+/* line 388, ../sass/components/_home.scss */
 .front #block-views-blog-block .views-field-view-node {
   border-bottom: 1px solid #f0f2f4;
   border-left: 1px solid #f0f2f4;
   border-right: 1px solid #f0f2f4;
   padding: 5px 25px 25px;
 }
-/* line 393, ../sass/components/_home.scss */
+/* line 394, ../sass/components/_home.scss */
 .front #block-views-blog-block .views-field-view-node a {
   background-color: #FFFFFF;
   border: none;
@@ -3218,12 +3221,12 @@ textarea {
   white-space: nowrap;
   border: 1px solid #012233;
 }
-/* line 397, ../sass/components/_home.scss */
+/* line 398, ../sass/components/_home.scss */
 .front #block-views-blog-block .views-field-view-node a:hover {
   color: #FFFFFF;
   background: #012233;
 }
-/* line 406, ../sass/components/_home.scss */
+/* line 407, ../sass/components/_home.scss */
 .front .keynotes {
   *zoom: 1;
   margin-bottom: 70px;
@@ -3237,14 +3240,14 @@ textarea {
 .front .keynotes:after {
   clear: both;
 }
-/* line 411, ../sass/components/_home.scss */
+/* line 412, ../sass/components/_home.scss */
 .front .keynotes h2.block-title {
   color: #8AB513;
   margin-bottom: 4px;
   margin-top: 47px;
   text-align: center;
 }
-/* line 418, ../sass/components/_home.scss */
+/* line 419, ../sass/components/_home.scss */
 .front .keynotes .keynote-row {
   display: inline;
   float: left;
@@ -3256,13 +3259,13 @@ textarea {
   margin-bottom: 1.5em;
 }
 @media screen and (max-width: 480px) {
-  /* line 418, ../sass/components/_home.scss */
+  /* line 419, ../sass/components/_home.scss */
   .front .keynotes .keynote-row {
     width: 100%;
     left: 0;
   }
 }
-/* line 422, ../sass/components/_home.scss */
+/* line 423, ../sass/components/_home.scss */
 .front .keynotes .keynote-row .left {
   display: inline;
   float: left;
@@ -3274,13 +3277,13 @@ textarea {
   padding-left: 0;
 }
 @media screen and (max-width: 480px) {
-  /* line 422, ../sass/components/_home.scss */
+  /* line 423, ../sass/components/_home.scss */
   .front .keynotes .keynote-row .left {
     width: 100%;
     left: 0;
   }
 }
-/* line 426, ../sass/components/_home.scss */
+/* line 427, ../sass/components/_home.scss */
 .front .keynotes .keynote-row .right {
   display: inline;
   float: left;
@@ -3292,14 +3295,14 @@ textarea {
   padding-right: 0;
 }
 @media screen and (max-width: 480px) {
-  /* line 426, ../sass/components/_home.scss */
+  /* line 427, ../sass/components/_home.scss */
   .front .keynotes .keynote-row .right {
     width: 100%;
     left: 0;
   }
 }
 @media screen and (max-width: 655px) {
-  /* line 418, ../sass/components/_home.scss */
+  /* line 419, ../sass/components/_home.scss */
   .front .keynotes .keynote-row {
     display: inline;
     float: left;
@@ -3311,14 +3314,14 @@ textarea {
   }
 }
 @media screen and (max-width: 655px) and (max-width: 480px) {
-  /* line 418, ../sass/components/_home.scss */
+  /* line 419, ../sass/components/_home.scss */
   .front .keynotes .keynote-row {
     width: 100%;
     left: 0;
   }
 }
 
-/* line 436, ../sass/components/_home.scss */
+/* line 437, ../sass/components/_home.scss */
 .front .keynotes h3 {
   border-bottom: 1px solid #FFFFFF;
   color: #012233;
@@ -3327,13 +3330,13 @@ textarea {
   padding-bottom: 8px;
   margin-bottom: 13px;
 }
-/* line 445, ../sass/components/_home.scss */
+/* line 446, ../sass/components/_home.scss */
 .front .keynotes p {
   color: #0d0d0d;
   margin-bottom: 10px;
   margin-top: 0;
 }
-/* line 453, ../sass/components/_home.scss */
+/* line 454, ../sass/components/_home.scss */
 .front #block-views-session-tracks-block {
   *zoom: 1;
   margin-bottom: 10px;
@@ -3347,12 +3350,12 @@ textarea {
 .front #block-views-session-tracks-block:after {
   clear: both;
 }
-/* line 458, ../sass/components/_home.scss */
+/* line 459, ../sass/components/_home.scss */
 .front #block-views-session-tracks-block h2.block-title {
   color: #FFFFFF;
   text-align: center;
 }
-/* line 463, ../sass/components/_home.scss */
+/* line 464, ../sass/components/_home.scss */
 .front #block-views-session-tracks-block .views-row {
   display: inline;
   float: left;
@@ -3363,13 +3366,13 @@ textarea {
   box-sizing: border-box;
 }
 @media screen and (max-width: 480px) {
-  /* line 463, ../sass/components/_home.scss */
+  /* line 464, ../sass/components/_home.scss */
   .front #block-views-session-tracks-block .views-row {
     width: 100%;
     left: 0;
   }
 }
-/* line 466, ../sass/components/_home.scss */
+/* line 467, ../sass/components/_home.scss */
 .front #block-views-session-tracks-block .views-row a {
   background-color: #FFFFFF;
   border: none;
@@ -3384,26 +3387,26 @@ textarea {
   margin-bottom: 60px;
   text-align: center;
 }
-/* line 474, ../sass/components/_home.scss */
+/* line 475, ../sass/components/_home.scss */
 .front #block-views-session-tracks-block .views-row a:hover {
   background: #012233;
   border: 1px solid #012233;
   color: #FFFFFF;
 }
-/* line 486, ../sass/components/_home.scss */
+/* line 487, ../sass/components/_home.scss */
 .front #tier_5 .block {
   line-height: 0;
   margin-bottom: 0;
 }
-/* line 492, ../sass/components/_home.scss */
+/* line 493, ../sass/components/_home.scss */
 .front #tier_5 iframe {
   max-width: 100%;
 }
-/* line 496, ../sass/components/_home.scss */
+/* line 497, ../sass/components/_home.scss */
 .front #tier_5 p {
   margin: 0;
 }
-/* line 501, ../sass/components/_home.scss */
+/* line 502, ../sass/components/_home.scss */
 .front #tier_5 .overlay {
   background: transparent;
   position: absolute;
@@ -3414,7 +3417,7 @@ textarea {
 }
 
 @media screen and (max-width: 768px) {
-  /* line 513, ../sass/components/_home.scss */
+  /* line 514, ../sass/components/_home.scss */
   .main-menu-active #header-wrapper {
     max-height: 1000px !important;
   }
@@ -3868,32 +3871,33 @@ textarea {
   font-size: 1.3em;
   font-family: misoBold,Arial,Helvetica,"Numbus Sans L",sans-serif;
   font-weight: normal;
+  padding-bottom: 5px;
 }
-/* line 38, ../sass/components/_sessions.scss */
+/* line 39, ../sass/components/_sessions.scss */
 .entityform-session .field-name-field-photo {
   float: left;
   margin-right: 25px;
   margin-bottom: 10px;
 }
 @media screen and (max-width: 768px) {
-  /* line 38, ../sass/components/_sessions.scss */
+  /* line 39, ../sass/components/_sessions.scss */
   .entityform-session .field-name-field-photo {
     width: 100%;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 48, ../sass/components/_sessions.scss */
+  /* line 49, ../sass/components/_sessions.scss */
   .entityform-session .field-name-field-speaker-bio {
     float: left;
     width: 100%;
   }
 }
-/* line 55, ../sass/components/_sessions.scss */
+/* line 56, ../sass/components/_sessions.scss */
 .entityform-session .field-name-field-speaker-bio p {
   margin-top: -4px;
 }
 
-/* line 62, ../sass/components/_sessions.scss */
+/* line 63, ../sass/components/_sessions.scss */
 .field-name-field-session-format,
 .field-name-field-experience-level,
 .field-name-field-categories,
@@ -3901,7 +3905,7 @@ textarea {
 .field-name-field-time-slot {
   margin-bottom: 1em;
 }
-/* line 69, ../sass/components/_sessions.scss */
+/* line 70, ../sass/components/_sessions.scss */
 .field-name-field-session-format .field-item,
 .field-name-field-experience-level .field-item,
 .field-name-field-categories .field-item,
@@ -3916,7 +3920,7 @@ textarea {
   margin-bottom: 3px;
   padding: 0.33em 0.5em 0.1333em;
 }
-/* line 80, ../sass/components/_sessions.scss */
+/* line 81, ../sass/components/_sessions.scss */
 .field-name-field-session-format a,
 .field-name-field-experience-level a,
 .field-name-field-categories a,
@@ -3926,36 +3930,36 @@ textarea {
   display: inline-block;
 }
 
-/* line 87, ../sass/components/_sessions.scss */
+/* line 88, ../sass/components/_sessions.scss */
 .field-name-field-time-slot .field-item {
   clear: both;
   float: left;
 }
 
-/* line 97, ../sass/components/_sessions.scss */
+/* line 98, ../sass/components/_sessions.scss */
 .field-name-field-session-format .field-item,
 .field-name-field-experience-level .field-item,
 .field-name-field-categories .field-item {
   padding: 0;
 }
-/* line 101, ../sass/components/_sessions.scss */
+/* line 102, ../sass/components/_sessions.scss */
 .field-name-field-session-format a,
 .field-name-field-experience-level a,
 .field-name-field-categories a {
   padding: 0.33em 0.5em 0.1333em;
 }
 
-/* line 109, ../sass/components/_sessions.scss */
+/* line 110, ../sass/components/_sessions.scss */
 .field-name-field-session-format .field-item a {
   padding: 0.33em 0.5em 0.1333em 0.4em;
 }
-/* line 113, ../sass/components/_sessions.scss */
+/* line 114, ../sass/components/_sessions.scss */
 .field-name-field-session-format .field-item:before {
   padding-left: 6px;
   position: relative;
   top: 2px;
 }
-/* line 118, ../sass/components/_sessions.scss */
+/* line 119, ../sass/components/_sessions.scss */
 .field-name-field-session-format .field-item.term-6:before {
   content: "";
   font-family: 'icomoon';
@@ -3969,7 +3973,7 @@ textarea {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 121, ../sass/components/_sessions.scss */
+/* line 122, ../sass/components/_sessions.scss */
 .field-name-field-session-format .field-item.term-7:before {
   content: "";
   font-family: 'icomoon';
@@ -3983,7 +3987,7 @@ textarea {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 124, ../sass/components/_sessions.scss */
+/* line 125, ../sass/components/_sessions.scss */
 .field-name-field-session-format .field-item.term-8:before {
   content: "";
   font-family: 'icomoon';
@@ -3998,21 +4002,21 @@ textarea {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 132, ../sass/components/_sessions.scss */
+/* line 133, ../sass/components/_sessions.scss */
 .field-name-field-experience-level .field-item a {
   padding: 0.33em 0.5em 0.1333em 0.3em;
 }
-/* line 136, ../sass/components/_sessions.scss */
+/* line 137, ../sass/components/_sessions.scss */
 .field-name-field-experience-level .field-item:before {
   padding-left: 5px;
   position: relative;
   top: 2px;
 }
-/* line 142, ../sass/components/_sessions.scss */
+/* line 143, ../sass/components/_sessions.scss */
 .field-name-field-experience-level .field-item.term-15 a {
   padding: 0.33em 0.5em 0.1333em 0.1em;
 }
-/* line 146, ../sass/components/_sessions.scss */
+/* line 147, ../sass/components/_sessions.scss */
 .field-name-field-experience-level .field-item.term-15:before {
   padding-left: 3px;
   content: "";
@@ -4027,7 +4031,7 @@ textarea {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 151, ../sass/components/_sessions.scss */
+/* line 152, ../sass/components/_sessions.scss */
 .field-name-field-experience-level .field-item.term-16:before {
   content: "";
   font-family: 'icomoon';
@@ -4041,7 +4045,7 @@ textarea {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 154, ../sass/components/_sessions.scss */
+/* line 155, ../sass/components/_sessions.scss */
 .field-name-field-experience-level .field-item.term-17:before {
   content: "";
   font-family: 'icomoon';
@@ -4055,7 +4059,7 @@ textarea {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 157, ../sass/components/_sessions.scss */
+/* line 158, ../sass/components/_sessions.scss */
 .field-name-field-experience-level .field-item.term-18:before {
   content: "";
   font-family: 'icomoon';
@@ -4071,31 +4075,31 @@ textarea {
   top: 1px;
 }
 
-/* line 166, ../sass/components/_sessions.scss */
+/* line 167, ../sass/components/_sessions.scss */
 .view-sessions .view-filters {
   padding-bottom: 10px;
   border-bottom: 2px solid #EBEDF1;
 }
-/* line 170, ../sass/components/_sessions.scss */
+/* line 171, ../sass/components/_sessions.scss */
 .view-sessions .view-filters .views-exposed-widget {
   padding-bottom: 10px;
 }
-/* line 174, ../sass/components/_sessions.scss */
+/* line 175, ../sass/components/_sessions.scss */
 .view-sessions .view-filters #edit-field-experience-level-tid-wrapper {
   margin-right: 20px;
 }
-/* line 179, ../sass/components/_sessions.scss */
+/* line 180, ../sass/components/_sessions.scss */
 .view-sessions .view-filters .bef-select-as-links .form-type-bef-link {
   float: left;
   padding-right: 12px;
 }
-/* line 183, ../sass/components/_sessions.scss */
+/* line 184, ../sass/components/_sessions.scss */
 .view-sessions .view-filters .bef-select-as-links .form-type-bef-link a {
   display: inline-block;
   line-height: 1.2;
   padding: 0.33em 0 0.1333em;
 }
-/* line 188, ../sass/components/_sessions.scss */
+/* line 189, ../sass/components/_sessions.scss */
 .view-sessions .view-filters .bef-select-as-links .form-type-bef-link a.active {
   background: #012233;
   border-radius: 4px;
@@ -4104,57 +4108,57 @@ textarea {
   line-height: 1.2;
   padding: 0.33em 0.5em 0.1333em;
 }
-/* line 201, ../sass/components/_sessions.scss */
+/* line 202, ../sass/components/_sessions.scss */
 .view-sessions table {
   width: 100%;
 }
-/* line 206, ../sass/components/_sessions.scss */
+/* line 207, ../sass/components/_sessions.scss */
 .view-sessions th.views-field-field-contact-name, .view-sessions th.views-field-field-session-title {
   text-align: left;
 }
 @media screen and (max-width: 600px) {
-  /* line 212, ../sass/components/_sessions.scss */
+  /* line 213, ../sass/components/_sessions.scss */
   .view-sessions th.views-field-field-session-format {
     display: none;
   }
 }
-/* line 218, ../sass/components/_sessions.scss */
+/* line 219, ../sass/components/_sessions.scss */
 .view-sessions tr.even, .view-sessions tr.odd {
   background: none;
   border: none;
   vertical-align: middle;
 }
-/* line 224, ../sass/components/_sessions.scss */
+/* line 225, ../sass/components/_sessions.scss */
 .view-sessions td {
   padding: 12px 7px;
 }
-/* line 227, ../sass/components/_sessions.scss */
+/* line 228, ../sass/components/_sessions.scss */
 .view-sessions td.views-field-field-session-title {
   font-family: misoBold,Arial,Helvetica,"Numbus Sans L",sans-serif;
   padding-left: 0;
   padding-right: 15px;
   font-size: 21px;
 }
-/* line 234, ../sass/components/_sessions.scss */
+/* line 235, ../sass/components/_sessions.scss */
 .view-sessions td.views-field-field-contact-name {
   padding-left: 0;
 }
-/* line 238, ../sass/components/_sessions.scss */
+/* line 239, ../sass/components/_sessions.scss */
 .view-sessions td.views-field-field-experience-level, .view-sessions td.views-field-field-session-format {
   white-space: nowrap;
   text-align: center;
 }
-/* line 243, ../sass/components/_sessions.scss */
+/* line 244, ../sass/components/_sessions.scss */
 .view-sessions td.views-field-field-experience-level div, .view-sessions td.views-field-field-session-format div {
   margin-bottom: 0;
 }
 @media screen and (max-width: 600px) {
-  /* line 249, ../sass/components/_sessions.scss */
+  /* line 250, ../sass/components/_sessions.scss */
   .view-sessions td.views-field-field-session-format {
     display: none;
   }
 }
-/* line 254, ../sass/components/_sessions.scss */
+/* line 255, ../sass/components/_sessions.scss */
 .view-sessions td .field-item {
   margin-right: 0;
 }

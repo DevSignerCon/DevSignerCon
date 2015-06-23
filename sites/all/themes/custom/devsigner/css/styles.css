@@ -1790,6 +1790,107 @@ tr.selected td {
   margin: 0;
 }
 
+/* line 905, ../sass/components/_misc.scss */
+.keynote h3 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 0.75em;
+}
+/* line 911, ../sass/components/_misc.scss */
+.keynote .row {
+  *zoom: 1;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+/* line 60, ../sass/layouts/_grid.scss */
+.keynote .row:before, .keynote .row:after {
+  content: "";
+  display: table;
+}
+/* line 65, ../sass/layouts/_grid.scss */
+.keynote .row:after {
+  clear: both;
+}
+/* line 917, ../sass/components/_misc.scss */
+.keynote .photo {
+  display: inline;
+  float: left;
+  width: 41.66667%;
+  padding: 0 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 480px) {
+  /* line 917, ../sass/components/_misc.scss */
+  .keynote .photo {
+    width: 100%;
+    left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 917, ../sass/components/_misc.scss */
+  .keynote .photo {
+    display: inline;
+    float: left;
+    width: 100%;
+    padding: 0 15px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 480px) {
+  /* line 917, ../sass/components/_misc.scss */
+  .keynote .photo {
+    width: 100%;
+    left: 0;
+  }
+}
+
+/* line 926, ../sass/components/_misc.scss */
+.keynote .photo img {
+  max-width: 100%;
+}
+/* line 931, ../sass/components/_misc.scss */
+.keynote .content {
+  display: inline;
+  float: left;
+  width: 58.33333%;
+  padding: 0 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 480px) {
+  /* line 931, ../sass/components/_misc.scss */
+  .keynote .content {
+    width: 100%;
+    left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 931, ../sass/components/_misc.scss */
+  .keynote .content {
+    display: inline;
+    float: left;
+    width: 100%;
+    padding: 0 15px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 480px) {
+  /* line 931, ../sass/components/_misc.scss */
+  .keynote .content {
+    width: 100%;
+    left: 0;
+  }
+}
+
 /* line 5, ../sass/components/_header.scss */
 #header-wrapper {
   background-color: #012233;

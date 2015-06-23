@@ -85,10 +85,17 @@
 }
 
 .field-name-field-time-slot {
+  float: left;
+  width: 100%;
+
   .field-item {
     clear: both;
     float: left;
   }
+}
+
+.field-name-field-session-slides2 {
+  margin-bottom: 1em;
 }
 
 .field-name-field-session-format,

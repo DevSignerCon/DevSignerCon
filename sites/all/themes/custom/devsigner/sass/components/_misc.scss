@@ -898,3 +898,42 @@ tr.selected td {
     }
   }
 }
+
+// Keynote layout.
+.keynote {
+
+  h3 {
+    font-size: 1.5em;
+    line-height: 1;
+    margin-bottom: 0.75em;
+  }
+
+  .row {
+    @include clearfix;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .photo {
+    @include column(5);
+    margin-bottom: 50px;
+
+    @media screen and (max-width: $tablet) {
+      @include column(12);
+      margin-bottom: 20px;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .content {
+    @include column(7);
+
+    @media screen and (max-width: $tablet) {
+      @include column(12);
+    }
+  }
+}
+

@@ -2,6 +2,10 @@
 // Sessions
 //
 
+#block-views-evaluation-block-block {
+  padding: 15px;
+}
+
 .entityform-session {
   .submitted {
     @include element-invisible;

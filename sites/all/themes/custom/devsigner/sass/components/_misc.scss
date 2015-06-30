@@ -897,6 +897,29 @@ tr.selected td {
       margin: 0;
     }
   }
+
+  #block-views-your-session-evals-block {
+    .view-header {
+      p {
+        margin-top: 0;
+      }
+    }
+
+    .view-content {
+      h3 {
+        margin-bottom: 15px;
+        line-height: 1.2
+      }
+
+      .views-row {
+        padding-bottom: 30px;
+
+        .views-label {
+          font-family: misoBold;
+        }
+      }
+    }
+  }
 }
 
 // Keynote layout.

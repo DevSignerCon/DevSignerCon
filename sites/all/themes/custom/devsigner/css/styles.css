@@ -7,44 +7,44 @@
  * of these @include files will be combined into a single file.
  */
 /* Import Sass mixins, variables, Compass modules, etc. */
-/* line 120, ../sass/_init.scss */
+/* line 124, ../sass/_init.scss */
 .icon-icons_1:before {
   content: "\e600";
 }
 
-/* line 123, ../sass/_init.scss */
+/* line 127, ../sass/_init.scss */
 .icon-icons_2:before {
   content: "\e601";
 }
 
-/* line 126, ../sass/_init.scss */
+/* line 130, ../sass/_init.scss */
 .icon-icons_3:before {
   content: "\e602";
 }
 
-/* line 129, ../sass/_init.scss */
+/* line 133, ../sass/_init.scss */
 .icon-pencil2:before {
   content: "\e906";
 }
 
-/* line 132, ../sass/_init.scss */
+/* line 136, ../sass/_init.scss */
 .icon-display:before {
   content: "\e956";
 }
 
-/* line 135, ../sass/_init.scss */
+/* line 139, ../sass/_init.scss */
 .icon-users:before {
   content: "\e972";
 }
 
-/* line 138, ../sass/_init.scss */
+/* line 142, ../sass/_init.scss */
 .icon-list:before {
   content: "\e9ba";
 }
 
 /* line 62, ../sass/_mixins.scss */
 #page .devsigner-button {
-  background-color: #012233;
+  background-color: #cc0099;
   border: none;
   color: #FFFFFF;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
@@ -1697,7 +1697,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1430353752');
+  background-image: url('../images/progress.gif?1464203676');
 }
 
 /* line 812, ../sass/components/_misc.scss */
@@ -1910,10 +1910,18 @@ tr.selected td {
 
 /* line 5, ../sass/components/_header.scss */
 #header-wrapper {
-  background-color: #012233;
+  background-color: #600075;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FF600075', endColorstr='#FFCC0099');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjEuMCIgeDI9IjEuMCIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzYwMDA3NSIvPjxzdG9wIG9mZnNldD0iOTYlIiBzdG9wLWNvbG9yPSIjY2MwMDk5Ii8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 100%, 100% 0%, color-stop(0%, #600075), color-stop(96%, #cc0099));
+  background-image: -moz-linear-gradient(left bottom, #600075 0%, #cc0099 96%);
+  background-image: -webkit-linear-gradient(left bottom, #600075 0%, #cc0099 96%);
+  background-image: linear-gradient(to right top, #600075 0%, #cc0099 96%);
 }
 
-/* line 9, ../sass/components/_header.scss */
+/* line 12, ../sass/components/_header.scss */
 .header-inner {
   height: 130px;
   margin-left: auto;
@@ -1921,7 +1929,7 @@ tr.selected td {
   max-width: 1200px;
 }
 
-/* line 14, ../sass/components/_header.scss */
+/* line 17, ../sass/components/_header.scss */
 #navigation-wrapper {
   display: inline;
   float: left;
@@ -1932,20 +1940,20 @@ tr.selected td {
   box-sizing: border-box;
 }
 @media screen and (max-width: 480px) {
-  /* line 14, ../sass/components/_header.scss */
+  /* line 17, ../sass/components/_header.scss */
   #navigation-wrapper {
     width: 100%;
     left: 0;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 14, ../sass/components/_header.scss */
+  /* line 17, ../sass/components/_header.scss */
   #navigation-wrapper {
     width: 100%;
   }
 }
 
-/* line 23, ../sass/components/_header.scss */
+/* line 26, ../sass/components/_header.scss */
 #logo {
   display: inline;
   float: left;
@@ -1957,14 +1965,14 @@ tr.selected td {
   margin-top: 16px;
 }
 @media screen and (max-width: 480px) {
-  /* line 23, ../sass/components/_header.scss */
+  /* line 26, ../sass/components/_header.scss */
   #logo {
     width: 100%;
     left: 0;
   }
 }
 @media screen and (max-width: 600px) {
-  /* line 23, ../sass/components/_header.scss */
+  /* line 26, ../sass/components/_header.scss */
   #logo {
     width: 41.6666667%;
   }
@@ -2133,7 +2141,7 @@ tr.selected td {
 
 /* line 5, ../sass/components/_footer.scss */
 #footer-wrapper {
-  background: #012233;
+  background: #B5138A;
   color: #E6E9ED;
 }
 /* line 9, ../sass/components/_footer.scss */
@@ -2412,7 +2420,7 @@ textarea {
 /* line 23, ../sass/components/_forms.scss */
 #edit-save,
 #edit-submit {
-  background-color: #012233;
+  background-color: #cc0099;
   border: none;
   color: #FFFFFF;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
@@ -3138,7 +3146,7 @@ textarea {
 }
 /* line 281, ../sass/components/_home.scss */
 .front #content-horse {
-  background: url("../images/horse.jpg") no-repeat 0 0;
+  background: url("../images/university-place.jpg") no-repeat 0 0;
   position: absolute;
   left: 41.6666667%;
   overflow: hidden;

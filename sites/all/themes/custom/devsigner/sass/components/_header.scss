@@ -3,7 +3,10 @@
 //
 
 #header-wrapper {
-  background-color: $navy;
+  // Gradient
+  background-color: $purplePrimary; // Old browsers
+  @include filter-gradient($purplePrimary, $purpleSecondary, horizontal); // IE6-9 fallback on horizontal gradient
+  @include background-image(linear-gradient(left bottom,  $purplePrimary 0%,$purpleSecondary 96%));
 }
 
 .header-inner {

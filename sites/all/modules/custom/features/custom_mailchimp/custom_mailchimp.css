@@ -1,0 +1,69 @@
+#save-the-date-submit{
+     position: relative;
+     height: 90px;
+     overflow: hidden;
+     transition: all 200ms;
+}
+
+#save-the-date-submit input{
+     width: 100%;
+     padding: 13px 13px 12px
+}
+
+/*
+#save-the-date-submit input[type="submit"]{
+     position: absolute;
+     top: 0px;
+     left: 0px;
+     height: 45px;
+     transition: all 200ms;
+}
+
+#save-the-date-submit:hover input[type="submit"]{
+     top: 45px;
+}
+*/
+
+#thanks{
+     margin: 0px !important;
+     font-size: 40px;
+     opacity: 0;
+     color: #012233;
+     -webkit-animation: thanksAnimation 1s linear 200ms forwards;
+     animation: thanksAnimation 1s linear 200ms forwards;
+}
+
+@-webkit-keyframes thanksAnimation {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes thanksAnimation {
+     from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@media (min-width: 768px){
+     #save-the-date-submit input{
+          max-width: 320px;
+     }
+}
+
+.save-the-date-error{
+     background-color: #ff0000 !important;
+}
+
+.fadeOut{
+     -webkit-animation: fadeout 200s linear forwards;
+     animation: fadeout 200ms linear forwards;
+}
+
+@-webkit-keyframes fadeout {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes fadeout {
+     from {opacity: 1;}
+    to {opacity: 0;}
+}

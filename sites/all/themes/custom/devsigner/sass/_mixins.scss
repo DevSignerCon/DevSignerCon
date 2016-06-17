@@ -47,13 +47,14 @@
 }
 
 // Button
-@mixin devsigner-button($bg:$navy,$color:$white) {
+@mixin devsigner-button($bg:$purpleSecondary,$color:$white) {
   background-color: $bg;
   border: none;
   color: $color;
   font-family: $miso-bold;
-  font-size: 1.5em; // 1.5em * 16px = 24px
+  font-size: 24px;
   padding: 10px 26px 8px;
+  white-space: nowrap;
 }
 
 // Custom devsigner-button class
@@ -66,3 +67,17 @@
   }
 }
 
+// Icon Set
+@mixin devsigner-icon($content: "\e600", $size: 18px) {
+  content: $content;
+  font-family: 'icomoon';
+  font-size: $size;
+  line-height: $size;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

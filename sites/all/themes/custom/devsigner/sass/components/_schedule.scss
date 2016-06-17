@@ -49,6 +49,10 @@
       font-size: 1.3125em; // 1.3125em * 16px = 21px
     }
 
+    a {
+      text-decoration: underline;
+    }
+
     .room {
       text-transform: uppercase;
     }
@@ -112,6 +116,16 @@
     line-height: 1.5;
     color: #012233;
 
+    .field-type-taxonomy-term-reference {
+      display: inline;
+      padding-left: 10px;
+      margin-bottom: 0;
+
+      .field-items {
+        display: inline;
+      }
+    }
+
     span {
       &.session-title {
         font-family: misoBold, Arial, Helvetica, 'Nimbus Sans L', sans-serif;
@@ -134,7 +148,7 @@
   .friday {
     border-bottom: 2px solid #ebedf1;
     margin-bottom: 1.5em;
-    
+
     h4 {
       background: $lime;
     }
@@ -146,7 +160,7 @@
   .saturday {
     border-bottom: 2px solid #ebedf1;
     margin-bottom: 1.5em;
-    
+
     h4 {
       background: $fuschia;
     }

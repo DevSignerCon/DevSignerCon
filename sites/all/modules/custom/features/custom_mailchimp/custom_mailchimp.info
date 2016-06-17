@@ -1,0 +1,6 @@
+name = Custom MailChimp
+description = Adds users to MailChimp campaign
+package = Other
+core = 7.x
+scripts[] = custom_mailchimp.js
+stylesheets[all][] = custom_mailchimp.css

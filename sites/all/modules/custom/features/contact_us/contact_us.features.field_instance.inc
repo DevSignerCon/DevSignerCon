@@ -19,9 +19,8 @@ function contact_us_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 0,
       ),
     ),
@@ -40,12 +39,12 @@ function contact_us_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 32,
+      'weight' => 1,
     ),
   );
 
-  // Exported field_instance: 'entityform-contact_us-field_email'
-  $field_instances['entityform-contact_us-field_email'] = array(
+  // Exported field_instance: 'entityform-contact_us-field_email_address'
+  $field_instances['entityform-contact_us-field_email_address'] = array(
     'bundle' => 'contact_us',
     'default_value' => NULL,
     'deleted' => 0,
@@ -53,17 +52,17 @@ function contact_us_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'email',
         'settings' => array(),
-        'type' => 'email_default',
-        'weight' => 1,
+        'type' => 'hidden',
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'entityform',
-    'field_name' => 'field_email',
-    'label' => 'Contact E-mail Address',
+    'field_name' => 'field_email_address',
+    'label' => 'Contact Address',
     'required' => 1,
     'settings' => array(
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -71,7 +70,7 @@ function contact_us_field_default_field_instances() {
       'module' => 'html5_tools',
       'settings' => array(),
       'type' => 'emailwidget',
-      'weight' => 34,
+      'weight' => 2,
     ),
   );
 
@@ -84,9 +83,8 @@ function contact_us_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 3,
       ),
     ),
@@ -105,7 +103,7 @@ function contact_us_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 36,
+      'weight' => 4,
     ),
   );
 
@@ -118,9 +116,8 @@ function contact_us_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 2,
       ),
     ),
@@ -139,13 +136,13 @@ function contact_us_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 35,
+      'weight' => 3,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Contact E-mail Address');
+  t('Contact Address');
   t('Full Name');
   t('Message');
   t('Subject');

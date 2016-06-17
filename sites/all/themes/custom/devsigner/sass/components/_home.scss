@@ -279,7 +279,7 @@
   }
 
   #content-horse {
-    background: url("../images/horse.jpg") no-repeat 0 0;
+    background: url("../images/university-place.jpg") no-repeat 0 0;
     position: absolute;
     left: 41.6666667%;
     overflow: hidden;
@@ -294,6 +294,7 @@
 
   .content-inner {
     @include column(5);
+    padding-bottom: 0 !important;
 
     @media screen and (max-width: $tablet) {
       @include column(12);
@@ -322,11 +323,11 @@
 
     .field-name-body {
       p:first-child {
-        font-size: 1.75em; // 1.75em * 16px = 28px
+        font-size: 27px;
         line-height: 1.5em;
 
         @media screen and (min-width: $tablet) and (max-width: 960px) {
-          font-size: 1.5em;
+          font-size: 22px;
         }
       }
       a.devsigner-button {

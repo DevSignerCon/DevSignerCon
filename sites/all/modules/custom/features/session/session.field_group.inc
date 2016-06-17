@@ -54,12 +54,13 @@ function session_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Speakers',
-    'weight' => '6',
+    'weight' => '10',
     'children' => array(
       0 => 'field_speaker_bio',
       1 => 'field_speaking_experience',
       2 => 'field_contact_name',
       3 => 'field_email_address',
+      4 => 'field_speaker',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -69,7 +70,7 @@ function session_field_group_info() {
         'id' => '',
         'classes' => '',
         'description' => '',
-        'show_label' => '1',
+        'show_label' => '0',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',

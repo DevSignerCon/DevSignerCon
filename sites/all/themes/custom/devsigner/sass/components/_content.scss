@@ -44,9 +44,26 @@ h1#page-title {
   line-height: 1em;
   margin-top: 17px;
   margin-bottom: 20px;
+
+  @media screen and (max-width: $tablet) {
+    font-size: 3.75em;
+  }
+  @media screen and (max-width: $mobile) {
+    font-size: 3em;
+  }
 }
 
 #content {
+  .content-inner {
+    font-size: 18px;
+    padding-bottom: 30px;
+
+    @media screen and (max-width: $tablet) {
+      font-size: 21px;
+      line-height: 26px;
+    }
+  }
+
   article {
     h2 {
       line-height: 1;

@@ -2,9 +2,23 @@
 // Sessions
 //
 
+#block-views-evaluation-block-block {
+  padding: 15px;
+}
+
 .entityform-session {
   .submitted {
     @include element-invisible;
+  }
+
+  .group-details,
+  .group-schedule {
+    @include column(1,2);
+
+  }
+
+  .field-name-field-session-description {
+    clear: both;
   }
 
   .field-name-field-speaker > .field-label {
@@ -23,6 +37,7 @@
     font-size: 1.3em;
     font-family: misoBold,Arial,Helvetica,"Numbus Sans L",sans-serif;
     font-weight: normal;
+    padding-bottom: 5px;
   }
 
   .field-name-field-photo {
@@ -50,8 +65,10 @@
 
 // Tags
 .field-name-field-session-format,
-.field-name-field-exerience-level,
-.field-name-field-categories {
+.field-name-field-experience-level,
+.field-name-field-categories,
+.field-name-field-room,
+.field-name-field-time-slot {
   margin-bottom: 1em;
 
   .field-item {
@@ -61,15 +78,32 @@
     display: inline-block;
     line-height: 1.2;
     margin-right: 3px;
+    margin-bottom: 3px;
     padding: 0.33em 0.5em 0.1333em;
   }
 
   a {
-    color: $white;
+    color: inherit;
     display: inline-block;
   }
 }
+
+.field-name-field-time-slot {
+  float: left;
+  width: 100%;
+
+  .field-item {
+    clear: both;
+    float: left;
+  }
+}
+
+.field-name-field-session-slides2 {
+  margin-bottom: 1em;
+}
+
 .field-name-field-session-format,
+.field-name-field-experience-level,
 .field-name-field-categories {
 
   .field-item {
@@ -78,5 +112,159 @@
 
   a {
     padding: 0.33em 0.5em 0.1333em;
+  }
+}
+
+// Icons
+.field-name-field-session-format {
+  .field-item {
+    a {
+      padding: 0.33em 0.5em 0.1333em 0.4em;
+    }
+
+    &:before {
+      padding-left: 6px;
+      position: relative;
+      top: 2px;
+    }
+    &.term-6:before {
+      @include devsigner-icon($users);
+    }
+    &.term-7:before {
+      @include devsigner-icon($display);
+    }
+    &.term-8:before {
+      @include devsigner-icon($pencil);
+    }
+  }
+}
+
+.field-name-field-experience-level {
+  .field-item {
+    a {
+      padding: 0.33em 0.5em 0.1333em 0.3em;
+    }
+
+    &:before {
+      padding-left: 5px;
+      position: relative;
+      top: 2px;
+    }
+    &.term-15 {
+      a {
+        padding: 0.33em 0.5em 0.1333em 0.1em;
+      }
+
+      &:before {
+        padding-left: 3px;
+        @include devsigner-icon($dot-single);
+      }
+    }
+    &.term-16:before {
+      @include devsigner-icon($dot-double);
+    }
+    &.term-17:before {
+      @include devsigner-icon($dot-triple);
+    }
+    &.term-18:before {
+      @include devsigner-icon($dot-open, 16px);
+      top: 1px;
+    }
+
+  }
+}
+
+.view-sessions {
+  .view-filters {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #EBEDF1;
+
+    .views-exposed-widget {
+      padding-bottom: 10px;
+    }
+
+    #edit-field-experience-level-tid-wrapper {
+      margin-right: 20px;
+    }
+
+    .bef-select-as-links {
+      .form-type-bef-link {
+        float: left;
+        padding-right: 12px;
+
+        a {
+          display: inline-block;
+          line-height: 1.2;
+          padding: 0.33em 0 0.1333em;
+
+          &.active {
+            background: #012233;
+            border-radius: 4px;
+            color: #FFFFFF;
+            display: inline-block;
+            line-height: 1.2;
+            padding: 0.33em 0.5em 0.1333em;
+          }
+        }
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+  }
+
+  th {
+    &.views-field-field-contact-name,
+    &.views-field-field-session-title {
+      text-align: left;
+    }
+
+    @media screen and (max-width: $mobile + 120) {
+      &.views-field-field-session-format {
+        display: none;
+      }
+    }
+  }
+
+  tr.even, tr.odd {
+    background: none;
+    border: none;
+    vertical-align: middle;
+  }
+
+  td {
+    padding: 12px 7px;
+
+    &.views-field-field-session-title {
+      font-family: misoBold,Arial,Helvetica,"Numbus Sans L",sans-serif;
+      padding-left: 0;
+      padding-right: 15px;
+      font-size: 21px;
+    }
+
+    &.views-field-field-contact-name {
+      padding-left: 0;
+    }
+
+    &.views-field-field-experience-level,
+    &.views-field-field-session-format {
+      white-space: nowrap;
+      text-align: center;
+
+      div {
+        margin-bottom: 0;
+      }
+    }
+
+    @media screen and (max-width: $mobile + 120) {
+      &.views-field-field-session-format {
+        display: none;
+      }
+    }
+
+    .field-item {
+      margin-right: 0;
+    }
   }
 }

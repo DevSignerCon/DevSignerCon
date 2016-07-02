@@ -1,6 +1,8 @@
 #IDE
 .idea
 
+#Excluding Gemfile.lock
+Gemfile.lock
 # Ignore configuration files that may contain sensitive information.
 sites/*/settings*.php
 

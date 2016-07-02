@@ -67,7 +67,7 @@ textarea {
   }
 
   label {
-    @include column(2,9);
+    @include column(3,9);
     @include alpha;
     clear: left;
     color: #424242;
@@ -204,5 +204,19 @@ textarea {
   // Fix for address fields
   #edit-field-address fieldset .form-item {
     width: 100%;
+  }
+}
+
+// Hide inout format help text
+#edit-field-takeaways-und-0-format {
+  display: none;
+}
+
+#edit-field-takeaways + fieldset {
+  clear: both;
+}
+#edit-field-speaker {
+  .clearfix {
+    clear: both;
   }
 }

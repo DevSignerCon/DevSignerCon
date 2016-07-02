@@ -1697,7 +1697,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1464203676');
+  background-image: url('../images/progress.gif?1467422981');
 }
 
 /* line 812, ../sass/components/_misc.scss */
@@ -2492,7 +2492,7 @@ textarea {
 .entityform-session label {
   display: inline;
   float: left;
-  width: 22.22222%;
+  width: 33.33333%;
   padding: 0 15px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2792,6 +2792,21 @@ textarea {
   width: 100%;
 }
 
+/* line 211, ../sass/components/_forms.scss */
+#edit-field-takeaways-und-0-format {
+  display: none;
+}
+
+/* line 215, ../sass/components/_forms.scss */
+#edit-field-takeaways + fieldset {
+  clear: both;
+}
+
+/* line 219, ../sass/components/_forms.scss */
+#edit-field-speaker .clearfix {
+  clear: both;
+}
+
 /* line 7, ../sass/components/_home.scss */
 .front html[xmlns] .slides {
   display: block;
@@ -2804,7 +2819,6 @@ textarea {
 .front #header-wrapper {
   max-height: 900px;
   max-height: 61.3vw;
-  overflow: hidden;
   transition: max-height 0.7s;
 }
 @media screen and (max-width: 768px) {
@@ -2848,10 +2862,6 @@ textarea {
 .front .region-header {
   max-width: 100%;
   width: 100%;
-}
-/* line 45, ../sass/components/_home.scss */
-.front #header-section {
-  overflow: hidden;
 }
 /* line 49, ../sass/components/_home.scss */
 .front .header-inner {

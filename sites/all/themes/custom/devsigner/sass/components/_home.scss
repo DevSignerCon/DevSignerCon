@@ -12,7 +12,7 @@
     // Fallback for browsers that don't support vw
     max-height: 900px;
     max-height: 61.3vw;
-    overflow: hidden;
+    //overflow: hidden;
     transition: max-height 0.7s;
 
     // Need to make adjustments to height when slider is below header
@@ -43,7 +43,7 @@
   }
 
   #header-section {
-    overflow: hidden;
+    //overflow: hidden;
   }
 
   .header-inner {

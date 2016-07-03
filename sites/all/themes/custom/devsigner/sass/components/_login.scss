@@ -1,0 +1,62 @@
+//
+// Login and registration page located at /member/register
+//
+// Some styles specifically targeting LoginToboggan's version of this page.
+//
+
+.page-user {
+
+  legend {
+    font-weight: bold;
+  }
+
+  label {
+    font-size: 1.5em;
+  }
+
+  .filter-help p a {
+    border-bottom-width: 0;
+
+    &:hover,
+    &:focus {
+      color: $purplePrimary;
+    }
+  }
+
+  .form-submit {
+    @include devsigner-button;
+  }
+
+  .login-forgot {
+    margin-bottom: 1em;
+    font-size: 0.9em;
+  }
+}
+
+.toboggan-unified {
+
+  #login-message {
+    font-family: $miso;
+    margin-bottom: 0.25em;
+  }
+
+  #login-links a {
+    border: 3px $purplePrimary solid;
+    background-color: $white;
+    color: $purplePrimary;
+
+    &:hover,
+    &:focus {
+      background-color: $purpleSecondary;
+      color: $white;
+    }
+  }
+
+  #login-links a.lt-active,
+  #login-links a.lt-active:hover,
+  #login-links a.lt-active:focus {
+    border: 3px $purplePrimary solid;
+    background-color: $purplePrimary;
+    color: $white;
+  }
+}

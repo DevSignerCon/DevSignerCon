@@ -42,13 +42,14 @@
   content: "\e9ba";
 }
 
-/* line 67, ../sass/_mixins.scss */
+/* line 68, ../sass/_mixins.scss */
 #page .devsigner-button {
   background-color: #cc0099;
   border: none;
   color: #FFFFFF;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
   font-size: 24px;
+  margin-right: 26px;
   padding: 10px 26px 8px;
   white-space: nowrap;
   -moz-border-radius: 4px;
@@ -59,17 +60,18 @@
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
 }
-/* line 60, ../sass/_mixins.scss */
+/* line 61, ../sass/_mixins.scss */
 #page .devsigner-button:hover {
   background-color: #66004d;
 }
-/* line 70, ../sass/_mixins.scss */
+/* line 71, ../sass/_mixins.scss */
 #page .devsigner-button.lime {
   background-color: #8AB513;
   border: none;
   color: #FFFFFF;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
   font-size: 24px;
+  margin-right: 26px;
   padding: 10px 26px 8px;
   white-space: nowrap;
   -moz-border-radius: 4px;
@@ -80,7 +82,7 @@
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
 }
-/* line 60, ../sass/_mixins.scss */
+/* line 61, ../sass/_mixins.scss */
 #page .devsigner-button.lime:hover {
   background-color: #445909;
 }
@@ -2468,11 +2470,20 @@ textarea {
 
 /* line 18, ../sass/components/_forms.scss */
 input.form-text,
+select,
 textarea {
   padding: 13px 13px 12px !important;
 }
 
-/* line 23, ../sass/components/_forms.scss */
+/* line 24, ../sass/components/_forms.scss */
+fieldset {
+  margin: 0;
+  padding: 1em;
+  border-color: #B5138A;
+  border-width: 1px;
+}
+
+/* line 31, ../sass/components/_forms.scss */
 #edit-save,
 #edit-submit {
   background-color: #cc0099;
@@ -2480,6 +2491,7 @@ textarea {
   color: #FFFFFF;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
   font-size: 24px;
+  margin-right: 26px;
   padding: 10px 26px 8px;
   white-space: nowrap;
   -moz-border-radius: 4px;
@@ -2490,31 +2502,36 @@ textarea {
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
 }
-/* line 60, ../sass/_mixins.scss */
+/* line 61, ../sass/_mixins.scss */
 #edit-save:hover,
 #edit-submit:hover {
   background-color: #66004d;
 }
 
-/* line 33, ../sass/components/_forms.scss */
+/* line 41, ../sass/components/_forms.scss */
 .devsigner-forms h3,
 .devsigner-forms legend,
 .entityform-session h3,
 .entityform-session legend {
+  font-family: miso, Arial, Helvetica, "Nimbus Sans L", sans-serif;
   font-size: 1.75em;
-  margin: 0;
+  font-weight: bold;
+  margin: 0 0 1em 0;
+  padding-bottom: 0.25em;
   position: relative;
   text-transform: uppercase;
   width: 100%;
+  color: #B5138A;
+  border-bottom: 2px #B5138A solid;
 }
-/* line 41, ../sass/components/_forms.scss */
+/* line 54, ../sass/components/_forms.scss */
 .devsigner-forms h3 span,
 .devsigner-forms legend span,
 .entityform-session h3 span,
 .entityform-session legend span {
   display: inline;
   float: left;
-  width: 22.22222%;
+  width: 33.33333%;
   padding: 0 15px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2523,7 +2540,7 @@ textarea {
   text-align: right;
 }
 @media screen and (max-width: 480px) {
-  /* line 41, ../sass/components/_forms.scss */
+  /* line 54, ../sass/components/_forms.scss */
   .devsigner-forms h3 span,
   .devsigner-forms legend span,
   .entityform-session h3 span,
@@ -2583,7 +2600,7 @@ textarea {
 .entityform-session label.option {
   color: #616061;
   float: none;
-  font-family: miso, Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  font-family: "Roboto", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   font-size: 1em;
   text-align: left;
   width: auto;
@@ -2619,7 +2636,7 @@ textarea {
 .entityform-session .field-type-text-with-summary fieldset.form-wrapper label {
   color: #616061;
   float: none;
-  font-family: miso, Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  font-family: "Roboto", Helvetica, Arial, "Nimbus Sans L", sans-serif;
   font-size: 1em;
   text-align: left;
   width: auto;
@@ -2651,7 +2668,7 @@ textarea {
 .entityform-session #edit-field-company table thead {
   display: inline;
   float: left;
-  width: 22.22222%;
+  width: 33.33333%;
   padding: 0 15px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -2698,7 +2715,7 @@ textarea {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  left: 22.22222%;
+  left: 33.33333%;
   position: relative;
   padding-left: 0;
   padding-right: 0;
@@ -2754,12 +2771,13 @@ textarea {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  left: 22.22222%;
+  left: 33.33333%;
   position: relative;
   padding-left: 0;
   padding-right: 0;
   clear: left;
-  font-size: 1em;
+  margin-top: 0.5em;
+  font-size: 0.875em;
 }
 @media screen and (max-width: 480px) {
   /* line 158, ../sass/components/_forms.scss */
@@ -2769,12 +2787,12 @@ textarea {
     left: 0;
   }
 }
-/* line 168, ../sass/components/_forms.scss */
+/* line 169, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-session-description-und-0-format,
 .entityform-session #edit-field-session-description-und-0-format {
   display: none;
 }
-/* line 173, ../sass/components/_forms.scss */
+/* line 174, ../sass/components/_forms.scss */
 .devsigner-forms #edit-actions,
 .entityform-session #edit-actions {
   display: inline;
@@ -2784,21 +2802,21 @@ textarea {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  left: 22.22222%;
+  left: 33.33333%;
   position: relative;
   padding-left: 0;
   padding-right: 0;
   margin-bottom: 76px;
 }
 @media screen and (max-width: 480px) {
-  /* line 173, ../sass/components/_forms.scss */
+  /* line 174, ../sass/components/_forms.scss */
   .devsigner-forms #edit-actions,
   .entityform-session #edit-actions {
     width: 100%;
     left: 0;
   }
 }
-/* line 182, ../sass/components/_forms.scss */
+/* line 183, ../sass/components/_forms.scss */
 .devsigner-forms .field-type-text-with-summary,
 .entityform-session .field-type-text-with-summary {
   *zoom: 1;
@@ -2815,7 +2833,7 @@ textarea {
 .entityform-session .field-type-text-with-summary:after {
   clear: both;
 }
-/* line 185, ../sass/components/_forms.scss */
+/* line 186, ../sass/components/_forms.scss */
 .devsigner-forms .field-type-text-with-summary fieldset.form-wrapper,
 .entityform-session .field-type-text-with-summary fieldset.form-wrapper {
   display: inline;
@@ -2825,19 +2843,19 @@ textarea {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  left: 22.22222%;
+  left: 33.33333%;
   position: relative;
   padding-right: 0;
 }
 @media screen and (max-width: 480px) {
-  /* line 185, ../sass/components/_forms.scss */
+  /* line 186, ../sass/components/_forms.scss */
   .devsigner-forms .field-type-text-with-summary fieldset.form-wrapper,
   .entityform-session .field-type-text-with-summary fieldset.form-wrapper {
     width: 100%;
     left: 0;
   }
 }
-/* line 193, ../sass/components/_forms.scss */
+/* line 194, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-categories,
 .entityform-session #edit-field-categories {
   position: absolute !important;
@@ -2846,32 +2864,184 @@ textarea {
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
-/* line 198, ../sass/components/_forms.scss */
+/* line 199, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-address fieldset,
 .entityform-session #edit-field-address fieldset {
   margin: 0;
   padding: 0;
   border: none;
 }
-/* line 205, ../sass/components/_forms.scss */
+/* line 206, ../sass/components/_forms.scss */
 .devsigner-forms #edit-field-address fieldset .form-item,
 .entityform-session #edit-field-address fieldset .form-item {
   width: 100%;
 }
 
-/* line 211, ../sass/components/_forms.scss */
+/* line 212, ../sass/components/_forms.scss */
 #edit-field-takeaways-und-0-format {
   display: none;
 }
 
-/* line 215, ../sass/components/_forms.scss */
+/* line 216, ../sass/components/_forms.scss */
 #edit-field-takeaways + fieldset {
   clear: both;
 }
 
-/* line 219, ../sass/components/_forms.scss */
+/* line 220, ../sass/components/_forms.scss */
 #edit-field-speaker .clearfix {
   clear: both;
+}
+
+/* line 234, ../sass/components/_forms.scss */
+.devsigner-forms,
+.entityform-session {
+  /* not checked */
+  /* on checked */
+}
+/* line 237, ../sass/components/_forms.scss */
+.devsigner-forms .form-type-checkbox,
+.entityform-session .form-type-checkbox {
+  margin: 0.5em 0;
+}
+/* line 241, ../sass/components/_forms.scss */
+.devsigner-forms [type="checkbox"]:not(:checked),
+.devsigner-forms [type="checkbox"]:checked,
+.entityform-session [type="checkbox"]:not(:checked),
+.entityform-session [type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+/* line 246, ../sass/components/_forms.scss */
+.devsigner-forms [type="checkbox"]:not(:checked) + label,
+.devsigner-forms [type="checkbox"]:checked + label,
+.entityform-session [type="checkbox"]:not(:checked) + label,
+.entityform-session [type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 75px;
+  cursor: pointer;
+}
+/* line 252, ../sass/components/_forms.scss */
+.devsigner-forms [type="checkbox"]:not(:checked) + label:before,
+.devsigner-forms [type="checkbox"]:checked + label:before,
+.devsigner-forms [type="checkbox"]:not(:checked) + label:after,
+.devsigner-forms [type="checkbox"]:checked + label:after,
+.entityform-session [type="checkbox"]:not(:checked) + label:before,
+.entityform-session [type="checkbox"]:checked + label:before,
+.entityform-session [type="checkbox"]:not(:checked) + label:after,
+.entityform-session [type="checkbox"]:checked + label:after {
+  content: '';
+  position: absolute;
+}
+/* line 259, ../sass/components/_forms.scss */
+.devsigner-forms [type="checkbox"]:not(:checked) + label:before,
+.devsigner-forms [type="checkbox"]:checked + label:before,
+.entityform-session [type="checkbox"]:not(:checked) + label:before,
+.entityform-session [type="checkbox"]:checked + label:before {
+  left: 0;
+  top: -3px;
+  width: 65px;
+  height: 30px;
+  background: #012233;
+  border-radius: 16px;
+  transition: background-color 0.2s;
+}
+/* line 269, ../sass/components/_forms.scss */
+.devsigner-forms [type="checkbox"]:not(:checked) + label:after,
+.devsigner-forms [type="checkbox"]:checked + label:after,
+.entityform-session [type="checkbox"]:not(:checked) + label:after,
+.entityform-session [type="checkbox"]:checked + label:after {
+  width: 20px;
+  height: 20px;
+  transition: all .2s;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  top: 2px;
+  left: 5px;
+}
+/* line 281, ../sass/components/_forms.scss */
+.devsigner-forms [type="checkbox"]:not(:checked) + label:before,
+.entityform-session [type="checkbox"]:not(:checked) + label:before {
+  content: '\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0no';
+  line-height: 30px;
+  color: #FFFFFF;
+  font-size: 0.875em;
+}
+/* line 289, ../sass/components/_forms.scss */
+.devsigner-forms [type="checkbox"]:checked + label:before,
+.entityform-session [type="checkbox"]:checked + label:before {
+  background-color: #B5138A;
+  content: '\00a0\00a0\00a0yes';
+  line-height: 30px;
+  color: #FFFFFF;
+  font-size: 0.875em;
+}
+/* line 296, ../sass/components/_forms.scss */
+.devsigner-forms [type="checkbox"]:checked + label:after,
+.entityform-session [type="checkbox"]:checked + label:after {
+  background-color: #FFFFFF;
+  top: 2px;
+  left: 40px;
+}
+
+/* line 314, ../sass/components/_forms.scss */
+.devsigner-forms .form-type-radio,
+.entityform-session .form-type-radio {
+  margin-bottom: 0.25em;
+}
+/* line 318, ../sass/components/_forms.scss */
+.devsigner-forms input[type="radio"],
+.devsigner-forms input[type="radio"] + label,
+.entityform-session input[type="radio"],
+.entityform-session input[type="radio"] + label {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+/* line 327, ../sass/components/_forms.scss */
+.devsigner-forms input[type="radio"],
+.entityform-session input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+}
+/* line 332, ../sass/components/_forms.scss */
+.devsigner-forms input[type="radio"] + label,
+.entityform-session input[type="radio"] + label {
+  position: relative;
+}
+/* line 336, ../sass/components/_forms.scss */
+.devsigner-forms input[type="radio"] + label:before,
+.entityform-session input[type="radio"] + label:before {
+  content: '';
+  background: #FFFFFF;
+  border: 2px solid #2A282B;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  margin-right: 10px;
+  text-align: center;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+/* line 351, ../sass/components/_forms.scss */
+.devsigner-forms input[type="radio"]:checked + label,
+.entityform-session input[type="radio"]:checked + label {
+  color: #B5138A;
+}
+/* line 355, ../sass/components/_forms.scss */
+.devsigner-forms input[type="radio"]:checked + label:before,
+.entityform-session input[type="radio"]:checked + label:before {
+  background: #B5138A;
+  border-color: #B5138A;
+  box-shadow: inset 0 0 0 4px #FFFFFF;
+}
+/* line 361, ../sass/components/_forms.scss */
+.devsigner-forms input[type="radio"]:focus + label,
+.entityform-session input[type="radio"]:focus + label {
+  outline: 1px solid #ddd;
 }
 
 /* line 7, ../sass/components/_home.scss */
@@ -3203,6 +3373,7 @@ textarea {
   color: #FFFFFF;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
   font-size: 24px;
+  margin-right: 26px;
   padding: 10px 26px 8px;
   white-space: nowrap;
   -moz-border-radius: 4px;
@@ -3213,7 +3384,7 @@ textarea {
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
 }
-/* line 60, ../sass/_mixins.scss */
+/* line 61, ../sass/_mixins.scss */
 .front #header #block-views-flex-slider-block .flexslider .views-field-field-link a:hover {
   background-color: #445909;
 }
@@ -3328,6 +3499,7 @@ textarea {
   color: #012233;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
   font-size: 24px;
+  margin-right: 26px;
   padding: 10px 26px 8px;
   white-space: nowrap;
   -moz-border-radius: 4px;
@@ -3339,7 +3511,7 @@ textarea {
   transition: all 200ms ease;
   border: 1px solid #012233;
 }
-/* line 60, ../sass/_mixins.scss */
+/* line 61, ../sass/_mixins.scss */
 .front .content-inner .field-name-body a.devsigner-button:hover {
   background-color: #cccccc;
 }
@@ -3442,6 +3614,7 @@ textarea {
   color: #012233;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
   font-size: 24px;
+  margin-right: 26px;
   padding: 10px 26px 8px;
   white-space: nowrap;
   -moz-border-radius: 4px;
@@ -3453,7 +3626,7 @@ textarea {
   transition: all 200ms ease;
   border: 1px solid #012233;
 }
-/* line 60, ../sass/_mixins.scss */
+/* line 61, ../sass/_mixins.scss */
 .front #block-views-blog-block .views-field-view-node a:hover {
   background-color: #cccccc;
 }
@@ -3615,6 +3788,7 @@ textarea {
   color: #FFFFFF;
   font-family: misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
   font-size: 24px;
+  margin-right: 26px;
   padding: 10px 26px 8px;
   white-space: nowrap;
   -moz-border-radius: 4px;
@@ -3630,7 +3804,7 @@ textarea {
   margin-bottom: 60px;
   text-align: center;
 }
-/* line 60, ../sass/_mixins.scss */
+/* line 61, ../sass/_mixins.scss */
 .front #block-views-session-tracks-block .views-row a:hover {
   background-color: #cccccc;
 }

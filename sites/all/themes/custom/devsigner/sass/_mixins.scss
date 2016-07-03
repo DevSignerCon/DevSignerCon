@@ -55,6 +55,11 @@
   font-size: 24px;
   padding: 10px 26px 8px;
   white-space: nowrap;
+  @include border-radius(4px);
+  @include transition(all 200ms ease);
+  &:hover {
+    background-color: darken($bg, 20%);
+  }
 }
 
 // Custom devsigner-button class

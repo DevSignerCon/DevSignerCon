@@ -111,7 +111,7 @@
     }
 
     ul.nice-menu {
-      background: $navy;
+      background-color: transparent;
       display: none;
       margin-top: 0;
       margin-bottom: 130px;
@@ -121,7 +121,7 @@
       width: 100%;
 
       > li {
-        background: $navy;
+        background-color: transparent;
         width: 100%;
 
         > a {
@@ -151,7 +151,7 @@
           width: 100%;
 
           li {
-            background: $navy;
+            background-color: transparent;
             border: none;
             text-align: right;
             width: 100%;

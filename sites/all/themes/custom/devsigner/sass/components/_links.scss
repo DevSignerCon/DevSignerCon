@@ -1,0 +1,41 @@
+//
+// Links
+//
+
+a {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+
+  &:link,
+  &:visited {
+    color: $purpleTertiary;
+  }
+
+  &:hover,
+  &:focus {
+    color: $purplePrimary;
+  }
+
+  &:active {
+    color: $purplePrimary;
+  }
+}
+
+// Attempt to target inline links in primary content only
+.content-inner p {
+  a {
+    border-bottom: 1px $purpleTertiary solid;
+    font-weight: bold;
+    background-image: -webkit-linear-gradient(left, transparent 50%, $purplePrimary 50%);
+    background-image: linear-gradient(to right, transparent 50%, $purplePrimary 50%);
+    background-position: 0;
+    background-size: 200%;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      border-bottom-color: transparent;
+      background-position: -100%;
+    }
+  }
+}

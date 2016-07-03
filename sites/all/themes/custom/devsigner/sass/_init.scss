@@ -52,12 +52,12 @@ $legacy-support-for-ie8: true;
 $base-font-size:   16px; // The font size set on the root html element.
 $base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
 
-$h1-font-size: 2    * $base-font-size;
-$h2-font-size: 1.5  * $base-font-size;
-$h3-font-size: 1.3  * $base-font-size;
-$h4-font-size: 1.25 * $base-font-size;
-$h5-font-size: 1.15 * $base-font-size;
-$h6-font-size: 1    * $base-font-size;
+$h1-font-size: 2.5 * $base-font-size;
+$h2-font-size: 2 * $base-font-size;
+$h3-font-size: 1.75 * $base-font-size;
+$h4-font-size: 1.3 * $base-font-size;
+$h5-font-size: 1.25 * $base-font-size;
+$h6-font-size: 1.15 * $base-font-size;
 
 // The following font family declarations are based on the Microsoft core web
 // fonts which are common fonts available on most computer systems. The DejaVu
@@ -79,6 +79,7 @@ $verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
 $tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
 $helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
 $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
+$roboto:          "Roboto", Helvetica, Arial, "Nimbus Sans L", sans-serif;
 $miso:            miso, Arial, Helvetica, "Nimbus Sans L", sans-serif;
 $miso-bold:       misoBold, Arial, Helvetica, "Numbus Sans L", sans-serif;
 $miso-light:      misoLight, Arial, Helvetica, "Numbus Sans L", sans-serif;
@@ -88,8 +89,8 @@ $miso-light:      misoLight, Arial, Helvetica, "Numbus Sans L", sans-serif;
 $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
 // Now create some variables for the font stacks we want to use on this site.
-$base-font-family: $miso; // The font family set on the html element.
-$font-body:        $miso;
+$base-font-family: $roboto; // The font family set on the html element.
+$font-body:        $roboto;
 $font-monospace:   $courier;
 
 
@@ -109,6 +110,7 @@ $white:   #FFFFFF;
 // 2016 Gradients
 $purplePrimary: #600075;
 $purpleSecondary: #cc0099;
+$purpleTertiary: #92278f;
 
 // The amount lists, blockquotes and comments are indented.
 $indent-amount: 30px;

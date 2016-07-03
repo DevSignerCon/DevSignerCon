@@ -2420,6 +2420,20 @@ h1#page-title {
   background: url("../images/bird.png") no-repeat 120px 10px;
 }
 
+/* line 5, ../sass/components/_breadcrumbs.scss */
+.easy-breadcrumb {
+  margin-top: 1em;
+  font-size: 0.875em;
+}
+/* line 9, ../sass/components/_breadcrumbs.scss */
+.easy-breadcrumb a {
+  border-bottom: 1px #FFFFFF dotted;
+}
+/* line 12, ../sass/components/_breadcrumbs.scss */
+.easy-breadcrumb a:hover, .easy-breadcrumb a:focus {
+  border-bottom-color: #600075;
+}
+
 /* line 7, ../sass/components/_forms.scss */
 .form-required {
   color: #B5138A;

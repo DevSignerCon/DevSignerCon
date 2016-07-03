@@ -1,0 +1,17 @@
+//
+// Breadcrumb styles
+//
+
+.easy-breadcrumb {
+  margin-top: 1em;
+  font-size: 0.875em;
+
+  a {
+    border-bottom: 1px $white dotted;
+
+    &:hover,
+    &:focus {
+      border-bottom-color: $purplePrimary;
+    }
+  }
+}

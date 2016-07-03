@@ -1968,7 +1968,7 @@ tr.selected td {
     left: 0;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   /* line 17, ../sass/components/_header.scss */
   #navigation-wrapper {
     width: 100%;
@@ -2073,13 +2073,13 @@ tr.selected td {
 .block-nice-menus ul.nice-menu li.menuparent ul li a.active {
   border-bottom: none;
 }
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1025px) {
   /* line 89, ../sass/components/_navigation.scss */
   .block-nice-menus ul.nice-menu {
     display: block !important;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   /* line 97, ../sass/components/_navigation.scss */
   .block-nice-menus #navigation-wrapper {
     background: #000000;

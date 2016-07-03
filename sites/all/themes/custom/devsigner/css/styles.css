@@ -42,7 +42,7 @@
   content: "\e9ba";
 }
 
-/* line 62, ../sass/_mixins.scss */
+/* line 67, ../sass/_mixins.scss */
 #page .devsigner-button {
   background-color: #cc0099;
   border: none;
@@ -51,8 +51,19 @@
   font-size: 24px;
   padding: 10px 26px 8px;
   white-space: nowrap;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
 }
-/* line 65, ../sass/_mixins.scss */
+/* line 60, ../sass/_mixins.scss */
+#page .devsigner-button:hover {
+  background-color: #66004d;
+}
+/* line 70, ../sass/_mixins.scss */
 #page .devsigner-button.lime {
   background-color: #8AB513;
   border: none;
@@ -61,6 +72,17 @@
   font-size: 24px;
   padding: 10px 26px 8px;
   white-space: nowrap;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+/* line 60, ../sass/_mixins.scss */
+#page .devsigner-button.lime:hover {
+  background-color: #445909;
 }
 
 @font-face {
@@ -2427,6 +2449,18 @@ textarea {
   font-size: 24px;
   padding: 10px 26px 8px;
   white-space: nowrap;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+/* line 60, ../sass/_mixins.scss */
+#edit-save:hover,
+#edit-submit:hover {
+  background-color: #66004d;
 }
 
 /* line 33, ../sass/components/_forms.scss */
@@ -3138,6 +3172,17 @@ textarea {
   font-size: 24px;
   padding: 10px 26px 8px;
   white-space: nowrap;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+/* line 60, ../sass/_mixins.scss */
+.front #header #block-views-flex-slider-block .flexslider .views-field-field-link a:hover {
+  background-color: #445909;
 }
 /* line 264, ../sass/components/_home.scss */
 .front #header #block-views-flex-slider-block .flexslider .views-field-field-slide-image {
@@ -3252,7 +3297,18 @@ textarea {
   font-size: 24px;
   padding: 10px 26px 8px;
   white-space: nowrap;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
   border: 1px solid #012233;
+}
+/* line 60, ../sass/_mixins.scss */
+.front .content-inner .field-name-body a.devsigner-button:hover {
+  background-color: #cccccc;
 }
 /* line 337, ../sass/components/_home.scss */
 .front .content-inner .field-name-body a.devsigner-button:hover {
@@ -3355,7 +3411,18 @@ textarea {
   font-size: 24px;
   padding: 10px 26px 8px;
   white-space: nowrap;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
   border: 1px solid #012233;
+}
+/* line 60, ../sass/_mixins.scss */
+.front #block-views-blog-block .views-field-view-node a:hover {
+  background-color: #cccccc;
 }
 /* line 398, ../sass/components/_home.scss */
 .front #block-views-blog-block .views-field-view-node a:hover {
@@ -3517,11 +3584,22 @@ textarea {
   font-size: 24px;
   padding: 10px 26px 8px;
   white-space: nowrap;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
   border: 1px solid #FFFFFF;
   background: none;
   display: block;
   margin-bottom: 60px;
   text-align: center;
+}
+/* line 60, ../sass/_mixins.scss */
+.front #block-views-session-tracks-block .views-row a:hover {
+  background-color: #cccccc;
 }
 /* line 475, ../sass/components/_home.scss */
 .front #block-views-session-tracks-block .views-row a:hover {

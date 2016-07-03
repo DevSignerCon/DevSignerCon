@@ -1697,7 +1697,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1467422981');
+  background-image: url('../images/progress.gif?1464203676');
 }
 
 /* line 812, ../sass/components/_misc.scss */
@@ -2076,7 +2076,7 @@ tr.selected td {
   }
   /* line 113, ../sass/components/_navigation.scss */
   .block-nice-menus ul.nice-menu {
-    background: #012233;
+    background-color: transparent;
     display: none;
     margin-top: 0;
     margin-bottom: 130px;
@@ -2087,7 +2087,7 @@ tr.selected td {
   }
   /* line 123, ../sass/components/_navigation.scss */
   .block-nice-menus ul.nice-menu > li {
-    background: #012233;
+    background-color: transparent;
     width: 100%;
   }
   /* line 127, ../sass/components/_navigation.scss */
@@ -2118,7 +2118,7 @@ tr.selected td {
   }
   /* line 153, ../sass/components/_navigation.scss */
   .block-nice-menus ul.nice-menu li.menuparent ul li {
-    background: #012233;
+    background-color: transparent;
     border: none;
     text-align: right;
     width: 100%;

@@ -4686,6 +4686,11 @@ fieldset {
   margin-right: 0;
 }
 
+/* line 274, ../sass/components/_sessions.scss */
+.page-eform-submit-session .block-easy-breadcrumb {
+  display: none;
+}
+
 /**
  * @file
  * Print styling

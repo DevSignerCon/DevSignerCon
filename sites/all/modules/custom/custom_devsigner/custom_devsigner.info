@@ -1,0 +1,4 @@
+name = Devsigner Custom Functions
+description = Custom snippets to help enhance the website.
+package = Custom
+core = 7.x

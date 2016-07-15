@@ -39,7 +39,11 @@
         </div>
       </div>
 
-      <?php print render($page['header']); ?>
+      <?php if ($page['header']): ?>
+        <div class="region-header">
+        <?php print render($page['header']); ?>
+        </div>
+      <?php endif; ?>
 
     </header>
   </div>
@@ -50,7 +54,11 @@
       <div id="content-horse"></div>
       <div id="content" class="column" role="main">
         <div class="content-inner">
-          <?php print render($page['highlighted']); ?>
+          <?php if ($page['highlighted']): ?>
+            <div class="region-highlighted">
+            <?php print render($page['highlighted']); ?>
+            </div>
+          <?php endif; ?>
           <?php print $breadcrumb; ?>
           <a id="main-content"></a>
           <?php print render($title_prefix); ?>
@@ -60,11 +68,17 @@
           <?php print render($title_suffix); ?>
           <?php print $messages; ?>
           <?php print render($tabs); ?>
-          <?php print render($page['help']); ?>
+          <?php if ($page['help']): ?>
+            <div class="region-help">
+            <?php print render($page['help']); ?>
+            </div>
+          <?php endif; ?>
           <?php if ($action_links): ?>
             <ul class="action-links"><?php print render($action_links); ?></ul>
           <?php endif; ?>
-          <?php print render($page['content']); ?>
+          <div class="region-content">
+            <?php print render($page['content']); ?>
+          </div>
           <?php print $feed_icons; ?>
         </div>
 
@@ -84,13 +98,37 @@
       </div><!-- #content -->
     </div><!-- #content-wrapper -->
 
-    <?php print render($page['tier_1']); ?>
-    <?php print render($page['tier_2']); ?>
-    <?php print render($page['tier_3']); ?>
-    <div class="tier4-frame">
-      <?php print render($page['tier_4']); ?>
-    </div>
-    <?php print render($page['tier_5']); ?>
+    <?php if ($page['tier_1']): ?>
+      <div class="region-tier_1">
+      <?php print render($page['tier_1']); ?>
+      </div>
+    <?php endif; ?>
+
+    <?php if ($page['tier_2']): ?>
+      <div class="region-tier_2">
+      <?php print render($page['tier_2']); ?>
+      </div>
+    <?php endif; ?>
+
+    <?php if ($page['tier_3']): ?>
+      <div class="region-tier_3">
+      <?php print render($page['tier_3']); ?>
+      </div>
+    <?php endif; ?>
+
+    <?php if ($page['tier_4']): ?>
+      <div class="region-tier_4">
+        <div class="tier4-frame">
+        <?php print render($page['tier_4']); ?>
+        </div>
+      </div>
+    <?php endif; ?>
+
+    <?php if ($page['tier_5']): ?>
+      <div class="region-tier_5">
+      <?php print render($page['tier_5']); ?>
+      </div>
+    <?php endif; ?>
 
   </div>
 
@@ -100,4 +138,8 @@
 
 </div>
 
-<?php print render($page['bottom']); ?>
+<?php if ($page['bottom']): ?>
+  <div class="region-bottom">
+  <?php print render($page['bottom']); ?>
+  </div>
+<?php endif; ?>

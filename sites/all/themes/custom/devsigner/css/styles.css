@@ -1719,7 +1719,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1467916936');
+  background-image: url('../images/progress.gif?1467523667');
 }
 
 /* line 812, ../sass/components/_misc.scss */
@@ -5062,6 +5062,12 @@ section.sponsor-group .sponsor header .social-info ul li a .fa:hover {
 
 /* line 274, ../sass/components/_sessions.scss */
 .page-eform-submit-session .block-easy-breadcrumb {
+  display: none;
+}
+
+/* line 7, ../sass/components/_access-denied-hack.scss */
+.page-eform-submit-session.not-logged-in .page__title,
+.page-eform-submit-session.not-logged-in .region-content {
   display: none;
 }
 

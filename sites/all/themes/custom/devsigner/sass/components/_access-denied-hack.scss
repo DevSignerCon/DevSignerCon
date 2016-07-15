@@ -1,0 +1,11 @@
+//
+// Hide 'Access denied' (i.e. page content) on selected pages, via hackedy hackedy.
+//
+
+.page-eform-submit-session.not-logged-in {
+
+  .page__title,
+  .region-content {
+    display: none;
+  }
+}

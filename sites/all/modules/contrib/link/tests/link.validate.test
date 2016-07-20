@@ -61,13 +61,10 @@ class LinkValidateTest extends LinkValidateTestCase {
    * Test if we're stopped from posting a bad url on default validation.
    */
   function test_link_validate_bad_url_validate_default() {
-    $this->web_user = $this->drupalCreateUser(array('administer content types',
-                                             'administer nodes',
-                                             'administer filters',
-                                             'access content',
-                                             'create page content',
-                                             'access administration pages'));
-    $this->drupalLogin($this->web_user);
+    $perms = user_role_permissions(array(array_search('administrator', user_roles()) => 'administrator'));
+    $perms = array_keys($perms[array_search('administrator', user_roles())]);
+    $admin = $this->drupalCreateUser($perms);
+    $this->drupalLogin($admin);
 
     // create field
     $name = strtolower($this->randomName());
@@ -106,13 +103,10 @@ class LinkValidateTest extends LinkValidateTestCase {
    * Test if we're stopped from posting a bad url with validation on.
    */
   function test_link_validate_bad_url_validate_on() {
-    $this->web_user = $this->drupalCreateUser(array('administer content types',
-                                             'administer nodes',
-                                             'administer filters',
-                                             'access content',
-                                             'create page content',
-                                             'access administration pages'));
-    $this->drupalLogin($this->web_user);
+    $perms = user_role_permissions(array(array_search('administrator', user_roles()) => 'administrator'));
+    $perms = array_keys($perms[array_search('administrator', user_roles())]);
+    $admin = $this->drupalCreateUser($perms);
+    $this->drupalLogin($admin);
 
     // create field
     $name = strtolower($this->randomName());
@@ -152,13 +146,10 @@ class LinkValidateTest extends LinkValidateTestCase {
    * Test if we can post a bad url if the validation is expressly turned off.
    */
   function test_link_validate_bad_url_validate_off() {
-    $this->web_user = $this->drupalCreateUser(array('administer content types',
-                                             'administer nodes',
-                                             'administer filters',
-                                             'access content',
-                                             'create page content',
-                                             'access administration pages'));
-    $this->drupalLogin($this->web_user);
+    $perms = user_role_permissions(array(array_search('administrator', user_roles()) => 'administrator'));
+    $perms = array_keys($perms[array_search('administrator', user_roles())]);
+    $admin = $this->drupalCreateUser($perms);
+    $this->drupalLogin($admin);
 
     // create field
     $name = strtolower($this->randomName());
@@ -202,13 +193,10 @@ class LinkValidateTest extends LinkValidateTestCase {
    */
   function x_test_link_validate_switching_between_validation_status() {
     $this->acquireContentTypes(1);
-    $this->web_user = $this->drupalCreateUser(array('administer content types',
-                                             'administer nodes',
-                                             'access administration pages',
-                                             'access content',
-                                             'create ' . $this->content_types[0]->type . ' content',
-                                             'edit any ' . $this->content_types[0]->type . ' content'));
-    $this->drupalLogin($this->web_user);
+    $perms = user_role_permissions(array(array_search('administrator', user_roles()) => 'administrator'));
+    $perms = array_keys($perms[array_search('administrator', user_roles())]);
+    $admin = $this->drupalCreateUser($perms);
+    $this->drupalLogin($admin);
     variable_set('node_options_' . $this->content_types[0]->name, array('status', 'promote'));
     $field_settings = array(
       'type' => 'link',
@@ -368,7 +356,7 @@ class LinkValidateUrlLight extends DrupalWebTestCase {
       'group' => 'Link',
     );
   }
-  
+
   function setUp() {
     parent::setUp('link');
   }
@@ -429,11 +417,10 @@ class LinkValidateUrlLight extends DrupalWebTestCase {
   function testValidateInternalLinks() {
     $tempfile = drupal_tempnam('public://files', 'test');
     $links = array(
-      'rss.xml',
       file_uri_target($tempfile),
       drupal_realpath($tempfile),
     );
-    
+
     foreach ($links as $link) {
       $type = link_url_type($link);
       $this->assertEqual(LINK_INTERNAL, $type, 'Test ' . $link . ' is an internal link.');
@@ -482,8 +469,8 @@ class LinkValidateUrlLight extends DrupalWebTestCase {
       //$valid2 = valid_url($link, TRUE);
       //$this->assertEqual(TRUE, $valid2, "Using valid_url() on $link.");
     }
-    // Test if we can make a tld valid:
-    variable_set('link_extra_domains', array('frog'));
+    // Test if we can make a tld allowable:
+    variable_set('link_allowed_domains', array('frog'));
     $valid = link_validate_url('http://www.example.frog');
     $this->assertEqual(LINK_EXTERNAL, $valid, "Testing that http://www.example.frog is a valid external link if we've added 'frog' to the list of valid domains.");
   }
@@ -495,7 +482,6 @@ class LinkValidateUrlLight extends DrupalWebTestCase {
       'http://4827.0.0.2/',
       '//www.example.com/',
       'http://www.testß.com/', // ß not allowed in domain names!
-      'http://www.example.frog/', // Bad TLD
       //'http://www.-fudge.com/', // domains can't have sections starting with a dash.
       'http://example.com/index.php?page=this\that',
       'example@example.com',
@@ -504,5 +490,9 @@ class LinkValidateUrlLight extends DrupalWebTestCase {
       $valid = link_validate_url($link);
       $this->assertEqual(FALSE, $valid, 'Testing that ' . $link . ' is not a valid link.');
     }
+    // Test if we can make a tld disallowed:
+    variable_set('link_allowed_domains', array('toad'));
+    $valid = link_validate_url('http://www.example.frog');
+    $this->assertEqual(FALSE, $valid, "Testing that http://www.example.frog is an invalid external link if we've not added 'frog' to the list of valid domains.");
   }
 }

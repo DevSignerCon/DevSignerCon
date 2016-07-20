@@ -10,7 +10,6 @@ define('LINK_INTERNAL', 'internal');
 define('LINK_FRONT', 'front');
 define('LINK_EMAIL', 'email');
 define('LINK_NEWS', 'news');
-define('LINK_DOMAINS', 'aero|arpa|asia|biz|build|com|cat|ceo|coop|edu|gov|info|int|jobs|mil|museum|name|nato|net|org|post|pro|tel|travel|mobi|local|xxx');
 
 define('LINK_TARGET_DEFAULT', 'default');
 define('LINK_TARGET_NEW_WINDOW', '_blank');
@@ -1261,7 +1260,7 @@ function link_validate_url($text, $langcode = NULL) {
  *
  * @param string $text
  *   Url to be checked.
- * 
+ *
  * @return mixed
  *   Returns boolean FALSE if the URL is not valid. On success, returns one of
  *   the LINK_(linktype) constants.
@@ -1383,11 +1382,16 @@ function link_url_type($text) {
 }
 
 /**
- * Returns the list of allowed domains, including domains added by admins via variable_set/$config.
+ * Returns the list of allowed domains.
+ *
+ * If the variable link_allowed_domains is set, restrict allowed domains to the
+ * strings in that array. If the variable link_allowed_domains is not set, allow
+ * all domains between 2 and 63 characters in length.
+ * See https://tools.ietf.org/html/rfc1034.
  */
 function _link_domains() {
-  $link_extra_domains = variable_get('link_extra_domains', array());
-  return empty($link_extra_domains) ? LINK_DOMAINS : LINK_DOMAINS . '|' . implode('|', $link_extra_domains);
+  $link_allowed_domains = variable_get('link_allowed_domains', array());
+  return empty($link_allowed_domains) ? '[a-z][a-z0-9-]{1,62}' : implode('|', $link_allowed_domains);
 }
 
 /**
@@ -1439,7 +1443,7 @@ function link_field_settings_form() {
 
 /**
  * Additional callback to adapt the property info of link fields.
- * 
+ *
  * @see entity_metadata_field_entity_property_info()
  */
 function link_field_property_info_callback(&$info, $entity_type, $field, $instance, $field_type) {

@@ -1,0 +1,370 @@
+From f8ea05469f22005733e7d030f45ff85771924f14 Mon Sep 17 00:00:00 2001
+From: Jaleel Carter <Jaleel.Carter@acquia.com>
+Date: Thu, 14 Jul 2016 13:29:03 -0400
+Subject: [PATCH] 2299657-45
+
+2299657-45-1
+---
+ link.install                 | 14 +++++++++++
+ link.module                  | 16 +++++++-----
+ tests/link.attribute.test    |  6 +++--
+ tests/link.crud.test         |  6 +++--
+ tests/link.crud_browser.test | 46 ++++++++++++++++++++---------------
+ tests/link.test              |  8 +++---
+ tests/link.validate.test     | 58 ++++++++++++++++++--------------------------
+ 7 files changed, 87 insertions(+), 67 deletions(-)
+
+diff --git a/link.install b/link.install
+index 14e745d..e1820f7 100644
+--- a/link.install
++++ b/link.install
+@@ -115,3 +115,17 @@ function link_update_7001() {
+     }
+   }
+ }
++
++/**
++ * Removes unused link_extra_domains variable.
++ */
++function link_update_7002() {
++  variable_del('link_extra_domains');
++}
++
++/**
++ * Implements hook_uninstall().
++ */
++function link_uninstall() {
++  variable_del('link_allowed_domains');
++}
+diff --git a/link.module b/link.module
+index 1e9d088..aece66d 100644
+--- a/link.module
++++ b/link.module
+@@ -10,7 +10,6 @@ define('LINK_INTERNAL', 'internal');
+ define('LINK_FRONT', 'front');
+ define('LINK_EMAIL', 'email');
+ define('LINK_NEWS', 'news');
+-define('LINK_DOMAINS', 'aero|arpa|asia|biz|build|com|cat|ceo|coop|edu|gov|info|int|jobs|mil|museum|name|nato|net|org|post|pro|tel|travel|mobi|local|xxx');
+ 
+ define('LINK_TARGET_DEFAULT', 'default');
+ define('LINK_TARGET_NEW_WINDOW', '_blank');
+@@ -1261,7 +1260,7 @@ function link_validate_url($text, $langcode = NULL) {
+  *
+  * @param string $text
+  *   Url to be checked.
+- * 
++ *
+  * @return mixed
+  *   Returns boolean FALSE if the URL is not valid. On success, returns one of
+  *   the LINK_(linktype) constants.
+@@ -1383,11 +1382,16 @@ function link_url_type($text) {
+ }
+ 
+ /**
+- * Returns the list of allowed domains, including domains added by admins via variable_set/$config.
++ * Returns the list of allowed domains.
++ *
++ * If the variable link_allowed_domains is set, restrict allowed domains to the
++ * strings in that array. If the variable link_allowed_domains is not set, allow
++ * all domains between 2 and 63 characters in length.
++ * See https://tools.ietf.org/html/rfc1034.
+  */
+ function _link_domains() {
+-  $link_extra_domains = variable_get('link_extra_domains', array());
+-  return empty($link_extra_domains) ? LINK_DOMAINS : LINK_DOMAINS . '|' . implode('|', $link_extra_domains);
++  $link_allowed_domains = variable_get('link_allowed_domains', array());
++  return empty($link_allowed_domains) ? '[a-z][a-z0-9-]{1,62}' : implode('|', $link_allowed_domains);
+ }
+ 
+ /**
+@@ -1439,7 +1443,7 @@ function link_field_settings_form() {
+ 
+ /**
+  * Additional callback to adapt the property info of link fields.
+- * 
++ *
+  * @see entity_metadata_field_entity_property_info()
+  */
+ function link_field_property_info_callback(&$info, $entity_type, $field, $instance, $field_type) {
+diff --git a/tests/link.attribute.test b/tests/link.attribute.test
+index 36e6be5..4765814 100644
+--- a/tests/link.attribute.test
++++ b/tests/link.attribute.test
+@@ -31,8 +31,10 @@ class LinkAttributeCrudTest extends DrupalWebTestCase {
+     parent::setup('field_ui', 'link');
+     $this->zebra = 0;
+     // Create and login user.
+-    $this->web_user = $this->drupalCreateUser(array('administer content types'));
+-    $this->drupalLogin($this->web_user);
++    $perms = user_role_permissions(array(array_search('administrator', user_roles()) => 'administrator'));
++    $perms = array_keys($perms[array_search('administrator', user_roles())]);
++    $admin = $this->drupalCreateUser($perms);
++    $this->drupalLogin($admin);
+   }
+ 
+   protected function createLink($url, $title, $attributes = array()) {
+diff --git a/tests/link.crud.test b/tests/link.crud.test
+index e9b7db4..5f12840 100644
+--- a/tests/link.crud.test
++++ b/tests/link.crud.test
+@@ -29,8 +29,10 @@ class LinkContentCrudTest extends DrupalWebTestCase {
+     $title = $this->randomName(20);
+ 
+     // Create and login user.
+-    $this->web_user = $this->drupalCreateUser(array('administer content types'));
+-    $this->drupalLogin($this->web_user);
++    $perms = user_role_permissions(array(array_search('administrator', user_roles()) => 'administrator'));
++    $perms = array_keys($perms[array_search('administrator', user_roles())]);
++    $admin = $this->drupalCreateUser($perms);
++    $this->drupalLogin($admin);
+ 
+     $this->drupalGet('admin/structure/types');
+ 
+diff --git a/tests/link.crud_browser.test b/tests/link.crud_browser.test
+index be04260..803169b 100644
+--- a/tests/link.crud_browser.test
++++ b/tests/link.crud_browser.test
+@@ -42,15 +42,11 @@ class LinkUITest extends DrupalWebTestcase {
+    */
+   function testLinkCreate() {
+     //libxml_use_internal_errors(true);
+-    $this->web_user = $this->drupalCreateUser(array(
+-      'administer content types',
+-      'administer nodes',
+-      'administer filters',
+-      'access content',
+-      'create page content',
+-      'access administration pages'
+-    ));
+-    $this->drupalLogin($this->web_user);
++    $perms = user_role_permissions(array(array_search('administrator', user_roles()) => 'administrator'));
++    $perms = array_keys($perms[array_search('administrator', user_roles())]);
++    $admin = $this->drupalCreateUser($perms);
++    $this->drupalLogin($admin);
++
+ 
+     // create field
+     $name = strtolower($this->randomName());
+@@ -133,7 +129,7 @@ class LinkUITest extends DrupalWebTestcase {
+     $input_test_cases[] = $test_case;
+ 
+     foreach ($input_test_cases as $input) {
+-      $this->drupalLogin($this->web_user);
++      $this->drupalLogin($admin);
+       $this->drupalGet('node/add/page');
+ 
+       $edit = array(
+@@ -179,8 +175,10 @@ class LinkUITest extends DrupalWebTestcase {
+    * title actually displays <strong>.
+    */
+   function testStaticLinkCreate() {
+-    $this->web_user = $this->drupalCreateUser(array('administer content types', 'access content', 'create page content'));
+-    $this->drupalLogin($this->web_user);
++    $perms = user_role_permissions(array(array_search('administrator', user_roles()) => 'administrator'));
++    $perms = array_keys($perms[array_search('administrator', user_roles())]);
++    $admin = $this->drupalCreateUser($perms);
++    $this->drupalLogin($admin);
+ 
+     // create field
+     $name = strtolower($this->randomName());
+@@ -227,8 +225,10 @@ class LinkUITest extends DrupalWebTestcase {
+    * Testing that if you have the title but no url, the title is not sanitized twice.
+    */
+   function testCRUDTitleOnlyTitleNoLink() {
+-    $this->web_user = $this->drupalCreateUser(array('administer content types', 'access content', 'create page content'));
+-    $this->drupalLogin($this->web_user);
++    $perms = user_role_permissions(array(array_search('administrator', user_roles()) => 'administrator'));
++    $perms = array_keys($perms[array_search('administrator', user_roles())]);
++    $admin = $this->drupalCreateUser($perms);
++    $this->drupalLogin($admin);
+ 
+     // create field
+     $name = strtolower($this->randomName());
+@@ -278,8 +278,10 @@ class LinkUITest extends DrupalWebTestcase {
+    * sure they are set to the expected results.
+    */
+   function testCRUDCreateFieldDefaults() {
+-    $this->web_user = $this->drupalCreateUser(array('administer content types', 'access content', 'create page content'));
+-    $this->drupalLogin($this->web_user);
++    $perms = user_role_permissions(array(array_search('administrator', user_roles()) => 'administrator'));
++    $perms = array_keys($perms[array_search('administrator', user_roles())]);
++    $admin = $this->drupalCreateUser($perms);
++    $this->drupalLogin($admin);
+ 
+     // create field
+     $name = strtolower($this->randomName());
+@@ -318,8 +320,10 @@ class LinkUITest extends DrupalWebTestcase {
+    * sure they are set to the expected results.
+    */
+   function testCRUDCreateFieldWithClass() {
+-    $this->web_user = $this->drupalCreateUser(array('administer content types', 'access content', 'create page content'));
+-    $this->drupalLogin($this->web_user);
++    $perms = user_role_permissions(array(array_search('administrator', user_roles()) => 'administrator'));
++    $perms = array_keys($perms[array_search('administrator', user_roles())]);
++    $admin = $this->drupalCreateUser($perms);
++    $this->drupalLogin($admin);
+ 
+     // create field
+     $name = strtolower($this->randomName());
+@@ -390,8 +394,10 @@ class LinkUITest extends DrupalWebTestcase {
+    * sure they are set to the expected results.
+    */
+   function testCRUDCreateFieldWithTwoClasses() {
+-    $this->web_user = $this->drupalCreateUser(array('administer content types', 'access content', 'create page content'));
+-    $this->drupalLogin($this->web_user);
++    $perms = user_role_permissions(array(array_search('administrator', user_roles()) => 'administrator'));
++    $perms = array_keys($perms[array_search('administrator', user_roles())]);
++    $admin = $this->drupalCreateUser($perms);
++    $this->drupalLogin($admin);
+ 
+     // create field
+     $name = strtolower($this->randomName());
+diff --git a/tests/link.test b/tests/link.test
+index 962197f..b030153 100644
+--- a/tests/link.test
++++ b/tests/link.test
+@@ -23,9 +23,11 @@ class LinkBaseTestClass extends DrupalWebTestCase {
+     $modules[] = 'field_ui';
+     $modules[] = 'link';
+     parent::setUp($modules);
+-    
+-    $this->web_user = $this->drupalCreateUser($this->permissions);
+-    $this->drupalLogin($this->web_user);
++
++    $perms = user_role_permissions(array(array_search('administrator', user_roles()) => 'administrator'));
++    $perms = array_keys($perms[array_search('administrator', user_roles())]);
++    $admin = $this->drupalCreateUser($perms);
++    $this->drupalLogin($admin);
+   }
+ 
+   protected function createLinkField($node_type = 'page', $settings = array()) {
+diff --git a/tests/link.validate.test b/tests/link.validate.test
+index a9ac116..f03a64c 100644
+--- a/tests/link.validate.test
++++ b/tests/link.validate.test
+@@ -61,13 +61,10 @@ class LinkValidateTest extends LinkValidateTestCase {
+    * Test if we're stopped from posting a bad url on default validation.
+    */
+   function test_link_validate_bad_url_validate_default() {
+-    $this->web_user = $this->drupalCreateUser(array('administer content types',
+-                                             'administer nodes',
+-                                             'administer filters',
+-                                             'access content',
+-                                             'create page content',
+-                                             'access administration pages'));
+-    $this->drupalLogin($this->web_user);
++    $perms = user_role_permissions(array(array_search('administrator', user_roles()) => 'administrator'));
++    $perms = array_keys($perms[array_search('administrator', user_roles())]);
++    $admin = $this->drupalCreateUser($perms);
++    $this->drupalLogin($admin);
+ 
+     // create field
+     $name = strtolower($this->randomName());
+@@ -106,13 +103,10 @@ class LinkValidateTest extends LinkValidateTestCase {
+    * Test if we're stopped from posting a bad url with validation on.
+    */
+   function test_link_validate_bad_url_validate_on() {
+-    $this->web_user = $this->drupalCreateUser(array('administer content types',
+-                                             'administer nodes',
+-                                             'administer filters',
+-                                             'access content',
+-                                             'create page content',
+-                                             'access administration pages'));
+-    $this->drupalLogin($this->web_user);
++    $perms = user_role_permissions(array(array_search('administrator', user_roles()) => 'administrator'));
++    $perms = array_keys($perms[array_search('administrator', user_roles())]);
++    $admin = $this->drupalCreateUser($perms);
++    $this->drupalLogin($admin);
+ 
+     // create field
+     $name = strtolower($this->randomName());
+@@ -152,13 +146,10 @@ class LinkValidateTest extends LinkValidateTestCase {
+    * Test if we can post a bad url if the validation is expressly turned off.
+    */
+   function test_link_validate_bad_url_validate_off() {
+-    $this->web_user = $this->drupalCreateUser(array('administer content types',
+-                                             'administer nodes',
+-                                             'administer filters',
+-                                             'access content',
+-                                             'create page content',
+-                                             'access administration pages'));
+-    $this->drupalLogin($this->web_user);
++    $perms = user_role_permissions(array(array_search('administrator', user_roles()) => 'administrator'));
++    $perms = array_keys($perms[array_search('administrator', user_roles())]);
++    $admin = $this->drupalCreateUser($perms);
++    $this->drupalLogin($admin);
+ 
+     // create field
+     $name = strtolower($this->randomName());
+@@ -202,13 +193,10 @@ class LinkValidateTest extends LinkValidateTestCase {
+    */
+   function x_test_link_validate_switching_between_validation_status() {
+     $this->acquireContentTypes(1);
+-    $this->web_user = $this->drupalCreateUser(array('administer content types',
+-                                             'administer nodes',
+-                                             'access administration pages',
+-                                             'access content',
+-                                             'create ' . $this->content_types[0]->type . ' content',
+-                                             'edit any ' . $this->content_types[0]->type . ' content'));
+-    $this->drupalLogin($this->web_user);
++    $perms = user_role_permissions(array(array_search('administrator', user_roles()) => 'administrator'));
++    $perms = array_keys($perms[array_search('administrator', user_roles())]);
++    $admin = $this->drupalCreateUser($perms);
++    $this->drupalLogin($admin);
+     variable_set('node_options_' . $this->content_types[0]->name, array('status', 'promote'));
+     $field_settings = array(
+       'type' => 'link',
+@@ -368,7 +356,7 @@ class LinkValidateUrlLight extends DrupalWebTestCase {
+       'group' => 'Link',
+     );
+   }
+-  
++
+   function setUp() {
+     parent::setUp('link');
+   }
+@@ -429,11 +417,10 @@ class LinkValidateUrlLight extends DrupalWebTestCase {
+   function testValidateInternalLinks() {
+     $tempfile = drupal_tempnam('public://files', 'test');
+     $links = array(
+-      'rss.xml',
+       file_uri_target($tempfile),
+       drupal_realpath($tempfile),
+     );
+-    
++
+     foreach ($links as $link) {
+       $type = link_url_type($link);
+       $this->assertEqual(LINK_INTERNAL, $type, 'Test ' . $link . ' is an internal link.');
+@@ -482,8 +469,8 @@ class LinkValidateUrlLight extends DrupalWebTestCase {
+       //$valid2 = valid_url($link, TRUE);
+       //$this->assertEqual(TRUE, $valid2, "Using valid_url() on $link.");
+     }
+-    // Test if we can make a tld valid:
+-    variable_set('link_extra_domains', array('frog'));
++    // Test if we can make a tld allowable:
++    variable_set('link_allowed_domains', array('frog'));
+     $valid = link_validate_url('http://www.example.frog');
+     $this->assertEqual(LINK_EXTERNAL, $valid, "Testing that http://www.example.frog is a valid external link if we've added 'frog' to the list of valid domains.");
+   }
+@@ -495,7 +482,6 @@ class LinkValidateUrlLight extends DrupalWebTestCase {
+       'http://4827.0.0.2/',
+       '//www.example.com/',
+       'http://www.testß.com/', // ß not allowed in domain names!
+-      'http://www.example.frog/', // Bad TLD
+       //'http://www.-fudge.com/', // domains can't have sections starting with a dash.
+       'http://example.com/index.php?page=this\that',
+       'example@example.com',
+@@ -504,5 +490,9 @@ class LinkValidateUrlLight extends DrupalWebTestCase {
+       $valid = link_validate_url($link);
+       $this->assertEqual(FALSE, $valid, 'Testing that ' . $link . ' is not a valid link.');
+     }
++    // Test if we can make a tld disallowed:
++    variable_set('link_allowed_domains', array('toad'));
++    $valid = link_validate_url('http://www.example.frog');
++    $this->assertEqual(FALSE, $valid, "Testing that http://www.example.frog is an invalid external link if we've not added 'frog' to the list of valid domains.");
+   }
+ }
+-- 
+2.7.4 (Apple Git-66)
+

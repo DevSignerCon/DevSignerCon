@@ -42,15 +42,11 @@ class LinkUITest extends DrupalWebTestcase {
    */
   function testLinkCreate() {
     //libxml_use_internal_errors(true);
-    $this->web_user = $this->drupalCreateUser(array(
-      'administer content types',
-      'administer nodes',
-      'administer filters',
-      'access content',
-      'create page content',
-      'access administration pages'
-    ));
-    $this->drupalLogin($this->web_user);
+    $perms = user_role_permissions(array(array_search('administrator', user_roles()) => 'administrator'));
+    $perms = array_keys($perms[array_search('administrator', user_roles())]);
+    $admin = $this->drupalCreateUser($perms);
+    $this->drupalLogin($admin);
+
 
     // create field
     $name = strtolower($this->randomName());
@@ -133,7 +129,7 @@ class LinkUITest extends DrupalWebTestcase {
     $input_test_cases[] = $test_case;
 
     foreach ($input_test_cases as $input) {
-      $this->drupalLogin($this->web_user);
+      $this->drupalLogin($admin);
       $this->drupalGet('node/add/page');
 
       $edit = array(
@@ -179,8 +175,10 @@ class LinkUITest extends DrupalWebTestcase {
    * title actually displays <strong>.
    */
   function testStaticLinkCreate() {
-    $this->web_user = $this->drupalCreateUser(array('administer content types', 'access content', 'create page content'));
-    $this->drupalLogin($this->web_user);
+    $perms = user_role_permissions(array(array_search('administrator', user_roles()) => 'administrator'));
+    $perms = array_keys($perms[array_search('administrator', user_roles())]);
+    $admin = $this->drupalCreateUser($perms);
+    $this->drupalLogin($admin);
 
     // create field
     $name = strtolower($this->randomName());
@@ -227,8 +225,10 @@ class LinkUITest extends DrupalWebTestcase {
    * Testing that if you have the title but no url, the title is not sanitized twice.
    */
   function testCRUDTitleOnlyTitleNoLink() {
-    $this->web_user = $this->drupalCreateUser(array('administer content types', 'access content', 'create page content'));
-    $this->drupalLogin($this->web_user);
+    $perms = user_role_permissions(array(array_search('administrator', user_roles()) => 'administrator'));
+    $perms = array_keys($perms[array_search('administrator', user_roles())]);
+    $admin = $this->drupalCreateUser($perms);
+    $this->drupalLogin($admin);
 
     // create field
     $name = strtolower($this->randomName());
@@ -278,8 +278,10 @@ class LinkUITest extends DrupalWebTestcase {
    * sure they are set to the expected results.
    */
   function testCRUDCreateFieldDefaults() {
-    $this->web_user = $this->drupalCreateUser(array('administer content types', 'access content', 'create page content'));
-    $this->drupalLogin($this->web_user);
+    $perms = user_role_permissions(array(array_search('administrator', user_roles()) => 'administrator'));
+    $perms = array_keys($perms[array_search('administrator', user_roles())]);
+    $admin = $this->drupalCreateUser($perms);
+    $this->drupalLogin($admin);
 
     // create field
     $name = strtolower($this->randomName());
@@ -318,8 +320,10 @@ class LinkUITest extends DrupalWebTestcase {
    * sure they are set to the expected results.
    */
   function testCRUDCreateFieldWithClass() {
-    $this->web_user = $this->drupalCreateUser(array('administer content types', 'access content', 'create page content'));
-    $this->drupalLogin($this->web_user);
+    $perms = user_role_permissions(array(array_search('administrator', user_roles()) => 'administrator'));
+    $perms = array_keys($perms[array_search('administrator', user_roles())]);
+    $admin = $this->drupalCreateUser($perms);
+    $this->drupalLogin($admin);
 
     // create field
     $name = strtolower($this->randomName());
@@ -390,8 +394,10 @@ class LinkUITest extends DrupalWebTestcase {
    * sure they are set to the expected results.
    */
   function testCRUDCreateFieldWithTwoClasses() {
-    $this->web_user = $this->drupalCreateUser(array('administer content types', 'access content', 'create page content'));
-    $this->drupalLogin($this->web_user);
+    $perms = user_role_permissions(array(array_search('administrator', user_roles()) => 'administrator'));
+    $perms = array_keys($perms[array_search('administrator', user_roles())]);
+    $admin = $this->drupalCreateUser($perms);
+    $this->drupalLogin($admin);
 
     // create field
     $name = strtolower($this->randomName());

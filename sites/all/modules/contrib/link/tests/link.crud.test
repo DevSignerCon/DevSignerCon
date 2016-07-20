@@ -29,8 +29,10 @@ class LinkContentCrudTest extends DrupalWebTestCase {
     $title = $this->randomName(20);
 
     // Create and login user.
-    $this->web_user = $this->drupalCreateUser(array('administer content types'));
-    $this->drupalLogin($this->web_user);
+    $perms = user_role_permissions(array(array_search('administrator', user_roles()) => 'administrator'));
+    $perms = array_keys($perms[array_search('administrator', user_roles())]);
+    $admin = $this->drupalCreateUser($perms);
+    $this->drupalLogin($admin);
 
     $this->drupalGet('admin/structure/types');
 

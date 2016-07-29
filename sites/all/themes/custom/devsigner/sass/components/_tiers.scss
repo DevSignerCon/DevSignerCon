@@ -13,8 +13,8 @@
 }
 
 #tier_1 {
-  background: $lime;
-  color: $white;
+  background: $white;
+  color: $navy;
 
   a:link,
   a:visited {
@@ -23,13 +23,15 @@
 }
 
 #tier_2 {
-  background: $white;
-  color: $navy;
+  background-color: $purplePrimary;
+  background-image: url('../images/bkg-texture-1.png');
+  background-size: cover;
+  color: $white;
   overflow: hidden;
 }
 
 #tier_3 {
-  background: $gray;
+  background: $white;
 }
 
 .tier4-frame {

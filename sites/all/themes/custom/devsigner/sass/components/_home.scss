@@ -2,6 +2,22 @@
 // Homepage specific styling
 //
 
+// Section Headings
+@mixin section-heading($color: $purplePrimary, $padding-y: 20px){
+  @include clearfix;
+  text-transform: uppercase;
+  font-family: $roboto;
+  font-weight: bold;
+  color: $color;
+  text-align: center;
+  padding: 20px $padding-y;
+}
+
+.section-heading {
+  @include section-heading;
+}
+
+
 .front {
 
   html[xmlns] .slides {display: block;}
@@ -447,6 +463,120 @@
       color: #0d0d0d;
       margin-bottom: 10px;
       margin-top: 0;
+    }
+  }
+
+  // Keynote Presenters 2016
+  #keynotePresenters {
+    padding: 40px 0;
+    @include clearfix;
+    .keynote-presenter {
+      margin-bottom: 60px;
+      text-align: center;
+      @media screen and (min-width: $tablet) {
+        @include column(6);
+        .keynote-content {
+          padding: 8%;
+          background-color: rgba(96,0,117, 0.6);
+        }
+        margin-bottom: 0px;
+      }
+      // The Headings
+      h2 {
+        border-bottom: 1px solid $white;
+        text-transform: uppercase;
+        font-family: $roboto;
+        font-weight: bold;
+      }
+      h3 {
+        text-transform: uppercase;
+        font-family: $roboto;
+      }
+      .keynote-name {
+        span {
+          text-transform: uppercase;
+          font-family: $roboto;
+          display: block;
+          clear: both;
+        }
+      }
+      // The Profile Photo
+      .presenter-photo {
+        padding: 0 20%;
+        img {
+          @include border-radius(100%);
+          border: 6px solid $white;
+        }
+      }
+      // The Text Box
+      .keynote-description {
+        padding: 20px;
+        text-align: center;
+      }
+    }
+  }
+
+  // Tier 3
+  #tier_3 {
+    background-image: url('../images/bkg-texture-2.png');
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding-top: 60px;
+  }
+
+  // Speakers
+  #block-views-featured-sessions-block {
+    @include clearfix;
+    padding-top: 60px;
+    h2 {
+      display: none;
+    }
+    // Item
+    .views-row {
+      text-align: center;
+      @include column(6);
+      padding: 0 25px;
+      min-height: 330px;
+      @media screen and (min-width: $tablet) {
+        @include column(4);
+        padding: 0 35px;
+      }
+      @media screen and (min-width: $desktop) {
+        @include column(3);
+        padding: 0 45px;
+      }
+      // the Photo
+      .views-field-field-photo {
+        position: relative;
+        &::after {
+          content: '';
+          width: 0;
+          height: 0;
+          display: block;
+          position: absolute;
+          bottom: 1px;
+          left: 50%;
+          border-color: transparent transparent $white transparent;
+          border-style: solid;
+          border-width: 20px;
+          @include transform(translate(-50%, 0%));
+        }
+        img {
+          @include border-radius(100%);
+          border: 6px solid $white;
+          display: block;
+        }
+      }
+      // the Name
+      .views-field-field-contact-name {
+        font-size: 1em;
+        margin-bottom: 10px;
+      }
+      // the Session
+      .views-field-field-session-title {
+        font-size: 0.8em;
+        line-height: 1.2em;
+      }
     }
   }
 

@@ -1719,7 +1719,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1464203676');
+  background-image: url('../images/progress.gif?1467523667');
 }
 
 /* line 812, ../sass/components/_misc.scss */
@@ -4234,7 +4234,7 @@ fieldset {
 }
 /* line 52, ../sass/components/_schedule.scss */
 .schedule-day li a {
-  text-decoration: underline;
+  text-decoration: none;
 }
 /* line 56, ../sass/components/_schedule.scss */
 .schedule-day li .room {
@@ -4278,80 +4278,85 @@ fieldset {
 /* line 100, ../sass/components/_schedule.scss */
 .schedule-detail h4 {
   color: #FFFFFF;
-  padding: 12px 5px 8px;
+  padding-top: 5px;
   font-size: 1.875em;
+  line-height: 1.5;
   margin-bottom: 0;
   text-align: center;
   text-transform: uppercase;
 }
-/* line 109, ../sass/components/_schedule.scss */
+/* line 110, ../sass/components/_schedule.scss */
 .schedule-detail ul {
   padding: 0;
 }
-/* line 113, ../sass/components/_schedule.scss */
+/* line 114, ../sass/components/_schedule.scss */
 .schedule-detail li {
+  margin-bottom: 0.5em;
+  padding-left: 0.5em;
+  text-indent: -0.5em;
   list-style: none;
-  font-size: 21px;
-  line-height: 1.5;
+  font-family: miso, Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  font-size: 1.5em;
+  line-height: 1.25;
   color: #012233;
 }
-/* line 119, ../sass/components/_schedule.scss */
+/* line 124, ../sass/components/_schedule.scss */
 .schedule-detail li .field-type-taxonomy-term-reference {
   display: inline;
   padding-left: 10px;
   margin-bottom: 0;
 }
-/* line 124, ../sass/components/_schedule.scss */
+/* line 129, ../sass/components/_schedule.scss */
 .schedule-detail li .field-type-taxonomy-term-reference .field-items {
   display: inline;
 }
-/* line 130, ../sass/components/_schedule.scss */
+/* line 135, ../sass/components/_schedule.scss */
 .schedule-detail li span.session-title {
   font-family: misoBold, Arial, Helvetica, 'Nimbus Sans L', sans-serif;
 }
-/* line 134, ../sass/components/_schedule.scss */
+/* line 139, ../sass/components/_schedule.scss */
 .schedule-detail li span.session-presenter {
   color: #616061;
 }
-/* line 139, ../sass/components/_schedule.scss */
+/* line 144, ../sass/components/_schedule.scss */
 .schedule-detail li:before {
   content: "\25A0";
   font-size: 12px;
-  padding-right: 5px;
+  padding-right: 7px;
   position: relative;
   top: -2px;
 }
-/* line 148, ../sass/components/_schedule.scss */
+/* line 153, ../sass/components/_schedule.scss */
 .schedule-detail .friday {
   border-bottom: 2px solid #ebedf1;
   margin-bottom: 1.5em;
 }
-/* line 152, ../sass/components/_schedule.scss */
+/* line 157, ../sass/components/_schedule.scss */
 .schedule-detail .friday h4 {
   background: #8AB513;
 }
-/* line 155, ../sass/components/_schedule.scss */
+/* line 160, ../sass/components/_schedule.scss */
 .schedule-detail .friday li:before {
   color: #8AB513;
 }
-/* line 160, ../sass/components/_schedule.scss */
+/* line 165, ../sass/components/_schedule.scss */
 .schedule-detail .saturday {
   border-bottom: 2px solid #ebedf1;
   margin-bottom: 1.5em;
 }
-/* line 164, ../sass/components/_schedule.scss */
+/* line 169, ../sass/components/_schedule.scss */
 .schedule-detail .saturday h4 {
   background: #B5138A;
 }
-/* line 167, ../sass/components/_schedule.scss */
+/* line 172, ../sass/components/_schedule.scss */
 .schedule-detail .saturday li:before {
   color: #B5138A;
 }
-/* line 173, ../sass/components/_schedule.scss */
+/* line 178, ../sass/components/_schedule.scss */
 .schedule-detail .sunday h4 {
   background: #138AB5;
 }
-/* line 176, ../sass/components/_schedule.scss */
+/* line 181, ../sass/components/_schedule.scss */
 .schedule-detail .sunday li:before {
   color: #138AB5;
 }
@@ -4972,48 +4977,62 @@ section.sponsor-group .sponsor header .social-info ul li a .fa:hover {
 }
 /* line 24, ../sass/components/_sessions.scss */
 .entityform-session .field-name-field-speaker > .field-label {
-  font-size: 1.75em;
-  margin: 0;
+  font-family: miso, Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  font-size: 2em;
+  margin: 1em 0 0;
   position: relative;
   text-transform: uppercase;
   width: 100%;
 }
-/* line 32, ../sass/components/_sessions.scss */
+/* line 33, ../sass/components/_sessions.scss */
 .entityform-session .field-name-field-speaker .field-item {
   overflow: auto;
 }
-/* line 36, ../sass/components/_sessions.scss */
+/* line 37, ../sass/components/_sessions.scss */
 .entityform-session .field-name-field-contact-name .field-item {
   font-size: 1.3em;
   font-family: misoBold,Arial,Helvetica,"Numbus Sans L",sans-serif;
   font-weight: normal;
   padding-bottom: 5px;
 }
-/* line 43, ../sass/components/_sessions.scss */
+/* line 44, ../sass/components/_sessions.scss */
 .entityform-session .field-name-field-photo {
   float: left;
   margin-right: 25px;
   margin-bottom: 10px;
 }
 @media screen and (max-width: 768px) {
-  /* line 43, ../sass/components/_sessions.scss */
+  /* line 44, ../sass/components/_sessions.scss */
   .entityform-session .field-name-field-photo {
     width: 100%;
   }
 }
+/* line 54, ../sass/components/_sessions.scss */
+.entityform-session .field-name-field-speaker-bio {
+  padding-bottom: 0.5em;
+  overflow: hidden;
+}
 @media screen and (max-width: 768px) {
-  /* line 53, ../sass/components/_sessions.scss */
+  /* line 54, ../sass/components/_sessions.scss */
   .entityform-session .field-name-field-speaker-bio {
     float: left;
     width: 100%;
   }
 }
-/* line 60, ../sass/components/_sessions.scss */
+/* line 63, ../sass/components/_sessions.scss */
 .entityform-session .field-name-field-speaker-bio p {
   margin-top: -4px;
 }
+/* line 68, ../sass/components/_sessions.scss */
+.entityform-session .field-name-field-website {
+  clear: left;
+  margin: 0.5em 0;
+  font-family: miso, Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  font-weight: bold;
+  font-size: 1.25em;
+}
 
-/* line 67, ../sass/components/_sessions.scss */
+/* line 78, ../sass/components/_sessions.scss */
 .field-name-field-session-format,
 .field-name-field-experience-level,
 .field-name-field-categories,
@@ -5021,7 +5040,7 @@ section.sponsor-group .sponsor header .social-info ul li a .fa:hover {
 .field-name-field-time-slot {
   margin-bottom: 1em;
 }
-/* line 74, ../sass/components/_sessions.scss */
+/* line 85, ../sass/components/_sessions.scss */
 .field-name-field-session-format .field-item,
 .field-name-field-experience-level .field-item,
 .field-name-field-categories .field-item,
@@ -5036,7 +5055,7 @@ section.sponsor-group .sponsor header .social-info ul li a .fa:hover {
   margin-bottom: 3px;
   padding: 0.33em 0.5em 0.1333em;
 }
-/* line 85, ../sass/components/_sessions.scss */
+/* line 96, ../sass/components/_sessions.scss */
 .field-name-field-session-format a,
 .field-name-field-experience-level a,
 .field-name-field-categories a,
@@ -5046,46 +5065,46 @@ section.sponsor-group .sponsor header .social-info ul li a .fa:hover {
   display: inline-block;
 }
 
-/* line 91, ../sass/components/_sessions.scss */
+/* line 102, ../sass/components/_sessions.scss */
 .field-name-field-time-slot {
   float: left;
   width: 100%;
 }
-/* line 95, ../sass/components/_sessions.scss */
+/* line 106, ../sass/components/_sessions.scss */
 .field-name-field-time-slot .field-item {
   clear: both;
   float: left;
 }
 
-/* line 101, ../sass/components/_sessions.scss */
+/* line 112, ../sass/components/_sessions.scss */
 .field-name-field-session-slides2 {
   margin-bottom: 1em;
 }
 
-/* line 109, ../sass/components/_sessions.scss */
+/* line 120, ../sass/components/_sessions.scss */
 .field-name-field-session-format .field-item,
 .field-name-field-experience-level .field-item,
 .field-name-field-categories .field-item {
   padding: 0;
 }
-/* line 113, ../sass/components/_sessions.scss */
+/* line 124, ../sass/components/_sessions.scss */
 .field-name-field-session-format a,
 .field-name-field-experience-level a,
 .field-name-field-categories a {
   padding: 0.33em 0.5em 0.1333em;
 }
 
-/* line 121, ../sass/components/_sessions.scss */
+/* line 132, ../sass/components/_sessions.scss */
 .field-name-field-session-format .field-item a {
   padding: 0.33em 0.5em 0.1333em 0.4em;
 }
-/* line 125, ../sass/components/_sessions.scss */
+/* line 136, ../sass/components/_sessions.scss */
 .field-name-field-session-format .field-item:before {
   padding-left: 6px;
   position: relative;
   top: 2px;
 }
-/* line 130, ../sass/components/_sessions.scss */
+/* line 141, ../sass/components/_sessions.scss */
 .field-name-field-session-format .field-item.term-6:before {
   content: "";
   font-family: 'icomoon';
@@ -5099,7 +5118,7 @@ section.sponsor-group .sponsor header .social-info ul li a .fa:hover {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 133, ../sass/components/_sessions.scss */
+/* line 144, ../sass/components/_sessions.scss */
 .field-name-field-session-format .field-item.term-7:before {
   content: "";
   font-family: 'icomoon';
@@ -5113,7 +5132,7 @@ section.sponsor-group .sponsor header .social-info ul li a .fa:hover {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 136, ../sass/components/_sessions.scss */
+/* line 147, ../sass/components/_sessions.scss */
 .field-name-field-session-format .field-item.term-8:before {
   content: "";
   font-family: 'icomoon';
@@ -5128,21 +5147,21 @@ section.sponsor-group .sponsor header .social-info ul li a .fa:hover {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 144, ../sass/components/_sessions.scss */
+/* line 155, ../sass/components/_sessions.scss */
 .field-name-field-experience-level .field-item a {
   padding: 0.33em 0.5em 0.1333em 0.3em;
 }
-/* line 148, ../sass/components/_sessions.scss */
+/* line 159, ../sass/components/_sessions.scss */
 .field-name-field-experience-level .field-item:before {
   padding-left: 5px;
   position: relative;
   top: 2px;
 }
-/* line 154, ../sass/components/_sessions.scss */
+/* line 165, ../sass/components/_sessions.scss */
 .field-name-field-experience-level .field-item.term-15 a {
   padding: 0.33em 0.5em 0.1333em 0.1em;
 }
-/* line 158, ../sass/components/_sessions.scss */
+/* line 169, ../sass/components/_sessions.scss */
 .field-name-field-experience-level .field-item.term-15:before {
   padding-left: 3px;
   content: "";
@@ -5157,7 +5176,7 @@ section.sponsor-group .sponsor header .social-info ul li a .fa:hover {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 163, ../sass/components/_sessions.scss */
+/* line 174, ../sass/components/_sessions.scss */
 .field-name-field-experience-level .field-item.term-16:before {
   content: "";
   font-family: 'icomoon';
@@ -5171,7 +5190,7 @@ section.sponsor-group .sponsor header .social-info ul li a .fa:hover {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 166, ../sass/components/_sessions.scss */
+/* line 177, ../sass/components/_sessions.scss */
 .field-name-field-experience-level .field-item.term-17:before {
   content: "";
   font-family: 'icomoon';
@@ -5185,7 +5204,7 @@ section.sponsor-group .sponsor header .social-info ul li a .fa:hover {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* line 169, ../sass/components/_sessions.scss */
+/* line 180, ../sass/components/_sessions.scss */
 .field-name-field-experience-level .field-item.term-18:before {
   content: "";
   font-family: 'icomoon';
@@ -5201,31 +5220,31 @@ section.sponsor-group .sponsor header .social-info ul li a .fa:hover {
   top: 1px;
 }
 
-/* line 178, ../sass/components/_sessions.scss */
+/* line 189, ../sass/components/_sessions.scss */
 .view-sessions .view-filters {
   padding-bottom: 10px;
   border-bottom: 2px solid #EBEDF1;
 }
-/* line 182, ../sass/components/_sessions.scss */
+/* line 193, ../sass/components/_sessions.scss */
 .view-sessions .view-filters .views-exposed-widget {
   padding-bottom: 10px;
 }
-/* line 186, ../sass/components/_sessions.scss */
+/* line 197, ../sass/components/_sessions.scss */
 .view-sessions .view-filters #edit-field-experience-level-tid-wrapper {
   margin-right: 20px;
 }
-/* line 191, ../sass/components/_sessions.scss */
+/* line 202, ../sass/components/_sessions.scss */
 .view-sessions .view-filters .bef-select-as-links .form-type-bef-link {
   float: left;
   padding-right: 12px;
 }
-/* line 195, ../sass/components/_sessions.scss */
+/* line 206, ../sass/components/_sessions.scss */
 .view-sessions .view-filters .bef-select-as-links .form-type-bef-link a {
   display: inline-block;
   line-height: 1.2;
   padding: 0.33em 0 0.1333em;
 }
-/* line 200, ../sass/components/_sessions.scss */
+/* line 211, ../sass/components/_sessions.scss */
 .view-sessions .view-filters .bef-select-as-links .form-type-bef-link a.active {
   background: #012233;
   border-radius: 4px;
@@ -5234,62 +5253,62 @@ section.sponsor-group .sponsor header .social-info ul li a .fa:hover {
   line-height: 1.2;
   padding: 0.33em 0.5em 0.1333em;
 }
-/* line 213, ../sass/components/_sessions.scss */
+/* line 224, ../sass/components/_sessions.scss */
 .view-sessions table {
   width: 100%;
 }
-/* line 218, ../sass/components/_sessions.scss */
+/* line 229, ../sass/components/_sessions.scss */
 .view-sessions th.views-field-field-contact-name, .view-sessions th.views-field-field-session-title {
   text-align: left;
 }
 @media screen and (max-width: 600px) {
-  /* line 224, ../sass/components/_sessions.scss */
+  /* line 235, ../sass/components/_sessions.scss */
   .view-sessions th.views-field-field-session-format {
     display: none;
   }
 }
-/* line 230, ../sass/components/_sessions.scss */
+/* line 241, ../sass/components/_sessions.scss */
 .view-sessions tr.even, .view-sessions tr.odd {
   background: none;
   border: none;
   vertical-align: middle;
 }
-/* line 236, ../sass/components/_sessions.scss */
+/* line 247, ../sass/components/_sessions.scss */
 .view-sessions td {
   padding: 12px 7px;
 }
-/* line 239, ../sass/components/_sessions.scss */
+/* line 250, ../sass/components/_sessions.scss */
 .view-sessions td.views-field-field-session-title {
   font-family: misoBold,Arial,Helvetica,"Numbus Sans L",sans-serif;
   padding-left: 0;
   padding-right: 15px;
   font-size: 21px;
 }
-/* line 246, ../sass/components/_sessions.scss */
+/* line 257, ../sass/components/_sessions.scss */
 .view-sessions td.views-field-field-contact-name {
   padding-left: 0;
 }
-/* line 250, ../sass/components/_sessions.scss */
+/* line 261, ../sass/components/_sessions.scss */
 .view-sessions td.views-field-field-experience-level, .view-sessions td.views-field-field-session-format {
   white-space: nowrap;
   text-align: center;
 }
-/* line 255, ../sass/components/_sessions.scss */
+/* line 266, ../sass/components/_sessions.scss */
 .view-sessions td.views-field-field-experience-level div, .view-sessions td.views-field-field-session-format div {
   margin-bottom: 0;
 }
 @media screen and (max-width: 600px) {
-  /* line 261, ../sass/components/_sessions.scss */
+  /* line 272, ../sass/components/_sessions.scss */
   .view-sessions td.views-field-field-session-format {
     display: none;
   }
 }
-/* line 266, ../sass/components/_sessions.scss */
+/* line 277, ../sass/components/_sessions.scss */
 .view-sessions td .field-item {
   margin-right: 0;
 }
 
-/* line 274, ../sass/components/_sessions.scss */
+/* line 285, ../sass/components/_sessions.scss */
 .page-eform-submit-session .block-easy-breadcrumb {
   display: none;
 }

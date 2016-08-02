@@ -50,7 +50,7 @@
     }
 
     a {
-      text-decoration: underline;
+      text-decoration: none;
     }
 
     .room {
@@ -99,8 +99,9 @@
 
   h4 {
     color: $white;
-    padding: 12px 5px 8px;
+    padding-top: 5px;
     font-size: 1.875em; // 1.875 * 16 = 30px
+    line-height: 1.5;
     margin-bottom: 0;
     text-align: center;
     text-transform: uppercase;
@@ -111,9 +112,13 @@
   }
 
   li {
+    margin-bottom: 0.5em;
+    padding-left: 0.5em;
+    text-indent: -0.5em;
     list-style: none;
-    font-size: 21px;
-    line-height: 1.5;
+    font-family: $miso;
+    font-size: 1.5em;
+    line-height: 1.25;
     color: #012233;
 
     .field-type-taxonomy-term-reference {
@@ -139,7 +144,7 @@
     &:before {
       content: "\25A0";
       font-size: 12px;
-      padding-right: 5px;
+      padding-right: 7px;
       position: relative;
       top: -2px;
     }

@@ -1719,7 +1719,7 @@ tr.selected td {
 /* line 803, ../sass/components/_misc.scss */
 .progress .filled {
   background-color: #0072b9;
-  background-image: url('../images/progress.gif?1464203676');
+  background-image: url('../images/progress.gif?1467523667');
 }
 
 /* line 812, ../sass/components/_misc.scss */
@@ -4234,7 +4234,7 @@ fieldset {
 }
 /* line 52, ../sass/components/_schedule.scss */
 .schedule-day li a {
-  text-decoration: underline;
+  text-decoration: none;
 }
 /* line 56, ../sass/components/_schedule.scss */
 .schedule-day li .room {
@@ -4278,80 +4278,85 @@ fieldset {
 /* line 100, ../sass/components/_schedule.scss */
 .schedule-detail h4 {
   color: #FFFFFF;
-  padding: 12px 5px 8px;
+  padding-top: 5px;
   font-size: 1.875em;
+  line-height: 1.5;
   margin-bottom: 0;
   text-align: center;
   text-transform: uppercase;
 }
-/* line 109, ../sass/components/_schedule.scss */
+/* line 110, ../sass/components/_schedule.scss */
 .schedule-detail ul {
   padding: 0;
 }
-/* line 113, ../sass/components/_schedule.scss */
+/* line 114, ../sass/components/_schedule.scss */
 .schedule-detail li {
+  margin-bottom: 0.5em;
+  padding-left: 0.5em;
+  text-indent: -0.5em;
   list-style: none;
-  font-size: 21px;
-  line-height: 1.5;
+  font-family: miso, Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  font-size: 1.5em;
+  line-height: 1.25;
   color: #012233;
 }
-/* line 119, ../sass/components/_schedule.scss */
+/* line 124, ../sass/components/_schedule.scss */
 .schedule-detail li .field-type-taxonomy-term-reference {
   display: inline;
   padding-left: 10px;
   margin-bottom: 0;
 }
-/* line 124, ../sass/components/_schedule.scss */
+/* line 129, ../sass/components/_schedule.scss */
 .schedule-detail li .field-type-taxonomy-term-reference .field-items {
   display: inline;
 }
-/* line 130, ../sass/components/_schedule.scss */
+/* line 135, ../sass/components/_schedule.scss */
 .schedule-detail li span.session-title {
   font-family: misoBold, Arial, Helvetica, 'Nimbus Sans L', sans-serif;
 }
-/* line 134, ../sass/components/_schedule.scss */
+/* line 139, ../sass/components/_schedule.scss */
 .schedule-detail li span.session-presenter {
   color: #616061;
 }
-/* line 139, ../sass/components/_schedule.scss */
+/* line 144, ../sass/components/_schedule.scss */
 .schedule-detail li:before {
   content: "\25A0";
   font-size: 12px;
-  padding-right: 5px;
+  padding-right: 7px;
   position: relative;
   top: -2px;
 }
-/* line 148, ../sass/components/_schedule.scss */
+/* line 153, ../sass/components/_schedule.scss */
 .schedule-detail .friday {
   border-bottom: 2px solid #ebedf1;
   margin-bottom: 1.5em;
 }
-/* line 152, ../sass/components/_schedule.scss */
+/* line 157, ../sass/components/_schedule.scss */
 .schedule-detail .friday h4 {
   background: #8AB513;
 }
-/* line 155, ../sass/components/_schedule.scss */
+/* line 160, ../sass/components/_schedule.scss */
 .schedule-detail .friday li:before {
   color: #8AB513;
 }
-/* line 160, ../sass/components/_schedule.scss */
+/* line 165, ../sass/components/_schedule.scss */
 .schedule-detail .saturday {
   border-bottom: 2px solid #ebedf1;
   margin-bottom: 1.5em;
 }
-/* line 164, ../sass/components/_schedule.scss */
+/* line 169, ../sass/components/_schedule.scss */
 .schedule-detail .saturday h4 {
   background: #B5138A;
 }
-/* line 167, ../sass/components/_schedule.scss */
+/* line 172, ../sass/components/_schedule.scss */
 .schedule-detail .saturday li:before {
   color: #B5138A;
 }
-/* line 173, ../sass/components/_schedule.scss */
+/* line 178, ../sass/components/_schedule.scss */
 .schedule-detail .sunday h4 {
   background: #138AB5;
 }
-/* line 176, ../sass/components/_schedule.scss */
+/* line 181, ../sass/components/_schedule.scss */
 .schedule-detail .sunday li:before {
   color: #138AB5;
 }

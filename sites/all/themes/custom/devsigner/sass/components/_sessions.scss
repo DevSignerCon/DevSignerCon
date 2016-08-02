@@ -22,8 +22,9 @@
   }
 
   .field-name-field-speaker > .field-label {
-    font-size: 1.75em; // 1.75em * 16px = 28px
-    margin: 0;
+    font-family: $miso;
+    font-size: 2em;
+    margin: 1em 0 0;
     position: relative;
     text-transform: uppercase;
     width: 100%;
@@ -51,6 +52,8 @@
   }
 
   .field-name-field-speaker-bio {
+    padding-bottom: 0.5em;
+    overflow: hidden;
 
     @media screen and (max-width: $tablet) {
       float: left;
@@ -60,6 +63,14 @@
     p {
       margin-top: -4px;
     }
+  }
+
+  .field-name-field-website {
+    clear: left;
+    margin: 0.5em 0;
+    font-family: $miso;
+    font-weight: bold;
+    font-size: 1.25em;
   }
 }
 

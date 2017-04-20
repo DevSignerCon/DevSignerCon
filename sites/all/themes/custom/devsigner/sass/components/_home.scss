@@ -3,7 +3,7 @@
 //
 
 // Section Headings
-@mixin section-heading($color: $purplePrimary, $padding-y: 20px){
+@mixin section-heading($color: $bluePrimary, $padding-y: 20px){
   @include clearfix;
   text-transform: uppercase;
   font-family: $roboto;

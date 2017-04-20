@@ -47,7 +47,7 @@
 }
 
 // Button
-@mixin devsigner-button($bg:$purpleSecondary,$color:$white) {
+@mixin devsigner-button($bg:$blueSecondary,$color:$white) {
   background-color: $bg;
   border: none;
   color: $color;

@@ -8,26 +8,26 @@ a {
 
   &:link,
   &:visited {
-    color: $purpleTertiary;
+    color: $blueTertiary;
   }
 
   &:hover,
   &:focus {
-    color: $purplePrimary;
+    color: $bluePrimary;
   }
 
   &:active {
-    color: $purplePrimary;
+    color: $bluePrimary;
   }
 }
 
 // Attempt to target inline links in primary content only
 .content-inner p {
   a {
-    border-bottom: 1px $purpleTertiary solid;
+    border-bottom: 1px $blueTertiary solid;
     font-weight: bold;
-    background-image: -webkit-linear-gradient(left, transparent 50%, $purplePrimary 50%);
-    background-image: linear-gradient(to right, transparent 50%, $purplePrimary 50%);
+    background-image: -webkit-linear-gradient(left, transparent 50%, $bluePrimary 50%);
+    background-image: linear-gradient(to right, transparent 50%, $bluePrimary 50%);
     background-position: 0;
     background-size: 200%;
 

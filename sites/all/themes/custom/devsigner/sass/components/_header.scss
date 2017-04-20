@@ -4,9 +4,9 @@
 
 #header-wrapper {
   // Gradient
-  background-color: $purplePrimary; // Old browsers
-  @include filter-gradient($purplePrimary, $purpleSecondary, horizontal); // IE6-9 fallback on horizontal gradient
-  @include background-image(linear-gradient(left bottom,  $purplePrimary 0%,$purpleSecondary 96%));
+  background-color: $bluePrimary; // Old browsers
+  @include filter-gradient($bluePrimary, $blueSecondary, horizontal); // IE6-9 fallback on horizontal gradient
+  @include background-image(linear-gradient(left bottom,  $bluePrimary 0%,$blueSecondary 96%));
 }
 
 .header-inner {

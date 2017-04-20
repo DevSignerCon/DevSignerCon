@@ -19,7 +19,7 @@
 
     &:hover,
     &:focus {
-      color: $purplePrimary;
+      color: $bluePrimary;
     }
   }
 
@@ -41,13 +41,13 @@
   }
 
   #login-links a {
-    border: 3px $purplePrimary solid;
+    border: 3px $bluePrimary solid;
     background-color: $white;
-    color: $purplePrimary;
+    color: $bluePrimary;
 
     &:hover,
     &:focus {
-      background-color: $purpleSecondary;
+      background-color: $blueSecondary;
       color: $white;
     }
   }
@@ -55,8 +55,8 @@
   #login-links a.lt-active,
   #login-links a.lt-active:hover,
   #login-links a.lt-active:focus {
-    border: 3px $purplePrimary solid;
-    background-color: $purplePrimary;
+    border: 3px $bluePrimary solid;
+    background-color: $bluePrimary;
     color: $white;
   }
 }

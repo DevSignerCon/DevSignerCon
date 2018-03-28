@@ -11,3 +11,7 @@ sites/*/files
 sites/*/private
 
 /sites/all/themes/custom/devsigner/.sass-cache/
+
+.DS_Store
+
+**/.DS_Store
